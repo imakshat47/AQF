@@ -11,7 +11,8 @@ import pandas as pd
 
 from config import (
     DATA_DIR, CACHE_DIR, SCHEMA_UNION_FILE, FIELDS_FILE,
-    DEFAULT_SLICE_SIZE, DEFAULT_RESULT_LIMIT, DEFAULT_OCCURRENCE_SEMANTICS
+    DEFAULT_SLICE_SIZE, DEFAULT_RESULT_LIMIT, DEFAULT_OCCURRENCE_SEMANTICS,
+    SCHEMA_OVERVIEW_MAX_DEPTH, SCHEMA_GRAPH_DIRECTION, SCHEMA_LEAF_LIMIT
 )
 from composition_loader import group_docs_by_composition_archetype
 from schema_union_builder import build_union_schema
@@ -25,7 +26,6 @@ from query_summary import build_query_summary_markdown
 
 st.set_page_config(page_title="openEHR Accordion Form Builder", layout="wide")
 
-# Extra cache metadata file
 SCHEMA_META_FILE = CACHE_DIR / "schema_metadata.json"
 
 
@@ -40,6 +40,12 @@ def save_json(obj, path: Path):
 def load_json(path: Path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
+
+def do_rerun():
+    if hasattr(st, "rerun"):
+        st.rerun()
+    else:
+        st.experimental_rerun()
 
 def signature_of_state(criteria, output_fields, sort_state, advanced):
     payload = {
@@ -60,9 +66,6 @@ def count_summary(union, catalog):
     return groups, subgroups, fields, suggestion_fields, null_fields
 
 def dataset_signature(folder: str) -> str:
-    """
-    Lightweight signature of dataset folder contents using JSON file name, size, and mtime.
-    """
     p = Path(folder)
     if not p.exists():
         return ""
@@ -89,13 +92,11 @@ def load_schema_metadata():
     return None
 
 def render_query_chips(criteria, outputs, sort_state):
-    """
-    Compact active-query summary above the tabs.
-    """
     chips = []
 
     for c in criteria[:5]:
-        chips.append(f"FILTER: {c.get('element_name', 'Field')} {c.get('operator', '')} {c.get('value', '')}")
+        val = c.get("value", "")
+        chips.append(f"FILTER: {c.get('element_name', 'Field')} {c.get('operator', '')} {val}")
 
     for o in outputs[:5]:
         chips.append(f"OUTPUT: {o.get('element_name', o.get('name', 'Field'))}")
@@ -122,6 +123,93 @@ def render_query_chips(criteria, outputs, sort_state):
         """
     st.markdown(html, unsafe_allow_html=True)
 
+
+# -------------------------------------------------------
+# Friendly display helpers
+# -------------------------------------------------------
+def display_cluster_label(cluster_path_str: str) -> str:
+    if not cluster_path_str or cluster_path_str == "(no cluster)":
+        return "Top-level fields"
+    return cluster_path_str
+
+def display_element_label(item: dict) -> str:
+    return item.get("element_name") or item.get("name") or "Field"
+
+def render_state_tree(title: str, groups: dict):
+    st.markdown(f"### {title}")
+    if not groups:
+        st.caption("No active items.")
+        return
+
+    lines = []
+    for entry_name, clusters in groups.items():
+        lines.append(f"- **{entry_name}**")
+        for cluster_label, items in clusters.items():
+            lines.append(f"  - **{cluster_label}**")
+            for item in items:
+                lines.append(f"    - {item}")
+
+    st.markdown("\n".join(lines))
+
+def build_criteria_tree(criteria_list):
+    groups = {}
+    for c in criteria_list:
+        entry = c.get("entry_name", "Unknown section")
+        cluster = display_cluster_label(c.get("cluster_path_str", "(no cluster)"))
+        field = display_element_label(c)
+        op = c.get("operator", "")
+        val = c.get("value", "")
+
+        if op in ("is_known", "is_unknown"):
+            label = f"**{field}** [{op}]"
+        else:
+            label = f"**{field}** [{op}] `{val}`"
+
+        groups.setdefault(entry, {}).setdefault(cluster, []).append(label)
+    return groups
+
+def build_output_tree(output_list):
+    groups = {}
+    for o in output_list:
+        entry = o.get("entry_name", "Unknown section")
+        cluster = display_cluster_label(o.get("cluster_path_str", "(no cluster)"))
+        field = display_element_label(o)
+        label = f"**{field}**"
+        groups.setdefault(entry, {}).setdefault(cluster, []).append(label)
+    return groups
+
+def build_sort_tree(sort_state):
+    if not sort_state:
+        return {}
+    entry = sort_state.get("entry_name", "Unknown section")
+    cluster = display_cluster_label(sort_state.get("cluster_path_str", "(no cluster)"))
+    field = sort_state.get("element_name", "Field")
+    direction = sort_state.get("direction", "asc")
+    return {entry: {cluster: [f"Sort by **{field}** ({direction})"]}}
+
+def build_advanced_tree(advanced_dict):
+    groups = {"Advanced settings": {"Execution": []}}
+
+    if advanced_dict:
+        groups["Advanced settings"]["Execution"].append(
+            f"Occurrence semantics: **{advanced_dict.get('occurrence_semantics', 'ALL')}**"
+        )
+        groups["Advanced settings"]["Execution"].append(
+            f"Include unknown values: **{'Yes' if advanced_dict.get('include_unknown', False) else 'No'}**"
+        )
+        groups["Advanced settings"]["Execution"].append(
+            f"Slice size: **{advanced_dict.get('slice_size', '')}**"
+        )
+        groups["Advanced settings"]["Execution"].append(
+            f"Result limit: **{advanced_dict.get('result_limit', '')}**"
+        )
+
+    return groups
+
+
+# -------------------------------------------------------
+# State reset helpers
+# -------------------------------------------------------
 def reset_filters():
     st.session_state.active_criteria = []
 
@@ -143,9 +231,6 @@ def reset_query_state():
     st.session_state.last_run_signature = None
 
 def reset_schema_cache():
-    """
-    Full schema reset: remove cache files and clear prepared bundle.
-    """
     st.session_state.schema_build_token += 1
     st.session_state.cached_schema_bundle = None
     st.session_state.schema_built_at = None
@@ -160,12 +245,8 @@ def reset_schema_cache():
 def initialize_state():
     defaults = {
         "schema_build_token": 0,
-
-        # cache-first bundle
         "cached_schema_bundle": None,
         "schema_built_at": None,
-
-        # query state
         "active_criteria": [],
         "active_output": [],
         "active_advanced": {
@@ -174,16 +255,11 @@ def initialize_state():
             "slice_size": DEFAULT_SLICE_SIZE,
             "result_limit": DEFAULT_RESULT_LIMIT
         },
-
         "sort_state": None,
         "active_query_plan": None,
         "last_run_result": None,
         "last_run_signature": None,
-
-        # dataset
         "dataset_folder_input": str(DATA_DIR),
-
-        # cache / startup flags
         "cache_auto_load_attempted": False,
         "schema_loaded_from_cache": False,
         "cache_loaded_without_validation": False
@@ -197,16 +273,6 @@ def initialize_state():
 # Cache-first startup helpers
 # -------------------------------------------------------
 def load_cached_schema_bundle():
-    """
-    Lightweight startup path:
-    - load schema_union.json
-    - load fields.json
-    - build form definition
-    - do NOT scan dataset folder here
-
-    If metadata exists and matches the dataset folder, mark as validated.
-    If metadata is missing or does not match, still load cache but mark it as unvalidated.
-    """
     if not SCHEMA_UNION_FILE.exists() or not FIELDS_FILE.exists():
         return None, False
 
@@ -239,13 +305,6 @@ def load_cached_schema_bundle():
     return bundle, validated
 
 def resolve_runtime_files_for_query(dataset_folder: str, composition_archetype: str):
-    """
-    Lazy file resolution used only when actually needed:
-    - Build/Refresh Schema
-    - Run Query
-
-    This means dataset scanning is avoided during normal page refresh.
-    """
     valid_groups, skipped = group_docs_by_composition_archetype(Path(dataset_folder))
     files = []
 
@@ -260,12 +319,6 @@ def resolve_runtime_files_for_query(dataset_folder: str, composition_archetype: 
 # -------------------------------------------------------
 @st.cache_data(show_spinner=False)
 def cached_build_from_dataset(data_dir: str, schema_build_token: int):
-    """
-    Explicit rebuild path:
-    scan dataset folder, rebuild union/catalog/form, overwrite .cache.
-
-    Cached so repeated Build/Refresh for the same dataset snapshot is efficient.
-    """
     valid_groups, skipped = group_docs_by_composition_archetype(Path(data_dir))
 
     if not valid_groups:
@@ -288,9 +341,6 @@ def cached_build_from_dataset(data_dir: str, schema_build_token: int):
     }, skipped, comp_arch_options
 
 def build_or_refresh_schema():
-    """
-    Explicit schema rebuild from current dataset folder.
-    """
     data_dir = st.session_state.dataset_folder_input.strip()
     built, skipped, comp_arch_options = cached_build_from_dataset(
         data_dir,
@@ -381,9 +431,7 @@ st.caption(
     "explicit schema rebuild, readable results, query funnel, and touched-schema lineage."
 )
 
-# -------------------------
-# Dataset folder input
-# -------------------------
+# Dataset
 st.markdown("### Dataset")
 st.text_input(
     "Dataset folder path",
@@ -400,9 +448,7 @@ if not Path(dataset_folder).exists():
     st.error(f"Dataset folder does not exist: {dataset_folder}")
     st.stop()
 
-# -------------------------
-# Auto-load cache on page refresh (lightweight)
-# -------------------------
+# Auto-load cache
 if (
     st.session_state.cached_schema_bundle is None
     and not st.session_state.cache_auto_load_attempted
@@ -416,11 +462,9 @@ if (
         st.session_state.schema_loaded_from_cache = True
         st.session_state.cache_loaded_without_validation = not validated
     else:
-        # No cache exists -> fallback once to build from dataset folder
         build_or_refresh_schema()
 
 prepared = st.session_state.cached_schema_bundle
-
 if prepared is None:
     st.warning("No cached schema found and no valid schema could be built. Click **Build / Refresh Schema** to try again.")
     st.stop()
@@ -431,9 +475,7 @@ catalog = prepared["catalog"]
 form = prepared["form"]
 built_at = prepared.get("built_at")
 
-# -------------------------
 # Top controls
-# -------------------------
 top1, top2, top3, top4, top5 = st.columns([2, 2, 1, 1, 1])
 
 with top1:
@@ -461,11 +503,9 @@ with top5:
 
 if st.button("Reset Schema Cache", key="reset_schema_cache"):
     reset_schema_cache()
-    st.experimental_rerun()
+    do_rerun()
 
-# -------------------------
-# Cache / startup banner
-# -------------------------
+# Cache banner
 if st.session_state.schema_loaded_from_cache:
     if st.session_state.cache_loaded_without_validation:
         st.warning(
@@ -475,9 +515,7 @@ if st.session_state.schema_loaded_from_cache:
     else:
         st.success("Loaded schema from cache.")
 
-# -------------------------
 # Status banner
-# -------------------------
 current_sig = signature_of_state(
     st.session_state.active_criteria,
     st.session_state.active_output,
@@ -492,16 +530,13 @@ elif st.session_state.last_run_signature != current_sig:
 else:
     st.success("Showing results for the last executed query.")
 
-# Active query chips
 render_query_chips(
     st.session_state.active_criteria,
     st.session_state.active_output,
     st.session_state.sort_state
 )
 
-# -------------------------
-# Schema summary cards
-# -------------------------
+# Summary cards
 groups_count, subgroups_count, fields_count, suggestion_fields_count, null_fields_count = count_summary(union, catalog)
 
 c1, c2, c3, c4, c5 = st.columns(5)
@@ -516,19 +551,20 @@ with st.expander("Dataset diagnostics", expanded=False):
     st.write(f"Current dataset folder: `{dataset_folder}`")
 
 with st.expander("Schema structure overview", expanded=False):
-    dot = build_schema_flow_dot(union)
+    dot = build_schema_flow_dot(
+        union,
+        max_depth=SCHEMA_OVERVIEW_MAX_DEPTH,
+        direction=SCHEMA_GRAPH_DIRECTION,
+        leaf_limit=SCHEMA_LEAF_LIMIT
+    )
     st.graphviz_chart(dot)
 
-# -------------------------
 # Tabs
-# -------------------------
 tab_criteria, tab_output, tab_advanced, tab_results = st.tabs(
     ["Criteria", "Output", "Advanced", "Results"]
 )
 
-# -------------------------
-# Criteria form
-# -------------------------
+# Criteria tab
 with tab_criteria:
     st.subheader(form["composition_label"])
 
@@ -539,7 +575,8 @@ with tab_criteria:
         for group in form["criteria_groups"]:
             with st.expander(group["group_label"], expanded=(group["group_label"] in ["HCPA", "Problem/Diagnosis"])):
                 for subgroup in group["subgroups"]:
-                    st.markdown(f"**{subgroup['label']}**")
+                    subgroup_label = display_cluster_label(subgroup["label"])
+                    st.markdown(f"**{subgroup_label}**")
 
                     for fld in subgroup["fields"]:
                         hay = f"{fld['full_label']} {fld['label']} {subgroup['label']}".lower()
@@ -654,12 +691,21 @@ with tab_criteria:
             st.session_state.active_criteria = enrich_criteria(new_criteria, catalog)
             st.success("Filters applied.")
 
-    st.write("### Active Filters")
-    st.json(st.session_state.active_criteria)
+    criteria_tree = build_criteria_tree(st.session_state.active_criteria)
+    render_state_tree("Active Filters", criteria_tree)
 
-# -------------------------
-# Output form
-# -------------------------
+    with st.expander("Touched schema graph for active filters", expanded=False):
+        crit_dot = build_touched_query_dot(
+            criteria=st.session_state.active_criteria,
+            outputs=[],
+            sort_state=None,
+            advanced=None,
+            mode="criteria",
+            direction=SCHEMA_GRAPH_DIRECTION
+        )
+        st.graphviz_chart(crit_dot)
+
+# Output tab
 with tab_output:
     st.subheader("Output fields")
 
@@ -704,15 +750,24 @@ with tab_output:
 
             st.success("Output settings applied.")
 
-    st.write("### Active Output Fields")
-    st.json(st.session_state.active_output)
-    if st.session_state.sort_state:
-        st.write("### Active Sort")
-        st.json(st.session_state.sort_state)
+    output_tree = build_output_tree(st.session_state.active_output)
+    render_state_tree("Active Output Fields", output_tree)
 
-# -------------------------
-# Advanced form
-# -------------------------
+    sort_tree = build_sort_tree(st.session_state.sort_state)
+    render_state_tree("Active Sort", sort_tree)
+
+    with st.expander("Touched schema graph for active output and sort", expanded=False):
+        out_dot = build_touched_query_dot(
+            criteria=[],
+            outputs=st.session_state.active_output,
+            sort_state=st.session_state.sort_state,
+            advanced=None,
+            mode="output",
+            direction=SCHEMA_GRAPH_DIRECTION
+        )
+        st.graphviz_chart(out_dot)
+
+# Advanced tab
 with tab_advanced:
     st.subheader("Advanced")
 
@@ -755,12 +810,22 @@ with tab_advanced:
             }
             st.success("Advanced settings applied.")
 
-    st.write("### Active Advanced Settings")
-    st.json(st.session_state.active_advanced)
+    advanced_tree = build_advanced_tree(st.session_state.active_advanced)
+    render_state_tree("Active Advanced Settings", advanced_tree)
+
+    with st.expander("Touched schema graph for advanced settings", expanded=False):
+        adv_dot = build_touched_query_dot(
+            criteria=[],
+            outputs=[],
+            sort_state=st.session_state.sort_state,
+            advanced=st.session_state.active_advanced,
+            mode="advanced",
+            direction=SCHEMA_GRAPH_DIRECTION
+        )
+        st.graphviz_chart(adv_dot)
 
     st.write("---")
     if st.button("Run Query", key="run_query_button"):
-        # Lazy dataset scan only now
         files, skipped, valid_groups = resolve_runtime_files_for_query(dataset_folder, comp_arch)
 
         if not files:
@@ -806,9 +871,7 @@ with tab_advanced:
         )
         st.success("Query executed.")
 
-# -------------------------
-# Results
-# -------------------------
+# Results tab
 with tab_results:
     st.subheader("Results")
 
@@ -855,9 +918,12 @@ with tab_results:
         st.markdown("### Touched schema / query lineage")
 
         touched_dot = build_touched_query_dot(
-            st.session_state.active_criteria,
-            st.session_state.active_output,
-            st.session_state.sort_state
+            criteria=st.session_state.active_criteria,
+            outputs=st.session_state.active_output,
+            sort_state=st.session_state.sort_state,
+            advanced=st.session_state.active_advanced,
+            mode="all",
+            direction=SCHEMA_GRAPH_DIRECTION
         )
         st.graphviz_chart(touched_dot)
 
@@ -865,23 +931,26 @@ with tab_results:
             if st.session_state.active_criteria:
                 st.markdown("**Filters**")
                 for c in st.session_state.active_criteria:
+                    cluster_label = display_cluster_label(c.get("cluster_path_str", "(no cluster)"))
                     st.write(
-                        f"- {c.get('entry_name')} → {c.get('cluster_path_str')} → {c.get('element_name')} "
+                        f"- {c.get('entry_name')} → {cluster_label} → {c.get('element_name')} "
                         f"[{c.get('operator')}] {c.get('value')}"
                     )
 
             if st.session_state.active_output:
                 st.markdown("**Outputs**")
                 for o in st.session_state.active_output:
+                    cluster_label = display_cluster_label(o.get("cluster_path_str", "(no cluster)"))
                     st.write(
-                        f"- {o.get('entry_name')} → {o.get('cluster_path_str')} → {o.get('element_name')}"
+                        f"- {o.get('entry_name')} → {cluster_label} → {o.get('element_name')}"
                     )
 
             if st.session_state.sort_state:
                 s = st.session_state.sort_state
+                cluster_label = display_cluster_label(s.get("cluster_path_str", "(no cluster)"))
                 st.markdown("**Sort**")
                 st.write(
-                    f"- {s.get('entry_name')} → {s.get('cluster_path_str')} → {s.get('element_name')} ({s.get('direction')})"
+                    f"- {s.get('entry_name')} → {cluster_label} → {s.get('element_name')} ({s.get('direction')})"
                 )
 
     else:

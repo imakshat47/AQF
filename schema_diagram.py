@@ -1,153 +1,273 @@
 # schema_diagram.py
 
 from __future__ import annotations
-from typing import Dict, List, Any, Tuple
-import re
 
-def _node_id(s: str) -> str:
-    """
-    Convert arbitrary label to DOT-safe node id.
-    """
-    s = re.sub(r"[^A-Za-z0-9_]+", "_", s)
-    if not s:
-        s = "node"
-    return s
+from graphviz import Digraph
 
-def build_schema_flow_dot(union_schema: dict) -> str:
-    """
-    Build a simple hierarchy flow diagram:
-    Composition -> Entry group -> Cluster path -> square box with leaf field count
-    """
-    comp_label = union_schema.get("composition_label", "Unknown composition")
-    lines = [
-        'digraph G {',
-        'rankdir=TB;',
-        'node [fontname="Helvetica", fontsize=11];',
-        'edge [color="#555555"];'
-    ]
 
-    root_id = "composition_root"
-    lines.append(f'{root_id} [label="{comp_label}", shape=box, style="filled", fillcolor="#DCEEFF"];')
+def display_cluster_label(cluster_path_str: str) -> str:
+    """
+    User-friendly label for subgroup / cluster path.
+    """
+    if not cluster_path_str or cluster_path_str == "(no cluster)":
+        return "Top-level fields"
+    return cluster_path_str
 
-    for entry_arch, group in union_schema.get("groups", {}).items():
+
+def _field_count_for_subgroup(subgroup: dict) -> int:
+    return len(subgroup.get("fields", {}))
+
+
+def build_schema_flow_dot(
+    union: dict,
+    max_depth: int = 4,
+    direction: str = "LR",
+    leaf_limit: int = 5
+):
+    """
+    Build a schema structure overview diagram.
+
+    Depth semantics:
+        1 = composition only
+        2 = composition -> entry groups
+        3 = composition -> entry groups -> subgroup paths
+        4 = composition -> entry groups -> subgroup paths -> leaf elements
+
+    If max_depth < 4:
+        subgroup nodes will display leaf counts instead of leaf nodes.
+
+    Parameters
+    ----------
+    union : dict
+        Schema union object.
+    max_depth : int
+        Tree height (1..4).
+    direction : str
+        Graphviz direction:
+        - "LR" = horizontal
+        - "TB" = vertical
+    leaf_limit : int
+        Maximum number of leaf nodes to show per subgroup when max_depth >= 4.
+    """
+    dot = Digraph()
+    dot.attr(rankdir=direction, fontsize="10")
+
+    comp_label = union.get("composition_label", union.get("composition_archetype", "Composition"))
+    comp_node = "composition_root"
+
+    dot.node(
+        comp_node,
+        comp_label,
+        shape="box",
+        style="rounded,filled",
+        fillcolor="#DFF6DD"
+    )
+
+    if max_depth <= 1:
+        return dot
+
+    groups = union.get("groups", {})
+
+    for entry_arch, group in groups.items():
         entry_name = group.get("entry_name", entry_arch)
-        entry_id = _node_id(f"entry_{entry_arch}")
-        lines.append(f'{entry_id} [label="{entry_name}", shape=box, style="rounded,filled", fillcolor="#EAF7E6"];')
-        lines.append(f"{root_id} -> {entry_id};")
+        subgroups = group.get("subgroups", {})
+        total_leafs = sum(_field_count_for_subgroup(sg) for sg in subgroups.values())
 
-        for subgroup_key, subgroup in group.get("subgroups", {}).items():
-            subgroup_id = _node_id(f"{entry_id}_{subgroup_key}")
-            label = subgroup_key.replace('"', "'")
-            lines.append(f'{subgroup_id} [label="{label}", shape=ellipse, style="filled", fillcolor="#FFF4D6"];')
-            lines.append(f"{entry_id} -> {subgroup_id};")
+        entry_label = entry_name
+        if max_depth < 3:
+            entry_label = f"{entry_name}\\n({len(subgroups)} groups, {total_leafs} fields)"
 
-            leaf_count = len(subgroup.get("fields", {}))
-            leaf_id = _node_id(f"{subgroup_id}_count")
-            lines.append(
-                f'{leaf_id} [label="{leaf_count}", shape=square, width=0.4, height=0.4, style="filled", fillcolor="#FDE2E4"];'
+        entry_node = f"entry_{abs(hash(entry_arch))}"
+        dot.node(
+            entry_node,
+            entry_label,
+            shape="box",
+            style="rounded,filled",
+            fillcolor="#FFF4CC"
+        )
+        dot.edge(comp_node, entry_node)
+
+        if max_depth <= 2:
+            continue
+
+        for subgroup_key, subgroup in subgroups.items():
+            subgroup_label = display_cluster_label(subgroup_key)
+            field_count = _field_count_for_subgroup(subgroup)
+
+            subgroup_node = f"{entry_node}_{abs(hash(subgroup_key))}"
+
+            if max_depth < 4:
+                subgroup_label = f"{subgroup_label}\\n({field_count} fields)"
+
+            dot.node(
+                subgroup_node,
+                subgroup_label,
+                shape="ellipse",
+                style="filled",
+                fillcolor="#E8F0FE"
             )
-            lines.append(f"{subgroup_id} -> {leaf_id};")
+            dot.edge(entry_node, subgroup_node)
 
-    lines.append("}")
-    return "\n".join(lines)
+            if max_depth < 4:
+                continue
+
+            fields = subgroup.get("fields", {})
+            shown = 0
+
+            for _, field in fields.items():
+                if shown >= leaf_limit:
+                    more_node = f"{subgroup_node}_more"
+                    remaining = max(0, len(fields) - leaf_limit)
+                    more_label = f"... (+{remaining} more)" if remaining > 0 else "..."
+                    dot.node(more_node, more_label, shape="plaintext")
+                    dot.edge(subgroup_node, more_node)
+                    break
+
+                field_label = field.get("element_name", "(field)")
+                dv_type = field.get("dv_type", "")
+                leaf_node = f"{subgroup_node}_{shown}"
+
+                dot.node(
+                    leaf_node,
+                    f"{field_label}\\n[{dv_type}]",
+                    shape="note",
+                    style="filled",
+                    fillcolor="#FCE8E6"
+                )
+                dot.edge(subgroup_node, leaf_node)
+                shown += 1
+
+    return dot
 
 
-def build_touched_paths(criteria: List[Dict], output_fields: List[Dict], sort_state: Dict | None = None) -> List[Dict]:
+def build_touched_query_dot(
+    criteria=None,
+    outputs=None,
+    sort_state=None,
+    advanced=None,
+    mode: str = "all",
+    direction: str = "LR"
+):
     """
-    Return a normalized list of touched paths for query provenance.
+    Build a touched-schema lineage diagram for the active query state.
 
-    Expected criteria/output items to include:
-      - entry_name
-      - cluster_path_str
-      - element_name
-      - role (filter/output/sort)
+    mode:
+        - "all"      -> filters + outputs + sort + advanced execution settings
+        - "criteria" -> filters only
+        - "output"   -> outputs + sort
+        - "advanced" -> sort + execution settings
     """
-    touched = []
+    criteria = criteria or []
+    outputs = outputs or []
+    advanced = advanced or {}
 
-    for c in criteria:
-        touched.append({
-            "role": "FILTER",
-            "entry_name": c.get("entry_name", "Unknown entry"),
-            "cluster_path_str": c.get("cluster_path_str", "(no cluster)"),
-            "element_name": c.get("element_name", c.get("field_key", "Field")),
-            "operator": c.get("operator"),
-            "value": c.get("value")
-        })
+    dot = Digraph()
+    dot.attr(rankdir=direction, fontsize="10")
 
-    for o in output_fields:
-        touched.append({
-            "role": "OUTPUT",
-            "entry_name": o.get("entry_name", "Unknown entry"),
-            "cluster_path_str": o.get("cluster_path_str", "(no cluster)"),
-            "element_name": o.get("element_name", o.get("field_key", "Field"))
-        })
+    root_label = {
+        "all": "Active query",
+        "criteria": "Active filters",
+        "output": "Active outputs",
+        "advanced": "Advanced settings"
+    }.get(mode, "Active query")
 
-    if sort_state:
-        touched.append({
-            "role": "SORT",
-            "entry_name": sort_state.get("entry_name", "Unknown entry"),
-            "cluster_path_str": sort_state.get("cluster_path_str", "(no cluster)"),
-            "element_name": sort_state.get("element_name", sort_state.get("field_key", "Field")),
-            "direction": sort_state.get("direction", "asc")
-        })
+    root = "query_root"
+    dot.node(
+        root,
+        root_label,
+        shape="box",
+        style="rounded,filled",
+        fillcolor="#DFF6DD"
+    )
 
-    return touched
+    groups = {}
 
+    def add_item(kind, item):
+        entry = item.get("entry_name", "Unknown section")
+        cluster = display_cluster_label(item.get("cluster_path_str", "(no cluster)"))
+        field = item.get("element_name", item.get("name", "Field"))
+        groups.setdefault(entry, {}).setdefault(cluster, []).append((kind, field, item))
 
-def build_touched_query_dot(criteria: List[Dict], output_fields: List[Dict], sort_state: Dict | None = None) -> str:
-    """
-    Build a simple touched-schema diagram:
-    Query -> Entry -> Cluster -> Field [FILTER/OUTPUT/SORT]
-    """
-    touched = build_touched_paths(criteria, output_fields, sort_state)
+    if mode in ("all", "criteria"):
+        for c in criteria:
+            add_item("filter", c)
 
-    lines = [
-        'digraph G {',
-        'rankdir=TB;',
-        'node [fontname="Helvetica", fontsize=11];',
-        'edge [color="#666666"];'
-    ]
+    if mode in ("all", "output"):
+        for o in outputs:
+            add_item("output", o)
 
-    root_id = "query_root"
-    lines.append(f'{root_id} [label="Query", shape=box, style="filled", fillcolor="#DCEEFF"];')
+    if mode in ("all", "output", "advanced") and sort_state:
+        add_item("sort", sort_state)
 
-    seen_entries = set()
-    seen_clusters = set()
-    seen_fields = set()
+    for entry_name, clusters in groups.items():
+        entry_node = f"entry_{abs(hash(entry_name))}"
+        dot.node(
+            entry_node,
+            entry_name,
+            shape="box",
+            style="rounded,filled",
+            fillcolor="#FFF4CC"
+        )
+        dot.edge(root, entry_node)
 
-    for t in touched:
-        entry_name = t["entry_name"]
-        cluster = t["cluster_path_str"]
-        element = t["element_name"]
-        role = t["role"]
+        for cluster_label, items in clusters.items():
+            cluster_node = f"{entry_node}_{abs(hash(cluster_label))}"
+            dot.node(
+                cluster_node,
+                cluster_label,
+                shape="ellipse",
+                style="filled",
+                fillcolor="#E8F0FE"
+            )
+            dot.edge(entry_node, cluster_node)
 
-        entry_id = _node_id(f"entry_{entry_name}")
-        cluster_id = _node_id(f"{entry_id}_{cluster}")
-        field_id = _node_id(f"{cluster_id}_{element}_{role}")
+            for idx, (kind, field, item) in enumerate(items):
+                leaf_node = f"{cluster_node}_{idx}"
 
-        if entry_id not in seen_entries:
-            lines.append(f'{entry_id} [label="{entry_name}", shape=box, style="rounded,filled", fillcolor="#EAF7E6"];')
-            lines.append(f"{root_id} -> {entry_id};")
-            seen_entries.add(entry_id)
+                if kind == "filter":
+                    op = item.get("operator", "")
+                    val = item.get("value", "")
+                    if op in ("is_known", "is_unknown"):
+                        label = f"{field}\\n[{op}]"
+                    else:
+                        label = f"{field}\\n[{op}] {val}"
+                    color = "#FCE8E6"
 
-        if cluster_id not in seen_clusters:
-            cluster_label = cluster.replace('"', "'")
-            lines.append(f'{cluster_id} [label="{cluster_label}", shape=ellipse, style="filled", fillcolor="#FFF4D6"];')
-            lines.append(f"{entry_id} -> {cluster_id};")
-            seen_clusters.add(cluster_id)
+                elif kind == "output":
+                    label = f"{field}\\n[output]"
+                    color = "#E6F4EA"
 
-        if field_id not in seen_fields:
-            suffix = role
-            if role == "FILTER":
-                suffix = f"FILTER\\n{t.get('operator','')} {t.get('value','')}"
-            elif role == "SORT":
-                suffix = f"SORT\\n{t.get('direction','asc')}"
+                else:
+                    label = f"{field}\\n[sort: {item.get('direction', 'asc')}]"
+                    color = "#EDE7F6"
 
-            label = f"{element}\\n[{suffix}]".replace('"', "'")
-            fill = "#FDE2E4" if role == "FILTER" else ("#E7F0FF" if role == "OUTPUT" else "#E8EAF6")
-            lines.append(f'{field_id} [label="{label}", shape=box, style="filled", fillcolor="{fill}"];')
-            lines.append(f"{cluster_id} -> {field_id};")
-            seen_fields.add(field_id)
+                dot.node(
+                    leaf_node,
+                    label,
+                    shape="note",
+                    style="filled",
+                    fillcolor=color
+                )
+                dot.edge(cluster_node, leaf_node)
 
-    lines.append("}")
-    return "\n".join(lines)
+    # Advanced execution settings block
+    if mode in ("all", "advanced"):
+        exec_lines = []
+        if advanced:
+            exec_lines.append(f"Occurrence semantics: {advanced.get('occurrence_semantics', 'ALL')}")
+            exec_lines.append(f"Include unknown: {'Yes' if advanced.get('include_unknown', False) else 'No'}")
+            exec_lines.append(f"Slice size: {advanced.get('slice_size', '')}")
+            exec_lines.append(f"Result limit: {advanced.get('result_limit', '')}")
+
+        if exec_lines:
+            exec_node = "execution_settings"
+            dot.node(
+                exec_node,
+                "\\n".join(exec_lines),
+                shape="box",
+                style="rounded,filled",
+                fillcolor="#F3E5F5"
+            )
+            dot.edge(root, exec_node)
+
+    return dot
