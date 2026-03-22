@@ -27,7 +27,7 @@ m_table/TPC-H V3.0.1/ref_data
 # **.tbl**
 
 # Ignore orbda directory and related files
-/dataset/**
+/dataset/orbda_**
 orbda
 .orbda
 /orbda
