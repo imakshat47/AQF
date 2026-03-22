@@ -1,0 +1,56 @@
+# To ignore all node_modules folders
+**/node_modules/
+
+# caches
+**/.cache
+**/__pycache__/
+
+# To ignore all .env files in any directory or subdirectory 
+**/.env
+**/venv
+
+# Log Files 
+**/log**
+**/logs
+
+# ignore google drive
+**/.tmp**
+
+# Ignore node_modules directory in m_table
+m_table/node_modules/
+
+# # Ignore TPC-H reference data
+m_table/ak_code/tpch.orders-10mb_total_embed.json
+m_table/TPC-H V3.0.1/ref_data
+# m_table/TPC-H V3.0.1/dbgen/lineitem.tbl
+# m_table/TPC-H V3.0.1/dbgen/*.tbl
+# **.tbl**
+
+# Ignore orbda directory and related files
+/dataset/**
+orbda
+.orbda
+/orbda
+**/orbda_10k/**
+**/dataset_orbda/**
+# **orbda**
+
+# Ignore part0 file
+part0
+
+# Ignore files and directories in sus-openehr-builder
+sus-openehr-builder/aih*
+sus-openehr-builder/ehr*
+sus-openehr-builder/patientIds/
+
+#sus-openehr-builder/
+#sus-openehr-builder/ehr/*
+#sus-openehr-builder/aih_dir/aih_n_aih.txt
+
+# QBDHN
+QBDNH/tpch.tpch_c1_v1.json
+QBDNH/tpch.tpch_c2_v1.json
+
+
+# Macosx
+__MACOSX

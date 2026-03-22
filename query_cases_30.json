@@ -1,0 +1,1412 @@
+[
+  {
+    "name": "simple_01_state_equals_sp",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "value": "SÃO PAULO"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "name": "HCPA → General data → State",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "simple_02_state_equals_rj",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "value": "RIO DE JANEIRO"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "name": "HCPA → General data → State",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "simple_03_reason_equals_quimio",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|reason for encounter|at0010",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "reason for encounter",
+          "value": "QUIMIOTERAPIA"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|reason for encounter|at0010",
+          "name": "HCPA → General data → reason for encounter",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "reason for encounter",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "simple_04_reason_equals_radio",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|reason for encounter|at0010",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "reason for encounter",
+          "value": "RADIOTERAPIA"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|reason for encounter|at0010",
+          "name": "HCPA → General data → reason for encounter",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "reason for encounter",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "simple_05_patient_age_gt_70",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|patient age|at0012",
+          "operator": ">",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "patient age",
+          "value": 70
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|patient age|at0012",
+          "name": "HCPA → General data → patient age",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "patient age",
+          "dv_type": "DV_COUNT"
+        }
+      ],
+      "sort": {
+        "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|patient age|at0012",
+        "direction": "desc",
+        "entry_name": "HCPA",
+        "cluster_path_str": "General data",
+        "element_name": "patient age"
+      },
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "simple_06_chemo_schema_contains_tmx",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|chemotherapy|schema|at0014",
+          "operator": "contains",
+          "entry_name": "HCPA",
+          "cluster_path_str": "chemotherapy",
+          "element_name": "schema",
+          "value": "TMX"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|chemotherapy|schema|at0014",
+          "name": "HCPA → chemotherapy → schema",
+          "entry_name": "HCPA",
+          "cluster_path_str": "chemotherapy",
+          "element_name": "schema",
+          "dv_type": "DV_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "simple_07_procedure_contains_radioterapia",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ACTION.procedure-sus.v1|(no cluster)|Procedure|at0002",
+          "operator": "contains",
+          "entry_name": "Procedure undertaken",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Procedure",
+          "value": "RADIOTERAPIA"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ACTION.procedure-sus.v1|(no cluster)|Procedure|at0002",
+          "name": "Procedure undertaken → Procedure",
+          "entry_name": "Procedure undertaken",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Procedure",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "simple_08_problem_contains_c50_9",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Problem|at0002.1",
+          "operator": "contains",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Problem",
+          "value": "C50.9"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Problem|at0002.1",
+          "name": "Problem/Diagnosis → Problem",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Problem",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "simple_09_clinical_staging_equals_3",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging / Clinical (cTNM)|Clinical staging|at0010",
+          "operator": "=",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging / Clinical (cTNM)",
+          "element_name": "Clinical staging",
+          "value": "3"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging / Clinical (cTNM)|Clinical staging|at0010",
+          "name": "Problem/Diagnosis → Tumour - TNM Cancer staging / Clinical (cTNM) → Clinical staging",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging / Clinical (cTNM)",
+          "element_name": "Clinical staging",
+          "dv_type": "DV_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "simple_10_regional_lymph_nodes_true",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Invaded regional linphonodes|at0.4",
+          "operator": "=",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Invaded regional linphonodes",
+          "value": "true"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Invaded regional linphonodes|at0.4",
+          "name": "Problem/Diagnosis → Invaded regional linphonodes",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Invaded regional linphonodes",
+          "dv_type": "DV_BOOLEAN"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "medium_01_state_sp_and_radioterapia",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "value": "SÃO PAULO"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|reason for encounter|at0010",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "reason for encounter",
+          "value": "RADIOTERAPIA"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "name": "HCPA → General data → State",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "dv_type": "DV_CODED_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|reason for encounter|at0010",
+          "name": "HCPA → General data → reason for encounter",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "reason for encounter",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "medium_02_state_rj_and_quimioterapia",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "value": "RIO DE JANEIRO"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|reason for encounter|at0010",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "reason for encounter",
+          "value": "QUIMIOTERAPIA"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "name": "HCPA → General data → State",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "dv_type": "DV_CODED_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|reason for encounter|at0010",
+          "name": "HCPA → General data → reason for encounter",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "reason for encounter",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "medium_03_age_gt_60_and_state_pr",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|patient age|at0012",
+          "operator": ">",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "patient age",
+          "value": 60
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "value": "PARANÁ"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|patient age|at0012",
+          "name": "HCPA → General data → patient age",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "patient age",
+          "dv_type": "DV_COUNT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "name": "HCPA → General data → State",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": {
+        "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|patient age|at0012",
+        "direction": "desc",
+        "entry_name": "HCPA",
+        "cluster_path_str": "General data",
+        "element_name": "patient age"
+      },
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "medium_04_chemo_tmx_and_duration_gt_12",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|chemotherapy|schema|at0014",
+          "operator": "contains",
+          "entry_name": "HCPA",
+          "cluster_path_str": "chemotherapy",
+          "element_name": "schema",
+          "value": "TMX"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|chemotherapy|duration of treatment|at0013",
+          "operator": ">",
+          "entry_name": "HCPA",
+          "cluster_path_str": "chemotherapy",
+          "element_name": "duration of treatment",
+          "value": 12
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|chemotherapy|schema|at0014",
+          "name": "HCPA → chemotherapy → schema",
+          "entry_name": "HCPA",
+          "cluster_path_str": "chemotherapy",
+          "element_name": "schema",
+          "dv_type": "DV_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|chemotherapy|duration of treatment|at0013",
+          "name": "HCPA → chemotherapy → duration of treatment",
+          "entry_name": "HCPA",
+          "cluster_path_str": "chemotherapy",
+          "element_name": "duration of treatment",
+          "dv_type": "DV_QUANTITY"
+        }
+      ],
+      "sort": {
+        "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|chemotherapy|duration of treatment|at0013",
+        "direction": "desc",
+        "entry_name": "HCPA",
+        "cluster_path_str": "chemotherapy",
+        "element_name": "duration of treatment"
+      },
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "medium_05_problem_c50_9_and_stage_3",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Problem|at0002.1",
+          "operator": "contains",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Problem",
+          "value": "C50.9"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging / Clinical (cTNM)|Clinical staging|at0010",
+          "operator": "=",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging / Clinical (cTNM)",
+          "element_name": "Clinical staging",
+          "value": "3"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Problem|at0002.1",
+          "name": "Problem/Diagnosis → Problem",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Problem",
+          "dv_type": "DV_CODED_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging / Clinical (cTNM)|Clinical staging|at0010",
+          "name": "Problem/Diagnosis → Tumour - TNM Cancer staging / Clinical (cTNM) → Clinical staging",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging / Clinical (cTNM)",
+          "element_name": "Clinical staging",
+          "dv_type": "DV_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "medium_06_problem_c53_9_and_procedure_radio",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Problem|at0002.1",
+          "operator": "contains",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Problem",
+          "value": "C53.9"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ACTION.procedure-sus.v1|(no cluster)|Procedure|at0002",
+          "operator": "contains",
+          "entry_name": "Procedure undertaken",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Procedure",
+          "value": "RADIOTERAPIA"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Problem|at0002.1",
+          "name": "Problem/Diagnosis → Problem",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Problem",
+          "dv_type": "DV_CODED_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ACTION.procedure-sus.v1|(no cluster)|Procedure|at0002",
+          "name": "Procedure undertaken → Procedure",
+          "entry_name": "Procedure undertaken",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Procedure",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "medium_07_discharge_evasao_and_state_sp",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.patient_discharge.v1|(no cluster)|reason for discharge|at0003",
+          "operator": "contains",
+          "entry_name": "Patient discharge",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "reason for discharge",
+          "value": "evasão"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "value": "SÃO PAULO"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.patient_discharge.v1|(no cluster)|reason for discharge|at0003",
+          "name": "Patient discharge → reason for discharge",
+          "entry_name": "Patient discharge",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "reason for discharge",
+          "dv_type": "DV_CODED_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "name": "HCPA → General data → State",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "medium_08_path_grade_unknown_and_problem_c50_9",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging / Pathological (pTNM)|Histopathological grading (G)|at0035",
+          "operator": "is_unknown",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging / Pathological (pTNM)",
+          "element_name": "Histopathological grading (G)"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Problem|at0002.1",
+          "operator": "contains",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Problem",
+          "value": "C50.9"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging / Pathological (pTNM)|Histopathological grading (G)|at0035",
+          "name": "Problem/Diagnosis → Tumour - TNM Cancer staging / Pathological (pTNM) → Histopathological grading (G)",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging / Pathological (pTNM)",
+          "element_name": "Histopathological grading (G)",
+          "dv_type": "NULL_FLAVOUR"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Problem|at0002.1",
+          "name": "Problem/Diagnosis → Problem",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Problem",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "medium_09_topography_c50_9_and_lymph_true",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging|topography|at0.43",
+          "operator": "contains",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging",
+          "element_name": "topography",
+          "value": "C50.9"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Invaded regional linphonodes|at0.4",
+          "operator": "=",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Invaded regional linphonodes",
+          "value": "true"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging|topography|at0.43",
+          "name": "Problem/Diagnosis → Tumour - TNM Cancer staging → topography",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging",
+          "element_name": "topography",
+          "dv_type": "DV_CODED_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Invaded regional linphonodes|at0.4",
+          "name": "Problem/Diagnosis → Invaded regional linphonodes",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Invaded regional linphonodes",
+          "dv_type": "DV_BOOLEAN"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "medium_10_radio_start_after_2011",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|reason for encounter|at0010",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "reason for encounter",
+          "value": "RADIOTERAPIA"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|radiotherapy|date of beginning of radiotherapy|at0032",
+          "operator": ">",
+          "entry_name": "HCPA",
+          "cluster_path_str": "radiotherapy",
+          "element_name": "date of beginning of radiotherapy",
+          "value": "2011-01-01"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|reason for encounter|at0010",
+          "name": "HCPA → General data → reason for encounter",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "reason for encounter",
+          "dv_type": "DV_CODED_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|radiotherapy|date of beginning of radiotherapy|at0032",
+          "name": "HCPA → radiotherapy → date of beginning of radiotherapy",
+          "entry_name": "HCPA",
+          "cluster_path_str": "radiotherapy",
+          "element_name": "date of beginning of radiotherapy",
+          "dv_type": "DV_DATE"
+        }
+      ],
+      "sort": {
+        "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|radiotherapy|date of beginning of radiotherapy|at0032",
+        "direction": "desc",
+        "entry_name": "HCPA",
+        "cluster_path_str": "radiotherapy",
+        "element_name": "date of beginning of radiotherapy"
+      },
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "hard_01_transplant_true_and_number_one",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|transplantation|indicator of transplantation|at0029",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "transplantation",
+          "element_name": "indicator of transplantation",
+          "value": "true"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|transplantation|number of transplantations|at0022",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "transplantation",
+          "element_name": "number of transplantations",
+          "value": 1
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|transplantation|indicator of transplantation|at0029",
+          "name": "HCPA → transplantation → indicator of transplantation",
+          "entry_name": "HCPA",
+          "cluster_path_str": "transplantation",
+          "element_name": "indicator of transplantation",
+          "dv_type": "DV_BOOLEAN"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|transplantation|number of transplantations|at0022",
+          "name": "HCPA → transplantation → number of transplantations",
+          "entry_name": "HCPA",
+          "cluster_path_str": "transplantation",
+          "element_name": "number of transplantations",
+          "dv_type": "DV_COUNT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "hard_02_renal_dialysis_known_ultrasound_false",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|renal therapy|date of first dialysis|at0030",
+          "operator": "is_known",
+          "entry_name": "HCPA",
+          "cluster_path_str": "renal therapy",
+          "element_name": "date of first dialysis"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|renal therapy|abdominal ultrasonography|at0026",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "renal therapy",
+          "element_name": "abdominal ultrasonography",
+          "value": "false"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|renal therapy|date of first dialysis|at0030",
+          "name": "HCPA → renal therapy → date of first dialysis",
+          "entry_name": "HCPA",
+          "cluster_path_str": "renal therapy",
+          "element_name": "date of first dialysis",
+          "dv_type": "DV_DATE"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|renal therapy|abdominal ultrasonography|at0026",
+          "name": "HCPA → renal therapy → abdominal ultrasonography",
+          "entry_name": "HCPA",
+          "cluster_path_str": "renal therapy",
+          "element_name": "abdominal ultrasonography",
+          "dv_type": "DV_BOOLEAN"
+        }
+      ],
+      "sort": {
+        "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|renal therapy|date of first dialysis|at0030",
+        "direction": "desc",
+        "entry_name": "HCPA",
+        "cluster_path_str": "renal therapy",
+        "element_name": "date of first dialysis"
+      },
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "hard_03_bari_followup_gt_6_bmi_gt_40",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.bariatric_surgery_evaluation.v1|(no cluster)|duration of follow-up (months)|at0002",
+          "operator": ">",
+          "entry_name": "Bariatric surgery evaluation",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "duration of follow-up (months)",
+          "value": 6
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-OBSERVATION.body_mass_index.v1|(no cluster)|Body Mass Index|at0004",
+          "operator": ">",
+          "entry_name": "Body mass index",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Body Mass Index",
+          "value": 40
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.bariatric_surgery_evaluation.v1|(no cluster)|duration of follow-up (months)|at0002",
+          "name": "Bariatric surgery evaluation → duration of follow-up (months)",
+          "entry_name": "Bariatric surgery evaluation",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "duration of follow-up (months)",
+          "dv_type": "DV_COUNT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-OBSERVATION.body_mass_index.v1|(no cluster)|Body Mass Index|at0004",
+          "name": "Body mass index → Body Mass Index",
+          "entry_name": "Body mass index",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Body Mass Index",
+          "dv_type": "DV_QUANTITY"
+        }
+      ],
+      "sort": {
+        "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.bariatric_surgery_evaluation.v1|(no cluster)|duration of follow-up (months)|at0002",
+        "direction": "desc",
+        "entry_name": "Bariatric surgery evaluation",
+        "cluster_path_str": "(no cluster)",
+        "element_name": "duration of follow-up (months)"
+      },
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "hard_04_state_sp_reason_quimio_age_gt_60",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "value": "SÃO PAULO"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|reason for encounter|at0010",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "reason for encounter",
+          "value": "QUIMIOTERAPIA"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|patient age|at0012",
+          "operator": ">",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "patient age",
+          "value": 60
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "name": "HCPA → General data → State",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "dv_type": "DV_CODED_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|patient age|at0012",
+          "name": "HCPA → General data → patient age",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "patient age",
+          "dv_type": "DV_COUNT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|reason for encounter|at0010",
+          "name": "HCPA → General data → reason for encounter",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "reason for encounter",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": {
+        "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|patient age|at0012",
+        "direction": "desc",
+        "entry_name": "HCPA",
+        "cluster_path_str": "General data",
+        "element_name": "patient age"
+      },
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "hard_05_state_rj_reason_radio_problem_c53_9",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "value": "RIO DE JANEIRO"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|reason for encounter|at0010",
+          "operator": "=",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "reason for encounter",
+          "value": "RADIOTERAPIA"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Problem|at0002.1",
+          "operator": "contains",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Problem",
+          "value": "C53.9"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|State|at0028",
+          "name": "HCPA → General data → State",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "State",
+          "dv_type": "DV_CODED_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|General data|reason for encounter|at0010",
+          "name": "HCPA → General data → reason for encounter",
+          "entry_name": "HCPA",
+          "cluster_path_str": "General data",
+          "element_name": "reason for encounter",
+          "dv_type": "DV_CODED_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Problem|at0002.1",
+          "name": "Problem/Diagnosis → Problem",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Problem",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "hard_06_problem_c50_9_stage_3_lymph_true",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Problem|at0002.1",
+          "operator": "contains",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Problem",
+          "value": "C50.9"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging / Clinical (cTNM)|Clinical staging|at0010",
+          "operator": "=",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging / Clinical (cTNM)",
+          "element_name": "Clinical staging",
+          "value": "3"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Invaded regional linphonodes|at0.4",
+          "operator": "=",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Invaded regional linphonodes",
+          "value": "true"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Problem|at0002.1",
+          "name": "Problem/Diagnosis → Problem",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Problem",
+          "dv_type": "DV_CODED_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging / Clinical (cTNM)|Clinical staging|at0010",
+          "name": "Problem/Diagnosis → Tumour - TNM Cancer staging / Clinical (cTNM) → Clinical staging",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging / Clinical (cTNM)",
+          "element_name": "Clinical staging",
+          "dv_type": "DV_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|(no cluster)|Invaded regional linphonodes|at0.4",
+          "name": "Problem/Diagnosis → Invaded regional linphonodes",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Invaded regional linphonodes",
+          "dv_type": "DV_BOOLEAN"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "hard_07_chemo_tmx_duration_gt_12_start_after_2011",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|chemotherapy|schema|at0014",
+          "operator": "contains",
+          "entry_name": "HCPA",
+          "cluster_path_str": "chemotherapy",
+          "element_name": "schema",
+          "value": "TMX"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|chemotherapy|duration of treatment|at0013",
+          "operator": ">",
+          "entry_name": "HCPA",
+          "cluster_path_str": "chemotherapy",
+          "element_name": "duration of treatment",
+          "value": 12
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|chemotherapy|date of beginning of chemotherapy|at0031",
+          "operator": ">",
+          "entry_name": "HCPA",
+          "cluster_path_str": "chemotherapy",
+          "element_name": "date of beginning of chemotherapy",
+          "value": "2011-01-01"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|chemotherapy|schema|at0014",
+          "name": "HCPA → chemotherapy → schema",
+          "entry_name": "HCPA",
+          "cluster_path_str": "chemotherapy",
+          "element_name": "schema",
+          "dv_type": "DV_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|chemotherapy|duration of treatment|at0013",
+          "name": "HCPA → chemotherapy → duration of treatment",
+          "entry_name": "HCPA",
+          "cluster_path_str": "chemotherapy",
+          "element_name": "duration of treatment",
+          "dv_type": "DV_QUANTITY"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|chemotherapy|date of beginning of chemotherapy|at0031",
+          "name": "HCPA → chemotherapy → date of beginning of chemotherapy",
+          "entry_name": "HCPA",
+          "cluster_path_str": "chemotherapy",
+          "element_name": "date of beginning of chemotherapy",
+          "dv_type": "DV_DATE"
+        }
+      ],
+      "sort": {
+        "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1|chemotherapy|date of beginning of chemotherapy|at0031",
+        "direction": "desc",
+        "entry_name": "HCPA",
+        "cluster_path_str": "chemotherapy",
+        "element_name": "date of beginning of chemotherapy"
+      },
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "hard_08_procedure_radio_and_irrad1_c50_9",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ACTION.procedure-sus.v1|(no cluster)|Procedure|at0002",
+          "operator": "contains",
+          "entry_name": "Procedure undertaken",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Procedure",
+          "value": "RADIOTERAPIA"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ACTION.procedure-sus.v1|(no cluster)|irradiated area 1|at0.59",
+          "operator": "contains",
+          "entry_name": "Procedure undertaken",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "irradiated area 1",
+          "value": "C50.9"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ACTION.procedure-sus.v1|(no cluster)|Procedure|at0002",
+          "name": "Procedure undertaken → Procedure",
+          "entry_name": "Procedure undertaken",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "Procedure",
+          "dv_type": "DV_CODED_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ACTION.procedure-sus.v1|(no cluster)|irradiated area 1|at0.59",
+          "name": "Procedure undertaken → irradiated area 1",
+          "entry_name": "Procedure undertaken",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "irradiated area 1",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "hard_09_discharge_date_unknown_reason_alta",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.patient_discharge.v1|(no cluster)|date of discharge|at0002",
+          "operator": "is_unknown",
+          "entry_name": "Patient discharge",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "date of discharge"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.patient_discharge.v1|(no cluster)|reason for discharge|at0003",
+          "operator": "contains",
+          "entry_name": "Patient discharge",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "reason for discharge",
+          "value": "Alta"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.patient_discharge.v1|(no cluster)|date of discharge|at0002",
+          "name": "Patient discharge → date of discharge",
+          "entry_name": "Patient discharge",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "date of discharge",
+          "dv_type": "NULL_FLAVOUR"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-ADMIN_ENTRY.patient_discharge.v1|(no cluster)|reason for discharge|at0003",
+          "name": "Patient discharge → reason for discharge",
+          "entry_name": "Patient discharge",
+          "cluster_path_str": "(no cluster)",
+          "element_name": "reason for discharge",
+          "dv_type": "DV_CODED_TEXT"
+        }
+      ],
+      "sort": null,
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  },
+  {
+    "name": "hard_10_topography_c50_9_path_grade_unknown_path_date_after_2010",
+    "form_state": {
+      "criteria": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging|topography|at0.43",
+          "operator": "contains",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging",
+          "element_name": "topography",
+          "value": "C50.9"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging / Pathological (pTNM)|Histopathological grading (G)|at0035",
+          "operator": "is_unknown",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging / Pathological (pTNM)",
+          "element_name": "Histopathological grading (G)"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging / Pathological (pTNM)|date of pathological identification|at0.44",
+          "operator": ">",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging / Pathological (pTNM)",
+          "element_name": "date of pathological identification",
+          "value": "2010-01-01"
+        }
+      ],
+      "output_fields": [
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging|topography|at0.43",
+          "name": "Problem/Diagnosis → Tumour - TNM Cancer staging → topography",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging",
+          "element_name": "topography",
+          "dv_type": "DV_CODED_TEXT"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging / Pathological (pTNM)|Histopathological grading (G)|at0035",
+          "name": "Problem/Diagnosis → Tumour - TNM Cancer staging / Pathological (pTNM) → Histopathological grading (G)",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging / Pathological (pTNM)",
+          "element_name": "Histopathological grading (G)",
+          "dv_type": "NULL_FLAVOUR"
+        },
+        {
+          "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging / Pathological (pTNM)|date of pathological identification|at0.44",
+          "name": "Problem/Diagnosis → Tumour - TNM Cancer staging / Pathological (pTNM) → date of pathological identification",
+          "entry_name": "Problem/Diagnosis",
+          "cluster_path_str": "Tumour - TNM Cancer staging / Pathological (pTNM)",
+          "element_name": "date of pathological identification",
+          "dv_type": "DV_DATE"
+        }
+      ],
+      "sort": {
+        "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging / Pathological (pTNM)|date of pathological identification|at0.44",
+        "direction": "desc",
+        "entry_name": "Problem/Diagnosis",
+        "cluster_path_str": "Tumour - TNM Cancer staging / Pathological (pTNM)",
+        "element_name": "date of pathological identification"
+      },
+      "advanced": {
+        "occurrence_semantics": "ALL",
+        "include_unknown": false,
+        "slice_size": 200,
+        "result_limit": 100
+      }
+    }
+  }
+]
