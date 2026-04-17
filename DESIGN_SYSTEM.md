@@ -4,8 +4,8 @@ This project now includes a reusable UI design system for Streamlit:
 
 - `styles/design_tokens.py`: centralized color/spacing/typography tokens
 - `styles/custom.css`: shared visual styles, responsive tweaks, transitions, focus states
-- `utils/theme_manager.py`: theme state and safe CSS injection
-- `utils/ui_helpers.py`: shared UI HTML generators
+- `ui_utils/theme_manager.py`: theme state and safe CSS injection
+- `ui_utils/ui_helpers.py`: shared UI HTML generators
 - `components/`: reusable cards, badges, funnel/table/query preview blocks
 - `pages/`: page-level render helpers for header, query builder preview, and results
 

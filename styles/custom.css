@@ -79,7 +79,9 @@ html, body, [class*="css"] {
 .aqf-alert {
   border-left: 4px solid var(--aqf-color-primary);
   border-radius: 8px;
-  border: 1px solid var(--aqf-border);
+  border-top: 1px solid var(--aqf-border);
+  border-right: 1px solid var(--aqf-border);
+  border-bottom: 1px solid var(--aqf-border);
   padding: 8px 12px;
   margin-bottom: 8px;
 }

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from html import escape
+from typing import Any
 
 import streamlit as st
 
@@ -49,9 +50,8 @@ def filter_chip_html(label: str) -> str:
     return f"<span class='aqf-chip'>{escape(label)}</span>"
 
 
-def loading_spinner(text: str = "Loading...") -> None:
-    with st.spinner(text):
-        st.write("")
+def loading_spinner(text: str = "Loading...") -> Any:
+    return st.spinner(text)
 
 
 def render_html(html: str) -> None:

@@ -557,13 +557,13 @@ with st.expander("Schema structure overview", expanded=False):
     st.graphviz_chart(dot)
 
 # Tabs
-qb_left, qb_right = st.columns([2.2, 1.0])
-with qb_left:
+query_builder_main, query_builder_sidebar = st.columns([2.2, 1.0])
+with query_builder_main:
     tab_criteria, tab_output, tab_advanced, tab_results = st.tabs(
         ["Criteria", "Output", "Advanced", "Results"]
     )
 
-with qb_right:
+with query_builder_sidebar:
     render_query_builder_preview(
         criteria=st.session_state.active_criteria,
         outputs=st.session_state.active_output,

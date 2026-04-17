@@ -1,11 +1,13 @@
 from __future__ import annotations
 
+from collections.abc import Callable
+
 import streamlit as st
 
 from components.status_badge import render_status_badge
 
 
-def render_header(dataset_folder: str, composition_archetype: str, built_at: str | None, record_count: int, on_refresh: callable, on_reset_filters: callable, on_reset_outputs: callable, on_toggle_theme: callable) -> None:
+def render_header(dataset_folder: str, composition_archetype: str, built_at: str | None, record_count: int, on_refresh: Callable[[], None], on_reset_filters: Callable[[], None], on_reset_outputs: Callable[[], None], on_toggle_theme: Callable[[], None]) -> None:
     st.markdown("<div class='aqf-header'>", unsafe_allow_html=True)
     c1, c2, c3, c4 = st.columns([2.6, 1.4, 1.2, 1.2])
 

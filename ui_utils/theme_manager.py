@@ -13,7 +13,11 @@ def hex_to_rgb(hex_color: str) -> tuple[int, int, int]:
     value = hex_color.strip().lstrip("#")
     if len(value) != 6:
         raise ValueError(f"Invalid hex color: {hex_color}")
-    return tuple(int(value[i:i + 2], 16) for i in (0, 2, 4))
+    return (
+        int(value[0:2], 16),
+        int(value[2:4], 16),
+        int(value[4:6], 16),
+    )
 
 
 def rgba(hex_color: str, alpha: float) -> str:
@@ -29,7 +33,8 @@ def initialize_theme_state(default_mode: str = "light") -> str:
 
 def toggle_theme() -> str:
     initialize_theme_state()
-    st.session_state.theme_mode = "dark" if st.session_state.theme_mode == "light" else "light"
+    next_mode = {"light": "dark", "dark": "light"}
+    st.session_state.theme_mode = next_mode.get(st.session_state.theme_mode, "light")
     return st.session_state.theme_mode
 
 
