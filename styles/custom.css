@@ -1,0 +1,119 @@
+:root {
+  --aqf-space-1: 4px;
+  --aqf-space-2: 8px;
+  --aqf-space-3: 12px;
+  --aqf-space-4: 16px;
+  --aqf-space-5: 24px;
+  --aqf-space-6: 32px;
+  --aqf-transition-fast: all 150ms ease;
+  --aqf-transition-base: all 200ms ease;
+  --aqf-transition-slow: all 300ms ease;
+}
+
+html, body, [class*="css"] {
+  font-family: Inter, Poppins, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.stApp {
+  background: var(--aqf-bg);
+  color: var(--aqf-text);
+}
+
+.aqf-header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--aqf-surface);
+  border: 1px solid var(--aqf-border);
+  border-radius: 12px;
+  box-shadow: var(--aqf-shadow);
+  padding: var(--aqf-space-4);
+  margin-bottom: var(--aqf-space-5);
+}
+
+.aqf-card {
+  background: var(--aqf-surface);
+  border: 1px solid var(--aqf-border);
+  border-radius: 12px;
+  padding: var(--aqf-space-4);
+  box-shadow: 0 1px 2px rgba(17,24,39,0.06);
+  transition: var(--aqf-transition-base);
+}
+
+.aqf-card:hover {
+  box-shadow: 0 12px 28px rgba(17,24,39,0.10);
+}
+
+.aqf-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 9999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  border: 1px solid var(--aqf-border);
+}
+
+.aqf-chip {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  margin: 2px 4px 2px 0;
+  background: #eef3ff;
+  border: 1px solid #c7d7ff;
+  font-size: 12px;
+}
+
+.aqf-panel-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.aqf-preview-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.aqf-alert {
+  border-left: 4px solid var(--aqf-color-primary);
+  border-radius: 8px;
+  border-top: 1px solid var(--aqf-border);
+  border-right: 1px solid var(--aqf-border);
+  border-bottom: 1px solid var(--aqf-border);
+  padding: 8px 12px;
+  margin-bottom: 8px;
+}
+
+.aqf-metric {
+  border-radius: 12px;
+  border: 1px solid var(--aqf-border);
+  padding: 12px;
+  background: var(--aqf-surface);
+}
+
+.stButton > button {
+  border-radius: 10px;
+  transition: var(--aqf-transition-base);
+}
+
+.stButton > button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.25);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--aqf-color-primary) !important;
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .aqf-header {
+    padding: 12px;
+  }
+
+  .stButton > button {
+    min-height: 44px;
+  }
+}

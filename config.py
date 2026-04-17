@@ -5,6 +5,15 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 
 # -----------------------------
+# UI / design system
+# -----------------------------
+STYLES_DIR = BASE_DIR / "styles"
+CUSTOM_CSS_FILE = STYLES_DIR / "custom.css"
+DEFAULT_THEME_MODE = "light"
+ENABLE_MODERN_UI = True
+ENABLE_DARK_MODE_TOGGLE = True
+
+# -----------------------------
 # Data / cache
 # -----------------------------
 DATA_DIR = BASE_DIR / "dataset/orbda1"

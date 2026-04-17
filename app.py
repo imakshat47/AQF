@@ -7,12 +7,12 @@ from pathlib import Path
 from datetime import datetime
 
 import streamlit as st
-import pandas as pd
 
 from config import (
     DATA_DIR, CACHE_DIR, SCHEMA_UNION_FILE, FIELDS_FILE,
     DEFAULT_SLICE_SIZE, DEFAULT_RESULT_LIMIT, DEFAULT_OCCURRENCE_SEMANTICS,
-    SCHEMA_OVERVIEW_MAX_DEPTH, SCHEMA_GRAPH_DIRECTION, SCHEMA_LEAF_LIMIT
+    SCHEMA_OVERVIEW_MAX_DEPTH, SCHEMA_GRAPH_DIRECTION, SCHEMA_LEAF_LIMIT,
+    CUSTOM_CSS_FILE, DEFAULT_THEME_MODE
 )
 from composition_loader import group_docs_by_composition_archetype
 from schema_union_builder import build_union_schema
@@ -23,8 +23,13 @@ from query_executor import run_query
 from result_formatter import format_results_for_display
 from schema_diagram import build_schema_flow_dot, build_touched_query_dot
 from query_summary import build_query_summary_markdown
+from pages.header import render_header
+from pages.query_builder import render_query_builder_preview, render_query_builder_help
+from pages.results import render_results_dashboard
+from components.alert_box import render_alert_box
+from ui_utils.theme_manager import initialize_theme_state, inject_design_system, toggle_theme
 
-st.set_page_config(page_title="openEHR Accordion Form Builder", layout="wide")
+st.set_page_config(page_title="AQF Query Builder", layout="wide")
 
 SCHEMA_META_FILE = CACHE_DIR / "schema_metadata.json"
 
@@ -424,12 +429,9 @@ def enrich_sort(sort_state, catalog):
 # App init
 # -------------------------------------------------------
 initialize_state()
-
-st.title("openEHR Accordion Form Builder")
-st.caption(
-    "Accordion-based composition form UI with cache-first startup, "
-    "explicit schema rebuild, readable results, query funnel, and touched-schema lineage."
-)
+initialize_theme_state(DEFAULT_THEME_MODE)
+if CUSTOM_CSS_FILE.exists():
+    inject_design_system(CUSTOM_CSS_FILE)
 
 # Dataset
 st.markdown("### Dataset")
@@ -474,32 +476,27 @@ union = prepared["union"]
 catalog = prepared["catalog"]
 form = prepared["form"]
 built_at = prepared.get("built_at")
+query_files, _, _ = resolve_runtime_files_for_query(dataset_folder, comp_arch)
+record_count = len(query_files)
 
-# Top controls
-top1, top2, top3, top4, top5 = st.columns([2, 2, 1, 1, 1])
+def _on_refresh_schema():
+    st.session_state.schema_build_token += 1
+    build_or_refresh_schema()
 
-with top1:
-    if st.button("Build / Refresh Schema", key="build_refresh_schema"):
-        st.session_state.schema_build_token += 1
-        build_or_refresh_schema()
 
-with top2:
-    if built_at:
-        st.info(f"Schema last built: {built_at}")
-    else:
-        st.info("Loaded cached schema (build time unavailable).")
+render_header(
+    dataset_folder=dataset_folder,
+    composition_archetype=comp_arch,
+    built_at=built_at,
+    record_count=record_count,
+    on_refresh=_on_refresh_schema,
+    on_reset_filters=reset_filters,
+    on_reset_outputs=reset_outputs,
+    on_toggle_theme=toggle_theme,
+)
 
-with top3:
-    if st.button("Reset Filters", key="reset_filters"):
-        reset_filters()
-
-with top4:
-    if st.button("Reset Outputs", key="reset_outputs"):
-        reset_outputs()
-
-with top5:
-    if st.button("Reset Query", key="reset_query"):
-        reset_query_state()
+if st.button("Reset Query", key="reset_query"):
+    reset_query_state()
 
 if st.button("Reset Schema Cache", key="reset_schema_cache"):
     reset_schema_cache()
@@ -524,11 +521,11 @@ current_sig = signature_of_state(
 )
 
 if st.session_state.last_run_signature is None:
-    st.info("Form ready. Apply filters / output settings, then click **Run Query**.")
+    render_alert_box("Form ready. Apply filters / output settings, then click Run Query.", "info")
 elif st.session_state.last_run_signature != current_sig:
-    st.warning("Form updated — click **Run Query** to execute the latest changes.")
+    render_alert_box("Form updated — click Run Query to execute the latest changes.", "warning")
 else:
-    st.success("Showing results for the last executed query.")
+    render_alert_box("Showing results for the last executed query.", "success")
 
 render_query_chips(
     st.session_state.active_criteria,
@@ -560,9 +557,23 @@ with st.expander("Schema structure overview", expanded=False):
     st.graphviz_chart(dot)
 
 # Tabs
-tab_criteria, tab_output, tab_advanced, tab_results = st.tabs(
-    ["Criteria", "Output", "Advanced", "Results"]
-)
+query_builder_main, query_builder_sidebar = st.columns([2.2, 1.0])
+with query_builder_main:
+    tab_criteria, tab_output, tab_advanced, tab_results = st.tabs(
+        ["Criteria", "Output", "Advanced", "Results"]
+    )
+
+with query_builder_sidebar:
+    render_query_builder_preview(
+        criteria=st.session_state.active_criteria,
+        outputs=st.session_state.active_output,
+        sort_state=st.session_state.sort_state,
+        groups_count=groups_count,
+        subgroups_count=subgroups_count,
+        fields_count=fields_count,
+        estimated_records=st.session_state.last_run_result.get("matched") if st.session_state.last_run_result else None,
+    )
+    render_query_builder_help()
 
 # Criteria tab
 with tab_criteria:
@@ -877,11 +888,17 @@ with tab_results:
 
     if st.session_state.last_run_result:
         out = st.session_state.last_run_result
+        display_df = None
+        if out["rows"]:
+            display_df = format_results_for_display(
+                out["rows"],
+                st.session_state.active_output
+            )
+            if "_source_file" in display_df.columns:
+                visible_cols = [c for c in display_df.columns if c != "_source_file"]
+                display_df = display_df[visible_cols + ["_source_file"]]
 
-        c1, c2, c3 = st.columns(3)
-        c1.metric("Scanned", out.get("scanned", 0))
-        c2.metric("Matched", out.get("matched", 0))
-        c3.metric("Sec / doc", f"{out.get('sec_per_doc', 0.0):.6f}")
+        render_results_dashboard(out, display_df)
 
         st.markdown(
             build_query_summary_markdown(
@@ -891,28 +908,6 @@ with tab_results:
                 st.session_state.active_advanced
             )
         )
-
-        st.markdown("### Query Funnel")
-        funnel = out.get("funnel", [])
-        if funnel:
-            st.dataframe(pd.DataFrame(funnel), use_container_width=True)
-        else:
-            st.caption("No funnel data available.")
-
-        if out["rows"]:
-            display_df = format_results_for_display(
-                out["rows"],
-                st.session_state.active_output
-            )
-
-            visible_cols = [c for c in display_df.columns if c != "_source_file"]
-            st.dataframe(display_df[visible_cols], use_container_width=True)
-
-            with st.expander("Show source file mapping"):
-                if "_source_file" in display_df.columns:
-                    st.dataframe(display_df[["Record", "_source_file"]], use_container_width=True)
-        else:
-            st.info("No matches found.")
 
         st.write("---")
         st.markdown("### Touched schema / query lineage")
