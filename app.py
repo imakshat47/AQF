@@ -23,8 +23,21 @@ from query_executor import run_query
 from result_formatter import format_results_for_display
 from schema_diagram import build_schema_flow_dot, build_touched_query_dot
 from query_summary import build_query_summary_markdown
+from components.alert_box import render_alert_box
+from components.metric_card import render_metric_card
+from pages.header import render_header
+from pages.layout import apply_design_system, initialize_theme_manager, section_close, section_open
+from pages.query_builder import (
+    render_advanced_controls,
+    render_criteria_controls,
+    render_field_cards_for_subgroup,
+    render_output_controls,
+    render_preview_panel,
+    render_query_builder_header,
+)
+from pages.results import render_results_dashboard
 
-st.set_page_config(page_title="openEHR Accordion Form Builder", layout="wide")
+st.set_page_config(page_title="🏥 AQF - openEHR Query Studio", layout="wide")
 
 SCHEMA_META_FILE = CACHE_DIR / "schema_metadata.json"
 
@@ -424,20 +437,17 @@ def enrich_sort(sort_state, catalog):
 # App init
 # -------------------------------------------------------
 initialize_state()
+initialize_theme_manager()
+apply_design_system()
 
-st.title("openEHR Accordion Form Builder")
-st.caption(
-    "Accordion-based composition form UI with cache-first startup, "
-    "explicit schema rebuild, readable results, query funnel, and touched-schema lineage."
-)
-
-# Dataset
-st.markdown("### Dataset")
-st.text_input(
-    "Dataset folder path",
-    key="dataset_folder_input",
-    help="Enter the folder containing your composition JSON files."
-)
+section_open("Dataset Configuration")
+dataset_exp = st.expander("Dataset path and composition setup", expanded=True)
+with dataset_exp:
+    st.text_input(
+        "Dataset folder path",
+        key="dataset_folder_input",
+        help="Enter the folder containing your composition JSON files."
+    )
 
 dataset_folder = st.session_state.dataset_folder_input.strip()
 if not dataset_folder:
@@ -475,31 +485,28 @@ catalog = prepared["catalog"]
 form = prepared["form"]
 built_at = prepared.get("built_at")
 
-# Top controls
-top1, top2, top3, top4, top5 = st.columns([2, 2, 1, 1, 1])
+files_for_meta, _, _ = resolve_runtime_files_for_query(dataset_folder, comp_arch)
+render_header(dataset_folder, comp_arch, len(files_for_meta), built_at)
 
+# Top controls / quick actions
+top1, top2, top3, top4 = st.columns([2, 1, 1, 1])
 with top1:
     if st.button("Build / Refresh Schema", key="build_refresh_schema"):
         st.session_state.schema_build_token += 1
         build_or_refresh_schema()
-
 with top2:
-    if built_at:
-        st.info(f"Schema last built: {built_at}")
-    else:
-        st.info("Loaded cached schema (build time unavailable).")
-
-with top3:
     if st.button("Reset Filters", key="reset_filters"):
         reset_filters()
-
-with top4:
+with top3:
     if st.button("Reset Outputs", key="reset_outputs"):
         reset_outputs()
-
-with top5:
+with top4:
     if st.button("Reset Query", key="reset_query"):
         reset_query_state()
+
+with st.expander("Settings", expanded=False):
+    st.selectbox("Theme mode", ["auto", "light", "dark"], key="aqf_theme_mode")
+    st.caption("Theme mode is persisted in session state for future full light/dark integration.")
 
 if st.button("Reset Schema Cache", key="reset_schema_cache"):
     reset_schema_cache()
@@ -508,12 +515,13 @@ if st.button("Reset Schema Cache", key="reset_schema_cache"):
 # Cache banner
 if st.session_state.schema_loaded_from_cache:
     if st.session_state.cache_loaded_without_validation:
-        st.warning(
+        render_alert_box(
             "Loaded schema from `.cache` without validating the current dataset folder. "
-            "Click **Build / Refresh Schema** if you want to validate/rebuild it."
+            "Click **Build / Refresh Schema** if you want to validate/rebuild it.",
+            kind="warning",
         )
     else:
-        st.success("Loaded schema from cache.")
+        render_alert_box("Loaded schema from cache.", kind="success")
 
 # Status banner
 current_sig = signature_of_state(
@@ -524,13 +532,13 @@ current_sig = signature_of_state(
 )
 
 if st.session_state.last_run_signature is None:
-    st.info("Form ready. Apply filters / output settings, then click **Run Query**.")
+    render_alert_box("Form ready. Apply filters / output settings, then click **Run Query**.", kind="info")
 elif st.session_state.last_run_signature != current_sig:
-    st.warning("Form updated — click **Run Query** to execute the latest changes.")
+    render_alert_box("Form updated — click **Run Query** to execute the latest changes.", kind="warning")
 else:
-    st.success("Showing results for the last executed query.")
+    render_alert_box("Showing results for the last executed query.", kind="success")
 
-render_query_chips(
+render_query_builder_header(
     st.session_state.active_criteria,
     st.session_state.active_output,
     st.session_state.sort_state
@@ -540,15 +548,22 @@ render_query_chips(
 groups_count, subgroups_count, fields_count, suggestion_fields_count, null_fields_count = count_summary(union, catalog)
 
 c1, c2, c3, c4, c5 = st.columns(5)
-c1.metric("Entry groups", groups_count)
-c2.metric("Cluster subgroups", subgroups_count)
-c3.metric("Leaf fields", fields_count)
-c4.metric("Fields with suggestions", suggestion_fields_count)
-c5.metric("Fields supporting unknown", null_fields_count)
+with c1:
+    render_metric_card("Entry groups", groups_count, icon="📊", tone="neutral", caption="Schema sections")
+with c2:
+    render_metric_card("Cluster subgroups", subgroups_count, icon="📁", tone="neutral", caption="Nested clusters")
+with c3:
+    render_metric_card("Leaf fields", fields_count, icon="🏷️", tone="neutral", caption="Selectable fields")
+with c4:
+    render_metric_card("Fields with suggestions", suggestion_fields_count, icon="💡", tone="neutral", caption="Autocomplete ready")
+with c5:
+    render_metric_card("Unknown-capable fields", null_fields_count, icon="❔", tone="neutral", caption="Null flavour support")
 
 with st.expander("Dataset diagnostics", expanded=False):
     st.write(f"Loaded composition archetype from schema: `{comp_arch}`")
     st.write(f"Current dataset folder: `{dataset_folder}`")
+    if built_at:
+        st.write(f"Schema build time: `{built_at}`")
 
 with st.expander("Schema structure overview", expanded=False):
     dot = build_schema_flow_dot(
@@ -558,34 +573,24 @@ with st.expander("Schema structure overview", expanded=False):
         leaf_limit=SCHEMA_LEAF_LIMIT
     )
     st.graphviz_chart(dot)
+section_close()
 
-# Tabs
-tab_criteria, tab_output, tab_advanced, tab_results = st.tabs(
-    ["Criteria", "Output", "Advanced", "Results"]
-)
+section_open("Query Builder")
+left_col, right_col = st.columns([2, 1], gap="large")
 
-# Criteria tab
-with tab_criteria:
+with left_col:
     st.subheader(form["composition_label"])
 
-    with st.form("criteria_form"):
-        search = st.text_input("Search fields by name or cluster", key="criteria_search")
+    with st.form("query_builder_form"):
+        search = render_criteria_controls(form)
         widget_meta = []
 
         for group in form["criteria_groups"]:
             with st.expander(group["group_label"], expanded=(group["group_label"] in ["HCPA", "Problem/Diagnosis"])):
                 for subgroup in group["subgroups"]:
-                    subgroup_label = display_cluster_label(subgroup["label"])
-                    st.markdown(f"**{subgroup_label}**")
-
-                    for fld in subgroup["fields"]:
-                        hay = f"{fld['full_label']} {fld['label']} {subgroup['label']}".lower()
-                        if search and search.lower() not in hay:
-                            continue
-
-                        st.markdown("---")
+                    visible_fields = render_field_cards_for_subgroup(subgroup, search)
+                    for fld in visible_fields:
                         cols = st.columns([1, 2, 2, 4])
-
                         use_key = f"use_{fld['field_key']}"
                         op_key = f"op_{fld['field_key']}"
                         val_key = f"val_{fld['field_key']}"
@@ -597,41 +602,23 @@ with tab_criteria:
                         with cols[1]:
                             op_options = fld["operators"]
                             op_labels = [f"{o['phrase']} ({o['op']})" for o in op_options]
-                            st.selectbox(
-                                "Condition",
-                                op_labels,
-                                key=op_key,
-                                help=fld["tooltip"]
-                            )
+                            st.selectbox("Condition", op_labels, key=op_key, help=fld["tooltip"])
 
                         with cols[2]:
                             mode = fld.get("suggestion_mode", "none")
                             suggestions = fld.get("suggested_values", [])
-
                             if mode in ("categorical", "boolean") and suggestions:
                                 st.selectbox(
-                                    fld["label"],
+                                    "Value",
                                     ["<Enter custom value>"] + suggestions,
                                     key=suggest_key,
                                     help=fld["tooltip"]
                                 )
-                                st.text_input(
-                                    "Custom value (optional)",
-                                    key=val_key
-                                )
+                                st.text_input("Value", key=val_key)
                             elif mode == "boolean":
-                                st.selectbox(
-                                    fld["label"],
-                                    ["true", "false"],
-                                    key=val_key,
-                                    help=fld["tooltip"]
-                                )
+                                st.selectbox("Value", ["true", "false"], key=val_key, help=fld["tooltip"])
                             else:
-                                st.text_input(
-                                    fld["label"],
-                                    key=val_key,
-                                    help=fld["tooltip"]
-                                )
+                                st.text_input("Value", key=val_key, help=fld["tooltip"])
 
                         with cols[3]:
                             if fld.get("suggested_values"):
@@ -641,193 +628,89 @@ with tab_criteria:
 
                         widget_meta.append(fld)
 
-        apply_criteria = st.form_submit_button("Apply Filters")
+        apply_criteria = st.form_submit_button("➕ Add / Apply Filters")
 
-        if apply_criteria:
-            new_criteria = []
-
-            for fld in widget_meta:
-                use_key = f"use_{fld['field_key']}"
-                op_key = f"op_{fld['field_key']}"
-                val_key = f"val_{fld['field_key']}"
-                suggest_key = f"suggest_{fld['field_key']}"
-
-                if not st.session_state.get(use_key, False):
-                    continue
-
-                op_choice = st.session_state.get(op_key)
-                op_obj = next(
-                    (o for o in fld["operators"] if f"{o['phrase']} ({o['op']})" == op_choice),
-                    None
-                )
-                if not op_obj:
-                    continue
-
-                value = None
-                suggestions = fld.get("suggested_values", [])
-                mode = fld.get("suggestion_mode", "none")
-
-                if mode in ("categorical", "boolean") and suggestions:
-                    selected = st.session_state.get(suggest_key)
-                    custom = st.session_state.get(val_key)
-                    if selected == "<Enter custom value>":
-                        value = custom
-                    elif selected:
-                        value = selected
-                    else:
-                        value = custom
-                else:
-                    value = st.session_state.get(val_key)
-
-                if op_obj["op"] not in ("is_known", "is_unknown") and (value is None or str(value).strip() == ""):
-                    continue
-
-                new_criteria.append({
-                    "field_key": fld["field_key"],
-                    "operator": op_obj["op"],
-                    "value": value
-                })
-
-            st.session_state.active_criteria = enrich_criteria(new_criteria, catalog)
-            st.success("Filters applied.")
-
-    criteria_tree = build_criteria_tree(st.session_state.active_criteria)
-    render_state_tree("Active Filters", criteria_tree)
-
-    with st.expander("Touched schema graph for active filters", expanded=False):
-        crit_dot = build_touched_query_dot(
-            criteria=st.session_state.active_criteria,
-            outputs=[],
-            sort_state=None,
-            advanced=None,
-            mode="criteria",
-            direction=SCHEMA_GRAPH_DIRECTION
-        )
-        st.graphviz_chart(crit_dot)
-
-# Output tab
-with tab_output:
-    st.subheader("Output fields")
-
-    with st.form("output_form"):
+        st.markdown("---")
         output_defs = form["output_fields"]
         default_output_labels = [x["name"] for x in st.session_state.active_output] if st.session_state.active_output else []
-
-        selected_labels = st.multiselect(
-            "Choose output columns",
-            [f["label"] for f in output_defs],
-            default=default_output_labels
-        )
-
-        sort_choices = {f["label"]: f["field_key"] for f in output_defs}
-        sort_label = st.selectbox(
-            "Sort by",
-            ["(none)"] + list(sort_choices.keys()),
-            index=0
-        )
-        sort_dir = st.selectbox("Direction", ["asc", "desc"], index=0)
-
+        selected_labels, sort_label, sort_dir, sort_choices = render_output_controls(output_defs, default_output_labels)
         apply_output = st.form_submit_button("Apply Output Settings")
 
-        if apply_output:
-            selected_outputs = []
-            for lbl in selected_labels:
-                f = next((x for x in output_defs if x["label"] == lbl), None)
-                if f:
-                    selected_outputs.append({
-                        "field_key": f["field_key"],
-                        "name": f["label"],
-                        "dv_type": f["dv_type"]
-                    })
-
-            st.session_state.active_output = enrich_outputs(selected_outputs, catalog)
-
-            if sort_label != "(none)":
-                raw_sort = {"field_key": sort_choices[sort_label], "direction": sort_dir}
-                st.session_state.sort_state = enrich_sort(raw_sort, catalog)
-            else:
-                st.session_state.sort_state = None
-
-            st.success("Output settings applied.")
-
-    output_tree = build_output_tree(st.session_state.active_output)
-    render_state_tree("Active Output Fields", output_tree)
-
-    sort_tree = build_sort_tree(st.session_state.sort_state)
-    render_state_tree("Active Sort", sort_tree)
-
-    with st.expander("Touched schema graph for active output and sort", expanded=False):
-        out_dot = build_touched_query_dot(
-            criteria=[],
-            outputs=st.session_state.active_output,
-            sort_state=st.session_state.sort_state,
-            advanced=None,
-            mode="output",
-            direction=SCHEMA_GRAPH_DIRECTION
+        st.markdown("---")
+        semantics, include_unknown, slice_size, result_limit = render_advanced_controls(
+            st.session_state.active_advanced,
+            DEFAULT_OCCURRENCE_SEMANTICS,
+            DEFAULT_SLICE_SIZE,
+            DEFAULT_RESULT_LIMIT
         )
-        st.graphviz_chart(out_dot)
-
-# Advanced tab
-with tab_advanced:
-    st.subheader("Advanced")
-
-    with st.form("advanced_form"):
-        semantics = st.selectbox(
-            "Repeated occurrence semantics",
-            ["ALL", "ANY"],
-            index=0 if st.session_state.active_advanced.get("occurrence_semantics", DEFAULT_OCCURRENCE_SEMANTICS) == "ALL" else 1
-        )
-
-        include_unknown = st.checkbox(
-            "Include unknown (null_flavour) values",
-            value=st.session_state.active_advanced.get("include_unknown", False)
-        )
-
-        slice_size = st.number_input(
-            "Slice size",
-            min_value=10,
-            max_value=10000,
-            value=int(st.session_state.active_advanced.get("slice_size", DEFAULT_SLICE_SIZE)),
-            step=10
-        )
-
-        result_limit = st.number_input(
-            "Result limit",
-            min_value=10,
-            max_value=5000,
-            value=int(st.session_state.active_advanced.get("result_limit", DEFAULT_RESULT_LIMIT)),
-            step=10
-        )
-
         apply_advanced = st.form_submit_button("Apply Advanced Settings")
+        run_query_clicked = st.form_submit_button("🚀 Run Query")
 
-        if apply_advanced:
-            st.session_state.active_advanced = {
-                "occurrence_semantics": semantics,
-                "include_unknown": include_unknown,
-                "slice_size": slice_size,
-                "result_limit": result_limit
-            }
-            st.success("Advanced settings applied.")
+    if apply_criteria:
+        new_criteria = []
+        for fld in widget_meta:
+            use_key = f"use_{fld['field_key']}"
+            op_key = f"op_{fld['field_key']}"
+            val_key = f"val_{fld['field_key']}"
+            suggest_key = f"suggest_{fld['field_key']}"
 
-    advanced_tree = build_advanced_tree(st.session_state.active_advanced)
-    render_state_tree("Active Advanced Settings", advanced_tree)
+            if not st.session_state.get(use_key, False):
+                continue
 
-    with st.expander("Touched schema graph for advanced settings", expanded=False):
-        adv_dot = build_touched_query_dot(
-            criteria=[],
-            outputs=[],
-            sort_state=st.session_state.sort_state,
-            advanced=st.session_state.active_advanced,
-            mode="advanced",
-            direction=SCHEMA_GRAPH_DIRECTION
-        )
-        st.graphviz_chart(adv_dot)
+            op_choice = st.session_state.get(op_key)
+            op_obj = next((o for o in fld["operators"] if f"{o['phrase']} ({o['op']})" == op_choice), None)
+            if not op_obj:
+                continue
 
-    st.write("---")
-    if st.button("Run Query", key="run_query_button"):
+            value = None
+            suggestions = fld.get("suggested_values", [])
+            mode = fld.get("suggestion_mode", "none")
+
+            if mode in ("categorical", "boolean") and suggestions:
+                selected = st.session_state.get(suggest_key)
+                custom = st.session_state.get(val_key)
+                if selected == "<Enter custom value>":
+                    value = custom
+                elif selected:
+                    value = selected
+                else:
+                    value = custom
+            else:
+                value = st.session_state.get(val_key)
+
+            if op_obj["op"] not in ("is_known", "is_unknown") and (value is None or str(value).strip() == ""):
+                continue
+
+            new_criteria.append({"field_key": fld["field_key"], "operator": op_obj["op"], "value": value})
+
+        st.session_state.active_criteria = enrich_criteria(new_criteria, catalog)
+        st.success("Filters applied.")
+
+    if apply_output:
+        selected_outputs = []
+        for lbl in selected_labels:
+            f = next((x for x in output_defs if x["label"] == lbl), None)
+            if f:
+                selected_outputs.append({"field_key": f["field_key"], "name": f["label"], "dv_type": f["dv_type"]})
+        st.session_state.active_output = enrich_outputs(selected_outputs, catalog)
+        if sort_label != "(none)":
+            raw_sort = {"field_key": sort_choices[sort_label], "direction": sort_dir}
+            st.session_state.sort_state = enrich_sort(raw_sort, catalog)
+        else:
+            st.session_state.sort_state = None
+        st.success("Output settings applied.")
+
+    if apply_advanced:
+        st.session_state.active_advanced = {
+            "occurrence_semantics": semantics,
+            "include_unknown": include_unknown,
+            "slice_size": slice_size,
+            "result_limit": result_limit
+        }
+        st.success("Advanced settings applied.")
+
+    if run_query_clicked:
         files, skipped, valid_groups = resolve_runtime_files_for_query(dataset_folder, comp_arch)
-
         if not files:
             st.error(
                 "No composition files matching the cached schema's composition archetype "
@@ -842,17 +725,14 @@ with tab_advanced:
             "sort": st.session_state.sort_state,
             "advanced": st.session_state.active_advanced
         }
-
         plan = compile_query(form_state)
         st.session_state.active_query_plan = plan
-
         out = run_query(
             files[:int(st.session_state.active_advanced.get("slice_size", DEFAULT_SLICE_SIZE))],
             plan,
             occurrence_semantics=st.session_state.active_advanced.get("occurrence_semantics", DEFAULT_OCCURRENCE_SEMANTICS),
             limit=int(st.session_state.active_advanced.get("result_limit", DEFAULT_RESULT_LIMIT))
         )
-
         if plan["sort"] and out["rows"]:
             sort_fk = plan["sort"]["field_key"]
             reverse = plan["sort"]["direction"] == "desc"
@@ -861,7 +741,6 @@ with tab_advanced:
                 key=lambda r: (r.get(sort_fk) is None, r.get(sort_fk)),
                 reverse=reverse
             )
-
         st.session_state.last_run_result = out
         st.session_state.last_run_signature = signature_of_state(
             st.session_state.active_criteria,
@@ -871,87 +750,81 @@ with tab_advanced:
         )
         st.success("Query executed.")
 
-# Results tab
-with tab_results:
-    st.subheader("Results")
+with right_col:
+    render_preview_panel(
+        st.session_state.active_criteria,
+        st.session_state.active_output,
+        st.session_state.sort_state,
+        union,
+        catalog,
+        st.session_state.last_run_result
+    )
 
-    if st.session_state.last_run_result:
-        out = st.session_state.last_run_result
+st.markdown("### Active Selection Tree")
+criteria_tree = build_criteria_tree(st.session_state.active_criteria)
+render_state_tree("Active Filters", criteria_tree)
+output_tree = build_output_tree(st.session_state.active_output)
+render_state_tree("Active Output Fields", output_tree)
+sort_tree = build_sort_tree(st.session_state.sort_state)
+render_state_tree("Active Sort", sort_tree)
+advanced_tree = build_advanced_tree(st.session_state.active_advanced)
+render_state_tree("Active Advanced Settings", advanced_tree)
 
-        c1, c2, c3 = st.columns(3)
-        c1.metric("Scanned", out.get("scanned", 0))
-        c2.metric("Matched", out.get("matched", 0))
-        c3.metric("Sec / doc", f"{out.get('sec_per_doc', 0.0):.6f}")
+section_close()
 
-        st.markdown(
-            build_query_summary_markdown(
-                st.session_state.active_criteria,
-                st.session_state.active_output,
-                st.session_state.sort_state,
-                st.session_state.active_advanced
-            )
-        )
+section_open("Results Dashboard")
+if st.session_state.last_run_result:
+    out = st.session_state.last_run_result
+    display_df = None
+    source_df = None
+    if out["rows"]:
+        full_df = format_results_for_display(out["rows"], st.session_state.active_output)
+        visible_cols = [c for c in full_df.columns if c != "_source_file"]
+        display_df = full_df[visible_cols]
+        if "_source_file" in full_df.columns:
+            source_df = full_df[["Record", "_source_file"]]
 
-        st.markdown("### Query Funnel")
-        funnel = out.get("funnel", [])
-        if funnel:
-            st.dataframe(pd.DataFrame(funnel), use_container_width=True)
-        else:
-            st.caption("No funnel data available.")
+    query_summary_md = build_query_summary_markdown(
+        st.session_state.active_criteria,
+        st.session_state.active_output,
+        st.session_state.sort_state,
+        st.session_state.active_advanced
+    )
 
-        if out["rows"]:
-            display_df = format_results_for_display(
-                out["rows"],
-                st.session_state.active_output
-            )
+    render_results_dashboard(out, query_summary_md, display_df, source_df)
 
-            visible_cols = [c for c in display_df.columns if c != "_source_file"]
-            st.dataframe(display_df[visible_cols], use_container_width=True)
+    st.markdown("### Schema Lineage")
+    touched_dot = build_touched_query_dot(
+        criteria=st.session_state.active_criteria,
+        outputs=st.session_state.active_output,
+        sort_state=st.session_state.sort_state,
+        advanced=st.session_state.active_advanced,
+        mode="all",
+        direction=SCHEMA_GRAPH_DIRECTION
+    )
+    st.graphviz_chart(touched_dot)
 
-            with st.expander("Show source file mapping"):
-                if "_source_file" in display_df.columns:
-                    st.dataframe(display_df[["Record", "_source_file"]], use_container_width=True)
-        else:
-            st.info("No matches found.")
-
-        st.write("---")
-        st.markdown("### Touched schema / query lineage")
-
-        touched_dot = build_touched_query_dot(
-            criteria=st.session_state.active_criteria,
-            outputs=st.session_state.active_output,
-            sort_state=st.session_state.sort_state,
-            advanced=st.session_state.active_advanced,
-            mode="all",
-            direction=SCHEMA_GRAPH_DIRECTION
-        )
-        st.graphviz_chart(touched_dot)
-
-        with st.expander("Show touched paths as text", expanded=False):
-            if st.session_state.active_criteria:
-                st.markdown("**Filters**")
-                for c in st.session_state.active_criteria:
-                    cluster_label = display_cluster_label(c.get("cluster_path_str", "(no cluster)"))
-                    st.write(
-                        f"- {c.get('entry_name')} → {cluster_label} → {c.get('element_name')} "
-                        f"[{c.get('operator')}] {c.get('value')}"
-                    )
-
-            if st.session_state.active_output:
-                st.markdown("**Outputs**")
-                for o in st.session_state.active_output:
-                    cluster_label = display_cluster_label(o.get("cluster_path_str", "(no cluster)"))
-                    st.write(
-                        f"- {o.get('entry_name')} → {cluster_label} → {o.get('element_name')}"
-                    )
-
-            if st.session_state.sort_state:
-                s = st.session_state.sort_state
-                cluster_label = display_cluster_label(s.get("cluster_path_str", "(no cluster)"))
-                st.markdown("**Sort**")
+    with st.expander("Touched paths", expanded=False):
+        if st.session_state.active_criteria:
+            st.markdown("**Filters**")
+            for c in st.session_state.active_criteria:
+                cluster_label = display_cluster_label(c.get("cluster_path_str", "(no cluster)"))
                 st.write(
-                    f"- {s.get('entry_name')} → {cluster_label} → {s.get('element_name')} ({s.get('direction')})"
+                    f"- {c.get('entry_name')} → {cluster_label} → {c.get('element_name')} "
+                    f"[{c.get('operator')}] {c.get('value')}"
                 )
 
-    else:
-        st.info("Apply filters/output settings and click **Run Query** in the Advanced tab.")
+        if st.session_state.active_output:
+            st.markdown("**Outputs**")
+            for o in st.session_state.active_output:
+                cluster_label = display_cluster_label(o.get("cluster_path_str", "(no cluster)"))
+                st.write(f"- {o.get('entry_name')} → {cluster_label} → {o.get('element_name')}")
+
+        if st.session_state.sort_state:
+            s = st.session_state.sort_state
+            cluster_label = display_cluster_label(s.get("cluster_path_str", "(no cluster)"))
+            st.markdown("**Sort**")
+            st.write(f"- {s.get('entry_name')} → {cluster_label} → {s.get('element_name')} ({s.get('direction')})")
+else:
+    st.info("Apply filters/output settings and click **Run Query** in the Query Builder section.")
+section_close()
