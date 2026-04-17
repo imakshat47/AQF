@@ -12,7 +12,8 @@ import pandas as pd
 from config import (
     DATA_DIR, CACHE_DIR, SCHEMA_UNION_FILE, FIELDS_FILE,
     DEFAULT_SLICE_SIZE, DEFAULT_RESULT_LIMIT, DEFAULT_OCCURRENCE_SEMANTICS,
-    SCHEMA_OVERVIEW_MAX_DEPTH, SCHEMA_GRAPH_DIRECTION, SCHEMA_LEAF_LIMIT
+    SCHEMA_OVERVIEW_MAX_DEPTH, SCHEMA_GRAPH_DIRECTION, SCHEMA_LEAF_LIMIT,
+    CUSTOM_CSS_FILE, DEFAULT_THEME_MODE, ENABLE_CUSTOM_CSS
 )
 from composition_loader import group_docs_by_composition_archetype
 from schema_union_builder import build_union_schema
@@ -23,8 +24,20 @@ from query_executor import run_query
 from result_formatter import format_results_for_display
 from schema_diagram import build_schema_flow_dot, build_touched_query_dot
 from query_summary import build_query_summary_markdown
+from utils.theme_manager import (
+    initialize_theme,
+    inject_custom_css,
+    inject_fonts,
+    inject_theme_variables,
+)
 
 st.set_page_config(page_title="openEHR Accordion Form Builder", layout="wide")
+
+if ENABLE_CUSTOM_CSS:
+    initialize_theme(DEFAULT_THEME_MODE)
+    inject_theme_variables()
+    inject_fonts()
+    inject_custom_css(CUSTOM_CSS_FILE)
 
 SCHEMA_META_FILE = CACHE_DIR / "schema_metadata.json"
 
