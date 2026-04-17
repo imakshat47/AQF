@@ -31,7 +31,7 @@ def metric_card(title: str, value: str, subtitle: Optional[str] = None, tone: st
     color = COLOR_PALETTE.get(tone, COLOR_PALETTE["primary"])
     border = with_opacity(color, 0.3)
     html = f"""
-    <div class="aqf-card aqf-animate-in" style="border-left:4px solid {color}; border-color:{border};">
+    <div class="aqf-card aqf-animate-in" style="border-color:{border}; border-left:4px solid {color};">
       <div style="font-size:12px; color:var(--aqf-color-text-muted);">{escape(title)}</div>
       <div style="font-size:24px; font-weight:700; margin-top:4px;">{escape(str(value))}</div>
       {f'<div style="font-size:12px; margin-top:4px; color:var(--aqf-color-text-muted);">{escape(subtitle)}</div>' if subtitle else ''}

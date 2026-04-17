@@ -46,7 +46,7 @@ SCHEMA_OVERVIEW_MAX_DEPTH = 3
 # Graph orientation:
 # "LR" = horizontal (left to right)
 # "TB" = vertical (top to bottom)
-SCHEMA_GRAPH_DIRECTION = "TR"
+SCHEMA_GRAPH_DIRECTION = "LR"
 
 # Max number of leaf nodes to show per subgroup when depth >= 4
 SCHEMA_LEAF_LIMIT = 5

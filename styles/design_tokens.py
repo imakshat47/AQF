@@ -17,27 +17,31 @@ class ThemeColors:
     border: str
 
 
-COLOR_PALETTE: Dict[str, Dict[str, str] | str] = {
+CORE_COLORS: Dict[str, str] = {
     "primary": "#0066CC",
     "secondary": "#7C3AED",
     "success": "#10B981",
     "warning": "#F59E0B",
     "danger": "#EF4444",
-    "neutral": {
-        "500": "#6B7280",
-        "400": "#9CA3AF",
-        "300": "#D1D5DB",
-        "200": "#E5E7EB",
-        "100": "#F3F4F6",
-    },
-    "background": {
-        "light": "#FFFFFF",
-        "dark": "#111827",
-    },
-    "surface": {
-        "light": "#F9FAFB",
-        "dark": "#1F2937",
-    },
+}
+
+NEUTRAL_COLORS: Dict[str, str] = {
+    "500": "#6B7280",
+    "400": "#9CA3AF",
+    "300": "#D1D5DB",
+    "200": "#E5E7EB",
+    "100": "#F3F4F6",
+}
+
+THEME_BASE_COLORS: Dict[str, Dict[str, str]] = {
+    "background": {"light": "#FFFFFF", "dark": "#111827"},
+    "surface": {"light": "#F9FAFB", "dark": "#1F2937"},
+}
+
+COLOR_PALETTE = {
+    **CORE_COLORS,
+    "neutral": NEUTRAL_COLORS,
+    **THEME_BASE_COLORS,
 }
 
 THEME_COLORS = {
