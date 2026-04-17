@@ -18,8 +18,9 @@ def render_results_dashboard(out: dict, query_summary_markdown: str, display_df:
         render_metric_card("Matched", out.get("matched", 0), icon="✅", tone="neutral")
     with m3:
         pct = 0.0
-        if out.get("scanned", 0):
-            pct = (out.get("matched", 0) / out.get("scanned", 1)) * 100
+        scanned = out.get("scanned", 0)
+        if scanned:
+            pct = (out.get("matched", 0) / scanned) * 100
         render_metric_card("Match %", f"{pct:.2f}%", icon="📈", tone="neutral")
     with m4:
         render_metric_card("Sec / doc", f"{out.get('sec_per_doc', 0.0):.6f}", icon="⏱️", tone="neutral")

@@ -13,7 +13,12 @@ def render_results_table(display_df: pd.DataFrame, key_prefix: str = "results"):
     page_size = st.selectbox("Rows per page", [10, 25, 50, 100], index=1, key=f"{key_prefix}_page_size")
     total_rows = len(display_df)
     max_page = max(1, (total_rows - 1) // page_size + 1)
-    page = st.number_input("Page", min_value=1, max_value=max_page, value=1, step=1, key=f"{key_prefix}_page")
+    page_key = f"{key_prefix}_page"
+    if page_key not in st.session_state:
+        st.session_state[page_key] = 1
+    if st.session_state[page_key] > max_page:
+        st.session_state[page_key] = max_page
+    page = st.number_input("Page", min_value=1, max_value=max_page, step=1, key=page_key)
 
     start = (page - 1) * page_size
     end = min(start + page_size, total_rows)
