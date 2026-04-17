@@ -48,7 +48,10 @@ def hex_to_rgb(hex_color: str) -> Tuple[int, int, int]:
         value = "".join(ch * 2 for ch in value)
     if len(value) != 6:
         raise ValueError(f"Invalid hex color: {hex_color}")
-    return tuple(int(value[i : i + 2], 16) for i in (0, 2, 4))
+    red = int(value[0:2], 16)
+    green = int(value[2:4], 16)
+    blue = int(value[4:6], 16)
+    return red, green, blue
 
 
 def with_opacity(hex_color: str, alpha: float) -> str:
