@@ -43,6 +43,7 @@ def apply_design_system():
         border-radius: {DESIGN_TOKENS['radius']};
         padding: {DESIGN_TOKENS['space_md']};
         margin-bottom: {DESIGN_TOKENS['space_md']};
+        background: #f8fbff;
         background: color-mix(in srgb, var(--background-color) 94%, var(--primary-color) 6%);
     }}
     .aqf-badge {{

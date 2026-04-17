@@ -10,5 +10,9 @@ def render_funnel_chart(funnel):
         return
 
     df = pd.DataFrame(funnel)
+    if df.empty or len(df.columns) < 2:
+        st.dataframe(df, use_container_width=True)
+        return
+
     st.bar_chart(df.set_index(df.columns[0]))
     st.dataframe(df, use_container_width=True)

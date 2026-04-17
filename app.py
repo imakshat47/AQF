@@ -602,19 +602,19 @@ with left_col:
                         with cols[1]:
                             op_options = fld["operators"]
                             op_labels = [f"{o['phrase']} ({o['op']})" for o in op_options]
-                            st.selectbox("Operator", op_labels, key=op_key, help=fld["tooltip"])
+                            st.selectbox("Condition", op_labels, key=op_key, help=fld["tooltip"])
 
                         with cols[2]:
                             mode = fld.get("suggestion_mode", "none")
                             suggestions = fld.get("suggested_values", [])
                             if mode in ("categorical", "boolean") and suggestions:
                                 st.selectbox(
-                                    "Value suggestions",
+                                    "Value",
                                     ["<Enter custom value>"] + suggestions,
                                     key=suggest_key,
                                     help=fld["tooltip"]
                                 )
-                                st.text_input("Custom value", key=val_key)
+                                st.text_input("Value", key=val_key)
                             elif mode == "boolean":
                                 st.selectbox("Value", ["true", "false"], key=val_key, help=fld["tooltip"])
                             else:
