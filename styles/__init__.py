@@ -1,0 +1,1 @@
+"""Styling resources for AQF."""
