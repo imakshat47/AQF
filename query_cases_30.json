@@ -1387,7 +1387,7 @@
         },
         {
           "field_key": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1|openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1|Tumour - TNM Cancer staging / Pathological (pTNM)|date of pathological identification|at0.44",
-          "name": "Problem/Diagnosis → Tumour - TNM Cancer staging / Pathological (pTNM) → date of pathological identification",
+          "name": "Problem/Diagnosis →   Tumour - TNM Cancer staging / Pathological (pTNM) → date of pathological identification",
           "entry_name": "Problem/Diagnosis",
           "cluster_path_str": "Tumour - TNM Cancer staging / Pathological (pTNM)",
           "element_name": "date of pathological identification",
