@@ -1,0 +1,31 @@
+query_index,query_name,query_label_nlp,criteria_count,output_count
+Q1,simple_01_state_equals_sp,WHERE State = SÃO PAULO | SHOW State,1,1
+Q2,simple_04_reason_equals_radio,WHERE reason for encounter = RADIOTERAPIA | SHOW reason for encounter,1,1
+Q3,medium_05_problem_c50_9_and_stage_3,"WHERE Problem contains C50.9 AND Clinical staging = 3 | SHOW Problem, Clinical staging",2,2
+Q4,simple_02_state_equals_rj,WHERE State = RIO DE JANEIRO | SHOW State,1,1
+Q5,simple_03_reason_equals_quimio,WHERE reason for encounter = QUIMIOTERAPIA | SHOW reason for encounter,1,1
+Q6,medium_03_age_gt_60_and_state_pr,"WHERE patient age > 60 AND State = PARANÁ | SHOW patient age, State | SORT BY patient age desc",2,2
+Q7,hard_05_state_rj_reason_radio_problem_c53_9,"WHERE State = RIO DE JANEIRO AND reason for encounter = RADIOTERAPIA AND Problem contains C53.9 | SHOW State, reason for encounter, Problem",3,3
+Q8,medium_10_radio_start_after_2011,"WHERE reason for encounter = RADIOTERAPIA AND date of beginning of radiotherapy > 2011-01-01 | SHOW reason for encounter, date of beginning of radiotherapy | SORT BY date of beginning of radiotherapy desc",2,2
+Q9,hard_04_state_sp_reason_quimio_age_gt_60,"WHERE State = SÃO PAULO AND reason for encounter = QUIMIOTERAPIA AND patient age > 60 | SHOW State, patient age, reason for encounter | SORT BY patient age desc",3,3
+Q10,medium_01_state_sp_and_radioterapia,"WHERE State = SÃO PAULO AND reason for encounter = RADIOTERAPIA | SHOW State, reason for encounter",2,2
+Q11,simple_09_clinical_staging_equals_3,WHERE Clinical staging = 3 | SHOW Clinical staging,1,1
+Q12,hard_08_procedure_radio_and_irrad1_c50_9,"WHERE Procedure contains RADIOTERAPIA AND irradiated area 1 contains C50.9 | SHOW Procedure, irradiated area 1",2,2
+Q13,medium_09_topography_c50_9_and_lymph_true,"WHERE topography contains C50.9 AND Invaded regional linphonodes = true | SHOW topography, Invaded regional linphonodes",2,2
+Q14,simple_05_patient_age_gt_70,WHERE patient age > 70 | SHOW patient age | SORT BY patient age desc,1,1
+Q15,medium_06_problem_c53_9_and_procedure_radio,"WHERE Problem contains C53.9 AND Procedure contains RADIOTERAPIA | SHOW Problem, Procedure",2,2
+Q16,medium_02_state_rj_and_quimioterapia,"WHERE State = RIO DE JANEIRO AND reason for encounter = QUIMIOTERAPIA | SHOW State, reason for encounter",2,2
+Q17,medium_08_path_grade_unknown_and_problem_c50_9,"WHERE Histopathological grading (G) is_unknown AND Problem contains C50.9 | SHOW Histopathological grading (G), Problem",2,2
+Q18,hard_07_chemo_tmx_duration_gt_12_start_after_2011,"WHERE schema contains TMX AND duration of treatment > 12 AND date of beginning of chemotherapy > 2011-01-01 | SHOW schema, duration of treatment, date of beginning of chemotherapy | SORT BY date of beginning of chemotherapy desc",3,3
+Q19,hard_09_discharge_date_unknown_reason_alta,"WHERE date of discharge is_unknown AND reason for discharge contains Alta | SHOW date of discharge, reason for discharge",2,2
+Q20,hard_02_renal_dialysis_known_ultrasound_false,"WHERE date of first dialysis is_known AND abdominal ultrasonography = false | SHOW date of first dialysis, abdominal ultrasonography | SORT BY date of first dialysis desc",2,2
+Q21,simple_06_chemo_schema_contains_tmx,WHERE schema contains TMX | SHOW schema,1,1
+Q22,simple_08_problem_contains_c50_9,WHERE Problem contains C50.9 | SHOW Problem,1,1
+Q23,hard_01_transplant_true_and_number_one,"WHERE indicator of transplantation = true AND number of transplantations = 1 | SHOW indicator of transplantation, number of transplantations",2,2
+Q24,hard_10_topography_c50_9_path_grade_unknown_path_date_after_2010,"WHERE topography contains C50.9 AND Histopathological grading (G) is_unknown AND date of pathological identification > 2010-01-01 | SHOW topography, Histopathological grading (G), date of pathological identification | SORT BY date of pathological identification desc",3,3
+Q25,medium_04_chemo_tmx_and_duration_gt_12,"WHERE schema contains TMX AND duration of treatment > 12 | SHOW schema, duration of treatment | SORT BY duration of treatment desc",2,2
+Q26,hard_06_problem_c50_9_stage_3_lymph_true,"WHERE Problem contains C50.9 AND Clinical staging = 3 AND Invaded regional linphonodes = true | SHOW Problem, Clinical staging, Invaded regional linphonodes",3,3
+Q27,simple_10_regional_lymph_nodes_true,WHERE Invaded regional linphonodes = true | SHOW Invaded regional linphonodes,1,1
+Q28,hard_03_bari_followup_gt_6_bmi_gt_40,"WHERE duration of follow-up (months) > 6 AND Body Mass Index > 40 | SHOW duration of follow-up (months), Body Mass Index | SORT BY duration of follow-up (months) desc",2,2
+Q29,simple_07_procedure_contains_radioterapia,WHERE Procedure contains RADIOTERAPIA | SHOW Procedure,1,1
+Q30,medium_07_discharge_evasao_and_state_sp,"WHERE reason for discharge contains evasão AND State = SÃO PAULO | SHOW reason for discharge, State",2,2

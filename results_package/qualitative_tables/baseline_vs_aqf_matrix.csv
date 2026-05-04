@@ -1,0 +1,5 @@
+system_family,cold_start_support,hierarchical_awareness,operator_specific_reasoning,explainability,user_effort,scalability
+Workload-driven forms,Low,Medium,Medium,Low,Medium,High
+Schema/content-driven forms,High,Medium,High,Low,Medium,High
+Visual exploration systems,High,High,Low,Medium,Higher,Medium
+AQF,High,High,High,High,Lower,High

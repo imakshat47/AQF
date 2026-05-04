@@ -1,0 +1,6 @@
+aqf_component,correctness,coverage,expressivity,complexity,latency,usability,explanation_quality
+Structure extraction,1,1,0,0,0,0,0
+Queriability scoring,0,1,1,1,0,0,0
+Form composition,0,1,1,1,0,1,0
+Query compilation,1,0,0,0,1,0,0
+Explainability,0,0,0,0,0,1,1

@@ -1,0 +1,15 @@
+composition_archetype,entry_arch,entry_name,subgroup_key,field_count,coverage_score,richness_score,knownness_score,subgroup_queriability
+openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1,openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1,HCPA,General data,5,1.0,0.8,0.9437881873727088,0.9259470468431772
+openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1,openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1,HCPA,radiotherapy,1,0.0273972602739726,0.0,1.0,0.2623287671232877
+openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1,openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1,HCPA,chemotherapy,3,0.06457925636007827,0.4,1.0,0.3990606653620352
+openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1,openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1,HCPA,transplantation,2,0.01761252446183953,0.2,1.0,0.3179256360078278
+openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1,openEHR-EHR-ADMIN_ENTRY.patient_discharge.v1,Patient discharge,(no cluster),2,0.38943248532289626,0.2,0.6085248763456502,0.3873758374817159
+openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1,openEHR-EHR-EVALUATION.bariatric_surgery_evaluation.v1,Bariatric surgery evaluation,(no cluster),3,0.32289628180039137,0.4,0.44803507469425013,0.3773120954837386
+openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1,openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1,Problem/Diagnosis,(no cluster),4,0.6653620352250489,0.6,1.0,0.729412915851272
+openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1,openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1,Problem/Diagnosis,Tumour - TNM Cancer staging / Clinical (cTNM),1,0.0547945205479452,0.0,1.0,0.27465753424657535
+openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1,openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1,Problem/Diagnosis,Tumour - TNM Cancer staging / Pathological (pTNM),2,0.12720156555772993,0.2,0.37928268681832816,0.2120613762055605
+openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1,openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1,Problem/Diagnosis,Tumour - TNM Cancer staging,1,0.0547945205479452,0.0,1.0,0.27465753424657535
+openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1,openEHR-EHR-ACTION.procedure-sus.v1,Procedure undertaken,(no cluster),6,0.410958904109589,1.0,0.0,0.4849315068493151
+openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1,openEHR-EHR-OBSERVATION.body_mass_index.v1,Body mass index,(no cluster),1,0.0958904109589041,0.0,0.8920068624401793,0.2661524005415517
+openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1,openEHR-EHR-OBSERVATION.body_weight.v1,Body weight,(no cluster),1,0.0,0.0,1.0,0.25
+openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1,openEHR-EHR-OBSERVATION.height.v1,Height/Length,(no cluster),1,0.0,0.0,1.0,0.25

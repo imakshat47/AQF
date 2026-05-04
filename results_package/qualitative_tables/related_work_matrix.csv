@@ -1,0 +1,5 @@
+approach_family,input_assumption,hierarchy_support,workload_dependency,query_generation_style,explainability,limitation
+Workload-driven automatic query forms,Representative query workload available,Limited / schema-centric,High,Canonical form -> declarative query,Low,Hard to use in cold-start settings
+Schema/content-driven form generation,Schema + data content,Moderate,Low,Forms derived from queriability,Low,Weaker direct grounding in actual user intent
+Visual exploration systems,Interactive navigation / browsing,High,Low,Navigation-first / exploratory,Moderate,Often not form-centric or directly executable
+AQF,Schema + content + structure-aware extraction,High,Low initially,Generated form -> AQL,High,"First generation is structure-driven, not yet workload-adaptive"

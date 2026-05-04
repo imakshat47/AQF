@@ -1,0 +1,34 @@
+entry_name,subgroup_key,element_name,dv_type,selection_score,projection_score,ordering_score,default_role
+Bariatric surgery evaluation,(no cluster),Baros table,DV_TEXT,0.510533799093063,0.5785005167749834,0.4336842105263158,projection
+Bariatric surgery evaluation,(no cluster),Baros score,DV_TEXT,0.49656836056303805,0.5705202661863976,0.4336842105263158,projection
+Bariatric surgery evaluation,(no cluster),duration of follow-up (months),DV_COUNT,0.3705405835029255,0.39086892560032355,0.6147186932849364,ordering
+Body mass index,(no cluster),Body Mass Index,DV_QUANTITY,0.7570503298416559,0.7123474013406818,0.7259255898366607,selection
+Body weight,(no cluster),Weight,DV_QUANTITY,0.2355547204291726,0.27031698310238433,0.44999999999999996,ordering
+HCPA,General data,patient age,DV_COUNT,1.0,1.0,1.0,selection
+HCPA,General data,issue date,DV_DATE,0.9904786741894565,0.9945592423939752,1.0,ordering
+HCPA,General data,healthcare unit,DV_CODED_TEXT,0.8265119662275251,0.900863980701443,0.7000000000000001,projection
+HCPA,General data,State,DV_CODED_TEXT,0.7773702360584884,0.872782992033422,0.7000000000000001,projection
+HCPA,General data,reason for encounter,DV_CODED_TEXT,0.7393819708959194,0.8328061811712946,0.6798076923076923,projection
+HCPA,chemotherapy,duration of treatment,DV_QUANTITY,0.2766423991249724,0.30920919047742784,0.47894736842105257,ordering
+HCPA,chemotherapy,schema,DV_TEXT,0.2766423991249724,0.30920919047742784,0.17894736842105263,projection
+HCPA,chemotherapy,date of beginning of chemotherapy,DV_DATE,0.2766423991249724,0.30920919047742784,0.47894736842105257,ordering
+HCPA,radiotherapy,date of beginning of radiotherapy,DV_DATE,0.48447504695729426,0.45571506442672455,0.5310526315789473,ordering
+HCPA,transplantation,indicator of transplantation,DV_BOOLEAN,0.2,0.25,0.15,projection
+HCPA,transplantation,number of transplantations,DV_COUNT,0.2,0.25,0.44999999999999996,ordering
+Height/Length,(no cluster),Height/Length,DV_QUANTITY,0.2355547204291726,0.27031698310238433,0.44999999999999996,ordering
+Patient discharge,(no cluster),date of discharge,DV_DATE_TIME,0.807696250575179,0.8392192860429595,0.9437500000000001,ordering
+Patient discharge,(no cluster),reason for discharge,DV_CODED_TEXT,0.7525074179523366,0.8585756674013353,0.7000000000000001,projection
+Problem/Diagnosis,(no cluster),Problem,DV_CODED_TEXT,0.8132135100948903,0.8932648629113659,0.7000000000000001,projection
+Problem/Diagnosis,(no cluster),Secondary Diagnosis,DV_CODED_TEXT,0.6902672265518965,0.8230098437439409,0.7000000000000001,projection
+Problem/Diagnosis,(no cluster),Associated causes,DV_CODED_TEXT,0.6902672265518965,0.8230098437439409,0.7000000000000001,projection
+Problem/Diagnosis,(no cluster),Invaded regional linphonodes,DV_BOOLEAN,0.3326315789473684,0.41210526315789475,0.3121052631578947,projection
+Problem/Diagnosis,Tumour - TNM Cancer staging,topography,DV_CODED_TEXT,0.5320856616412022,0.5260790246972283,0.3121052631578947,selection
+Problem/Diagnosis,Tumour - TNM Cancer staging / Clinical (cTNM),Clinical staging,DV_TEXT,0.4539907391893511,0.48145335472474204,0.3121052631578947,projection
+Problem/Diagnosis,Tumour - TNM Cancer staging / Pathological (pTNM),date of pathological identification,DV_DATE,0.5404194381472911,0.5308411827007077,0.6121052631578947,ordering
+Problem/Diagnosis,Tumour - TNM Cancer staging / Pathological (pTNM),Histopathological grading (G),NULL_FLAVOUR,0.3064892354629137,0.316471800471797,0.22291607396870552,projection
+Procedure undertaken,(no cluster),Procedure,DV_CODED_TEXT,0.7773844040285364,0.8545218572470757,0.6798076923076923,projection
+Procedure undertaken,(no cluster),irradiated area 1,DV_CODED_TEXT,0.4546503810267071,0.4386723981806747,0.23105263157894734,selection
+Procedure undertaken,(no cluster),fields/insertions 1,DV_COUNT,0.4483784538109786,0.43508843977168704,0.5310526315789473,ordering
+Procedure undertaken,(no cluster),fields/insertions 2,NULL_FLAVOUR,0.14819152216739567,0.15144124901883219,0.1071395881006865,projection
+Procedure undertaken,(no cluster),irradiated area 2,NULL_FLAVOUR,0.1138197411266496,0.11999898904523816,0.09409610983981694,projection
+Procedure undertaken,(no cluster),irradiated area 3,NULL_FLAVOUR,0.0663157894736842,0.08105263157894736,0.08105263157894736,projection

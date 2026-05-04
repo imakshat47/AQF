@@ -1,0 +1,2 @@
+composition_archetype,composition_label,section_count,subgroup_count,field_count,avg_subgroups_per_section,avg_fields_per_subgroup,avg_fields_per_section,null_supporting_fields
+openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1,Outpatient high complexity procedures,8,14,33,1.75,2.357142857142857,4.125,9
