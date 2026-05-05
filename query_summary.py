@@ -69,7 +69,7 @@ def build_query_summary_markdown(criteria, outputs, sort_state, advanced):
             crit_phrases.append(f"{field_phrase} {op_phrase}")
         find_clause = "Find records where " + " and ".join(crit_phrases) + "."
     else:
-        find_clause = "Find records from the current record family."
+        find_clause = "Find all records."
 
     parts.append(find_clause)
 

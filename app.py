@@ -633,11 +633,11 @@ with tab_criteria:
                                     help=fld["tooltip"]
                                 )
 
-                        with cols[3]:
-                            if fld.get("suggested_values"):
-                                st.caption("Common values: " + ", ".join(fld["suggested_values"][:5]))
-                            else:
-                                st.caption("No cached suggestions yet.")
+                        # with cols[3]:
+                        #     if fld.get("suggested_values"):
+                        #         st.caption("Common values: " + ", ".join(fld["suggested_values"][:5]))
+                        #     else:
+                        #         st.caption("No cached suggestions yet.")
 
                         widget_meta.append(fld)
 

@@ -16,7 +16,7 @@ def ensure_list(x):
     """
     Normalize openEHR structures where 'items' or 'description.items'
     may be either a dict or a list. This is required because your attached
-    composition files contain both variants. [1]
+    composition files contain both variants. 
     """
     if x is None:
         return []
