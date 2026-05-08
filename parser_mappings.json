@@ -1,0 +1,84 @@
+{
+  "version": "1.0",
+  "parsers": {
+    "ehr_index_reference": {
+      "description": "EHR container JSON with references to VERSIONED_COMPOSITION objects rather than embedded composition bodies.",
+      "detection": {
+        "required_top_level_keys": [
+          "ehr_id",
+          "compositions"
+        ],
+        "array_item_equals": {
+          "compositions": {
+            "type": "VERSIONED_COMPOSITION"
+          }
+        }
+      },
+      "strategy": "ehr_index_reference",
+      "paths": {
+        "system_id": "system_id.value",
+        "ehr_id": "ehr_id.value",
+        "time_created": "time_created.value",
+        "composition_refs": "compositions",
+        "contribution_refs": "contributions",
+        "ehr_access_ref": "ehr_access",
+        "ehr_status_ref": "ehr_status"
+      },
+      "composition_ref": {
+        "id_path": "id.value",
+        "type_path": "type",
+        "expected_type": "VERSIONED_COMPOSITION"
+      },
+      "resolution": {
+        "enabled": true,
+        "strategy": "by_hier_object_id"
+      },
+      "record_family": "EHR_INDEX_REFERENCE"
+    },
+    "inline_composition": {
+      "description": "Standalone composition JSON with archetype/content inline.",
+      "detection": {
+        "any_top_level_keys": [
+          "archetype_node_id",
+          "_type"
+        ],
+        "contains": {
+          "archetype_node_id": "COMPOSITION"
+        },
+        "equals": {
+          "_type": "COMPOSITION"
+        }
+      },
+      "strategy": "inline_composition",
+      "record_family_path": "archetype_node_id"
+    },
+    "ehr_with_inline_compositions": {
+      "description": "EHR JSON containing embedded composition objects.",
+      "detection": {
+        "required_top_level_keys": [
+          "ehr_id"
+        ],
+        "min_composition_like_count": 1
+      },
+      "strategy": "recursive_composition_search",
+      "record_family_path": "archetype_node_id"
+    },
+    "versioned_composition": {
+      "description": "VERSIONED_COMPOSITION wrapper that may contain a composition under data, version.data, versions[].data, items[].data, or composition.",
+      "detection": {
+        "equals": {
+          "type": "VERSIONED_COMPOSITION",
+          "_type": "VERSIONED_COMPOSITION"
+        }
+      },
+      "strategy": "versioned_composition",
+      "unwrap_candidates": [
+        "data",
+        "version.data",
+        "versions.0.data",
+        "items.0.data",
+        "composition"
+      ]
+    }
+  }
+}

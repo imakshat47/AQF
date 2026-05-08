@@ -1,0 +1,475 @@
+AQF Journal Research Paper Outline v1 
+
+Rigid baseline outline for the AQF draft until explicitly revised 
+
+Version status: Finalized as Outline v1. Future updates should be versioned explicitly as Outline v2, v3, etc., with a short change log. 
+
+Working title: AQF: Automatic Query Form Generation for Hierarchical JSON Electronic Health Records 
+
+Abstract 
+
+Problem: hierarchical JSON EHR data is difficult to query directly. 
+
+Challenge: users know intent, but systems require path/schema knowledge. 
+
+AQF: automatically generates bounded, executable, explainable query forms. 
+
+Method: structure graph construction; content profiling; hierarchical queriability; operator-aware field scoring; bounded form synthesis; canonical query form model; form-to-query translation; query explainability. 
+
+Scope: JSON, not XML; AQL-like examples only illustrate path-querying burden; query-level explainability, not predictive-model XAI. 
+
+Evaluation: Easy / Medium / Hard workloads; Form Utility Score; ablation; performance; planned user study. 
+
+1. Introduction 
+
+1.1 Motivation 
+
+Use restaurant menu analogy. 
+
+Explain direct structural interaction problem. 
+
+Introduce running RADIOTERAPIA query. 
+
+Show why clinical intent is simple but structural execution is hard. 
+
+Establish expressivity versus cognitive complexity. 
+
+1.2 Our Approach 
+
+Present AQF as three layers: structural layer, intent layer, and interaction layer. 
+
+Clarify JSON target. 
+
+Clarify AQL-like examples are motivational. 
+
+Define query-level explainability early. 
+
+1.3 Contributions 
+
+Problem formulation for hierarchical JSON EHR query-form generation. 
+
+Hierarchical queriability. 
+
+Operator-aware field scoring. 
+
+Bounded form synthesis. 
+
+Canonical query form model. 
+
+Form-to-query translation. 
+
+Query Explainability Layer. 
+
+Evaluation framework. 
+
+2. Problem Formulation 
+
+2.1 From User Intent to Hierarchical Query Forms 
+
+Users begin with information needs, not schemas. 
+
+Decompose running query into constraints, outputs, and hidden path requirements. 
+
+Define query form as constrained query language. 
+
+Explain why visible fields increase both expressivity and cognitive burden. 
+
+2.2 Hierarchical JSON EHR Data Model 
+
+Use building floor-map analogy. 
+
+Define R = (V, E). 
+
+Define section, path, leaf field, path context, and repeated group. 
+
+Explain path-dependent field meaning. 
+
+R = (V, E) 
+
+2.3 Expressivity–Complexity Objective, Form Utility Score, and Running Example 
+
+Define AQF optimization objective. 
+
+Define Easy / Medium / Hard query classes. 
+
+Classify running query as Hard. 
+
+Define Form Utility Score and ExplainabilitySupport. 
+
+Clarify that FUS is a structured evaluation score, not clinical utility. 
+
+Mention planned weight sensitivity analysis. 
+
+maximize FormUtility(F) 
+subject to C_visible(F) ≤ τ 
+
+FUS(F) = 
+w1 · StructuralCoverage(F) 
++ w2 · FieldCoverage(F) 
++ w3 · QueryExpressivity(F) 
++ w4 · ExplainabilitySupport(F) 
+- w5 · InteractionCost(F) 
+
+ExplainabilitySupport(F) = 
+δ1 · IntentSummary(F) 
++ δ2 · PathLineage(F) 
++ δ3 · ConstraintTunneling(F) 
+
+3. Related Work 
+
+3.1 Automated Query Form Generation 
+
+Form-based query interfaces. 
+
+Workload-driven generation. 
+
+Schema/content-driven generation. 
+
+Queriability and expressivity–complexity framing. 
+
+Gap: not designed for hierarchical JSON EHR path context. 
+
+3.2 EHR Query Interfaces and Clinical Data Exploration 
+
+Visual EHR query interfaces. 
+
+Concept-based querying. 
+
+Archetype/template-based interaction. 
+
+Clinical visualization and exploration. 
+
+Gap: often require manual concept/structure navigation; AQF synthesizes forms automatically. 
+
+3.3 Hierarchical Data Querying and Healthcare Explainability 
+
+JSON/XML nested data querying. 
+
+XML as analogy only. 
+
+Path preservation and result reconstruction. 
+
+Healthcare explainability and human-centered evaluation. 
+
+Gap: AQF provides query-level explanations over generated JSON query forms. 
+
+4. Hierarchical Data Analysis 
+
+4.1 Structure Graph Construction 
+
+Define G = (S, P, L, E_s). 
+
+S: sections; P: paths; L: leaf fields; E_s: containment and co-occurrence edges. 
+
+Explain structure graph as conceptual floor map. 
+
+Use running example: HCPA; General data; State; patient age; reason for encounter; issue date; healthcare unit. 
+
+G = (S, P, L, E_s) 
+
+4.2 Content Profiling 
+
+Profile frequency, coverage, missingness, diversity, type, co-occurrence, depth, and repetition. 
+
+Use postulate style. 
+
+Explain why each feature supports form generation. 
+
+4.3 Hierarchical Queriability 
+
+Define section queriability, path-context queriability, and leaf-field queriability. 
+
+Include concise formulas. 
+
+Introduce each formula with intuition/postulate. 
+
+5. Form Synthesis 
+
+5.1 Section and Path-Group Selection 
+
+Select high-value sections. 
+
+Select meaningful path groups. 
+
+Use restaurant menu analogy. 
+
+Avoid flat field lists. 
+
+5.2 Field Selection and Query-Role Allocation 
+
+Select fields using leaf queriability, operator-aware scoring, and visible-complexity budget. 
+
+Assign query roles: selection, projection, ordering. 
+
+Clarify query role is not user role. 
+
+5.3 Visible Complexity Control and Progressive Disclosure 
+
+Define C_visible(F). 
+
+Show high-value fields by default. 
+
+Place lower-ranked fields behind expansion. 
+
+Preserve expressivity without initial overload. 
+
+6. Canonical Query Form Model 
+
+6.1 Operator-Aware Field Scoring 
+
+Define Q_select(l), Q_project(l), and Q_order(l). 
+
+Explain field-role suitability with examples. 
+
+Keep aggregation as future work unless implemented. 
+
+6.2 Canonical Trees: Input, Output, and Relationship 
+
+Define F = <IT, OT, RT>. 
+
+IT: constraints. 
+
+OT: projections/order. 
+
+RT: path dependencies. 
+
+Map running query. 
+
+F = <IT, OT, RT> 
+
+6.3 GenerateAQFForms Algorithm 
+
+Parse JSON records. 
+
+Extract sections, paths, fields. 
+
+Build graph. 
+
+Profile content. 
+
+Compute queriability. 
+
+Compute operator-aware scores. 
+
+Select sections/path groups. 
+
+Allocate fields. 
+
+Construct IT/OT/RT. 
+
+Enforce visible complexity. 
+
+Apply progressive disclosure. 
+
+Return forms. 
+
+7. Form-to-Query Translation 
+
+7.1 Form-State Interpretation and Path Binding 
+
+Completed form becomes structured query specification. 
+
+Bind selected fields to JSON paths. 
+
+Use running path examples. 
+
+Explain path binding as floor-map route. 
+
+7.2 Query Translation and Hierarchical Result Materialization 
+
+Compile to executable JSON operations. 
+
+Evaluate predicates. 
+
+Collect projected fields. 
+
+Preserve labels and path context. 
+
+Address missing fields, repeated groups, multiple values, type conversion, and path ambiguity. 
+
+8. Query Explainability Layer 
+
+8.1 Structural Summary and Path Lineage 
+
+Show sections used, paths touched, and fields included. 
+
+Explain from query plan/path bindings. 
+
+Clarify this is not ML prediction explanation. 
+
+8.2 Intent Summary 
+
+Generate natural-language summary of query. 
+
+Help user verify constraints and outputs. 
+
+Use running RADIOTERAPIA query. 
+
+8.3 Constraint Tunneling and No-Result Explanation 
+
+Define Constraint Tunneling formally. 
+
+Use dish-with-special-requests analogy. 
+
+Show progressive result-count reduction. 
+
+Explain no-result diagnosis. 
+
+9. Evaluation 
+
+9.1 Experimental Setup and Query Workload 
+
+Define RQ1 form usefulness, RQ2 scoring contribution, RQ3 execution efficiency, and RQ4 explanation usefulness. 
+
+Dataset: hierarchical JSON EHR records. 
+
+Workload: 30 queries — 10 Easy, 10 Medium, 10 Hard. 
+
+9.2 Generated Form Usefulness and Threshold Effects 
+
+Measure structural coverage, field coverage, query expressivity, and Form Utility Score. 
+
+Vary visible threshold. 
+
+Include FUS weight sensitivity analysis. 
+
+9.3 Operator-Aware Scoring and Ablation Study 
+
+Report top fields by role. 
+
+Ablations: full AQF; no operator-aware scoring; no missingness handling; no path-context scoring; no progressive disclosure; no query explainability. 
+
+9.4 Compilation and Execution Performance 
+
+Measure form-state parsing, path binding, query translation, execution, and materialization. 
+
+Show interactivity. 
+
+9.5 Planned User Study and Analysis Template 
+
+State no empirical user-study claims yet. 
+
+Planned comparison: AQF without explanations vs AQF with Query Explainability Layer. 
+
+Metrics: completion rate, formulation time, reformulation attempts, confidence, usefulness of intent summary, usefulness of path lineage, usefulness of Constraint Tunneling. 
+
+10. Discussion 
+
+10.1 Hierarchy, Semantics, and Visible Complexity 
+
+Revisit central thesis. 
+
+Explain why flattening loses meaning. 
+
+Discuss visible complexity as cognitive budget. 
+
+10.2 Interpretability, Trust, and User Interaction 
+
+Discuss structural summaries, path lineage, intent summaries, and Constraint Tunneling. 
+
+Clarify query interpretability, not clinical decision explanation. 
+
+10.3 Limitations and Threats to Validity 
+
+Heuristic scoring. 
+
+Weight sensitivity. 
+
+Dataset representativeness. 
+
+Query workload design. 
+
+JSON schema quality. 
+
+Schema evolution. 
+
+Value normalization. 
+
+Limited aggregation. 
+
+User study pending. 
+
+No predictive clinical decision-support claim. 
+
+11. Conclusion 
+
+Restate problem. 
+
+Restate AQF method. 
+
+Summarize contributions. 
+
+Mention future work: real user study, aggregation, learned weights, personalization, adaptive refinement, natural-language querying. 
+
+Closing thesis: AQF shows that hierarchical EHR complexity can be made queryable by transforming raw structural traversal into bounded, explainable, form-based interaction. 
+
+Appendices 
+
+Appendix A. Datasets and Query Sets 
+
+Dataset details. 
+
+JSON hierarchy summary. 
+
+Extracted sections/paths/fields. 
+
+Full Easy / Medium / Hard query list. 
+
+Appendix B. Baseline and Human-Designed Form Comparison 
+
+Manual forms. 
+
+Generic query builders. 
+
+Workload-driven generation. 
+
+Visual EHR query systems. 
+
+Schema/content-driven systems. 
+
+Appendix C. Cost of Generation 
+
+C_total = 
+C_parse 
++ C_graph 
++ C_profile 
++ C_queriability 
++ C_synthesis 
++ C_translation 
++ C_explainability 
+
+Appendix D. Additional AQF Capabilities and Future Extensions 
+
+Aggregation. 
+
+Learned weights. 
+
+User-role-aware form generation. 
+
+Personalization. 
+
+Conversational querying. 
+
+Adaptive refinement. 
+
+Clinical validation. 
+
+Appendix E. User Study Protocol and Results TO_BE_ADDED 
+
+Participant demographics. 
+
+Study design. 
+
+Task list. 
+
+Metrics. 
+
+Statistical analysis. 
+
+Qualitative feedback. 
+
+Final results. 
+
+Version Lock Note 
+
+This document is frozen as AQF Journal Research Paper Outline v1. Until an explicitly named future version is created, this outline should be treated as the rigid baseline structure for the AQF draft. 

@@ -263,9 +263,7 @@ def render_brand():
         """
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
             <div style="
-                width:36px;height:36px;border-radius:10px;
-                background:#DBEAFE;display:flex;align-items:center;justify-content:center;
-                color:#1D4ED8;font-weight:700;">AQ</div>
+            width:36px;height:36px;border-radius:10px;background:#DBEAFE;display:flex;align-items:center;justify-content:center;color:#1D4ED8;font-weight:700;">AQ</div>
             <div>
                 <div style="font-size:20px;font-weight:700;color:#0F172A;">AQF</div>
                 <div style="font-size:12px;color:#64748B;">Adaptive Query Forms</div>
@@ -274,6 +272,7 @@ def render_brand():
         """,
         unsafe_allow_html=True,
     )
+
 
 def clean_query_summary(summary_md: str) -> str:
     text = summary_md.strip()
