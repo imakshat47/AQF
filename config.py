@@ -6,7 +6,8 @@ BASE_DIR = Path(__file__).resolve().parent
 # -----------------------------
 # Data / cache
 # -----------------------------
-DATA_DIR = BASE_DIR / "dataset/orbda1"
+DATA_DIR = BASE_DIR / "dataset/aih_dataset_orbda/aih_dataset_orbda"
+# DATA_DIR = "E:\\pFolder\\AQF\\dataset\\aih_dataset_orbda\\aih_dataset_orbda"
 CACHE_DIR = BASE_DIR / ".cache"
 SCHEMA_UNION_FILE = CACHE_DIR / "schema_union.json"
 FIELDS_FILE = CACHE_DIR / "fields.json"
