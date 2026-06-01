@@ -1,0 +1,9 @@
+{
+  "kappa": 60,
+  "theta": 0.1,
+  "alpha": 0.7,
+  "beta": 0.3,
+  "lambda": 0.25,
+  "random_trials": 30,
+  "include_cross": false
+}
