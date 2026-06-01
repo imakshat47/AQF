@@ -1,0 +1,293 @@
+[
+  {
+    "query_id": "D1",
+    "workload": "W2_DEMOGRAPHIC_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Gender Filter",
+    "description": "Gender Filter.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / gender",
+        "field_label": "gender",
+        "operator": "equals",
+        "value": "Masculino"
+      }
+    ],
+    "outputs": [
+      "gender"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "D2",
+    "workload": "W2_DEMOGRAPHIC_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Known Gender with Birth Date",
+    "description": "Known Gender with Birth Date.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / gender",
+        "field_label": "gender",
+        "operator": "is_known",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "gender",
+      "birth date"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "D3",
+    "workload": "W2_DEMOGRAPHIC_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Nationality Filter",
+    "description": "Nationality Filter.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / nationality",
+        "field_label": "nationality",
+        "operator": "equals",
+        "value": "BRASIL"
+      }
+    ],
+    "outputs": [
+      "nationality"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "D4",
+    "workload": "W2_DEMOGRAPHIC_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Unknown Race",
+    "description": "Unknown Race.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / race",
+        "field_label": "race",
+        "operator": "is_unknown",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "race"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "D5",
+    "workload": "W2_DEMOGRAPHIC_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Unknown Ethnic Group",
+    "description": "Unknown Ethnic Group.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / ethnic group",
+        "field_label": "ethnic group",
+        "operator": "is_unknown",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "ethnic group"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "D6",
+    "workload": "W2_DEMOGRAPHIC_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Birth Date Before Threshold",
+    "description": "Birth Date Before Threshold.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / birth date",
+        "field_label": "birth date",
+        "operator": "before",
+        "value": "1960-01-01"
+      }
+    ],
+    "outputs": [
+      "birth date"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "D7",
+    "workload": "W2_DEMOGRAPHIC_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Gender and Nationality",
+    "description": "Gender and Nationality.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / gender",
+        "field_label": "gender",
+        "operator": "equals",
+        "value": "Masculino"
+      },
+      {
+        "canonical_path": "Demographic data / components / nationality",
+        "field_label": "nationality",
+        "operator": "equals",
+        "value": "BRASIL"
+      }
+    ],
+    "outputs": [
+      "gender",
+      "nationality"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "D8",
+    "workload": "W2_DEMOGRAPHIC_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Birth Date with Known Gender",
+    "description": "Birth Date with Known Gender.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / birth date",
+        "field_label": "birth date",
+        "operator": "before",
+        "value": "1960-01-01"
+      },
+      {
+        "canonical_path": "Demographic data / components / gender",
+        "field_label": "gender",
+        "operator": "is_known",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "birth date",
+      "gender"
+    ],
+    "sort": {
+      "field": "birth date",
+      "direction": "desc"
+    }
+  },
+  {
+    "query_id": "D9",
+    "workload": "W2_DEMOGRAPHIC_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Educational Level and Nationality",
+    "description": "Educational Level and Nationality.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / educational level",
+        "field_label": "educational level",
+        "operator": "equals",
+        "value": "Ignorado/não se aplica"
+      },
+      {
+        "canonical_path": "Demographic data / components / nationality",
+        "field_label": "nationality",
+        "operator": "equals",
+        "value": "BRASIL"
+      }
+    ],
+    "outputs": [
+      "educational level",
+      "nationality"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "D10",
+    "workload": "W2_DEMOGRAPHIC_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Unknown Race with Known Nationality",
+    "description": "Unknown Race with Known Nationality.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / race",
+        "field_label": "race",
+        "operator": "is_unknown",
+        "value": null
+      },
+      {
+        "canonical_path": "Demographic data / components / nationality",
+        "field_label": "nationality",
+        "operator": "is_known",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "race",
+      "nationality"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "D11",
+    "workload": "W2_DEMOGRAPHIC_EXPERT",
+    "difficulty": "Hard",
+    "query_name": "Multiple Missingness with Known Nationality",
+    "description": "Multiple Missingness with Known Nationality.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / race",
+        "field_label": "race",
+        "operator": "is_unknown",
+        "value": null
+      },
+      {
+        "canonical_path": "Demographic data / components / ethnic group",
+        "field_label": "ethnic group",
+        "operator": "is_unknown",
+        "value": null
+      },
+      {
+        "canonical_path": "Demographic data / components / nationality",
+        "field_label": "nationality",
+        "operator": "is_known",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "race",
+      "ethnic group",
+      "nationality"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "D12",
+    "workload": "W2_DEMOGRAPHIC_EXPERT",
+    "difficulty": "Hard",
+    "query_name": "Birth Date, Gender, and Nationality",
+    "description": "Birth Date, Gender, and Nationality.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / birth date",
+        "field_label": "birth date",
+        "operator": "after",
+        "value": "1950-01-01"
+      },
+      {
+        "canonical_path": "Demographic data / components / gender",
+        "field_label": "gender",
+        "operator": "is_known",
+        "value": null
+      },
+      {
+        "canonical_path": "Demographic data / components / nationality",
+        "field_label": "nationality",
+        "operator": "equals",
+        "value": "BRASIL"
+      }
+    ],
+    "outputs": [
+      "birth date",
+      "gender",
+      "nationality"
+    ],
+    "sort": {
+      "field": "birth date",
+      "direction": "desc"
+    }
+  }
+]

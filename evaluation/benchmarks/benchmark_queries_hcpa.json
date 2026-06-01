@@ -1,0 +1,778 @@
+[
+  {
+    "query_id": "Q1",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "State Filter",
+    "description": "Filter records by State equal to SÃO PAULO; display State.",
+    "filters": [
+      {
+        "canonical_path": "HCPA / General data / State",
+        "field_label": "State",
+        "operator": "equals",
+        "value": "SÃO PAULO"
+      }
+    ],
+    "outputs": [
+      "State"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q2",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Known State Projection",
+    "description": "Filter records where State is known; display State and reason for encounter.",
+    "filters": [
+      {
+        "canonical_path": "HCPA / General data / State",
+        "field_label": "State",
+        "operator": "is_known",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "State",
+      "reason for encounter"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q3",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Chemotherapy Encounter Reason",
+    "description": "Filter records by reason for encounter equal to QUIMIOTERAPIA; display reason for encounter.",
+    "filters": [
+      {
+        "canonical_path": "HCPA / General data / reason for encounter",
+        "field_label": "reason for encounter",
+        "operator": "equals",
+        "value": "QUIMIOTERAPIA"
+      }
+    ],
+    "outputs": [
+      "reason for encounter"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q4",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Encounter Reason Projection",
+    "description": "Filter records where reason for encounter is known; display reason for encounter, State, and patient age.",
+    "filters": [
+      {
+        "canonical_path": "HCPA / General data / reason for encounter",
+        "field_label": "reason for encounter",
+        "operator": "is_known",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "reason for encounter",
+      "State",
+      "patient age"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q5",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Elderly Patient Age Query",
+    "description": "Filter records where patient age is greater than 70; display patient age and sort by patient age descending.",
+    "filters": [
+      {
+        "canonical_path": "HCPA / General data / patient age",
+        "field_label": "patient age",
+        "operator": ">",
+        "value": 70
+      }
+    ],
+    "outputs": [
+      "patient age"
+    ],
+    "sort": {
+      "field": "patient age",
+      "direction": "desc"
+    }
+  },
+  {
+    "query_id": "Q6",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Chemotherapy Schema Search",
+    "description": "Filter records where chemotherapy schema contains TMX; display chemotherapy schema.",
+    "filters": [
+      {
+        "canonical_path": "HCPA / chemotherapy / schema",
+        "field_label": "schema",
+        "operator": "contains",
+        "value": "TMX"
+      }
+    ],
+    "outputs": [
+      "schema"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q7",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Radiotherapy Procedure Search",
+    "description": "Filter records where Procedure contains RADIOTERAPIA; display Procedure.",
+    "filters": [
+      {
+        "canonical_path": "Procedure undertaken / Procedure",
+        "field_label": "Procedure",
+        "operator": "contains",
+        "value": "RADIOTERAPIA"
+      }
+    ],
+    "outputs": [
+      "Procedure"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q8",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Diagnosis Code Search",
+    "description": "Filter records where Problem contains C50.9; display Problem.",
+    "filters": [
+      {
+        "canonical_path": "Problem/Diagnosis / Problem",
+        "field_label": "Problem",
+        "operator": "contains",
+        "value": "C50.9"
+      }
+    ],
+    "outputs": [
+      "Problem"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q9",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Clinical Staging Filter",
+    "description": "Filter records where Clinical staging equals 3; display Clinical staging.",
+    "filters": [
+      {
+        "canonical_path": "Problem/Diagnosis / Clinical staging",
+        "field_label": "Clinical staging",
+        "operator": "equals",
+        "value": "3"
+      }
+    ],
+    "outputs": [
+      "Clinical staging"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q10",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Lymph Node Invasion Filter",
+    "description": "Filter records where invaded regional lymph nodes equals true; display invaded regional lymph nodes.",
+    "filters": [
+      {
+        "canonical_path": "Problem/Diagnosis / invaded regional lymph nodes",
+        "field_label": "invaded regional lymph nodes",
+        "operator": "equals",
+        "value": true
+      }
+    ],
+    "outputs": [
+      "invaded regional lymph nodes"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q11",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "State and Radiotherapy Encounter",
+    "description": "Filter State=SÃO PAULO and reason for encounter=RADIOTERAPIA; display both.",
+    "filters": [
+      {
+        "canonical_path": "HCPA / General data / State",
+        "field_label": "State",
+        "operator": "equals",
+        "value": "SÃO PAULO"
+      },
+      {
+        "canonical_path": "HCPA / General data / reason for encounter",
+        "field_label": "reason for encounter",
+        "operator": "equals",
+        "value": "RADIOTERAPIA"
+      }
+    ],
+    "outputs": [
+      "State",
+      "reason for encounter"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q12",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Known State with Chemotherapy Encounter",
+    "description": "Filter State is known and reason for encounter=QUIMIOTERAPIA; display State, reason for encounter, patient age.",
+    "filters": [
+      {
+        "canonical_path": "HCPA / General data / State",
+        "field_label": "State",
+        "operator": "is_known",
+        "value": null
+      },
+      {
+        "canonical_path": "HCPA / General data / reason for encounter",
+        "field_label": "reason for encounter",
+        "operator": "equals",
+        "value": "QUIMIOTERAPIA"
+      }
+    ],
+    "outputs": [
+      "State",
+      "reason for encounter",
+      "patient age"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q13",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Age and State Query",
+    "description": "Filter patient age>60 and State=PARANÁ; display both; sort by age desc.",
+    "filters": [
+      {
+        "canonical_path": "HCPA / General data / patient age",
+        "field_label": "patient age",
+        "operator": ">",
+        "value": 60
+      },
+      {
+        "canonical_path": "HCPA / General data / State",
+        "field_label": "State",
+        "operator": "equals",
+        "value": "PARANÁ"
+      }
+    ],
+    "outputs": [
+      "patient age",
+      "State"
+    ],
+    "sort": {
+      "field": "patient age",
+      "direction": "desc"
+    }
+  },
+  {
+    "query_id": "Q14",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Chemotherapy Schema and Duration",
+    "description": "Filter chemotherapy schema contains TMX and duration of treatment>12; display both; sort by duration desc.",
+    "filters": [
+      {
+        "canonical_path": "HCPA / chemotherapy / schema",
+        "field_label": "schema",
+        "operator": "contains",
+        "value": "TMX"
+      },
+      {
+        "canonical_path": "HCPA / chemotherapy / duration of treatment",
+        "field_label": "duration of treatment",
+        "operator": ">",
+        "value": 12
+      }
+    ],
+    "outputs": [
+      "schema",
+      "duration of treatment"
+    ],
+    "sort": {
+      "field": "duration of treatment",
+      "direction": "desc"
+    }
+  },
+  {
+    "query_id": "Q15",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Diagnosis with Clinical Staging",
+    "description": "Filter Problem contains C50.9 and Clinical staging=3; display both.",
+    "filters": [
+      {
+        "canonical_path": "Problem/Diagnosis / Problem",
+        "field_label": "Problem",
+        "operator": "contains",
+        "value": "C50.9"
+      },
+      {
+        "canonical_path": "Problem/Diagnosis / Clinical staging",
+        "field_label": "Clinical staging",
+        "operator": "equals",
+        "value": "3"
+      }
+    ],
+    "outputs": [
+      "Problem",
+      "Clinical staging"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q16",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Diagnosis and Radiotherapy Procedure",
+    "description": "Filter Problem contains C53.9 and Procedure contains RADIOTERAPIA; display both.",
+    "filters": [
+      {
+        "canonical_path": "Problem/Diagnosis / Problem",
+        "field_label": "Problem",
+        "operator": "contains",
+        "value": "C53.9"
+      },
+      {
+        "canonical_path": "Procedure undertaken / Procedure",
+        "field_label": "Procedure",
+        "operator": "contains",
+        "value": "RADIOTERAPIA"
+      }
+    ],
+    "outputs": [
+      "Problem",
+      "Procedure"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q17",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Discharge Reason and State",
+    "description": "Filter reason for discharge contains evasão and State=SÃO PAULO; display both.",
+    "filters": [
+      {
+        "canonical_path": "Discharge / reason for discharge",
+        "field_label": "reason for discharge",
+        "operator": "contains",
+        "value": "evasão"
+      },
+      {
+        "canonical_path": "HCPA / General data / State",
+        "field_label": "State",
+        "operator": "equals",
+        "value": "SÃO PAULO"
+      }
+    ],
+    "outputs": [
+      "reason for discharge",
+      "State"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q18",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Unknown Histopathological Grading with Diagnosis",
+    "description": "Filter histopathological grading is unknown and Problem contains C50.9; display both.",
+    "filters": [
+      {
+        "canonical_path": "Problem/Diagnosis / histopathological grading",
+        "field_label": "histopathological grading",
+        "operator": "is_unknown",
+        "value": null
+      },
+      {
+        "canonical_path": "Problem/Diagnosis / Problem",
+        "field_label": "Problem",
+        "operator": "contains",
+        "value": "C50.9"
+      }
+    ],
+    "outputs": [
+      "histopathological grading",
+      "Problem"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q19",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Tumour Topography and Nodal Invasion",
+    "description": "Filter tumour topography contains C50.9 and invaded regional lymph nodes=true; display both.",
+    "filters": [
+      {
+        "canonical_path": "Problem/Diagnosis / tumour topography",
+        "field_label": "tumour topography",
+        "operator": "contains",
+        "value": "C50.9"
+      },
+      {
+        "canonical_path": "Problem/Diagnosis / invaded regional lymph nodes",
+        "field_label": "invaded regional lymph nodes",
+        "operator": "equals",
+        "value": true
+      }
+    ],
+    "outputs": [
+      "tumour topography",
+      "invaded regional lymph nodes"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q20",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Radiotherapy Encounter with Start Date",
+    "description": "Filter reason for encounter=RADIOTERAPIA and radiotherapy start date after 2011-01-01; display both; sort date desc.",
+    "filters": [
+      {
+        "canonical_path": "HCPA / General data / reason for encounter",
+        "field_label": "reason for encounter",
+        "operator": "equals",
+        "value": "RADIOTERAPIA"
+      },
+      {
+        "canonical_path": "HCPA / Radiotherapy / date of beginning of radiotherapy",
+        "field_label": "date of beginning of radiotherapy",
+        "operator": "after",
+        "value": "2011-01-01"
+      }
+    ],
+    "outputs": [
+      "reason for encounter",
+      "date of beginning of radiotherapy"
+    ],
+    "sort": {
+      "field": "date of beginning of radiotherapy",
+      "direction": "desc"
+    }
+  },
+  {
+    "query_id": "Q21",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Hard",
+    "query_name": "Transplantation Indicator and Count",
+    "description": "Transplantation Indicator and Count.",
+    "filters": [
+      {
+        "canonical_path": "Nephrology / indicator of transplantation",
+        "field_label": "indicator of transplantation",
+        "operator": "equals",
+        "value": true
+      },
+      {
+        "canonical_path": "Nephrology / number of transplantations",
+        "field_label": "number of transplantations",
+        "operator": "equals",
+        "value": 1
+      }
+    ],
+    "outputs": [
+      "indicator of transplantation",
+      "number of transplantations"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q22",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Hard",
+    "query_name": "Dialysis Date and Imaging Status",
+    "description": "Dialysis Date and Imaging Status.",
+    "filters": [
+      {
+        "canonical_path": "Dialysis / date of first dialysis",
+        "field_label": "date of first dialysis",
+        "operator": "is_known",
+        "value": null
+      },
+      {
+        "canonical_path": "Imaging / abdominal ultrasonography",
+        "field_label": "abdominal ultrasonography",
+        "operator": "equals",
+        "value": false
+      }
+    ],
+    "outputs": [
+      "date of first dialysis",
+      "abdominal ultrasonography"
+    ],
+    "sort": {
+      "field": "date of first dialysis",
+      "direction": "desc"
+    }
+  },
+  {
+    "query_id": "Q23",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Hard",
+    "query_name": "Follow-Up Duration and BMI",
+    "description": "Follow Up Duration and BMI.",
+    "filters": [
+      {
+        "canonical_path": "Follow-up / duration of follow-up months",
+        "field_label": "duration of follow-up months",
+        "operator": ">",
+        "value": 6
+      },
+      {
+        "canonical_path": "Bariatrics / body mass index",
+        "field_label": "body mass index",
+        "operator": ">",
+        "value": 40
+      }
+    ],
+    "outputs": [
+      "duration of follow-up months",
+      "body mass index"
+    ],
+    "sort": {
+      "field": "duration of follow-up months",
+      "direction": "desc"
+    }
+  },
+  {
+    "query_id": "Q24",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Hard",
+    "query_name": "State, Encounter Reason, and Age",
+    "description": "State, Encounter Reason, and Age.",
+    "filters": [
+      {
+        "canonical_path": "HCPA / General data / State",
+        "field_label": "State",
+        "operator": "equals",
+        "value": "SÃO PAULO"
+      },
+      {
+        "canonical_path": "HCPA / General data / reason for encounter",
+        "field_label": "reason for encounter",
+        "operator": "equals",
+        "value": "QUIMIOTERAPIA"
+      },
+      {
+        "canonical_path": "HCPA / General data / patient age",
+        "field_label": "patient age",
+        "operator": ">",
+        "value": 60
+      }
+    ],
+    "outputs": [
+      "State",
+      "reason for encounter",
+      "patient age"
+    ],
+    "sort": {
+      "field": "patient age",
+      "direction": "desc"
+    }
+  },
+  {
+    "query_id": "Q25",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Hard",
+    "query_name": "State, Radiotherapy Encounter, and Diagnosis",
+    "description": "State, Radiotherapy Encounter, and Diagnosis.",
+    "filters": [
+      {
+        "canonical_path": "HCPA / General data / State",
+        "field_label": "State",
+        "operator": "equals",
+        "value": "RIO DE JANEIRO"
+      },
+      {
+        "canonical_path": "HCPA / General data / reason for encounter",
+        "field_label": "reason for encounter",
+        "operator": "equals",
+        "value": "RADIOTERAPIA"
+      },
+      {
+        "canonical_path": "Problem/Diagnosis / Problem",
+        "field_label": "Problem",
+        "operator": "contains",
+        "value": "C53.9"
+      }
+    ],
+    "outputs": [
+      "State",
+      "reason for encounter",
+      "Problem"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q26",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Hard",
+    "query_name": "Diagnosis, Staging, and Nodal Invasion",
+    "description": "Diagnosis, Staging, and Nodal Invasion.",
+    "filters": [
+      {
+        "canonical_path": "Problem/Diagnosis / Problem",
+        "field_label": "Problem",
+        "operator": "contains",
+        "value": "C50.9"
+      },
+      {
+        "canonical_path": "Problem/Diagnosis / Clinical staging",
+        "field_label": "Clinical staging",
+        "operator": "equals",
+        "value": "3"
+      },
+      {
+        "canonical_path": "Problem/Diagnosis / invaded regional lymph nodes",
+        "field_label": "invaded regional lymph nodes",
+        "operator": "equals",
+        "value": true
+      }
+    ],
+    "outputs": [
+      "Problem",
+      "Clinical staging",
+      "invaded regional lymph nodes"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q27",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Hard",
+    "query_name": "Chemotherapy Schema, Duration, and Start Date",
+    "description": "Chemotherapy Schema, Duration, and Start Date.",
+    "filters": [
+      {
+        "canonical_path": "HCPA / chemotherapy / schema",
+        "field_label": "schema",
+        "operator": "contains",
+        "value": "TMX"
+      },
+      {
+        "canonical_path": "HCPA / chemotherapy / duration of treatment",
+        "field_label": "duration of treatment",
+        "operator": ">",
+        "value": 12
+      },
+      {
+        "canonical_path": "HCPA / chemotherapy / date of beginning of chemotherapy",
+        "field_label": "date of beginning of chemotherapy",
+        "operator": "after",
+        "value": "2011-01-01"
+      }
+    ],
+    "outputs": [
+      "schema",
+      "duration of treatment",
+      "date of beginning of chemotherapy"
+    ],
+    "sort": {
+      "field": "date of beginning of chemotherapy",
+      "direction": "desc"
+    }
+  },
+  {
+    "query_id": "Q28",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Hard",
+    "query_name": "Procedure and Irradiated Area",
+    "description": "Procedure and Irradiated Area.",
+    "filters": [
+      {
+        "canonical_path": "Procedure undertaken / Procedure",
+        "field_label": "Procedure",
+        "operator": "contains",
+        "value": "RADIOTERAPIA"
+      },
+      {
+        "canonical_path": "Radiotherapy / irradiated area 1",
+        "field_label": "irradiated area 1",
+        "operator": "contains",
+        "value": "C50.9"
+      }
+    ],
+    "outputs": [
+      "Procedure",
+      "irradiated area 1"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q29",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Hard",
+    "query_name": "Unknown Discharge Date with Discharge Reason",
+    "description": "Unknown Discharge Date with Discharge Reason.",
+    "filters": [
+      {
+        "canonical_path": "Discharge / date of discharge",
+        "field_label": "date of discharge",
+        "operator": "is_unknown",
+        "value": null
+      },
+      {
+        "canonical_path": "Discharge / reason for discharge",
+        "field_label": "reason for discharge",
+        "operator": "contains",
+        "value": "Alta"
+      }
+    ],
+    "outputs": [
+      "date of discharge",
+      "reason for discharge"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "Q30",
+    "workload": "W1_HCPA_EXPERT",
+    "difficulty": "Hard",
+    "query_name": "Tumour Topography, Unknown Grading, and Pathology Date",
+    "description": "Tumour Topography, Unknown Grading, and Pathology Date.",
+    "filters": [
+      {
+        "canonical_path": "Problem/Diagnosis / tumour topography",
+        "field_label": "tumour topography",
+        "operator": "contains",
+        "value": "C50.9"
+      },
+      {
+        "canonical_path": "Problem/Diagnosis / histopathological grading",
+        "field_label": "histopathological grading",
+        "operator": "is_unknown",
+        "value": null
+      },
+      {
+        "canonical_path": "Problem/Diagnosis / date of pathological identification",
+        "field_label": "date of pathological identification",
+        "operator": "after",
+        "value": "2010-01-01"
+      }
+    ],
+    "outputs": [
+      "tumour topography",
+      "histopathological grading",
+      "date of pathological identification"
+    ],
+    "sort": {
+      "field": "date of pathological identification",
+      "direction": "desc"
+    }
+  }
+]
