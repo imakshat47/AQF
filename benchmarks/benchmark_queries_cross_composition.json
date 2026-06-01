@@ -1,0 +1,178 @@
+[
+  {
+    "query_id": "X1",
+    "workload": "W3_CROSS_COMPOSITION_CHALLENGE",
+    "difficulty": "Hard",
+    "query_name": "Demographic Gender with Radiotherapy Encounter",
+    "description": "Demographic Gender with Radiotherapy Encounter.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / gender",
+        "field_label": "gender",
+        "operator": "is_known",
+        "value": null
+      },
+      {
+        "canonical_path": "HCPA / General data / reason for encounter",
+        "field_label": "reason for encounter",
+        "operator": "equals",
+        "value": "RADIOTERAPIA"
+      }
+    ],
+    "outputs": [
+      "gender",
+      "reason for encounter"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "X2",
+    "workload": "W3_CROSS_COMPOSITION_CHALLENGE",
+    "difficulty": "Hard",
+    "query_name": "Nationality, State, and Age",
+    "description": "Nationality, State, and Age.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / nationality",
+        "field_label": "nationality",
+        "operator": "equals",
+        "value": "BRASIL"
+      },
+      {
+        "canonical_path": "HCPA / General data / State",
+        "field_label": "State",
+        "operator": "equals",
+        "value": "SÃO PAULO"
+      },
+      {
+        "canonical_path": "HCPA / General data / patient age",
+        "field_label": "patient age",
+        "operator": ">",
+        "value": 60
+      }
+    ],
+    "outputs": [
+      "nationality",
+      "State",
+      "patient age"
+    ],
+    "sort": {
+      "field": "patient age",
+      "direction": "desc"
+    }
+  },
+  {
+    "query_id": "X3",
+    "workload": "W3_CROSS_COMPOSITION_CHALLENGE",
+    "difficulty": "Hard",
+    "query_name": "Gender with Diagnosis",
+    "description": "Gender with Diagnosis.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / gender",
+        "field_label": "gender",
+        "operator": "is_known",
+        "value": null
+      },
+      {
+        "canonical_path": "Problem/Diagnosis / Problem",
+        "field_label": "Problem",
+        "operator": "contains",
+        "value": "C50.9"
+      }
+    ],
+    "outputs": [
+      "gender",
+      "Problem"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "X4",
+    "workload": "W3_CROSS_COMPOSITION_CHALLENGE",
+    "difficulty": "Hard",
+    "query_name": "Birth Date with Radiotherapy Procedure",
+    "description": "Birth Date with Radiotherapy Procedure.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / birth date",
+        "field_label": "birth date",
+        "operator": "before",
+        "value": "1960-01-01"
+      },
+      {
+        "canonical_path": "Procedure undertaken / Procedure",
+        "field_label": "Procedure",
+        "operator": "contains",
+        "value": "RADIOTERAPIA"
+      }
+    ],
+    "outputs": [
+      "birth date",
+      "Procedure"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "X5",
+    "workload": "W3_CROSS_COMPOSITION_CHALLENGE",
+    "difficulty": "Hard",
+    "query_name": "Nationality with Chemotherapy Treatment",
+    "description": "Nationality with Chemotherapy Treatment.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / nationality",
+        "field_label": "nationality",
+        "operator": "equals",
+        "value": "BRASIL"
+      },
+      {
+        "canonical_path": "HCPA / chemotherapy / schema",
+        "field_label": "schema",
+        "operator": "contains",
+        "value": "TMX"
+      },
+      {
+        "canonical_path": "HCPA / chemotherapy / date of beginning of chemotherapy",
+        "field_label": "date of beginning of chemotherapy",
+        "operator": "after",
+        "value": "2011-01-01"
+      }
+    ],
+    "outputs": [
+      "nationality",
+      "schema",
+      "date of beginning of chemotherapy"
+    ],
+    "sort": {
+      "field": "date of beginning of chemotherapy",
+      "direction": "desc"
+    }
+  },
+  {
+    "query_id": "X6",
+    "workload": "W3_CROSS_COMPOSITION_CHALLENGE",
+    "difficulty": "Hard",
+    "query_name": "Cross-Composition Missingness",
+    "description": "Cross-Composition Missingness.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / race",
+        "field_label": "race",
+        "operator": "is_unknown",
+        "value": null
+      },
+      {
+        "canonical_path": "Problem/Diagnosis / histopathological grading",
+        "field_label": "histopathological grading",
+        "operator": "is_unknown",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "race",
+      "histopathological grading"
+    ],
+    "sort": null
+  }
+]
