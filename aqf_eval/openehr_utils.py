@@ -7,11 +7,19 @@ from typing import Any, Iterable
 
 LIST_LIKE_KEYS = {
     "content", "items", "events", "activities", "protocol", "state",
-    "other_context", "data", "rows", "cells", "versions"
+    "other_context", "data", "rows", "cells", "versions", "description",
+    "ism_transition", "instruction_details"
 }
 
 ENTRY_CLASSES = {"OBSERVATION", "EVALUATION", "INSTRUCTION", "ACTION", "ADMIN_ENTRY"}
 CONTAINER_CLASSES = {"SECTION", "CLUSTER", "ITEM_TREE", "ITEM_LIST", "ITEM_TABLE", "ITEM_SINGLE"}
+
+# openEHR child branches to inspect. `description` is critical for ACTION.procedure-sus in ORBDA.
+CHILD_KEYS = [
+    "content", "items", "events", "activities", "data", "state", "protocol",
+    "other_context", "rows", "cells", "item", "description", "ism_transition",
+    "instruction_details"
+]
 
 
 def load_json(path: Path) -> Any:
@@ -88,20 +96,11 @@ def looks_like_composition(obj: Any) -> bool:
 
 
 def normalize_list_like_keys(obj: Any) -> Any:
-    """Normalize common openEHR child containers to lists, recursively.
-
-    This deliberately avoids normalizing VALUE dictionaries. It normalizes only known
-    container keys so downstream traversal is composition-shape agnostic.
-    """
     if isinstance(obj, dict):
         out = {}
         for k, v in obj.items():
-            if k in LIST_LIKE_KEYS and not (k == "data" and isinstance(v, dict) and "type" in v and v.get("type", "").startswith("DV_")):
-                # Some exports store data as ITEM_TREE object. Normalize only if object/list of RM containers.
-                if k in {"content", "items", "events", "activities", "protocol", "state", "other_context", "rows", "cells", "versions"}:
-                    out[k] = [normalize_list_like_keys(x) for x in as_list(v)]
-                else:
-                    out[k] = normalize_list_like_keys(v)
+            if k in {"content", "items", "events", "activities", "protocol", "state", "other_context", "rows", "cells", "versions"}:
+                out[k] = [normalize_list_like_keys(x) for x in as_list(v)]
             else:
                 out[k] = normalize_list_like_keys(v)
         return out
@@ -111,9 +110,9 @@ def normalize_list_like_keys(obj: Any) -> Any:
 
 
 def find_compositions(obj: Any) -> list[dict]:
-    found = []
     if looks_like_composition(obj):
         return [obj]
+    found = []
     if isinstance(obj, dict):
         for v in obj.values():
             found.extend(find_compositions(v))
@@ -130,77 +129,98 @@ def scan_json_folder(folder: Path) -> list[dict]:
             continue
         try:
             obj = load_json(path)
-        except Exception as exc:
-            units.append({"source_file": str(path), "load_error": str(exc), "raw_composition": None})
+        except Exception:
             continue
         comps = find_compositions(obj)
         if not comps:
             continue
-        # crude EHR id extraction from parent or subject
         ehr_id = None
         if isinstance(obj, dict):
             e = obj.get("ehr_id") or obj.get("ehrId")
-            if isinstance(e, dict):
-                ehr_id = e.get("value")
-            elif isinstance(e, str):
-                ehr_id = e
+            if isinstance(e, dict): ehr_id = e.get("value")
+            elif isinstance(e, str): ehr_id = e
         for i, comp in enumerate(comps):
             comp = normalize_list_like_keys(comp)
             subject_id = None
-            subj = comp
-            # subject often under content.subject.external_ref.id.value
             try:
-                content = as_list(comp.get("content"))[0]
-                ext = content.get("subject", {}).get("external_ref", {}).get("id", {})
-                if isinstance(ext, dict):
-                    subject_id = ext.get("value")
+                first_content = as_list(comp.get("content"))[0]
+                ext = first_content.get("subject", {}).get("external_ref", {}).get("id", {})
+                if isinstance(ext, dict): subject_id = ext.get("value")
             except Exception:
                 pass
             family = archetype_of(comp) or "UNKNOWN_COMPOSITION"
             units.append({
                 "unit_id": stable_hash({"path": str(path), "index": i, "uid": uid_of(comp), "family": family}),
-                "source_file": str(path),
-                "ehr_id": ehr_id or subject_id,
-                "subject_id": subject_id,
-                "record_family": family,
-                "composition_name": name_of(comp),
-                "composition_uid": uid_of(comp),
+                "source_file": str(path), "ehr_id": ehr_id or subject_id, "subject_id": subject_id,
+                "record_family": family, "composition_name": name_of(comp), "composition_uid": uid_of(comp),
                 "raw_composition": comp,
             })
-    return [u for u in units if u.get("raw_composition") is not None]
+    return units
+
+
+def _to_num(x):
+    try:
+        if x is None or x == "": return None
+        if isinstance(x, bool): return x
+        if isinstance(x, (int, float)): return x
+        s = str(x)
+        return float(s) if "." in s else int(s)
+    except Exception:
+        return x
 
 
 def value_info(element: dict) -> dict:
+    """Extract value from openEHR DV_* datatypes, including magnitude-based numeric types."""
     if "value" in element:
         val = element.get("value")
         if isinstance(val, dict):
             dv_type = str(val.get("type", "UNKNOWN"))
-            raw = val.get("value")
-            code = None
-            term = None
+            raw = None
+            display = None
+            units = val.get("units")
+            if dv_type in {"DV_COUNT", "DV_QUANTITY"}:
+                raw = _to_num(val.get("magnitude", val.get("value")))
+                display = raw if units is None else f"{raw} {units}"
+            elif dv_type == "DV_PROPORTION":
+                num, den = _to_num(val.get("numerator")), _to_num(val.get("denominator"))
+                raw = None if num is None or den in (None, 0) else num / den
+                display = f"{num}/{den}" if num is not None and den is not None else raw
+            elif dv_type == "DV_BOOLEAN":
+                v = val.get("value")
+                raw = str(v).lower() == "true" if isinstance(v, str) else bool(v)
+                display = str(raw).lower()
+            else:
+                raw = val.get("value")
+                display = raw
+            code = None; term = None
             dc = val.get("defining_code")
             if isinstance(dc, dict):
                 code = dc.get("code_string")
                 tid = dc.get("terminology_id", {})
-                if isinstance(tid, dict):
-                    term = tid.get("value")
-            return {"is_known": True, "value": raw, "display_value": raw, "dv_type": dv_type, "code_string": code, "terminology_id": term, "null_flavour": None}
-        return {"is_known": True, "value": val, "display_value": val, "dv_type": "UNKNOWN", "code_string": None, "terminology_id": None, "null_flavour": None}
+                if isinstance(tid, dict): term = tid.get("value")
+            return {"is_known": True, "value": raw, "display_value": display, "dv_type": dv_type,
+                    "code_string": code, "terminology_id": term, "units": units, "null_flavour": None}
+        return {"is_known": True, "value": val, "display_value": val, "dv_type": "UNKNOWN",
+                "code_string": None, "terminology_id": None, "units": None, "null_flavour": None}
     if "null_flavour" in element:
         nf = element.get("null_flavour")
         if isinstance(nf, dict):
-            return {"is_known": False, "value": None, "display_value": nf.get("value"), "dv_type": "NULL_FLAVOUR", "code_string": nf.get("defining_code", {}).get("code_string") if isinstance(nf.get("defining_code"), dict) else None, "terminology_id": None, "null_flavour": nf.get("value")}
-        return {"is_known": False, "value": None, "display_value": str(nf), "dv_type": "NULL_FLAVOUR", "code_string": None, "terminology_id": None, "null_flavour": str(nf)}
-    return {"is_known": False, "value": None, "display_value": None, "dv_type": "UNKNOWN", "code_string": None, "terminology_id": None, "null_flavour": None}
+            code = nf.get("defining_code", {}).get("code_string") if isinstance(nf.get("defining_code"), dict) else None
+            return {"is_known": False, "value": None, "display_value": nf.get("value", "unknown"),
+                    "dv_type": "NULL_FLAVOUR", "code_string": code, "terminology_id": None, "units": None,
+                    "null_flavour": nf.get("value", "unknown")}
+        return {"is_known": False, "value": None, "display_value": str(nf), "dv_type": "NULL_FLAVOUR",
+                "code_string": None, "terminology_id": None, "units": None, "null_flavour": str(nf)}
+    return {"is_known": False, "value": None, "display_value": None, "dv_type": "UNKNOWN",
+            "code_string": None, "terminology_id": None, "units": None, "null_flavour": None}
 
 
 def iter_children(node: dict) -> Iterable[tuple[str, Any]]:
-    for key in ["content", "items", "events", "activities", "data", "state", "protocol", "other_context", "rows", "cells", "item"]:
+    for key in CHILD_KEYS:
         if key in node:
             v = node[key]
             if isinstance(v, list):
-                for x in v:
-                    yield key, x
+                for x in v: yield key, x
             elif isinstance(v, dict):
                 yield key, v
 
@@ -208,8 +228,7 @@ def iter_children(node: dict) -> Iterable[tuple[str, Any]]:
 def walk_elements(node: Any, ctx: dict | None = None) -> list[dict]:
     ctx = dict(ctx or {})
     out = []
-    if not isinstance(node, dict):
-        return out
+    if not isinstance(node, dict): return out
     rm = detect_rm_class(node)
     label = name_of(node)
     arch = archetype_of(node)
@@ -220,34 +239,24 @@ def walk_elements(node: Any, ctx: dict | None = None) -> list[dict]:
         ctx.update({"section_name": label or ctx.get("section_name"), "section_archetype": arch or ctx.get("section_archetype")})
     elif rm in ENTRY_CLASSES:
         ctx.update({"entry_name": label or ctx.get("entry_name"), "entry_archetype": arch or ctx.get("entry_archetype"), "entry_type": rm})
+        # ACTION.description often lacks container label; keep ACTION label as group.
     elif rm in CONTAINER_CLASSES:
-        # Accumulate canonical subgroup path but avoid repeating empty labels.
         parts = list(ctx.get("cluster_path_parts", []))
-        if label and label not in parts[-2:]:
-            parts.append(label)
+        if label and label not in parts[-2:]: parts.append(label)
         ctx.update({"cluster_path_parts": parts, "cluster_rm_class": rm})
     elif rm == "ELEMENT":
         vi = value_info(node)
         cluster_path = " / ".join(ctx.get("cluster_path_parts", [])) or "Top-level fields"
-        group = ctx.get("section_name") or ctx.get("entry_name") or ctx.get("composition_name") or "Composition"
+        group = ctx.get("entry_name") or ctx.get("section_name") or ctx.get("composition_name") or "Composition"
         element_label = label or arch or "Unnamed element"
         canonical_path = f"{group} / {cluster_path} / {element_label}"
         out.append({
-            "label": element_label,
-            "canonical_path": canonical_path,
-            "form_group": group,
-            "nested_subgroup": cluster_path,
-            "rm_class": rm,
-            "element_archetype": arch,
-            "composition_archetype": ctx.get("composition_archetype"),
-            "entry_archetype": ctx.get("entry_archetype"),
-            "entry_type": ctx.get("entry_type"),
-            "value": vi.get("value"),
-            "display_value": vi.get("display_value"),
-            "dv_type": vi.get("dv_type"),
-            "is_known": vi.get("is_known"),
-            "null_flavour": vi.get("null_flavour"),
-            "code_string": vi.get("code_string"),
+            "label": element_label, "canonical_path": canonical_path, "form_group": group,
+            "nested_subgroup": cluster_path, "rm_class": rm, "element_archetype": arch,
+            "composition_archetype": ctx.get("composition_archetype"), "entry_archetype": ctx.get("entry_archetype"),
+            "entry_type": ctx.get("entry_type"), "value": vi.get("value"), "display_value": vi.get("display_value"),
+            "dv_type": vi.get("dv_type"), "is_known": vi.get("is_known"), "null_flavour": vi.get("null_flavour"),
+            "code_string": vi.get("code_string"), "units": vi.get("units"),
         })
         return out
 
