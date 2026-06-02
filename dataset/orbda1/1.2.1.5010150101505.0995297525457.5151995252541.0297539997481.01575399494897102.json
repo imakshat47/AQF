@@ -92,7 +92,7 @@
                 "name": "Physician"
             },
             "content": [
-                {radio
+                {
                     "archetype_node_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
                     "type": "ADMIN_ENTRY",
                     "name": {
