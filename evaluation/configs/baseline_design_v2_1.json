@@ -1,0 +1,10 @@
+{
+  "baselines": {
+    "aqf_full": "AQF score + theta pruning + kappa cap + operator-aware canonical grouped form",
+    "flattened_topk": "Composition/context removed; frequency top-k; flat single group",
+    "frequency_only": "Canonical grouping retained but ranking uses coverage/frequency only",
+    "no_pruning": "True no-pruning; exposes all canonical fields, no kappa cap",
+    "aqf_topk_no_threshold": "AQF score top-k without theta pruning",
+    "no_operator_awareness": "AQF field selection with broad non-type-aware operators"
+  }
+}
