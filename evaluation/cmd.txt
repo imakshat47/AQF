@@ -1,0 +1,84 @@
+cmd
+
+python evaluation/run_parameter_sweep.py  --data-dir orbda_10k/mixed  --out-dir results/sweep_exhaustive_cartesian  --use-cache  --kappas 25,27,30,32,35,39,42,45,53  --thetas 0.00,0.02,0.05,0.08,0.10,0.12,0.15,0.20  --alphas 0.50,0.60,0.70,0.80  --betas 0.50,0.40,0.30,0.20  --lambdas 0.00,0.10,0.25,0.50  --random-trials 30
+
+
+
+python evaluation/run_evaluation.py  --data-dir orbda_10k/mixed  --out-dir results/aqf_eval_mixed_corrected  --use-cache  --kappa 25  --theta 0.10  --alpha 0.70  --beta 0.30  --lamb 0.25
+
+
+
+8/6
+
+python evaluation/run_journal_postprocess.py  --results-dir results\aqf_eval_v2_1_k30  --eta 1.0  --theta 0.10
+
+
+
+python evaluation/run_evaluation_final.py  --data-dir orbda_10k/mixed  --out-dir results/aqf_final_c35  --use-cache  --complexity-budget 35  --theta 0.10  --lambda-sc 0.25  --mu 0.25  --eta 1.0  --random-trials 30
+
+[OK] AQF final evaluation complete: results\aqf_final_c35
+               method  query_count  strict_coverage  partial_coverage  field_count  max_depth  final_complexity  operator_count  weighted_operator_burden
+             aqf_full           42         0.904762          0.914286           29          6              35.0             163                    151.00
+aqf_topk_no_threshold           42         0.904762          0.914286           29          6              35.0             163                    151.00
+       frequency_only           42         0.904762          0.914286           29          6              35.0             163                    151.00
+       flattened_topk           42         0.904762          0.914286           29          6              35.0             163                    151.00
+no_operator_awareness           42         0.904762          0.914286           29          6              35.0             319                    348.00
+           no_pruning           42         1.000000          1.000000           53          6              59.0             281                    259.25
+
+
+
+python evaluation/run_acf_evaluation.py  --data-dir orbda_10k/mixed  --out-dir results/acf_eval_default  --use-cache  --k-e 5  --k-a 10  --k-r 1  --k-sigma 6  --k-pi 6  --k-tau 3  --k-gamma 2  --field-complexity 30  --p 0.15  --random-trials 30
+
+[OK] ACF evaluation complete: results\acf_eval_default
+               method  query_count  strict_coverage  partial_coverage  field_count  form_complexity_elements  operator_count  weighted_operator_burden
+             acf_full           42         0.023810          0.023810            9                         9              49                     45.75
+       frequency_only           42         0.023810          0.023810            9                         9              49                     45.75
+       necessity_only           42         0.023810          0.023810            9                         9              49                     45.75
+       selection_only           42         0.023810          0.023810            9                         9              49                     45.75
+      projection_only           42         0.023810          0.023810            9                         9              49                     45.75
+ no_operator_specific           42         0.023810          0.023810            9                         9              49                     45.75
+        flattened_acf           42         0.023810          0.023810            9                         9              49                     45.75
+no_operator_awareness           42         0.023810          0.023810            9                         9              99                    108.00
+           no_pruning           42         1.000000          1.000000           53                        53             286                    264.75
+      random_entities           42         0.047619          0.088435           12                        12              67                     62.75
+
+
+
+python evaluation/run_acf_evaluation.py  --data-dir orbda_10k/mixed  --out-dir results/acf_eval_group_level  --use-cache  --entity-level group  --k-e 8  --k-a 10  --k-r 2  --field-complexity 35  --p 0.15  --random-trials 30
+
+
+
+python evaluation/run_acf_evaluation.py \
+  --data-dir orbda_10k/mixed \
+  --out-dir results/acf_eval_ke10 \
+  --use-cache \
+  --entity-level subgroup \
+  --k-e 10 \
+  --k-a 10 \
+  --k-r 2 \
+  --field-complexity 35 \
+  --p 0.15 \
+  --random-trials 30
+
+
+
+python evaluation/run_acf_evaluation.py \
+  --data-dir orbda_10k/mixed \
+  --out-dir results/acf_eval_fc40 \
+  --use-cache \
+  --entity-level group \
+  --k-e 10 \
+  --k-a 12 \
+  --k-r 2 \
+  --field-complexity 40 \
+  --p 0.15 \
+  --random-trials 30
+
+
+python evaluation/aqf_metrics_report.py  --results-dir results/aqf_final_c35  --eta 1.0
+
+python evaluation/run_evaluation_final.py  --data-dir orbda_10k/mixed  --out-dir results/aqf_final_c35_v2  --use-cache  --complexity-budget 35  --theta 0.10  --lambda-sc 0.25  --mu 0.25  --eta 1.0  --random-trials 30
+
+
+
+python evaluation/run_aqf_sensitivity_grid.py  --data-dir orbda_10k/mixed  --out-dir results/aqf_param_sensitivity_oat  --use-cache  --only-one-at-a-time  --complexity-budgets 20,25,30,32,35,38,40,45,50,53  --thetas 0.00,0.02,0.05,0.08,0.10,0.12,0.15,0.18,0.20,0.25  --lambda-scs 0.00,0.10,0.25,0.40,0.50,0.60,0.75,0.90,1.00  --mus 0.00,0.05,0.10,0.25,0.40,0.50,0.75,1.00  --etas 0.00,0.50,1.00,1.50,2.00  --random-trials 10
