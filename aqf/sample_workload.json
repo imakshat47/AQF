@@ -1,0 +1,195 @@
+{
+  "queries": [
+    {
+      "query_id": "Q_DEM_001",
+      "category": "demographic",
+      "description": "Find records by gender and nationality.",
+      "required_fields": [
+        "gender",
+        "nationality"
+      ],
+      "required_operators": {
+        "gender": [
+          "equals"
+        ],
+        "nationality": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ]
+    },
+    {
+      "query_id": "Q_DEM_002",
+      "category": "demographic",
+      "description": "Find records by birth date range.",
+      "required_fields": [
+        "birth date"
+      ],
+      "required_operators": {
+        "birth date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ]
+    },
+    {
+      "query_id": "Q_DX_001",
+      "category": "diagnosis",
+      "description": "Find records by primary problem/diagnosis.",
+      "required_fields": [
+        "Problem"
+      ],
+      "required_operators": {
+        "Problem": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ]
+    },
+    {
+      "query_id": "Q_DX_002",
+      "category": "diagnosis",
+      "description": "Find records by topography and clinical staging.",
+      "required_fields": [
+        "topography",
+        "Clinical staging"
+      ],
+      "required_operators": {
+        "topography": [
+          "equals"
+        ],
+        "Clinical staging": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ]
+    },
+    {
+      "query_id": "Q_PROC_001",
+      "category": "procedure",
+      "description": "Find records by procedure undertaken.",
+      "required_fields": [
+        "Procedure"
+      ],
+      "required_operators": {
+        "Procedure": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken"
+      ]
+    },
+    {
+      "query_id": "Q_TREAT_001",
+      "category": "treatment",
+      "description": "Find chemotherapy records by schema and treatment duration.",
+      "required_fields": [
+        "schema",
+        "duration of treatment"
+      ],
+      "required_operators": {
+        "schema": [
+          "contains"
+        ],
+        "duration of treatment": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "chemotherapy"
+      ]
+    },
+    {
+      "query_id": "Q_TEMP_001",
+      "category": "temporal",
+      "description": "Find records by issue date range.",
+      "required_fields": [
+        "issue date"
+      ],
+      "required_operators": {
+        "issue date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "HCPA"
+      ]
+    },
+    {
+      "query_id": "Q_TEMP_002",
+      "category": "temporal",
+      "description": "Find records by date of beginning of chemotherapy.",
+      "required_fields": [
+        "date of beginning of chemotherapy"
+      ],
+      "required_operators": {
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "chemotherapy"
+      ]
+    },
+    {
+      "query_id": "Q_CROSS_001",
+      "category": "cross_context",
+      "description": "Find records by diagnosis, procedure, and issue date.",
+      "required_fields": [
+        "Problem",
+        "Procedure",
+        "issue date"
+      ],
+      "required_operators": {
+        "Problem": [
+          "equals"
+        ],
+        "Procedure": [
+          "equals"
+        ],
+        "issue date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "HCPA"
+      ]
+    },
+    {
+      "query_id": "Q_CROSS_002",
+      "category": "cross_context",
+      "description": "Find records by state, patient age, and treatment schema.",
+      "required_fields": [
+        "State",
+        "patient age",
+        "schema"
+      ],
+      "required_operators": {
+        "State": [
+          "equals"
+        ],
+        "patient age": [
+          "range"
+        ],
+        "schema": [
+          "contains"
+        ]
+      },
+      "required_contexts": [
+        "General data",
+        "chemotherapy"
+      ]
+    }
+  ]
+}

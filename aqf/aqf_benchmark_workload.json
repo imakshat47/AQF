@@ -1,0 +1,500 @@
+{
+  "metadata": {
+    "name": "AQF ORBDA benchmark workload",
+    "version": "1.0",
+    "query_count": 20,
+    "description": "Benchmark query workload for evaluating AQF form expressivity over ORBDA/openEHR-style compositions. These queries are used to test whether generated AQF forms expose the required fields, operators, and structural contexts. Constraints are included for later AQL realization evaluation."
+  },
+  "queries": [
+    {
+      "query_id": "D1",
+      "query_name": "Male patient cohort",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Retrieve all patient records in which the demographic attribute gender is recorded as Male, in order to define a gender-specific patient cohort.",
+      "required_fields": [
+        "gender"
+      ],
+      "required_operators": {
+        "gender": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "gender": "Male"
+      }
+    },
+    {
+      "query_id": "D2",
+      "query_name": "Patients born before 01-01-1970",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Identify all patient records in which birth date is earlier than 01-01-1970, to enable age-based demographic stratification.",
+      "required_fields": [
+        "birth date"
+      ],
+      "required_operators": {
+        "birth date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "birth date": {
+          "operator": "before",
+          "value": "1970-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "D3",
+      "query_name": "Brazilian nationality cohort",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Retrieve all patient records in which nationality is documented as Brazilian, for demographic and population-based subgroup analysis.",
+      "required_fields": [
+        "nationality"
+      ],
+      "required_operators": {
+        "nationality": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "nationality": "Brazilian"
+      }
+    },
+    {
+      "query_id": "D4",
+      "query_name": "Higher education demographic filter",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Retrieve all patient records in which educational level is documented as Higher education, for demographic and social-determinant profiling.",
+      "required_fields": [
+        "educational level"
+      ],
+      "required_operators": {
+        "educational level": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "educational level": "Higher education"
+      }
+    },
+    {
+      "query_id": "DX1",
+      "query_name": "Breast cancer primary diagnosis cohort",
+      "query_complexity": "easy",
+      "category": "diagnosis",
+      "description": "Retrieve all clinical records in which primary diagnosis corresponds to breast cancer, to define a diagnosis-specific outpatient cohort.",
+      "required_fields": [
+        "Problem"
+      ],
+      "required_operators": {
+        "Problem": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "Problem": "breast cancer"
+      }
+    },
+    {
+      "query_id": "DX2",
+      "query_name": "Hypertension as secondary diagnosis",
+      "query_complexity": "easy",
+      "category": "diagnosis",
+      "description": "Identify all records in which secondary diagnosis is recorded as hypertension, to capture clinically relevant comorbidity alongside the principal disease.",
+      "required_fields": [
+        "Secondary Diagnosis"
+      ],
+      "required_operators": {
+        "Secondary Diagnosis": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "Secondary Diagnosis": "hypertension"
+      }
+    },
+    {
+      "query_id": "DX3",
+      "query_name": "Colon topography cohort",
+      "query_complexity": "medium",
+      "category": "diagnosis",
+      "description": "Retrieve all clinical records in which topography corresponds to colon, thereby identifying cases associated with the specified anatomical site.",
+      "required_fields": [
+        "topography"
+      ],
+      "required_operators": {
+        "topography": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis",
+        "Tumour - TNM Cancer staging"
+      ],
+      "constraints": {
+        "topography": "colon"
+      }
+    },
+    {
+      "query_id": "DX4",
+      "query_name": "Stage III disease cohort",
+      "query_complexity": "medium",
+      "category": "diagnosis",
+      "description": "Retrieve all records in which staging is documented as Stage III, for severity-oriented cohort derivation and treatment pathway review.",
+      "required_fields": [
+        "Clinical staging"
+      ],
+      "required_operators": {
+        "Clinical staging": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis",
+        "Clinical (cTNM)"
+      ],
+      "constraints": {
+        "Clinical staging": "Stage III"
+      }
+    },
+    {
+      "query_id": "TP1",
+      "query_name": "Biopsy procedure cohort",
+      "query_complexity": "easy",
+      "category": "treatment_procedure",
+      "description": "Retrieve all records in which procedure is documented as biopsy, to identify patients who underwent that specific diagnostic intervention.",
+      "required_fields": [
+        "Procedure"
+      ],
+      "required_operators": {
+        "Procedure": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken"
+      ],
+      "constraints": {
+        "Procedure": "biopsy"
+      }
+    },
+    {
+      "query_id": "TP2",
+      "query_name": "FOLFOX chemotherapy schema cohort",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Retrieve all treatment records in which chemotherapy schema corresponds to FOLFOX, in order to identify a regimen-specific chemotherapy cohort.",
+      "required_fields": [
+        "schema"
+      ],
+      "required_operators": {
+        "schema": [
+          "contains"
+        ]
+      },
+      "required_contexts": [
+        "chemotherapy"
+      ],
+      "constraints": {
+        "schema": "FOLFOX"
+      }
+    },
+    {
+      "query_id": "TP3",
+      "query_name": "Pelvic radiotherapy fields cohort",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Retrieve all records in which radiotherapy fields indicate pelvic field irradiation, to identify patients treated with the specified radiotherapy field configuration.",
+      "required_fields": [
+        "fields/insertions 1",
+        "fields/insertions 2"
+      ],
+      "required_operators": {
+        "fields/insertions 1": [
+          "contains"
+        ],
+        "fields/insertions 2": [
+          "contains"
+        ]
+      },
+      "required_contexts": [
+        "radiotherapy"
+      ],
+      "constraints": {
+        "radiotherapy fields": "pelvic field irradiation"
+      }
+    },
+    {
+      "query_id": "TP4",
+      "query_name": "Treatment duration greater than 90 days",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Retrieve all records in which duration of treatment exceeds 90 days, to identify patients exposed to prolonged treatment courses.",
+      "required_fields": [
+        "duration of treatment"
+      ],
+      "required_operators": {
+        "duration of treatment": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "chemotherapy"
+      ],
+      "constraints": {
+        "duration of treatment": {
+          "operator": ">",
+          "value": 90,
+          "unit": "days"
+        }
+      }
+    },
+    {
+      "query_id": "TM1",
+      "query_name": "Records issued after 01-01-2022",
+      "query_complexity": "easy",
+      "category": "temporal",
+      "description": "Retrieve all records in which issue date is later than 01-01-2022, to support time-bounded clinical record selection.",
+      "required_fields": [
+        "issue date"
+      ],
+      "required_operators": {
+        "issue date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "HCPA",
+        "General data"
+      ],
+      "constraints": {
+        "issue date": {
+          "operator": "after",
+          "value": "2022-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "TM2",
+      "query_name": "Discharge records in January 2023",
+      "query_complexity": "medium",
+      "category": "temporal",
+      "description": "Identify all records in which date of discharge falls within January 2023, for temporal analysis of discharge activity.",
+      "required_fields": [
+        "date of discharge"
+      ],
+      "required_operators": {
+        "date of discharge": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Patient discharge"
+      ],
+      "constraints": {
+        "date of discharge": {
+          "operator": "between",
+          "from": "2023-01-01",
+          "to": "2023-01-31"
+        }
+      }
+    },
+    {
+      "query_id": "TM3",
+      "query_name": "Chemotherapy beginning after 01-06-2021",
+      "query_complexity": "medium",
+      "category": "temporal",
+      "description": "Retrieve all records in which date of beginning of chemotherapy is later than 01-06-2021, in order to identify patients starting chemotherapy in the defined time window.",
+      "required_fields": [
+        "date of beginning of chemotherapy"
+      ],
+      "required_operators": {
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "chemotherapy"
+      ],
+      "constraints": {
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2021-06-01"
+        }
+      }
+    },
+    {
+      "query_id": "TM4",
+      "query_name": "Pathological identification in 2020",
+      "query_complexity": "medium",
+      "category": "temporal",
+      "description": "Retrieve all records in which date of pathological identification falls within the calendar year 2020, for diagnostic timing and case-identification review.",
+      "required_fields": [
+        "date of pathological identification"
+      ],
+      "required_operators": {
+        "date of pathological identification": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Pathological (pTNM)",
+        "Tumour - TNM Cancer staging"
+      ],
+      "constraints": {
+        "date of pathological identification": {
+          "operator": "between",
+          "from": "2020-01-01",
+          "to": "2020-12-31"
+        }
+      }
+    },
+    {
+      "query_id": "CX1",
+      "query_name": "Breast cancer plus biopsy cohort",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Retrieve all records in which primary diagnosis is breast cancer and procedure is biopsy, thereby identifying a clinically meaningful diagnosis–procedure cohort.",
+      "required_fields": [
+        "Problem",
+        "Procedure"
+      ],
+      "required_operators": {
+        "Problem": [
+          "equals"
+        ],
+        "Procedure": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis",
+        "Procedure undertaken"
+      ],
+      "constraints": {
+        "Problem": "breast cancer",
+        "Procedure": "biopsy"
+      }
+    },
+    {
+      "query_id": "CX2",
+      "query_name": "Patients older than 60 with lung cancer",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Identify all patients older than 60 years based on birth date or age derivation, whose primary diagnosis is lung cancer, to define an age-conditioned disease cohort.",
+      "required_fields": [
+        "birth date",
+        "patient age",
+        "Problem"
+      ],
+      "required_operators": {
+        "birth date": [
+          "date_range"
+        ],
+        "patient age": [
+          "range"
+        ],
+        "Problem": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "General data",
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "patient age": {
+          "operator": ">",
+          "value": 60
+        },
+        "Problem": "lung cancer"
+      }
+    },
+    {
+      "query_id": "CX3",
+      "query_name": "São Paulo patients on FOLFOX treatment",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Retrieve all patient records in which the demographic location attribute state is São Paulo and chemotherapy schema is FOLFOX, to identify a geographically restricted treatment cohort.",
+      "required_fields": [
+        "State",
+        "schema"
+      ],
+      "required_operators": {
+        "State": [
+          "equals"
+        ],
+        "schema": [
+          "contains"
+        ]
+      },
+      "required_contexts": [
+        "General data",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "State": "São Paulo",
+        "schema": "FOLFOX"
+      }
+    },
+    {
+      "query_id": "CX4",
+      "query_name": "Stage III biopsy cohort with chemotherapy beginning after 01-01-2022",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Retrieve all records in which staging is Stage III, procedure is biopsy, and date of beginning of chemotherapy is later than 01-01-2022, thereby defining a temporally constrained multi-context clinical cohort.",
+      "required_fields": [
+        "Clinical staging",
+        "Procedure",
+        "date of beginning of chemotherapy"
+      ],
+      "required_operators": {
+        "Clinical staging": [
+          "equals"
+        ],
+        "Procedure": [
+          "equals"
+        ],
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "Clinical staging": "Stage III",
+        "Procedure": "biopsy",
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2022-01-01"
+        }
+      }
+    }
+  ]
+}
