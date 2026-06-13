@@ -1,0 +1,10 @@
+python aqf_schema_graph.py  --input ../orbda_10k/mixed  --output output_best  --lambda_cc 0.5  --mu 0.25  --theta 0.15  --edge_threshold 0.2  --cooccurrence_scope leaf
+
+python canonical_structure_generator.py  --graph_json output_best/reduced_schema_graph.json  --output_dir output_best/canonical
+
+python operator_aware_field_selector.py  --canonical_forms_json output_best/canonical/canonical_forms.json  --output_dir output_best/operator_aware  --top_k_input_per_form 12  --top_k_output_per_form 12  --best_operator_only
+
+python adaptive_form_generator.py  --operator_aware_forms_json output_best/operator_aware/operator_aware_forms.json  --output_dir output_best/aqf_forms  --kappa 24  --eta 1.0  --max_filters 12  --max_outputs 8  --relationship_top_k 40
+
+python aqf_query_realizer.py  --aqf_forms_json output_best/aqf_forms/aqf_forms.json  --workload_json aqf_benchmark_workload.json  --output_dir output_best/query_realization
+

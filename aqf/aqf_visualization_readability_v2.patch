@@ -1,0 +1,133 @@
+--- visualize_all_aqf_graphs.py
++++ visualize_all_aqf_graphs.py
+@@
+-def draw_organic_graph(
++def draw_organic_graph(
+     payload: Dict[str, Any],
+     output_png: Path,
+     title: str,
+     subtitle: str,
+     edge_mode: str,
+     max_nodes: int,
+     dpi: int,
+     width: float,
+     height: float,
+     hide_labels: bool,
+     seed: int,
++    show_edge_weights: bool,
++    min_node_size: float,
++    max_node_size: float,
++    node_font_size: float,
++    edge_font_size: float,
++    title_font_size: float,
++    subtitle_font_size: float,
++    legend_font_size: float,
+ ) -> None:
+@@
+-    fig, ax = plt.subplots(figsize=(width, height))
+-    ax.set_title(title, fontsize=18, fontweight="bold", pad=18)
+-    ax.text(0.5, 0.965, subtitle, transform=fig.transFigure, ha="center", fontsize=11)
++    fig, ax = plt.subplots(figsize=(width, height))
++    ax.set_title(title, fontsize=title_font_size, fontweight="bold", pad=22)
++    ax.text(0.5, 0.965, subtitle, transform=fig.transFigure, ha="center", fontsize=subtitle_font_size)
+     ax.axis("off")
+@@
+-    for e in sorted_edges:
++    # For edge-weight labels, avoid labeling every edge in dense graphs.
++    # Keep the labels on the strongest edges to emphasize graph complexity without clutter.
++    edge_label_candidates = sorted(
++        sorted_edges,
++        key=lambda e: float(e.get("weight") or e.get("structural_connectivity") or 0.0),
++        reverse=True,
++    )
++    max_edge_labels = 45 if len(sorted_edges) <= 120 else 30
++    edge_label_keys = {
++        (e.get("source"), e.get("target"), e.get("edge_type"))
++        for e in edge_label_candidates[:max_edge_labels]
++    }
++
++    for e in sorted_edges:
+         s, t = e.get("source"), e.get("target")
+         if s not in pos or t not in pos:
+             continue
+@@
+-        lw = 0.35 + 2.7 * (w / max_w)
++        # Edge width directly represents structural connectivity / edge weight.
++        lw = 0.85 + 5.20 * (w / max_w)
+         alpha = 0.66 if et == "containment" else 0.18
+         linestyle = "-" if et == "containment" else "--"
+         ax.plot([x1, x2], [y1, y2], color=EDGE_COLORS.get(et, "#888888"), lw=lw, alpha=alpha, linestyle=linestyle, zorder=1)
++
++        if show_edge_weights and (s, t, et) in edge_label_keys:
++            mx = (x1 + x2) / 2.0
++            my = (y1 + y2) / 2.0
++            label = f"w={w:.2f}"
++            ax.text(
++                mx,
++                my,
++                label,
++                fontsize=edge_font_size,
++                color="#222222",
++                ha="center",
++                va="center",
++                bbox=dict(boxstyle="round,pad=0.18", fc="white", ec="none", alpha=0.72),
++                zorder=2,
++            )
+@@
+-        # For unweighted schema graph, sizes still encode type/coverage slightly.
+-        size = 170 + 1550 * math.sqrt(score / max_s) if max_s > 0 else 350
++        # Dynamic node size. Larger base and range improve paper readability.
++        size = min_node_size + (max_node_size - min_node_size) * math.sqrt(score / max_s) if max_s > 0 else min_node_size
+         if aqf_type == "section":
+-            size *= 1.22
++            size *= 1.28
+         elif aqf_type == "leaf":
+-            size *= 0.86
++            size *= 0.92
+@@
+-            ax.text(x, y - 0.18, label, fontsize=7.5, ha="center", va="top", zorder=4)
++            ax.text(
++                x,
++                y - 0.24,
++                label,
++                fontsize=node_font_size,
++                ha="center",
++                va="top",
++                zorder=4,
++                bbox=dict(boxstyle="round,pad=0.14", fc="white", ec="none", alpha=0.62),
++            )
+@@
+-    ax.legend(handles=legend_items, loc="upper right", frameon=True, fontsize=9)
++    ax.legend(handles=legend_items, loc="upper right", frameon=True, fontsize=legend_font_size)
+@@
+-    fig.text(0.5, 0.035, stats_line, ha="center", fontsize=9)
+-    fig.text(0.5, 0.017, param_line, ha="center", fontsize=9)
++    fig.text(0.5, 0.035, stats_line, ha="center", fontsize=max(11, legend_font_size - 1))
++    fig.text(0.5, 0.017, param_line, ha="center", fontsize=max(11, legend_font_size - 1))
+@@
+ def main() -> None:
+@@
+     parser.add_argument("--hide_labels", action="store_true", help="Hide node labels for dense graphs")
+     parser.add_argument("--seed", type=int, default=42, help="Random seed for deterministic organic layout")
++    parser.add_argument("--show_edge_weights", action="store_true", help="Show edge weights on strongest edges")
++    parser.add_argument("--min_node_size", type=float, default=650, help="Minimum node size")
++    parser.add_argument("--max_node_size", type=float, default=5200, help="Maximum node size")
++    parser.add_argument("--node_font_size", type=float, default=16, help="Node label font size")
++    parser.add_argument("--edge_font_size", type=float, default=14, help="Edge weight label font size")
++    parser.add_argument("--title_font_size", type=float, default=22, help="Title font size")
++    parser.add_argument("--subtitle_font_size", type=float, default=16, help="Subtitle font size")
++    parser.add_argument("--legend_font_size", type=float, default=14, help="Legend and footer font size")
+@@
+         draw_organic_graph(
+@@
+             hide_labels=args.hide_labels,
+             seed=args.seed,
++            show_edge_weights=args.show_edge_weights,
++            min_node_size=args.min_node_size,
++            max_node_size=args.max_node_size,
++            node_font_size=args.node_font_size,
++            edge_font_size=args.edge_font_size,
++            title_font_size=args.title_font_size,
++            subtitle_font_size=args.subtitle_font_size,
++            legend_font_size=args.legend_font_size,
+         )
