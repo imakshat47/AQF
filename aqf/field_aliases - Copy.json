@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "name": "AQF field and context aliases",
+    "version": "1.0",
+    "description": "Alias dictionary for benchmark-aware AQF query realization and coverage repair."
+  },
+  "field_aliases": {
+    "gender": [
+      "gender",
+      "sex",
+      "sexo"
+    ],
+    "birth date": [
+      "birth date",
+      "date of birth",
+      "dob"
+    ],
+    "nationality": [
+      "nationality",
+      "country of birth",
+      "birth nationality"
+    ],
+    "educational level": [
+      "educational level",
+      "education",
+      "schooling",
+      "level of education"
+    ],
+    "Problem": [
+      "Problem",
+      "primary diagnosis",
+      "diagnosis",
+      "principal diagnosis",
+      "problem diagnosis",
+      "Problem/Diagnosis"
+    ],
+    "Secondary Diagnosis": [
+      "Secondary Diagnosis",
+      "secondary diagnosis",
+      "comorbidity",
+      "associated diagnosis"
+    ],
+    "topography": [
+      "topography",
+      "anatomical site",
+      "tumour topography",
+      "tumor topography"
+    ],
+    "Clinical staging": [
+      "Clinical staging",
+      "staging",
+      "stage",
+      "clinical stage",
+      "TNM stage",
+      "cTNM"
+    ],
+    "Procedure": [
+      "Procedure",
+      "procedure undertaken",
+      "procedure",
+      "biopsy",
+      "intervention"
+    ],
+    "schema": [
+      "schema",
+      "chemotherapy schema",
+      "regimen",
+      "chemotherapy regimen",
+      "treatment schema"
+    ],
+    "fields/insertions 1": [
+      "fields/insertions 1",
+      "radiotherapy fields",
+      "radiotherapy field",
+      "irradiated area 1",
+      "field insertion 1"
+    ],
+    "fields/insertions 2": [
+      "fields/insertions 2",
+      "radiotherapy fields",
+      "radiotherapy field",
+      "irradiated area 2",
+      "field insertion 2"
+    ],
+    "duration of treatment": [
+      "duration of treatment",
+      "treatment duration",
+      "duration",
+      "therapy duration"
+    ],
+    "issue date": [
+      "issue date",
+      "record issue date",
+      "issuance date"
+    ],
+    "date of discharge": [
+      "date of discharge",
+      "discharge date"
+    ],
+    "date of beginning of chemotherapy": [
+      "date of beginning of chemotherapy",
+      "chemotherapy beginning",
+      "chemotherapy start date",
+      "start of chemotherapy"
+    ],
+    "date of pathological identification": [
+      "date of pathological identification",
+      "pathological identification date",
+      "pathology identification date"
+    ],
+    "patient age": [
+      "patient age",
+      "age"
+    ],
+    "State": [
+      "State",
+      "state",
+      "location state",
+      "UF",
+      "federative unit",
+      "São Paulo",
+      "Sao Paulo"
+    ]
+  },
+  "context_aliases": {
+    "Demographic data": [
+      "Demographic data",
+      "demographics",
+      "demographic"
+    ],
+    "Problem/Diagnosis": [
+      "Problem/Diagnosis",
+      "diagnosis",
+      "problem diagnosis",
+      "clinical diagnosis"
+    ],
+    "Procedure undertaken": [
+      "Procedure undertaken",
+      "procedure",
+      "procedure list"
+    ],
+    "chemotherapy": [
+      "chemotherapy",
+      "chemo",
+      "treatment regimen"
+    ],
+    "radiotherapy": [
+      "radiotherapy",
+      "radio therapy",
+      "irradiation"
+    ],
+    "HCPA": [
+      "HCPA",
+      "high complexity procedures",
+      "outpatient high complexity procedures"
+    ],
+    "General data": [
+      "General data",
+      "general",
+      "administrative data"
+    ],
+    "Patient discharge": [
+      "Patient discharge",
+      "discharge"
+    ],
+    "Clinical (cTNM)": [
+      "Clinical (cTNM)",
+      "clinical staging",
+      "ctnm",
+      "staging"
+    ],
+    "Pathological (pTNM)": [
+      "Pathological (pTNM)",
+      "pathological",
+      "ptnm"
+    ],
+    "Tumour - TNM Cancer staging": [
+      "Tumour - TNM Cancer staging",
+      "TNM staging",
+      "cancer staging",
+      "tumor staging"
+    ]
+  }
+}
