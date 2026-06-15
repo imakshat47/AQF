@@ -1,4 +1,4 @@
-python aqf_schema_graph.py  --input ../orbda_10k/mixed  --output output_best  --lambda_cc 0.5  --mu 0.25  --theta 0.15  --edge_threshold 0.2  --cooccurrence_scope leaf
+python aqf_schema_graph.py  --input ../dataset/mixed  --output output_best  --lambda_cc 0.5  --mu 0.25  --theta 0.15  --edge_threshold 0.2  --cooccurrence_scope leaf
 
 python canonical_structure_generator.py  --graph_json output_best/reduced_schema_graph.json  --output_dir output_best/canonical
 
