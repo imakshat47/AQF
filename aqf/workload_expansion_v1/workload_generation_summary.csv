@@ -1,0 +1,3 @@
+workload,query_count,category_distribution,complexity_distribution
+curated,154,"{""demographic"": 14, ""diagnosis"": 14, ""treatment_procedure"": 25, ""temporal"": 14, ""cross_context"": 81, ""administrative"": 6}","{""easy"": 29, ""medium"": 86, ""hard"": 39}"
+synthetic,10000,"{""cross_context"": 4595, ""demographic"": 1063, ""administrative"": 1107, ""treatment_procedure"": 1064, ""temporal"": 1088, ""diagnosis"": 1083}","{""medium"": 3983, ""easy"": 2954, ""hard"": 3063}"
