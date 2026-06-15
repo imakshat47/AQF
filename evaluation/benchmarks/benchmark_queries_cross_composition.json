@@ -174,5 +174,116 @@
       "histopathological grading"
     ],
     "sort": null
+  },
+  {
+    "query_id": "X7",
+    "workload": "W3_CROSS_COMPOSITION_CHALLENGE",
+    "difficulty": "Hard",
+    "query_name": "Gender With Hospital Admission",
+    "description": "Combine demographic gender with hospital admission type.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / gender",
+        "field_label": "gender",
+        "operator": "is_known",
+        "value": null
+      },
+      {
+        "canonical_path": "Patient admission / Tree / Admission type",
+        "field_label": "Admission type",
+        "operator": "is_known",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "gender",
+      "Admission type"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "X8",
+    "workload": "W3_CROSS_COMPOSITION_CHALLENGE",
+    "difficulty": "Hard",
+    "query_name": "Nationality With Hospital Service",
+    "description": "Combine demographic nationality with hospital service and ICU total.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / nationality",
+        "field_label": "nationality",
+        "operator": "equals",
+        "value": "BRASIL"
+      },
+      {
+        "canonical_path": "Patient admission / Tree / Hospital service",
+        "field_label": "Hospital service",
+        "operator": "is_known",
+        "value": null
+      },
+      {
+        "canonical_path": "Authorization for hospital admission / Components / ICU - Total",
+        "field_label": "ICU - Total",
+        "operator": ">",
+        "value": 0
+      }
+    ],
+    "outputs": [
+      "nationality",
+      "Hospital service",
+      "ICU - Total"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "X9",
+    "workload": "W3_CROSS_COMPOSITION_CHALLENGE",
+    "difficulty": "Hard",
+    "query_name": "Clinical Diagnosis With Hospital Discharge",
+    "description": "Combine diagnosis with hospital discharge claim reason.",
+    "filters": [
+      {
+        "canonical_path": "Problem/Diagnosis / structure / Problem",
+        "field_label": "Problem",
+        "operator": "contains",
+        "value": "C"
+      },
+      {
+        "canonical_path": "Patient discharge / Components / claim reason",
+        "field_label": "claim reason",
+        "operator": "is_known",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "Problem",
+      "claim reason"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "X10",
+    "workload": "W3_CROSS_COMPOSITION_CHALLENGE",
+    "difficulty": "Hard",
+    "query_name": "Demographic Missingness With Hospital Outcome",
+    "description": "Combine demographic missingness with hospital death indicator.",
+    "filters": [
+      {
+        "canonical_path": "Demographic data / components / race",
+        "field_label": "race",
+        "operator": "is_unknown",
+        "value": null
+      },
+      {
+        "canonical_path": "Patient discharge / Components / death indicator",
+        "field_label": "death indicator",
+        "operator": "equals",
+        "value": false
+      }
+    ],
+    "outputs": [
+      "race",
+      "death indicator"
+    ],
+    "sort": null
   }
 ]
