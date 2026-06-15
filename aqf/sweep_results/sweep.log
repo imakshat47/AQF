@@ -1,0 +1,187 @@
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe demographic_graph_integrator.py --clinical_graph_json output_final/reduced_schema_graph.json --output_dir sweep_results\00_demographic_integration
+Demographic graph integration complete.
+Demographic fields: 4
+Merged nodes: 59
+Merged edges: 440
+Output: sweep_results\00_demographic_integration
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_8 --top_k_input_per_form 8 --top_k_output_per_form 8 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_8
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_8\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_8
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_8
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_12 --top_k_input_per_form 12 --top_k_output_per_form 12 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_12
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_12\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_12
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_12
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_16 --top_k_input_per_form 16 --top_k_output_per_form 16 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_16
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_16\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_16
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_16
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_8 --top_k_input_per_form 8 --top_k_output_per_form 8 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_8
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_8\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_8
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_8
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_12 --top_k_input_per_form 12 --top_k_output_per_form 12 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_12
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_12\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_12
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_12
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_16 --top_k_input_per_form 16 --top_k_output_per_form 16 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_16
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_16\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_16
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_16
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_8 --top_k_input_per_form 8 --top_k_output_per_form 8 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_8
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_8\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_8
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_8
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_12 --top_k_input_per_form 12 --top_k_output_per_form 12 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_12
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_12\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_12
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_12
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_16 --top_k_input_per_form 16 --top_k_output_per_form 16 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_16
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_16\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_16
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_16
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_8 --top_k_input_per_form 8 --top_k_output_per_form 8 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_8
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_8\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_8
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_8
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_12 --top_k_input_per_form 12 --top_k_output_per_form 12 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_12
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_12\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_12
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_12
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_16 --top_k_input_per_form 16 --top_k_output_per_form 16 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_16
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_16\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_16
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_16
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_8 --top_k_input_per_form 8 --top_k_output_per_form 8 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_8
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_8\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_8
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_8
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_12 --top_k_input_per_form 12 --top_k_output_per_form 12 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_12
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_12\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_12
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_12
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_16 --top_k_input_per_form 16 --top_k_output_per_form 16 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_16
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_16\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_16
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_16
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_8 --top_k_input_per_form 8 --top_k_output_per_form 8 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_8
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_8\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_8
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_8
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_12 --top_k_input_per_form 12 --top_k_output_per_form 12 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_12
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_12\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_12
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_12
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_field_selector.py --canonical_forms_json output_final/canonical/canonical_forms.json --output_dir sweep_results\op_topk_16 --top_k_input_per_form 16 --top_k_output_per_form 16 --best_operator_only
+Operator-aware field selection complete.
+Input canonical forms: output_final/canonical/canonical_forms.json
+Output folder: sweep_results\op_topk_16
+Operator-aware fields: 30
+Operator-aware forms: 2
+
+$ E:\pFolder\researchwork\Thesis\aqf\venv\Scripts\python.exe operator_aware_demographic_patch.py --operator_aware_forms_json sweep_results\op_topk_16\operator_aware_forms.json --demographic_schema_graph_json sweep_results\00_demographic_integration\demographic_schema_graph.json --output_dir sweep_results\op_demo_topk_16
+Demographic operator-aware form added. Forms: 3. Output: sweep_results\op_demo_topk_16
