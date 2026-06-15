@@ -18,7 +18,7 @@ from aqf_eval.journal_metrics_final import complexity_row, operator_rows, canoni
 import pandas as pd
 
 PARSER_VERSION='aqf_final_v2_4_draft_aligned'
-BENCHMARK_VERSION='expert_curated_v1'
+BENCHMARK_VERSION='expert_curated_v2_three_compositions'
 
 def load_json(p):
     with open(p,'r',encoding='utf-8') as f: return json.load(f)
@@ -72,7 +72,12 @@ def main():
     p.add_argument('--complexity-budget',type=float,default=35.0)
     p.add_argument('--theta',type=float,default=0.10); p.add_argument('--lambda-sc',type=float,default=0.25); p.add_argument('--mu',type=float,default=0.25); p.add_argument('--eta',type=float,default=1.0)
     p.add_argument('--random-trials',type=int,default=30); p.add_argument('--seed',type=int,default=42); p.add_argument('--include-cross',action='store_true')
-    p.add_argument('--benchmarks',nargs='+',default=[str(ROOT/'evaluation'/'benchmarks'/'benchmark_queries_hcpa.json'),str(ROOT/'evaluation'/'benchmarks'/'benchmark_queries_demographic.json'),str(ROOT/'evaluation'/'benchmarks'/'benchmark_queries_cross_composition.json')])
+    p.add_argument('--benchmarks',nargs='+',default=[
+        str(ROOT/'evaluation'/'benchmarks'/'benchmark_queries_hcpa.json'),
+        str(ROOT/'evaluation'/'benchmarks'/'benchmark_queries_demographic.json'),
+        str(ROOT/'evaluation'/'benchmarks'/'benchmark_queries_hospitalisation.json'),
+        str(ROOT/'evaluation'/'benchmarks'/'benchmark_queries_cross_composition.json'),
+    ])
     args=p.parse_args(); out_dir=Path(args.out_dir); out_dir.mkdir(parents=True,exist_ok=True)
     forest, forest_cached, cache_dir=ensure_forest(args,out_dir)
     scores, scores_cached=ensure_scores(forest,cache_dir,args.lambda_sc,args.mu,args.use_cache)
