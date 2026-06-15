@@ -197,6 +197,8 @@ def coverage_by_category(detail: pd.DataFrame) -> pd.DataFrame:
         text = ' '.join([str(row.get('query_id','')), str(row.get('missing_fields','')), str(row.get('match_audit',''))]).lower()
         if any(t in text for t in ['gender','birth date','nationality','race','educational','ethnic']):
             return 'demographic'
+        if any(t in text for t in ['admission','hospital','icu','patient class','claim reason','death indicator','universal id','state/province']):
+            return 'hospitalisation'
         if any(t in text for t in ['diagnosis','problem','staging','topography','histopathological','linphonodes','lymph']):
             return 'diagnosis_oriented'
         if any(t in text for t in ['procedure','therapy','radiotherapy','chemotherapy','transplant','dialysis','ultrasonography','treatment']):
