@@ -1,0 +1,290 @@
+{
+  "metadata": {
+    "name": "ORBDA/openEHR datatype-aware AQF operator mapping",
+    "version": "1.0",
+    "rationale": "Based on ORBDA data types and AQF query realization failures; maps openEHR DV_* datatypes to compatible filter, output, and aggregate operators."
+  },
+  "datatype_operators": {
+    "DV_TEXT": {
+      "filter": [
+        "equals",
+        "not_equals",
+        "contains",
+        "not_contains",
+        "starts_with",
+        "is_present",
+        "is_absent"
+      ],
+      "preferred_filter": "contains",
+      "output": [
+        "project",
+        "sort"
+      ],
+      "grouping": [
+        "group_by"
+      ]
+    },
+    "DV_CODED_TEXT": {
+      "filter": [
+        "equals",
+        "not_equals",
+        "multi_select",
+        "not_in",
+        "contains",
+        "is_present",
+        "is_absent"
+      ],
+      "preferred_filter": "equals",
+      "output": [
+        "project"
+      ],
+      "grouping": [
+        "group_by"
+      ]
+    },
+    "DV_COUNT": {
+      "filter": [
+        "equals",
+        "not_equals",
+        "range",
+        "greater_than",
+        "greater_or_equal",
+        "less_than",
+        "less_or_equal",
+        "is_present",
+        "is_absent"
+      ],
+      "preferred_filter": "range",
+      "output": [
+        "project",
+        "sort"
+      ],
+      "aggregate": [
+        "count",
+        "min",
+        "max",
+        "avg",
+        "sum"
+      ]
+    },
+    "DV_QUANTITY": {
+      "filter": [
+        "equals",
+        "not_equals",
+        "range",
+        "greater_than",
+        "greater_or_equal",
+        "less_than",
+        "less_or_equal",
+        "unit_equals",
+        "is_present",
+        "is_absent"
+      ],
+      "preferred_filter": "range",
+      "output": [
+        "project",
+        "sort"
+      ],
+      "aggregate": [
+        "count",
+        "min",
+        "max",
+        "avg",
+        "sum"
+      ]
+    },
+    "DV_PROPORTION": {
+      "filter": [
+        "equals",
+        "not_equals",
+        "range",
+        "greater_than",
+        "greater_or_equal",
+        "less_than",
+        "less_or_equal",
+        "is_present",
+        "is_absent"
+      ],
+      "preferred_filter": "range",
+      "output": [
+        "project",
+        "sort"
+      ],
+      "aggregate": [
+        "count",
+        "min",
+        "max",
+        "avg"
+      ]
+    },
+    "DV_DATE": {
+      "filter": [
+        "date_equals",
+        "date_range",
+        "before",
+        "after",
+        "on_or_before",
+        "on_or_after",
+        "is_present",
+        "is_absent"
+      ],
+      "preferred_filter": "date_range",
+      "output": [
+        "project",
+        "sort"
+      ],
+      "aggregate": [
+        "count",
+        "min",
+        "max"
+      ]
+    },
+    "DV_DATE_TIME": {
+      "filter": [
+        "datetime_equals",
+        "datetime_range",
+        "before",
+        "after",
+        "on_or_before",
+        "on_or_after",
+        "is_present",
+        "is_absent"
+      ],
+      "preferred_filter": "datetime_range",
+      "output": [
+        "project",
+        "sort"
+      ],
+      "aggregate": [
+        "count",
+        "min",
+        "max"
+      ]
+    },
+    "DV_BOOLEAN": {
+      "filter": [
+        "equals",
+        "not_equals",
+        "is_true",
+        "is_false",
+        "is_present",
+        "is_absent"
+      ],
+      "preferred_filter": "equals",
+      "output": [
+        "project"
+      ],
+      "grouping": [
+        "group_by"
+      ]
+    }
+  },
+  "operator_aliases": {
+    "equals": [
+      "equals",
+      "multi_select",
+      "contains"
+    ],
+    "not_equals": [
+      "not_equals",
+      "not_in",
+      "not_contains"
+    ],
+    "contains": [
+      "contains",
+      "equals",
+      "starts_with"
+    ],
+    "range": [
+      "range",
+      "greater_than",
+      "greater_or_equal",
+      "less_than",
+      "less_or_equal",
+      "date_range",
+      "datetime_range"
+    ],
+    "date_range": [
+      "date_range",
+      "date_equals",
+      "before",
+      "after",
+      "on_or_before",
+      "on_or_after"
+    ],
+    "date_equals": [
+      "date_equals",
+      "date_range"
+    ],
+    "greater_than": [
+      "greater_than",
+      "range"
+    ],
+    "less_than": [
+      "less_than",
+      "range"
+    ],
+    "is_present": [
+      "is_present",
+      "equals",
+      "contains",
+      "range",
+      "date_range"
+    ],
+    "project": [
+      "project"
+    ],
+    "sort": [
+      "sort"
+    ],
+    "group_by": [
+      "group_by"
+    ]
+  },
+  "field_overrides": {
+    "date of discharge": {
+      "datatype": "DV_DATE",
+      "preferred_filter": "date_range"
+    },
+    "fields/insertions 1": {
+      "datatype": "DV_COUNT",
+      "preferred_filter": "range"
+    },
+    "fields/insertions 2": {
+      "datatype": "DV_COUNT",
+      "preferred_filter": "range"
+    },
+    "irradiated area 1": {
+      "datatype": "DV_CODED_TEXT",
+      "preferred_filter": "equals"
+    },
+    "irradiated area 2": {
+      "datatype": "DV_CODED_TEXT",
+      "preferred_filter": "equals"
+    },
+    "clinical staging": {
+      "datatype": "DV_TEXT",
+      "preferred_filter": "contains"
+    },
+    "schema": {
+      "datatype": "DV_TEXT",
+      "preferred_filter": "contains"
+    },
+    "birth date": {
+      "datatype": "DV_DATE",
+      "preferred_filter": "date_range"
+    },
+    "gender": {
+      "datatype": "DV_CODED_TEXT",
+      "preferred_filter": "equals"
+    },
+    "nationality": {
+      "datatype": "DV_CODED_TEXT",
+      "preferred_filter": "equals"
+    },
+    "educational level": {
+      "datatype": "DV_CODED_TEXT",
+      "preferred_filter": "equals"
+    }
+  }
+}
