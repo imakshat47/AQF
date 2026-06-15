@@ -1,0 +1,279 @@
+[
+  {
+    "query_id": "H1",
+    "workload": "W3_HOSPITALISATION_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Admission Type Filter",
+    "description": "Filter hospitalisation records by admission type; display admission type.",
+    "filters": [
+      {
+        "canonical_path": "Patient admission / Tree / Admission type",
+        "field_label": "Admission type",
+        "operator": "equals",
+        "value": "Urgent"
+      }
+    ],
+    "outputs": [
+      "Admission type"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "H2",
+    "workload": "W3_HOSPITALISATION_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Known Hospital Service",
+    "description": "Filter records where hospital service is known; display hospital service.",
+    "filters": [
+      {
+        "canonical_path": "Patient admission / Tree / Hospital service",
+        "field_label": "Hospital service",
+        "operator": "is_known",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "Hospital service"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "H3",
+    "workload": "W3_HOSPITALISATION_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "ICU Total Threshold",
+    "description": "Filter records where ICU total is greater than zero; display ICU total.",
+    "filters": [
+      {
+        "canonical_path": "Authorization for hospital admission / Components / ICU - Total",
+        "field_label": "ICU - Total",
+        "operator": ">",
+        "value": 0
+      }
+    ],
+    "outputs": [
+      "ICU - Total"
+    ],
+    "sort": {
+      "field": "ICU - Total",
+      "direction": "desc"
+    }
+  },
+  {
+    "query_id": "H4",
+    "workload": "W3_HOSPITALISATION_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Death Indicator",
+    "description": "Filter records by death indicator; display death indicator.",
+    "filters": [
+      {
+        "canonical_path": "Patient discharge / Components / death indicator",
+        "field_label": "death indicator",
+        "operator": "equals",
+        "value": true
+      }
+    ],
+    "outputs": [
+      "death indicator"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "H5",
+    "workload": "W3_HOSPITALISATION_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Unknown Hospital Infection",
+    "description": "Filter records where hospital infection is unknown; display hospital infection.",
+    "filters": [
+      {
+        "canonical_path": "Patient discharge / Components / hospital infection",
+        "field_label": "hospital infection",
+        "operator": "is_unknown",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "hospital infection"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "H6",
+    "workload": "W3_HOSPITALISATION_EXPERT",
+    "difficulty": "Easy",
+    "query_name": "Facility Universal ID",
+    "description": "Filter records where the facility universal ID is known; display facility universal ID.",
+    "filters": [
+      {
+        "canonical_path": "Patient admission / Tree / Assigned patient location / Facility / Universal ID",
+        "field_label": "Universal ID",
+        "operator": "is_known",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "Universal ID"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "H7",
+    "workload": "W3_HOSPITALISATION_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Admission Type With Service",
+    "description": "Filter admission type and hospital service; display both fields.",
+    "filters": [
+      {
+        "canonical_path": "Patient admission / Tree / Admission type",
+        "field_label": "Admission type",
+        "operator": "equals",
+        "value": "Urgent"
+      },
+      {
+        "canonical_path": "Patient admission / Tree / Hospital service",
+        "field_label": "Hospital service",
+        "operator": "contains",
+        "value": "CARD"
+      }
+    ],
+    "outputs": [
+      "Admission type",
+      "Hospital service"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "H8",
+    "workload": "W3_HOSPITALISATION_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Admission Date With State",
+    "description": "Filter admissions after a date and known state/province; display admission date and state/province.",
+    "filters": [
+      {
+        "canonical_path": "Patient admission / Tree / Admit date/time",
+        "field_label": "Admit date/time",
+        "operator": "after",
+        "value": "2012-01-01"
+      },
+      {
+        "canonical_path": "Patient admission / Tree / Assigned patient location / Address / State/province",
+        "field_label": "State/province",
+        "operator": "is_known",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "Admit date/time",
+      "State/province"
+    ],
+    "sort": {
+      "field": "Admit date/time",
+      "direction": "desc"
+    }
+  },
+  {
+    "query_id": "H9",
+    "workload": "W3_HOSPITALISATION_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Claim Reason With Death Indicator",
+    "description": "Filter claim reason and death indicator; display both fields.",
+    "filters": [
+      {
+        "canonical_path": "Patient discharge / Components / claim reason",
+        "field_label": "claim reason",
+        "operator": "is_known",
+        "value": null
+      },
+      {
+        "canonical_path": "Patient discharge / Components / death indicator",
+        "field_label": "death indicator",
+        "operator": "equals",
+        "value": false
+      }
+    ],
+    "outputs": [
+      "claim reason",
+      "death indicator"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "H10",
+    "workload": "W3_HOSPITALISATION_EXPERT",
+    "difficulty": "Medium",
+    "query_name": "Patient Class Missingness",
+    "description": "Filter records where patient class is unknown; display patient class and admission type.",
+    "filters": [
+      {
+        "canonical_path": "Patient admission / Tree / Patient class",
+        "field_label": "Patient class",
+        "operator": "is_unknown",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "Patient class",
+      "Admission type"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "H11",
+    "workload": "W3_HOSPITALISATION_EXPERT",
+    "difficulty": "Hard",
+    "query_name": "Hospitalisation Diagnosis And Procedure",
+    "description": "Filter hospitalisation diagnosis and procedure; display both fields.",
+    "filters": [
+      {
+        "canonical_path": "Problem/Diagnosis / structure / Problem",
+        "field_label": "Problem",
+        "operator": "contains",
+        "value": "I"
+      },
+      {
+        "canonical_path": "Procedure undertaken / Procedure list / Procedure",
+        "field_label": "Procedure",
+        "operator": "is_known",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "Problem",
+      "Procedure"
+    ],
+    "sort": null
+  },
+  {
+    "query_id": "H12",
+    "workload": "W3_HOSPITALISATION_EXPERT",
+    "difficulty": "Hard",
+    "query_name": "Hospital Admission Discharge Summary",
+    "description": "Filter admission date and claim reason; display admission, location, ICU, and discharge indicators.",
+    "filters": [
+      {
+        "canonical_path": "Patient admission / Tree / Admit date/time",
+        "field_label": "Admit date/time",
+        "operator": "after",
+        "value": "2012-01-01"
+      },
+      {
+        "canonical_path": "Patient discharge / Components / claim reason",
+        "field_label": "claim reason",
+        "operator": "is_known",
+        "value": null
+      }
+    ],
+    "outputs": [
+      "Admit date/time",
+      "Admission type",
+      "Hospital service",
+      "ICU - Total",
+      "claim reason",
+      "death indicator"
+    ],
+    "sort": {
+      "field": "Admit date/time",
+      "direction": "desc"
+    }
+  }
+]
