@@ -1,0 +1,13 @@
+{
+  "metadata": {
+    "target_total_fields": 35,
+    "kappa": 24.0,
+    "eta": 1.0,
+    "max_filters": 12,
+    "max_outputs": 8,
+    "preserve_all_forms": false,
+    "workload_priority_fields": 0,
+    "form_count": 0
+  },
+  "aqf_forms": []
+}
