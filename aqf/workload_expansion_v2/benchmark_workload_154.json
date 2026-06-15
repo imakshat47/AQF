@@ -1,0 +1,5004 @@
+{
+  "metadata": {
+    "name": "AQF 154 semi-curated benchmark workload",
+    "version": "2.0",
+    "query_count": 154,
+    "synthetic": false
+  },
+  "queries": [
+    {
+      "query_id": "D1",
+      "query_name": "Male patient cohort",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Retrieve all patient records in which the demographic attribute gender is recorded as Male, in order to define a gender-specific patient cohort.",
+      "required_fields": [
+        "gender"
+      ],
+      "required_operators": {
+        "gender": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "gender": "Male"
+      }
+    },
+    {
+      "query_id": "D2",
+      "query_name": "Patients born before 01-01-1970",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Identify all patient records in which birth date is earlier than 01-01-1970, to enable age-based demographic stratification.",
+      "required_fields": [
+        "birth date"
+      ],
+      "required_operators": {
+        "birth date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "birth date": {
+          "operator": "before",
+          "value": "1970-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "D3",
+      "query_name": "Brazilian nationality cohort",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Retrieve all patient records in which nationality is documented as Brazilian, for demographic and population-based subgroup analysis.",
+      "required_fields": [
+        "nationality"
+      ],
+      "required_operators": {
+        "nationality": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "nationality": "Brazilian"
+      }
+    },
+    {
+      "query_id": "D4",
+      "query_name": "Higher education demographic filter",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Retrieve all patient records in which educational level is documented as Higher education, for demographic and social-determinant profiling.",
+      "required_fields": [
+        "educational level"
+      ],
+      "required_operators": {
+        "educational level": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "educational level": "Higher education"
+      }
+    },
+    {
+      "query_id": "DX1",
+      "query_name": "Breast cancer primary diagnosis cohort",
+      "query_complexity": "easy",
+      "category": "diagnosis",
+      "description": "Retrieve all clinical records in which primary diagnosis corresponds to breast cancer, to define a diagnosis-specific outpatient cohort.",
+      "required_fields": [
+        "Problem"
+      ],
+      "required_operators": {
+        "Problem": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "Problem": "breast cancer"
+      }
+    },
+    {
+      "query_id": "DX2",
+      "query_name": "Hypertension as secondary diagnosis",
+      "query_complexity": "easy",
+      "category": "diagnosis",
+      "description": "Identify all records in which secondary diagnosis is recorded as hypertension, to capture clinically relevant comorbidity alongside the principal disease.",
+      "required_fields": [
+        "Secondary Diagnosis"
+      ],
+      "required_operators": {
+        "Secondary Diagnosis": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "Secondary Diagnosis": "hypertension"
+      }
+    },
+    {
+      "query_id": "DX3",
+      "query_name": "Colon topography cohort",
+      "query_complexity": "medium",
+      "category": "diagnosis",
+      "description": "Retrieve all clinical records in which topography corresponds to colon, thereby identifying cases associated with the specified anatomical site.",
+      "required_fields": [
+        "topography"
+      ],
+      "required_operators": {
+        "topography": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis",
+        "Tumour - TNM Cancer staging"
+      ],
+      "constraints": {
+        "topography": "colon"
+      }
+    },
+    {
+      "query_id": "DX4",
+      "query_name": "Stage III disease cohort",
+      "query_complexity": "medium",
+      "category": "diagnosis",
+      "description": "Retrieve all records in which staging is documented as Stage III, for severity-oriented cohort derivation and treatment pathway review.",
+      "required_fields": [
+        "Clinical staging"
+      ],
+      "required_operators": {
+        "Clinical staging": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis",
+        "Clinical (cTNM)"
+      ],
+      "constraints": {
+        "Clinical staging": "Stage III"
+      }
+    },
+    {
+      "query_id": "TP1",
+      "query_name": "Biopsy procedure cohort",
+      "query_complexity": "easy",
+      "category": "treatment_procedure",
+      "description": "Retrieve all records in which procedure is documented as biopsy, to identify patients who underwent that specific diagnostic intervention.",
+      "required_fields": [
+        "Procedure"
+      ],
+      "required_operators": {
+        "Procedure": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken"
+      ],
+      "constraints": {
+        "Procedure": "biopsy"
+      }
+    },
+    {
+      "query_id": "TP2",
+      "query_name": "FOLFOX chemotherapy schema cohort",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Retrieve all treatment records in which chemotherapy schema corresponds to FOLFOX, in order to identify a regimen-specific chemotherapy cohort.",
+      "required_fields": [
+        "schema"
+      ],
+      "required_operators": {
+        "schema": [
+          "contains"
+        ]
+      },
+      "required_contexts": [
+        "chemotherapy"
+      ],
+      "constraints": {
+        "schema": "FOLFOX"
+      }
+    },
+    {
+      "query_id": "TP3",
+      "query_name": "Pelvic radiotherapy fields cohort",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Retrieve all records in which radiotherapy fields indicate pelvic field irradiation, to identify patients treated with the specified radiotherapy field configuration.",
+      "required_fields": [
+        "fields/insertions 1",
+        "fields/insertions 2"
+      ],
+      "required_operators": {
+        "fields/insertions 1": [
+          "contains"
+        ],
+        "fields/insertions 2": [
+          "contains"
+        ]
+      },
+      "required_contexts": [
+        "radiotherapy"
+      ],
+      "constraints": {
+        "radiotherapy fields": "pelvic field irradiation"
+      },
+      "alternative_required_field_groups": [
+        {
+          "fields": [
+            "fields/insertions 1"
+          ],
+          "required_operators": {
+            "fields/insertions 1": [
+              "range"
+            ]
+          }
+        },
+        {
+          "fields": [
+            "fields/insertions 2"
+          ],
+          "required_operators": {
+            "fields/insertions 2": [
+              "range"
+            ]
+          }
+        },
+        {
+          "fields": [
+            "irradiated area 1"
+          ],
+          "required_operators": {
+            "irradiated area 1": [
+              "equals"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "query_id": "TP4",
+      "query_name": "Treatment duration greater than 90 days",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Retrieve all records in which duration of treatment exceeds 90 days, to identify patients exposed to prolonged treatment courses.",
+      "required_fields": [
+        "duration of treatment"
+      ],
+      "required_operators": {
+        "duration of treatment": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "chemotherapy"
+      ],
+      "constraints": {
+        "duration of treatment": {
+          "operator": ">",
+          "value": 90,
+          "unit": "days"
+        }
+      }
+    },
+    {
+      "query_id": "TM1",
+      "query_name": "Records issued after 01-01-2022",
+      "query_complexity": "easy",
+      "category": "temporal",
+      "description": "Retrieve all records in which issue date is later than 01-01-2022, to support time-bounded clinical record selection.",
+      "required_fields": [
+        "issue date"
+      ],
+      "required_operators": {
+        "issue date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "HCPA",
+        "General data"
+      ],
+      "constraints": {
+        "issue date": {
+          "operator": "after",
+          "value": "2022-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "TM2",
+      "query_name": "Discharge records in January 2023",
+      "query_complexity": "medium",
+      "category": "temporal",
+      "description": "Identify all records in which date of discharge falls within January 2023, for temporal analysis of discharge activity.",
+      "required_fields": [
+        "date of discharge"
+      ],
+      "required_operators": {
+        "date of discharge": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Patient discharge"
+      ],
+      "constraints": {
+        "date of discharge": {
+          "operator": "between",
+          "from": "2023-01-01",
+          "to": "2023-01-31"
+        }
+      }
+    },
+    {
+      "query_id": "TM3",
+      "query_name": "Chemotherapy beginning after 01-06-2021",
+      "query_complexity": "medium",
+      "category": "temporal",
+      "description": "Retrieve all records in which date of beginning of chemotherapy is later than 01-06-2021, in order to identify patients starting chemotherapy in the defined time window.",
+      "required_fields": [
+        "date of beginning of chemotherapy"
+      ],
+      "required_operators": {
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "chemotherapy"
+      ],
+      "constraints": {
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2021-06-01"
+        }
+      }
+    },
+    {
+      "query_id": "TM4",
+      "query_name": "Pathological identification in 2020",
+      "query_complexity": "medium",
+      "category": "temporal",
+      "description": "Retrieve all records in which date of pathological identification falls within the calendar year 2020, for diagnostic timing and case-identification review.",
+      "required_fields": [
+        "date of pathological identification"
+      ],
+      "required_operators": {
+        "date of pathological identification": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Pathological (pTNM)",
+        "Tumour - TNM Cancer staging"
+      ],
+      "constraints": {
+        "date of pathological identification": {
+          "operator": "between",
+          "from": "2020-01-01",
+          "to": "2020-12-31"
+        }
+      }
+    },
+    {
+      "query_id": "CX1",
+      "query_name": "Breast cancer plus biopsy cohort",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Retrieve all records in which primary diagnosis is breast cancer and procedure is biopsy, thereby identifying a clinically meaningful diagnosis–procedure cohort.",
+      "required_fields": [
+        "Problem",
+        "Procedure"
+      ],
+      "required_operators": {
+        "Problem": [
+          "equals"
+        ],
+        "Procedure": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis",
+        "Procedure undertaken"
+      ],
+      "constraints": {
+        "Problem": "breast cancer",
+        "Procedure": "biopsy"
+      }
+    },
+    {
+      "query_id": "CX2",
+      "query_name": "Patients older than 60 with lung cancer",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Identify all patients older than 60 years based on birth date or age derivation, whose primary diagnosis is lung cancer, to define an age-conditioned disease cohort.",
+      "required_fields": [
+        "birth date",
+        "patient age",
+        "Problem"
+      ],
+      "required_operators": {
+        "birth date": [
+          "date_range"
+        ],
+        "patient age": [
+          "range"
+        ],
+        "Problem": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "General data",
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "patient age": {
+          "operator": ">",
+          "value": 60
+        },
+        "Problem": "lung cancer"
+      },
+      "alternative_required_field_groups": [
+        {
+          "fields": [
+            "patient age",
+            "Problem"
+          ],
+          "required_operators": {
+            "patient age": [
+              "range"
+            ],
+            "Problem": [
+              "equals"
+            ]
+          }
+        },
+        {
+          "fields": [
+            "birth date",
+            "Problem"
+          ],
+          "required_operators": {
+            "birth date": [
+              "date_range"
+            ],
+            "Problem": [
+              "equals"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "query_id": "CX3",
+      "query_name": "São Paulo patients on FOLFOX treatment",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Retrieve all patient records in which the demographic location attribute state is São Paulo and chemotherapy schema is FOLFOX, to identify a geographically restricted treatment cohort.",
+      "required_fields": [
+        "State",
+        "schema"
+      ],
+      "required_operators": {
+        "State": [
+          "equals"
+        ],
+        "schema": [
+          "contains"
+        ]
+      },
+      "required_contexts": [
+        "General data",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "State": "São Paulo",
+        "schema": "FOLFOX"
+      }
+    },
+    {
+      "query_id": "CX4",
+      "query_name": "Stage III biopsy cohort with chemotherapy beginning after 01-01-2022",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Retrieve all records in which staging is Stage III, procedure is biopsy, and date of beginning of chemotherapy is later than 01-01-2022, thereby defining a temporally constrained multi-context clinical cohort.",
+      "required_fields": [
+        "Clinical staging",
+        "Procedure",
+        "date of beginning of chemotherapy"
+      ],
+      "required_operators": {
+        "Clinical staging": [
+          "equals"
+        ],
+        "Procedure": [
+          "equals"
+        ],
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "Clinical staging": "Stage III",
+        "Procedure": "biopsy",
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2022-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J021",
+      "query_name": "demographic query by gender",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Single-field semi-curated query: filter records by gender.",
+      "required_fields": [
+        "gender"
+      ],
+      "required_operators": {
+        "gender": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "gender": "Male"
+      }
+    },
+    {
+      "query_id": "J022",
+      "query_name": "demographic query by birth date",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Single-field semi-curated query: filter records by birth date.",
+      "required_fields": [
+        "birth date"
+      ],
+      "required_operators": {
+        "birth date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "birth date": {
+          "operator": "before",
+          "value": "1970-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J023",
+      "query_name": "demographic query by nationality",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Single-field semi-curated query: filter records by nationality.",
+      "required_fields": [
+        "nationality"
+      ],
+      "required_operators": {
+        "nationality": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "nationality": "Other"
+      }
+    },
+    {
+      "query_id": "J024",
+      "query_name": "demographic query by educational level",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Single-field semi-curated query: filter records by educational level.",
+      "required_fields": [
+        "educational level"
+      ],
+      "required_operators": {
+        "educational level": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "educational level": "Primary education"
+      }
+    },
+    {
+      "query_id": "J025",
+      "query_name": "demographic query by gender and birth date",
+      "query_complexity": "medium",
+      "category": "demographic",
+      "description": "Two-field semi-curated query: filter records by gender, birth date.",
+      "required_fields": [
+        "gender",
+        "birth date"
+      ],
+      "required_operators": {
+        "gender": [
+          "equals"
+        ],
+        "birth date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "gender": "Male",
+        "birth date": {
+          "operator": "before",
+          "value": "1970-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J026",
+      "query_name": "demographic query by gender and nationality",
+      "query_complexity": "medium",
+      "category": "demographic",
+      "description": "Two-field semi-curated query: filter records by gender, nationality.",
+      "required_fields": [
+        "gender",
+        "nationality"
+      ],
+      "required_operators": {
+        "gender": [
+          "equals"
+        ],
+        "nationality": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "gender": "Male",
+        "nationality": "Other"
+      }
+    },
+    {
+      "query_id": "J027",
+      "query_name": "demographic query by gender and educational level",
+      "query_complexity": "medium",
+      "category": "demographic",
+      "description": "Two-field semi-curated query: filter records by gender, educational level.",
+      "required_fields": [
+        "gender",
+        "educational level"
+      ],
+      "required_operators": {
+        "gender": [
+          "equals"
+        ],
+        "educational level": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "gender": "Male",
+        "educational level": "Secondary education"
+      }
+    },
+    {
+      "query_id": "J028",
+      "query_name": "demographic query by birth date and nationality",
+      "query_complexity": "medium",
+      "category": "demographic",
+      "description": "Two-field semi-curated query: filter records by birth date, nationality.",
+      "required_fields": [
+        "birth date",
+        "nationality"
+      ],
+      "required_operators": {
+        "birth date": [
+          "date_range"
+        ],
+        "nationality": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "birth date": {
+          "operator": "between",
+          "from": "1960-01-01",
+          "to": "1990-12-31"
+        },
+        "nationality": "Other"
+      }
+    },
+    {
+      "query_id": "J029",
+      "query_name": "demographic query by birth date and educational level",
+      "query_complexity": "medium",
+      "category": "demographic",
+      "description": "Two-field semi-curated query: filter records by birth date, educational level.",
+      "required_fields": [
+        "birth date",
+        "educational level"
+      ],
+      "required_operators": {
+        "birth date": [
+          "date_range"
+        ],
+        "educational level": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "birth date": {
+          "operator": "before",
+          "value": "1970-01-01"
+        },
+        "educational level": "Secondary education"
+      }
+    },
+    {
+      "query_id": "J030",
+      "query_name": "demographic query by nationality and educational level",
+      "query_complexity": "medium",
+      "category": "demographic",
+      "description": "Two-field semi-curated query: filter records by nationality, educational level.",
+      "required_fields": [
+        "nationality",
+        "educational level"
+      ],
+      "required_operators": {
+        "nationality": [
+          "equals"
+        ],
+        "educational level": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data"
+      ],
+      "constraints": {
+        "nationality": "Portuguese",
+        "educational level": "Higher education"
+      }
+    },
+    {
+      "query_id": "J031",
+      "query_name": "diagnosis query by Problem",
+      "query_complexity": "easy",
+      "category": "diagnosis",
+      "description": "Single-field semi-curated query: filter records by Problem.",
+      "required_fields": [
+        "Problem"
+      ],
+      "required_operators": {
+        "Problem": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "Problem": "breast cancer"
+      }
+    },
+    {
+      "query_id": "J032",
+      "query_name": "diagnosis query by Secondary Diagnosis",
+      "query_complexity": "easy",
+      "category": "diagnosis",
+      "description": "Single-field semi-curated query: filter records by Secondary Diagnosis.",
+      "required_fields": [
+        "Secondary Diagnosis"
+      ],
+      "required_operators": {
+        "Secondary Diagnosis": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "Secondary Diagnosis": "hypertension"
+      }
+    },
+    {
+      "query_id": "J033",
+      "query_name": "diagnosis query by topography",
+      "query_complexity": "easy",
+      "category": "diagnosis",
+      "description": "Single-field semi-curated query: filter records by topography.",
+      "required_fields": [
+        "topography"
+      ],
+      "required_operators": {
+        "topography": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "topography": "breast"
+      }
+    },
+    {
+      "query_id": "J034",
+      "query_name": "diagnosis query by Clinical staging",
+      "query_complexity": "easy",
+      "category": "diagnosis",
+      "description": "Single-field semi-curated query: filter records by Clinical staging.",
+      "required_fields": [
+        "Clinical staging"
+      ],
+      "required_operators": {
+        "Clinical staging": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "Clinical staging": "Stage II"
+      }
+    },
+    {
+      "query_id": "J035",
+      "query_name": "diagnosis query by Problem and Secondary Diagnosis",
+      "query_complexity": "medium",
+      "category": "diagnosis",
+      "description": "Two-field semi-curated query: filter records by Problem, Secondary Diagnosis.",
+      "required_fields": [
+        "Problem",
+        "Secondary Diagnosis"
+      ],
+      "required_operators": {
+        "Problem": [
+          "equals"
+        ],
+        "Secondary Diagnosis": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "Problem": "breast cancer",
+        "Secondary Diagnosis": "anemia"
+      }
+    },
+    {
+      "query_id": "J036",
+      "query_name": "diagnosis query by Problem and topography",
+      "query_complexity": "medium",
+      "category": "diagnosis",
+      "description": "Two-field semi-curated query: filter records by Problem, topography.",
+      "required_fields": [
+        "Problem",
+        "topography"
+      ],
+      "required_operators": {
+        "Problem": [
+          "equals"
+        ],
+        "topography": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "Problem": "lung cancer",
+        "topography": "prostate"
+      }
+    },
+    {
+      "query_id": "J037",
+      "query_name": "diagnosis query by Problem and Clinical staging",
+      "query_complexity": "medium",
+      "category": "diagnosis",
+      "description": "Two-field semi-curated query: filter records by Problem, Clinical staging.",
+      "required_fields": [
+        "Problem",
+        "Clinical staging"
+      ],
+      "required_operators": {
+        "Problem": [
+          "equals"
+        ],
+        "Clinical staging": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "Problem": "lung cancer",
+        "Clinical staging": "Stage IV"
+      }
+    },
+    {
+      "query_id": "J038",
+      "query_name": "diagnosis query by Secondary Diagnosis and topography",
+      "query_complexity": "medium",
+      "category": "diagnosis",
+      "description": "Two-field semi-curated query: filter records by Secondary Diagnosis, topography.",
+      "required_fields": [
+        "Secondary Diagnosis",
+        "topography"
+      ],
+      "required_operators": {
+        "Secondary Diagnosis": [
+          "equals"
+        ],
+        "topography": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "Secondary Diagnosis": "anemia",
+        "topography": "lung"
+      }
+    },
+    {
+      "query_id": "J039",
+      "query_name": "diagnosis query by Secondary Diagnosis and Clinical staging",
+      "query_complexity": "medium",
+      "category": "diagnosis",
+      "description": "Two-field semi-curated query: filter records by Secondary Diagnosis, Clinical staging.",
+      "required_fields": [
+        "Secondary Diagnosis",
+        "Clinical staging"
+      ],
+      "required_operators": {
+        "Secondary Diagnosis": [
+          "equals"
+        ],
+        "Clinical staging": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "Secondary Diagnosis": "hypertension",
+        "Clinical staging": "Stage II"
+      }
+    },
+    {
+      "query_id": "J040",
+      "query_name": "diagnosis query by topography and Clinical staging",
+      "query_complexity": "medium",
+      "category": "diagnosis",
+      "description": "Two-field semi-curated query: filter records by topography, Clinical staging.",
+      "required_fields": [
+        "topography",
+        "Clinical staging"
+      ],
+      "required_operators": {
+        "topography": [
+          "equals"
+        ],
+        "Clinical staging": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Problem/Diagnosis"
+      ],
+      "constraints": {
+        "topography": "prostate",
+        "Clinical staging": "Stage III"
+      }
+    },
+    {
+      "query_id": "J041",
+      "query_name": "treatment_procedure query by Procedure",
+      "query_complexity": "easy",
+      "category": "treatment_procedure",
+      "description": "Single-field semi-curated query: filter records by Procedure.",
+      "required_fields": [
+        "Procedure"
+      ],
+      "required_operators": {
+        "Procedure": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "Procedure": "radiotherapy"
+      }
+    },
+    {
+      "query_id": "J042",
+      "query_name": "treatment_procedure query by schema",
+      "query_complexity": "easy",
+      "category": "treatment_procedure",
+      "description": "Single-field semi-curated query: filter records by schema.",
+      "required_fields": [
+        "schema"
+      ],
+      "required_operators": {
+        "schema": [
+          "contains"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "schema": "FOLFIRI"
+      }
+    },
+    {
+      "query_id": "J043",
+      "query_name": "treatment_procedure query by duration of treatment",
+      "query_complexity": "easy",
+      "category": "treatment_procedure",
+      "description": "Single-field semi-curated query: filter records by duration of treatment.",
+      "required_fields": [
+        "duration of treatment"
+      ],
+      "required_operators": {
+        "duration of treatment": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "duration of treatment": {
+          "operator": ">",
+          "value": 30,
+          "unit": "days"
+        }
+      }
+    },
+    {
+      "query_id": "J044",
+      "query_name": "treatment_procedure query by fields/insertions 1",
+      "query_complexity": "easy",
+      "category": "treatment_procedure",
+      "description": "Single-field semi-curated query: filter records by fields/insertions 1.",
+      "required_fields": [
+        "fields/insertions 1"
+      ],
+      "required_operators": {
+        "fields/insertions 1": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "fields/insertions 1": {
+          "operator": ">",
+          "value": 0
+        }
+      }
+    },
+    {
+      "query_id": "J045",
+      "query_name": "treatment_procedure query by fields/insertions 2",
+      "query_complexity": "easy",
+      "category": "treatment_procedure",
+      "description": "Single-field semi-curated query: filter records by fields/insertions 2.",
+      "required_fields": [
+        "fields/insertions 2"
+      ],
+      "required_operators": {
+        "fields/insertions 2": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "fields/insertions 2": {
+          "operator": ">",
+          "value": 0
+        }
+      }
+    },
+    {
+      "query_id": "J046",
+      "query_name": "treatment_procedure query by irradiated area 1",
+      "query_complexity": "easy",
+      "category": "treatment_procedure",
+      "description": "Single-field semi-curated query: filter records by irradiated area 1.",
+      "required_fields": [
+        "irradiated area 1"
+      ],
+      "required_operators": {
+        "irradiated area 1": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "irradiated area 1": "pelvis"
+      }
+    },
+    {
+      "query_id": "J047",
+      "query_name": "treatment_procedure query by Procedure and schema",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Two-field semi-curated query: filter records by Procedure, schema.",
+      "required_fields": [
+        "Procedure",
+        "schema"
+      ],
+      "required_operators": {
+        "Procedure": [
+          "equals"
+        ],
+        "schema": [
+          "contains"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "Procedure": "chemotherapy",
+        "schema": "FOLFOX"
+      }
+    },
+    {
+      "query_id": "J048",
+      "query_name": "treatment_procedure query by Procedure and duration of treatment",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Two-field semi-curated query: filter records by Procedure, duration of treatment.",
+      "required_fields": [
+        "Procedure",
+        "duration of treatment"
+      ],
+      "required_operators": {
+        "Procedure": [
+          "equals"
+        ],
+        "duration of treatment": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "Procedure": "radiotherapy",
+        "duration of treatment": {
+          "operator": ">",
+          "value": 60,
+          "unit": "days"
+        }
+      }
+    },
+    {
+      "query_id": "J049",
+      "query_name": "treatment_procedure query by Procedure and fields/insertions 1",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Two-field semi-curated query: filter records by Procedure, fields/insertions 1.",
+      "required_fields": [
+        "Procedure",
+        "fields/insertions 1"
+      ],
+      "required_operators": {
+        "Procedure": [
+          "equals"
+        ],
+        "fields/insertions 1": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "Procedure": "radiotherapy",
+        "fields/insertions 1": {
+          "operator": ">",
+          "value": 0
+        }
+      }
+    },
+    {
+      "query_id": "J050",
+      "query_name": "treatment_procedure query by Procedure and fields/insertions 2",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Two-field semi-curated query: filter records by Procedure, fields/insertions 2.",
+      "required_fields": [
+        "Procedure",
+        "fields/insertions 2"
+      ],
+      "required_operators": {
+        "Procedure": [
+          "equals"
+        ],
+        "fields/insertions 2": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "Procedure": "chemotherapy",
+        "fields/insertions 2": {
+          "operator": ">",
+          "value": 0
+        }
+      }
+    },
+    {
+      "query_id": "J051",
+      "query_name": "treatment_procedure query by Procedure and irradiated area 1",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Two-field semi-curated query: filter records by Procedure, irradiated area 1.",
+      "required_fields": [
+        "Procedure",
+        "irradiated area 1"
+      ],
+      "required_operators": {
+        "Procedure": [
+          "equals"
+        ],
+        "irradiated area 1": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "Procedure": "chemotherapy",
+        "irradiated area 1": "pelvis"
+      }
+    },
+    {
+      "query_id": "J052",
+      "query_name": "treatment_procedure query by schema and duration of treatment",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Two-field semi-curated query: filter records by schema, duration of treatment.",
+      "required_fields": [
+        "schema",
+        "duration of treatment"
+      ],
+      "required_operators": {
+        "schema": [
+          "contains"
+        ],
+        "duration of treatment": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "schema": "AC-T",
+        "duration of treatment": {
+          "operator": ">",
+          "value": 90,
+          "unit": "days"
+        }
+      }
+    },
+    {
+      "query_id": "J053",
+      "query_name": "treatment_procedure query by schema and fields/insertions 1",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Two-field semi-curated query: filter records by schema, fields/insertions 1.",
+      "required_fields": [
+        "schema",
+        "fields/insertions 1"
+      ],
+      "required_operators": {
+        "schema": [
+          "contains"
+        ],
+        "fields/insertions 1": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "schema": "AC-T",
+        "fields/insertions 1": {
+          "operator": ">",
+          "value": 0
+        }
+      }
+    },
+    {
+      "query_id": "J054",
+      "query_name": "treatment_procedure query by schema and fields/insertions 2",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Two-field semi-curated query: filter records by schema, fields/insertions 2.",
+      "required_fields": [
+        "schema",
+        "fields/insertions 2"
+      ],
+      "required_operators": {
+        "schema": [
+          "contains"
+        ],
+        "fields/insertions 2": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "schema": "FOLFOX",
+        "fields/insertions 2": {
+          "operator": ">",
+          "value": 0
+        }
+      }
+    },
+    {
+      "query_id": "J055",
+      "query_name": "treatment_procedure query by schema and irradiated area 1",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Two-field semi-curated query: filter records by schema, irradiated area 1.",
+      "required_fields": [
+        "schema",
+        "irradiated area 1"
+      ],
+      "required_operators": {
+        "schema": [
+          "contains"
+        ],
+        "irradiated area 1": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "schema": "FOLFIRI",
+        "irradiated area 1": "thorax"
+      }
+    },
+    {
+      "query_id": "J056",
+      "query_name": "treatment_procedure query by duration of treatment and fields/insertions 1",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Two-field semi-curated query: filter records by duration of treatment, fields/insertions 1.",
+      "required_fields": [
+        "duration of treatment",
+        "fields/insertions 1"
+      ],
+      "required_operators": {
+        "duration of treatment": [
+          "range"
+        ],
+        "fields/insertions 1": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "duration of treatment": {
+          "operator": ">",
+          "value": 30,
+          "unit": "days"
+        },
+        "fields/insertions 1": {
+          "operator": ">",
+          "value": 0
+        }
+      }
+    },
+    {
+      "query_id": "J057",
+      "query_name": "treatment_procedure query by duration of treatment and fields/insertions 2",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Two-field semi-curated query: filter records by duration of treatment, fields/insertions 2.",
+      "required_fields": [
+        "duration of treatment",
+        "fields/insertions 2"
+      ],
+      "required_operators": {
+        "duration of treatment": [
+          "range"
+        ],
+        "fields/insertions 2": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "duration of treatment": {
+          "operator": ">",
+          "value": 30,
+          "unit": "days"
+        },
+        "fields/insertions 2": {
+          "operator": ">",
+          "value": 0
+        }
+      }
+    },
+    {
+      "query_id": "J058",
+      "query_name": "treatment_procedure query by duration of treatment and irradiated area 1",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Two-field semi-curated query: filter records by duration of treatment, irradiated area 1.",
+      "required_fields": [
+        "duration of treatment",
+        "irradiated area 1"
+      ],
+      "required_operators": {
+        "duration of treatment": [
+          "range"
+        ],
+        "irradiated area 1": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "duration of treatment": {
+          "operator": ">",
+          "value": 60,
+          "unit": "days"
+        },
+        "irradiated area 1": "thorax"
+      }
+    },
+    {
+      "query_id": "J059",
+      "query_name": "treatment_procedure query by fields/insertions 1 and fields/insertions 2",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Two-field semi-curated query: filter records by fields/insertions 1, fields/insertions 2.",
+      "required_fields": [
+        "fields/insertions 1",
+        "fields/insertions 2"
+      ],
+      "required_operators": {
+        "fields/insertions 1": [
+          "range"
+        ],
+        "fields/insertions 2": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "fields/insertions 1": {
+          "operator": ">",
+          "value": 0
+        },
+        "fields/insertions 2": {
+          "operator": ">",
+          "value": 0
+        }
+      }
+    },
+    {
+      "query_id": "J060",
+      "query_name": "treatment_procedure query by fields/insertions 1 and irradiated area 1",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Two-field semi-curated query: filter records by fields/insertions 1, irradiated area 1.",
+      "required_fields": [
+        "fields/insertions 1",
+        "irradiated area 1"
+      ],
+      "required_operators": {
+        "fields/insertions 1": [
+          "range"
+        ],
+        "irradiated area 1": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "fields/insertions 1": {
+          "operator": ">",
+          "value": 0
+        },
+        "irradiated area 1": "thorax"
+      }
+    },
+    {
+      "query_id": "J061",
+      "query_name": "treatment_procedure query by fields/insertions 2 and irradiated area 1",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Two-field semi-curated query: filter records by fields/insertions 2, irradiated area 1.",
+      "required_fields": [
+        "fields/insertions 2",
+        "irradiated area 1"
+      ],
+      "required_operators": {
+        "fields/insertions 2": [
+          "range"
+        ],
+        "irradiated area 1": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Procedure undertaken",
+        "chemotherapy"
+      ],
+      "constraints": {
+        "fields/insertions 2": {
+          "operator": ">",
+          "value": 0
+        },
+        "irradiated area 1": "abdomen"
+      }
+    },
+    {
+      "query_id": "J062",
+      "query_name": "temporal query by issue date",
+      "query_complexity": "easy",
+      "category": "temporal",
+      "description": "Single-field semi-curated query: filter records by issue date.",
+      "required_fields": [
+        "issue date"
+      ],
+      "required_operators": {
+        "issue date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "HCPA"
+      ],
+      "constraints": {
+        "issue date": {
+          "operator": "between",
+          "from": "2021-01-01",
+          "to": "2022-12-31"
+        }
+      }
+    },
+    {
+      "query_id": "J063",
+      "query_name": "temporal query by date of discharge",
+      "query_complexity": "easy",
+      "category": "temporal",
+      "description": "Single-field semi-curated query: filter records by date of discharge.",
+      "required_fields": [
+        "date of discharge"
+      ],
+      "required_operators": {
+        "date of discharge": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "HCPA"
+      ],
+      "constraints": {
+        "date of discharge": {
+          "operator": "between",
+          "from": "2023-01-01",
+          "to": "2023-01-31"
+        }
+      }
+    },
+    {
+      "query_id": "J064",
+      "query_name": "temporal query by date of beginning of chemotherapy",
+      "query_complexity": "easy",
+      "category": "temporal",
+      "description": "Single-field semi-curated query: filter records by date of beginning of chemotherapy.",
+      "required_fields": [
+        "date of beginning of chemotherapy"
+      ],
+      "required_operators": {
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "HCPA"
+      ],
+      "constraints": {
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2021-06-01"
+        }
+      }
+    },
+    {
+      "query_id": "J065",
+      "query_name": "temporal query by date of pathological identification",
+      "query_complexity": "easy",
+      "category": "temporal",
+      "description": "Single-field semi-curated query: filter records by date of pathological identification.",
+      "required_fields": [
+        "date of pathological identification"
+      ],
+      "required_operators": {
+        "date of pathological identification": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "HCPA"
+      ],
+      "constraints": {
+        "date of pathological identification": {
+          "operator": "between",
+          "from": "2020-01-01",
+          "to": "2020-12-31"
+        }
+      }
+    },
+    {
+      "query_id": "J066",
+      "query_name": "temporal query by issue date and date of discharge",
+      "query_complexity": "medium",
+      "category": "temporal",
+      "description": "Two-field semi-curated query: filter records by issue date, date of discharge.",
+      "required_fields": [
+        "issue date",
+        "date of discharge"
+      ],
+      "required_operators": {
+        "issue date": [
+          "date_range"
+        ],
+        "date of discharge": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "HCPA"
+      ],
+      "constraints": {
+        "issue date": {
+          "operator": "after",
+          "value": "2022-01-01"
+        },
+        "date of discharge": {
+          "operator": "after",
+          "value": "2022-06-01"
+        }
+      }
+    },
+    {
+      "query_id": "J067",
+      "query_name": "temporal query by issue date and date of beginning of chemotherapy",
+      "query_complexity": "medium",
+      "category": "temporal",
+      "description": "Two-field semi-curated query: filter records by issue date, date of beginning of chemotherapy.",
+      "required_fields": [
+        "issue date",
+        "date of beginning of chemotherapy"
+      ],
+      "required_operators": {
+        "issue date": [
+          "date_range"
+        ],
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "HCPA"
+      ],
+      "constraints": {
+        "issue date": {
+          "operator": "between",
+          "from": "2021-01-01",
+          "to": "2022-12-31"
+        },
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2022-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J068",
+      "query_name": "temporal query by issue date and date of pathological identification",
+      "query_complexity": "medium",
+      "category": "temporal",
+      "description": "Two-field semi-curated query: filter records by issue date, date of pathological identification.",
+      "required_fields": [
+        "issue date",
+        "date of pathological identification"
+      ],
+      "required_operators": {
+        "issue date": [
+          "date_range"
+        ],
+        "date of pathological identification": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "HCPA"
+      ],
+      "constraints": {
+        "issue date": {
+          "operator": "after",
+          "value": "2022-01-01"
+        },
+        "date of pathological identification": {
+          "operator": "after",
+          "value": "2019-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J069",
+      "query_name": "temporal query by date of discharge and date of beginning of chemotherapy",
+      "query_complexity": "medium",
+      "category": "temporal",
+      "description": "Two-field semi-curated query: filter records by date of discharge, date of beginning of chemotherapy.",
+      "required_fields": [
+        "date of discharge",
+        "date of beginning of chemotherapy"
+      ],
+      "required_operators": {
+        "date of discharge": [
+          "date_range"
+        ],
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "HCPA"
+      ],
+      "constraints": {
+        "date of discharge": {
+          "operator": "between",
+          "from": "2023-01-01",
+          "to": "2023-01-31"
+        },
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2021-06-01"
+        }
+      }
+    },
+    {
+      "query_id": "J070",
+      "query_name": "temporal query by date of discharge and date of pathological identification",
+      "query_complexity": "medium",
+      "category": "temporal",
+      "description": "Two-field semi-curated query: filter records by date of discharge, date of pathological identification.",
+      "required_fields": [
+        "date of discharge",
+        "date of pathological identification"
+      ],
+      "required_operators": {
+        "date of discharge": [
+          "date_range"
+        ],
+        "date of pathological identification": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "HCPA"
+      ],
+      "constraints": {
+        "date of discharge": {
+          "operator": "between",
+          "from": "2023-01-01",
+          "to": "2023-01-31"
+        },
+        "date of pathological identification": {
+          "operator": "after",
+          "value": "2019-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J071",
+      "query_name": "temporal query by date of beginning of chemotherapy and date of pathological identification",
+      "query_complexity": "medium",
+      "category": "temporal",
+      "description": "Two-field semi-curated query: filter records by date of beginning of chemotherapy, date of pathological identification.",
+      "required_fields": [
+        "date of beginning of chemotherapy",
+        "date of pathological identification"
+      ],
+      "required_operators": {
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ],
+        "date of pathological identification": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "HCPA"
+      ],
+      "constraints": {
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2022-01-01"
+        },
+        "date of pathological identification": {
+          "operator": "after",
+          "value": "2019-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J072",
+      "query_name": "administrative query by State",
+      "query_complexity": "easy",
+      "category": "administrative",
+      "description": "Single-field semi-curated query: filter records by State.",
+      "required_fields": [
+        "State"
+      ],
+      "required_operators": {
+        "State": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "General data"
+      ],
+      "constraints": {
+        "State": "São Paulo"
+      }
+    },
+    {
+      "query_id": "J073",
+      "query_name": "administrative query by healthcare unit",
+      "query_complexity": "easy",
+      "category": "administrative",
+      "description": "Single-field semi-curated query: filter records by healthcare unit.",
+      "required_fields": [
+        "healthcare unit"
+      ],
+      "required_operators": {
+        "healthcare unit": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "General data"
+      ],
+      "constraints": {
+        "healthcare unit": "Unit A"
+      }
+    },
+    {
+      "query_id": "J074",
+      "query_name": "administrative query by reason for encounter",
+      "query_complexity": "easy",
+      "category": "administrative",
+      "description": "Single-field semi-curated query: filter records by reason for encounter.",
+      "required_fields": [
+        "reason for encounter"
+      ],
+      "required_operators": {
+        "reason for encounter": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "General data"
+      ],
+      "constraints": {
+        "reason for encounter": "follow-up"
+      }
+    },
+    {
+      "query_id": "J075",
+      "query_name": "administrative query by State and healthcare unit",
+      "query_complexity": "medium",
+      "category": "administrative",
+      "description": "Two-field semi-curated query: filter records by State, healthcare unit.",
+      "required_fields": [
+        "State",
+        "healthcare unit"
+      ],
+      "required_operators": {
+        "State": [
+          "equals"
+        ],
+        "healthcare unit": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "General data"
+      ],
+      "constraints": {
+        "State": "Minas Gerais",
+        "healthcare unit": "Unit B"
+      }
+    },
+    {
+      "query_id": "J076",
+      "query_name": "administrative query by State and reason for encounter",
+      "query_complexity": "medium",
+      "category": "administrative",
+      "description": "Two-field semi-curated query: filter records by State, reason for encounter.",
+      "required_fields": [
+        "State",
+        "reason for encounter"
+      ],
+      "required_operators": {
+        "State": [
+          "equals"
+        ],
+        "reason for encounter": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "General data"
+      ],
+      "constraints": {
+        "State": "São Paulo",
+        "reason for encounter": "follow-up"
+      }
+    },
+    {
+      "query_id": "J077",
+      "query_name": "administrative query by healthcare unit and reason for encounter",
+      "query_complexity": "medium",
+      "category": "administrative",
+      "description": "Two-field semi-curated query: filter records by healthcare unit, reason for encounter.",
+      "required_fields": [
+        "healthcare unit",
+        "reason for encounter"
+      ],
+      "required_operators": {
+        "healthcare unit": [
+          "equals"
+        ],
+        "reason for encounter": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "General data"
+      ],
+      "constraints": {
+        "healthcare unit": "Unit B",
+        "reason for encounter": "diagnosis"
+      }
+    },
+    {
+      "query_id": "J078",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of discharge, topography, reason for encounter, educational level.",
+      "required_fields": [
+        "date of discharge",
+        "topography",
+        "reason for encounter",
+        "educational level"
+      ],
+      "required_operators": {
+        "date of discharge": [
+          "date_range"
+        ],
+        "topography": [
+          "equals"
+        ],
+        "reason for encounter": [
+          "equals"
+        ],
+        "educational level": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of discharge": {
+          "operator": "after",
+          "value": "2022-06-01"
+        },
+        "topography": "lung",
+        "reason for encounter": "treatment",
+        "educational level": "Higher education"
+      }
+    },
+    {
+      "query_id": "J079",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of discharge, birth date, reason for encounter, fields/insertions 1.",
+      "required_fields": [
+        "date of discharge",
+        "birth date",
+        "reason for encounter",
+        "fields/insertions 1"
+      ],
+      "required_operators": {
+        "date of discharge": [
+          "date_range"
+        ],
+        "birth date": [
+          "date_range"
+        ],
+        "reason for encounter": [
+          "equals"
+        ],
+        "fields/insertions 1": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of discharge": {
+          "operator": "between",
+          "from": "2023-01-01",
+          "to": "2023-01-31"
+        },
+        "birth date": {
+          "operator": "after",
+          "value": "1980-01-01"
+        },
+        "reason for encounter": "diagnosis",
+        "fields/insertions 1": {
+          "operator": ">",
+          "value": 0
+        }
+      }
+    },
+    {
+      "query_id": "J080",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by irradiated area 1, nationality, reason for encounter, date of beginning of chemotherapy.",
+      "required_fields": [
+        "irradiated area 1",
+        "nationality",
+        "reason for encounter",
+        "date of beginning of chemotherapy"
+      ],
+      "required_operators": {
+        "irradiated area 1": [
+          "equals"
+        ],
+        "nationality": [
+          "equals"
+        ],
+        "reason for encounter": [
+          "equals"
+        ],
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "irradiated area 1": "pelvis",
+        "nationality": "Portuguese",
+        "reason for encounter": "diagnosis",
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2021-06-01"
+        }
+      }
+    },
+    {
+      "query_id": "J081",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by birth date, fields/insertions 2, issue date.",
+      "required_fields": [
+        "birth date",
+        "fields/insertions 2",
+        "issue date"
+      ],
+      "required_operators": {
+        "birth date": [
+          "date_range"
+        ],
+        "fields/insertions 2": [
+          "range"
+        ],
+        "issue date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "birth date": {
+          "operator": "between",
+          "from": "1960-01-01",
+          "to": "1990-12-31"
+        },
+        "fields/insertions 2": {
+          "operator": ">",
+          "value": 0
+        },
+        "issue date": {
+          "operator": "after",
+          "value": "2022-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J082",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by fields/insertions 2, Problem.",
+      "required_fields": [
+        "fields/insertions 2",
+        "Problem"
+      ],
+      "required_operators": {
+        "fields/insertions 2": [
+          "range"
+        ],
+        "Problem": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "fields/insertions 2": {
+          "operator": ">",
+          "value": 0
+        },
+        "Problem": "prostate cancer"
+      }
+    },
+    {
+      "query_id": "J083",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by nationality, schema.",
+      "required_fields": [
+        "nationality",
+        "schema"
+      ],
+      "required_operators": {
+        "nationality": [
+          "equals"
+        ],
+        "schema": [
+          "contains"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "nationality": "Brazilian",
+        "schema": "FOLFIRI"
+      }
+    },
+    {
+      "query_id": "J084",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by gender, reason for encounter, schema, Secondary Diagnosis.",
+      "required_fields": [
+        "gender",
+        "reason for encounter",
+        "schema",
+        "Secondary Diagnosis"
+      ],
+      "required_operators": {
+        "gender": [
+          "equals"
+        ],
+        "reason for encounter": [
+          "equals"
+        ],
+        "schema": [
+          "contains"
+        ],
+        "Secondary Diagnosis": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "gender": "Female",
+        "reason for encounter": "follow-up",
+        "schema": "FOLFIRI",
+        "Secondary Diagnosis": "diabetes"
+      }
+    },
+    {
+      "query_id": "J085",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by reason for encounter, date of beginning of chemotherapy, educational level, irradiated area 1.",
+      "required_fields": [
+        "reason for encounter",
+        "date of beginning of chemotherapy",
+        "educational level",
+        "irradiated area 1"
+      ],
+      "required_operators": {
+        "reason for encounter": [
+          "equals"
+        ],
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ],
+        "educational level": [
+          "equals"
+        ],
+        "irradiated area 1": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "reason for encounter": "follow-up",
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2022-01-01"
+        },
+        "educational level": "Primary education",
+        "irradiated area 1": "abdomen"
+      }
+    },
+    {
+      "query_id": "J086",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by gender, topography, State.",
+      "required_fields": [
+        "gender",
+        "topography",
+        "State"
+      ],
+      "required_operators": {
+        "gender": [
+          "equals"
+        ],
+        "topography": [
+          "equals"
+        ],
+        "State": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "gender": "Male",
+        "topography": "breast",
+        "State": "São Paulo"
+      }
+    },
+    {
+      "query_id": "J087",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by gender, Problem.",
+      "required_fields": [
+        "gender",
+        "Problem"
+      ],
+      "required_operators": {
+        "gender": [
+          "equals"
+        ],
+        "Problem": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "gender": "Female",
+        "Problem": "breast cancer"
+      }
+    },
+    {
+      "query_id": "J088",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by Secondary Diagnosis, fields/insertions 2, date of discharge, reason for encounter.",
+      "required_fields": [
+        "Secondary Diagnosis",
+        "fields/insertions 2",
+        "date of discharge",
+        "reason for encounter"
+      ],
+      "required_operators": {
+        "Secondary Diagnosis": [
+          "equals"
+        ],
+        "fields/insertions 2": [
+          "range"
+        ],
+        "date of discharge": [
+          "date_range"
+        ],
+        "reason for encounter": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "Secondary Diagnosis": "anemia",
+        "fields/insertions 2": {
+          "operator": ">",
+          "value": 0
+        },
+        "date of discharge": {
+          "operator": "between",
+          "from": "2023-01-01",
+          "to": "2023-01-31"
+        },
+        "reason for encounter": "diagnosis"
+      }
+    },
+    {
+      "query_id": "J089",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by Clinical staging, nationality, date of pathological identification.",
+      "required_fields": [
+        "Clinical staging",
+        "nationality",
+        "date of pathological identification"
+      ],
+      "required_operators": {
+        "Clinical staging": [
+          "equals"
+        ],
+        "nationality": [
+          "equals"
+        ],
+        "date of pathological identification": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "Clinical staging": "Stage IV",
+        "nationality": "Portuguese",
+        "date of pathological identification": {
+          "operator": "between",
+          "from": "2020-01-01",
+          "to": "2020-12-31"
+        }
+      }
+    },
+    {
+      "query_id": "J090",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by gender, State, Secondary Diagnosis, schema.",
+      "required_fields": [
+        "gender",
+        "State",
+        "Secondary Diagnosis",
+        "schema"
+      ],
+      "required_operators": {
+        "gender": [
+          "equals"
+        ],
+        "State": [
+          "equals"
+        ],
+        "Secondary Diagnosis": [
+          "equals"
+        ],
+        "schema": [
+          "contains"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "gender": "Female",
+        "State": "São Paulo",
+        "Secondary Diagnosis": "diabetes",
+        "schema": "FOLFIRI"
+      }
+    },
+    {
+      "query_id": "J091",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of pathological identification, Problem, gender.",
+      "required_fields": [
+        "date of pathological identification",
+        "Problem",
+        "gender"
+      ],
+      "required_operators": {
+        "date of pathological identification": [
+          "date_range"
+        ],
+        "Problem": [
+          "equals"
+        ],
+        "gender": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of pathological identification": {
+          "operator": "between",
+          "from": "2020-01-01",
+          "to": "2020-12-31"
+        },
+        "Problem": "breast cancer",
+        "gender": "Male"
+      }
+    },
+    {
+      "query_id": "J092",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of pathological identification, State.",
+      "required_fields": [
+        "date of pathological identification",
+        "State"
+      ],
+      "required_operators": {
+        "date of pathological identification": [
+          "date_range"
+        ],
+        "State": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of pathological identification": {
+          "operator": "after",
+          "value": "2019-01-01"
+        },
+        "State": "São Paulo"
+      }
+    },
+    {
+      "query_id": "J093",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of pathological identification, nationality.",
+      "required_fields": [
+        "date of pathological identification",
+        "nationality"
+      ],
+      "required_operators": {
+        "date of pathological identification": [
+          "date_range"
+        ],
+        "nationality": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of pathological identification": {
+          "operator": "after",
+          "value": "2019-01-01"
+        },
+        "nationality": "Portuguese"
+      }
+    },
+    {
+      "query_id": "J094",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by State, date of beginning of chemotherapy, birth date.",
+      "required_fields": [
+        "State",
+        "date of beginning of chemotherapy",
+        "birth date"
+      ],
+      "required_operators": {
+        "State": [
+          "equals"
+        ],
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ],
+        "birth date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "State": "São Paulo",
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2021-06-01"
+        },
+        "birth date": {
+          "operator": "between",
+          "from": "1960-01-01",
+          "to": "1990-12-31"
+        }
+      }
+    },
+    {
+      "query_id": "J095",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by educational level, reason for encounter, fields/insertions 2.",
+      "required_fields": [
+        "educational level",
+        "reason for encounter",
+        "fields/insertions 2"
+      ],
+      "required_operators": {
+        "educational level": [
+          "equals"
+        ],
+        "reason for encounter": [
+          "equals"
+        ],
+        "fields/insertions 2": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "educational level": "Higher education",
+        "reason for encounter": "treatment",
+        "fields/insertions 2": {
+          "operator": ">",
+          "value": 0
+        }
+      }
+    },
+    {
+      "query_id": "J096",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by birth date, healthcare unit.",
+      "required_fields": [
+        "birth date",
+        "healthcare unit"
+      ],
+      "required_operators": {
+        "birth date": [
+          "date_range"
+        ],
+        "healthcare unit": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "birth date": {
+          "operator": "before",
+          "value": "1970-01-01"
+        },
+        "healthcare unit": "Unit C"
+      }
+    },
+    {
+      "query_id": "J097",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by reason for encounter, gender.",
+      "required_fields": [
+        "reason for encounter",
+        "gender"
+      ],
+      "required_operators": {
+        "reason for encounter": [
+          "equals"
+        ],
+        "gender": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "reason for encounter": "diagnosis",
+        "gender": "Female"
+      }
+    },
+    {
+      "query_id": "J098",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by topography, fields/insertions 1, birth date.",
+      "required_fields": [
+        "topography",
+        "fields/insertions 1",
+        "birth date"
+      ],
+      "required_operators": {
+        "topography": [
+          "equals"
+        ],
+        "fields/insertions 1": [
+          "range"
+        ],
+        "birth date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "topography": "lung",
+        "fields/insertions 1": {
+          "operator": ">",
+          "value": 0
+        },
+        "birth date": {
+          "operator": "after",
+          "value": "1980-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J099",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by gender, issue date.",
+      "required_fields": [
+        "gender",
+        "issue date"
+      ],
+      "required_operators": {
+        "gender": [
+          "equals"
+        ],
+        "issue date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "gender": "Male",
+        "issue date": {
+          "operator": "between",
+          "from": "2021-01-01",
+          "to": "2022-12-31"
+        }
+      }
+    },
+    {
+      "query_id": "J100",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by schema, nationality.",
+      "required_fields": [
+        "schema",
+        "nationality"
+      ],
+      "required_operators": {
+        "schema": [
+          "contains"
+        ],
+        "nationality": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "schema": "AC-T",
+        "nationality": "Brazilian"
+      }
+    },
+    {
+      "query_id": "J101",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by reason for encounter, fields/insertions 2, issue date.",
+      "required_fields": [
+        "reason for encounter",
+        "fields/insertions 2",
+        "issue date"
+      ],
+      "required_operators": {
+        "reason for encounter": [
+          "equals"
+        ],
+        "fields/insertions 2": [
+          "range"
+        ],
+        "issue date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "reason for encounter": "follow-up",
+        "fields/insertions 2": {
+          "operator": ">",
+          "value": 0
+        },
+        "issue date": {
+          "operator": "after",
+          "value": "2022-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J102",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by Procedure, birth date.",
+      "required_fields": [
+        "Procedure",
+        "birth date"
+      ],
+      "required_operators": {
+        "Procedure": [
+          "equals"
+        ],
+        "birth date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "Procedure": "radiotherapy",
+        "birth date": {
+          "operator": "after",
+          "value": "1980-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J103",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by Clinical staging, duration of treatment, gender, State.",
+      "required_fields": [
+        "Clinical staging",
+        "duration of treatment",
+        "gender",
+        "State"
+      ],
+      "required_operators": {
+        "Clinical staging": [
+          "equals"
+        ],
+        "duration of treatment": [
+          "range"
+        ],
+        "gender": [
+          "equals"
+        ],
+        "State": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "Clinical staging": "Stage IV",
+        "duration of treatment": {
+          "operator": ">",
+          "value": 60,
+          "unit": "days"
+        },
+        "gender": "Male",
+        "State": "São Paulo"
+      }
+    },
+    {
+      "query_id": "J104",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by Clinical staging, fields/insertions 2, educational level.",
+      "required_fields": [
+        "Clinical staging",
+        "fields/insertions 2",
+        "educational level"
+      ],
+      "required_operators": {
+        "Clinical staging": [
+          "equals"
+        ],
+        "fields/insertions 2": [
+          "range"
+        ],
+        "educational level": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "Clinical staging": "Stage I",
+        "fields/insertions 2": {
+          "operator": ">",
+          "value": 0
+        },
+        "educational level": "Higher education"
+      }
+    },
+    {
+      "query_id": "J105",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by Clinical staging, birth date, State, date of beginning of chemotherapy.",
+      "required_fields": [
+        "Clinical staging",
+        "birth date",
+        "State",
+        "date of beginning of chemotherapy"
+      ],
+      "required_operators": {
+        "Clinical staging": [
+          "equals"
+        ],
+        "birth date": [
+          "date_range"
+        ],
+        "State": [
+          "equals"
+        ],
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "Clinical staging": "Stage III",
+        "birth date": {
+          "operator": "before",
+          "value": "1970-01-01"
+        },
+        "State": "Rio de Janeiro",
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2021-06-01"
+        }
+      }
+    },
+    {
+      "query_id": "J106",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by Secondary Diagnosis, birth date, State, schema.",
+      "required_fields": [
+        "Secondary Diagnosis",
+        "birth date",
+        "State",
+        "schema"
+      ],
+      "required_operators": {
+        "Secondary Diagnosis": [
+          "equals"
+        ],
+        "birth date": [
+          "date_range"
+        ],
+        "State": [
+          "equals"
+        ],
+        "schema": [
+          "contains"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "Secondary Diagnosis": "diabetes",
+        "birth date": {
+          "operator": "before",
+          "value": "1970-01-01"
+        },
+        "State": "São Paulo",
+        "schema": "AC-T"
+      }
+    },
+    {
+      "query_id": "J107",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by Problem, fields/insertions 1, gender.",
+      "required_fields": [
+        "Problem",
+        "fields/insertions 1",
+        "gender"
+      ],
+      "required_operators": {
+        "Problem": [
+          "equals"
+        ],
+        "fields/insertions 1": [
+          "range"
+        ],
+        "gender": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "Problem": "prostate cancer",
+        "fields/insertions 1": {
+          "operator": ">",
+          "value": 0
+        },
+        "gender": "Male"
+      }
+    },
+    {
+      "query_id": "J108",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by schema, State, birth date.",
+      "required_fields": [
+        "schema",
+        "State",
+        "birth date"
+      ],
+      "required_operators": {
+        "schema": [
+          "contains"
+        ],
+        "State": [
+          "equals"
+        ],
+        "birth date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "schema": "cisplatin",
+        "State": "Rio de Janeiro",
+        "birth date": {
+          "operator": "after",
+          "value": "1980-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J109",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by irradiated area 1, reason for encounter.",
+      "required_fields": [
+        "irradiated area 1",
+        "reason for encounter"
+      ],
+      "required_operators": {
+        "irradiated area 1": [
+          "equals"
+        ],
+        "reason for encounter": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "irradiated area 1": "thorax",
+        "reason for encounter": "follow-up"
+      }
+    },
+    {
+      "query_id": "J110",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by schema, nationality, issue date, Problem.",
+      "required_fields": [
+        "schema",
+        "nationality",
+        "issue date",
+        "Problem"
+      ],
+      "required_operators": {
+        "schema": [
+          "contains"
+        ],
+        "nationality": [
+          "equals"
+        ],
+        "issue date": [
+          "date_range"
+        ],
+        "Problem": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "schema": "cisplatin",
+        "nationality": "Portuguese",
+        "issue date": {
+          "operator": "between",
+          "from": "2021-01-01",
+          "to": "2022-12-31"
+        },
+        "Problem": "prostate cancer"
+      }
+    },
+    {
+      "query_id": "J111",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by healthcare unit, gender, Clinical staging, issue date.",
+      "required_fields": [
+        "healthcare unit",
+        "gender",
+        "Clinical staging",
+        "issue date"
+      ],
+      "required_operators": {
+        "healthcare unit": [
+          "equals"
+        ],
+        "gender": [
+          "equals"
+        ],
+        "Clinical staging": [
+          "equals"
+        ],
+        "issue date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "healthcare unit": "Unit C",
+        "gender": "Male",
+        "Clinical staging": "Stage III",
+        "issue date": {
+          "operator": "between",
+          "from": "2021-01-01",
+          "to": "2022-12-31"
+        }
+      }
+    },
+    {
+      "query_id": "J112",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by irradiated area 1, State.",
+      "required_fields": [
+        "irradiated area 1",
+        "State"
+      ],
+      "required_operators": {
+        "irradiated area 1": [
+          "equals"
+        ],
+        "State": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "irradiated area 1": "abdomen",
+        "State": "Rio de Janeiro"
+      }
+    },
+    {
+      "query_id": "J113",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by irradiated area 1, date of beginning of chemotherapy, Secondary Diagnosis, State.",
+      "required_fields": [
+        "irradiated area 1",
+        "date of beginning of chemotherapy",
+        "Secondary Diagnosis",
+        "State"
+      ],
+      "required_operators": {
+        "irradiated area 1": [
+          "equals"
+        ],
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ],
+        "Secondary Diagnosis": [
+          "equals"
+        ],
+        "State": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "irradiated area 1": "thorax",
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2022-01-01"
+        },
+        "Secondary Diagnosis": "anemia",
+        "State": "Minas Gerais"
+      }
+    },
+    {
+      "query_id": "J114",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by healthcare unit, fields/insertions 2.",
+      "required_fields": [
+        "healthcare unit",
+        "fields/insertions 2"
+      ],
+      "required_operators": {
+        "healthcare unit": [
+          "equals"
+        ],
+        "fields/insertions 2": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "healthcare unit": "Unit A",
+        "fields/insertions 2": {
+          "operator": ">",
+          "value": 0
+        }
+      }
+    },
+    {
+      "query_id": "J115",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by topography, date of pathological identification, fields/insertions 1.",
+      "required_fields": [
+        "topography",
+        "date of pathological identification",
+        "fields/insertions 1"
+      ],
+      "required_operators": {
+        "topography": [
+          "equals"
+        ],
+        "date of pathological identification": [
+          "date_range"
+        ],
+        "fields/insertions 1": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "topography": "prostate",
+        "date of pathological identification": {
+          "operator": "between",
+          "from": "2020-01-01",
+          "to": "2020-12-31"
+        },
+        "fields/insertions 1": {
+          "operator": ">",
+          "value": 0
+        }
+      }
+    },
+    {
+      "query_id": "J116",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by Problem, birth date, reason for encounter, duration of treatment.",
+      "required_fields": [
+        "Problem",
+        "birth date",
+        "reason for encounter",
+        "duration of treatment"
+      ],
+      "required_operators": {
+        "Problem": [
+          "equals"
+        ],
+        "birth date": [
+          "date_range"
+        ],
+        "reason for encounter": [
+          "equals"
+        ],
+        "duration of treatment": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "Problem": "lung cancer",
+        "birth date": {
+          "operator": "before",
+          "value": "1970-01-01"
+        },
+        "reason for encounter": "treatment",
+        "duration of treatment": {
+          "operator": ">",
+          "value": 30,
+          "unit": "days"
+        }
+      }
+    },
+    {
+      "query_id": "J117",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by Problem, date of pathological identification.",
+      "required_fields": [
+        "Problem",
+        "date of pathological identification"
+      ],
+      "required_operators": {
+        "Problem": [
+          "equals"
+        ],
+        "date of pathological identification": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "Problem": "prostate cancer",
+        "date of pathological identification": {
+          "operator": "between",
+          "from": "2020-01-01",
+          "to": "2020-12-31"
+        }
+      }
+    },
+    {
+      "query_id": "J118",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of discharge, reason for encounter, Problem, gender.",
+      "required_fields": [
+        "date of discharge",
+        "reason for encounter",
+        "Problem",
+        "gender"
+      ],
+      "required_operators": {
+        "date of discharge": [
+          "date_range"
+        ],
+        "reason for encounter": [
+          "equals"
+        ],
+        "Problem": [
+          "equals"
+        ],
+        "gender": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of discharge": {
+          "operator": "after",
+          "value": "2022-06-01"
+        },
+        "reason for encounter": "treatment",
+        "Problem": "lung cancer",
+        "gender": "Female"
+      }
+    },
+    {
+      "query_id": "J119",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by State, Clinical staging.",
+      "required_fields": [
+        "State",
+        "Clinical staging"
+      ],
+      "required_operators": {
+        "State": [
+          "equals"
+        ],
+        "Clinical staging": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "State": "São Paulo",
+        "Clinical staging": "Stage IV"
+      }
+    },
+    {
+      "query_id": "J120",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by reason for encounter, fields/insertions 1, Secondary Diagnosis, date of pathological identification.",
+      "required_fields": [
+        "reason for encounter",
+        "fields/insertions 1",
+        "Secondary Diagnosis",
+        "date of pathological identification"
+      ],
+      "required_operators": {
+        "reason for encounter": [
+          "equals"
+        ],
+        "fields/insertions 1": [
+          "range"
+        ],
+        "Secondary Diagnosis": [
+          "equals"
+        ],
+        "date of pathological identification": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "reason for encounter": "diagnosis",
+        "fields/insertions 1": {
+          "operator": ">",
+          "value": 0
+        },
+        "Secondary Diagnosis": "hypertension",
+        "date of pathological identification": {
+          "operator": "after",
+          "value": "2019-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J121",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by issue date, topography, State, duration of treatment.",
+      "required_fields": [
+        "issue date",
+        "topography",
+        "State",
+        "duration of treatment"
+      ],
+      "required_operators": {
+        "issue date": [
+          "date_range"
+        ],
+        "topography": [
+          "equals"
+        ],
+        "State": [
+          "equals"
+        ],
+        "duration of treatment": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "issue date": {
+          "operator": "between",
+          "from": "2021-01-01",
+          "to": "2022-12-31"
+        },
+        "topography": "lung",
+        "State": "Minas Gerais",
+        "duration of treatment": {
+          "operator": ">",
+          "value": 30,
+          "unit": "days"
+        }
+      }
+    },
+    {
+      "query_id": "J122",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by Clinical staging, reason for encounter.",
+      "required_fields": [
+        "Clinical staging",
+        "reason for encounter"
+      ],
+      "required_operators": {
+        "Clinical staging": [
+          "equals"
+        ],
+        "reason for encounter": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "Clinical staging": "Stage II",
+        "reason for encounter": "follow-up"
+      }
+    },
+    {
+      "query_id": "J123",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by educational level, date of beginning of chemotherapy.",
+      "required_fields": [
+        "educational level",
+        "date of beginning of chemotherapy"
+      ],
+      "required_operators": {
+        "educational level": [
+          "equals"
+        ],
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "educational level": "Secondary education",
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2022-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J124",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by educational level, Problem, date of pathological identification.",
+      "required_fields": [
+        "educational level",
+        "Problem",
+        "date of pathological identification"
+      ],
+      "required_operators": {
+        "educational level": [
+          "equals"
+        ],
+        "Problem": [
+          "equals"
+        ],
+        "date of pathological identification": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "educational level": "Primary education",
+        "Problem": "breast cancer",
+        "date of pathological identification": {
+          "operator": "after",
+          "value": "2019-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J125",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of discharge, healthcare unit, schema.",
+      "required_fields": [
+        "date of discharge",
+        "healthcare unit",
+        "schema"
+      ],
+      "required_operators": {
+        "date of discharge": [
+          "date_range"
+        ],
+        "healthcare unit": [
+          "equals"
+        ],
+        "schema": [
+          "contains"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of discharge": {
+          "operator": "after",
+          "value": "2022-06-01"
+        },
+        "healthcare unit": "Unit B",
+        "schema": "cisplatin"
+      }
+    },
+    {
+      "query_id": "J126",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of pathological identification, irradiated area 1.",
+      "required_fields": [
+        "date of pathological identification",
+        "irradiated area 1"
+      ],
+      "required_operators": {
+        "date of pathological identification": [
+          "date_range"
+        ],
+        "irradiated area 1": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of pathological identification": {
+          "operator": "between",
+          "from": "2020-01-01",
+          "to": "2020-12-31"
+        },
+        "irradiated area 1": "thorax"
+      }
+    },
+    {
+      "query_id": "J127",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by healthcare unit, gender.",
+      "required_fields": [
+        "healthcare unit",
+        "gender"
+      ],
+      "required_operators": {
+        "healthcare unit": [
+          "equals"
+        ],
+        "gender": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "healthcare unit": "Unit A",
+        "gender": "Female"
+      }
+    },
+    {
+      "query_id": "J128",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by issue date, topography.",
+      "required_fields": [
+        "issue date",
+        "topography"
+      ],
+      "required_operators": {
+        "issue date": [
+          "date_range"
+        ],
+        "topography": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "issue date": {
+          "operator": "between",
+          "from": "2021-01-01",
+          "to": "2022-12-31"
+        },
+        "topography": "lung"
+      }
+    },
+    {
+      "query_id": "J129",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of beginning of chemotherapy, fields/insertions 1.",
+      "required_fields": [
+        "date of beginning of chemotherapy",
+        "fields/insertions 1"
+      ],
+      "required_operators": {
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ],
+        "fields/insertions 1": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2022-01-01"
+        },
+        "fields/insertions 1": {
+          "operator": ">",
+          "value": 0
+        }
+      }
+    },
+    {
+      "query_id": "J130",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by gender, date of beginning of chemotherapy, State.",
+      "required_fields": [
+        "gender",
+        "date of beginning of chemotherapy",
+        "State"
+      ],
+      "required_operators": {
+        "gender": [
+          "equals"
+        ],
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ],
+        "State": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "gender": "Male",
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2021-06-01"
+        },
+        "State": "São Paulo"
+      }
+    },
+    {
+      "query_id": "J131",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by Secondary Diagnosis, birth date.",
+      "required_fields": [
+        "Secondary Diagnosis",
+        "birth date"
+      ],
+      "required_operators": {
+        "Secondary Diagnosis": [
+          "equals"
+        ],
+        "birth date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "Secondary Diagnosis": "hypertension",
+        "birth date": {
+          "operator": "after",
+          "value": "1980-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J132",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by nationality, Secondary Diagnosis, issue date, schema.",
+      "required_fields": [
+        "nationality",
+        "Secondary Diagnosis",
+        "issue date",
+        "schema"
+      ],
+      "required_operators": {
+        "nationality": [
+          "equals"
+        ],
+        "Secondary Diagnosis": [
+          "equals"
+        ],
+        "issue date": [
+          "date_range"
+        ],
+        "schema": [
+          "contains"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "nationality": "Portuguese",
+        "Secondary Diagnosis": "hypertension",
+        "issue date": {
+          "operator": "after",
+          "value": "2022-01-01"
+        },
+        "schema": "AC-T"
+      }
+    },
+    {
+      "query_id": "J133",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by issue date, reason for encounter, irradiated area 1, birth date.",
+      "required_fields": [
+        "issue date",
+        "reason for encounter",
+        "irradiated area 1",
+        "birth date"
+      ],
+      "required_operators": {
+        "issue date": [
+          "date_range"
+        ],
+        "reason for encounter": [
+          "equals"
+        ],
+        "irradiated area 1": [
+          "equals"
+        ],
+        "birth date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "issue date": {
+          "operator": "after",
+          "value": "2022-01-01"
+        },
+        "reason for encounter": "follow-up",
+        "irradiated area 1": "thorax",
+        "birth date": {
+          "operator": "between",
+          "from": "1960-01-01",
+          "to": "1990-12-31"
+        }
+      }
+    },
+    {
+      "query_id": "J134",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by nationality, State, topography, Procedure.",
+      "required_fields": [
+        "nationality",
+        "State",
+        "topography",
+        "Procedure"
+      ],
+      "required_operators": {
+        "nationality": [
+          "equals"
+        ],
+        "State": [
+          "equals"
+        ],
+        "topography": [
+          "equals"
+        ],
+        "Procedure": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "nationality": "Portuguese",
+        "State": "Rio de Janeiro",
+        "topography": "colon",
+        "Procedure": "chemotherapy"
+      }
+    },
+    {
+      "query_id": "J135",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of discharge, topography, reason for encounter.",
+      "required_fields": [
+        "date of discharge",
+        "topography",
+        "reason for encounter"
+      ],
+      "required_operators": {
+        "date of discharge": [
+          "date_range"
+        ],
+        "topography": [
+          "equals"
+        ],
+        "reason for encounter": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of discharge": {
+          "operator": "after",
+          "value": "2022-06-01"
+        },
+        "topography": "prostate",
+        "reason for encounter": "diagnosis"
+      }
+    },
+    {
+      "query_id": "J136",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by State, duration of treatment, Clinical staging, birth date.",
+      "required_fields": [
+        "State",
+        "duration of treatment",
+        "Clinical staging",
+        "birth date"
+      ],
+      "required_operators": {
+        "State": [
+          "equals"
+        ],
+        "duration of treatment": [
+          "range"
+        ],
+        "Clinical staging": [
+          "equals"
+        ],
+        "birth date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "State": "Rio de Janeiro",
+        "duration of treatment": {
+          "operator": ">",
+          "value": 90,
+          "unit": "days"
+        },
+        "Clinical staging": "Stage IV",
+        "birth date": {
+          "operator": "after",
+          "value": "1980-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J137",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of discharge, fields/insertions 1.",
+      "required_fields": [
+        "date of discharge",
+        "fields/insertions 1"
+      ],
+      "required_operators": {
+        "date of discharge": [
+          "date_range"
+        ],
+        "fields/insertions 1": [
+          "range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of discharge": {
+          "operator": "between",
+          "from": "2023-01-01",
+          "to": "2023-01-31"
+        },
+        "fields/insertions 1": {
+          "operator": ">",
+          "value": 0
+        }
+      }
+    },
+    {
+      "query_id": "J138",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by irradiated area 1, healthcare unit, issue date.",
+      "required_fields": [
+        "irradiated area 1",
+        "healthcare unit",
+        "issue date"
+      ],
+      "required_operators": {
+        "irradiated area 1": [
+          "equals"
+        ],
+        "healthcare unit": [
+          "equals"
+        ],
+        "issue date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "irradiated area 1": "abdomen",
+        "healthcare unit": "Unit A",
+        "issue date": {
+          "operator": "after",
+          "value": "2022-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J139",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of discharge, reason for encounter.",
+      "required_fields": [
+        "date of discharge",
+        "reason for encounter"
+      ],
+      "required_operators": {
+        "date of discharge": [
+          "date_range"
+        ],
+        "reason for encounter": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of discharge": {
+          "operator": "after",
+          "value": "2022-06-01"
+        },
+        "reason for encounter": "follow-up"
+      }
+    },
+    {
+      "query_id": "J140",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of beginning of chemotherapy, State, educational level, irradiated area 1.",
+      "required_fields": [
+        "date of beginning of chemotherapy",
+        "State",
+        "educational level",
+        "irradiated area 1"
+      ],
+      "required_operators": {
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ],
+        "State": [
+          "equals"
+        ],
+        "educational level": [
+          "equals"
+        ],
+        "irradiated area 1": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2021-06-01"
+        },
+        "State": "Rio de Janeiro",
+        "educational level": "Secondary education",
+        "irradiated area 1": "abdomen"
+      }
+    },
+    {
+      "query_id": "J141",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of beginning of chemotherapy, duration of treatment, Clinical staging.",
+      "required_fields": [
+        "date of beginning of chemotherapy",
+        "duration of treatment",
+        "Clinical staging"
+      ],
+      "required_operators": {
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ],
+        "duration of treatment": [
+          "range"
+        ],
+        "Clinical staging": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2022-01-01"
+        },
+        "duration of treatment": {
+          "operator": ">",
+          "value": 60,
+          "unit": "days"
+        },
+        "Clinical staging": "Stage III"
+      }
+    },
+    {
+      "query_id": "J142",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by nationality, Problem.",
+      "required_fields": [
+        "nationality",
+        "Problem"
+      ],
+      "required_operators": {
+        "nationality": [
+          "equals"
+        ],
+        "Problem": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "nationality": "Other",
+        "Problem": "lung cancer"
+      }
+    },
+    {
+      "query_id": "J143",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by topography, date of beginning of chemotherapy.",
+      "required_fields": [
+        "topography",
+        "date of beginning of chemotherapy"
+      ],
+      "required_operators": {
+        "topography": [
+          "equals"
+        ],
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "topography": "colon",
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2021-06-01"
+        }
+      }
+    },
+    {
+      "query_id": "J144",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by topography, Procedure, birth date.",
+      "required_fields": [
+        "topography",
+        "Procedure",
+        "birth date"
+      ],
+      "required_operators": {
+        "topography": [
+          "equals"
+        ],
+        "Procedure": [
+          "equals"
+        ],
+        "birth date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "topography": "lung",
+        "Procedure": "biopsy",
+        "birth date": {
+          "operator": "before",
+          "value": "1970-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J145",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by Procedure, Problem, reason for encounter, date of beginning of chemotherapy.",
+      "required_fields": [
+        "Procedure",
+        "Problem",
+        "reason for encounter",
+        "date of beginning of chemotherapy"
+      ],
+      "required_operators": {
+        "Procedure": [
+          "equals"
+        ],
+        "Problem": [
+          "equals"
+        ],
+        "reason for encounter": [
+          "equals"
+        ],
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "Procedure": "chemotherapy",
+        "Problem": "prostate cancer",
+        "reason for encounter": "diagnosis",
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2022-01-01"
+        }
+      }
+    },
+    {
+      "query_id": "J146",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by educational level, Procedure.",
+      "required_fields": [
+        "educational level",
+        "Procedure"
+      ],
+      "required_operators": {
+        "educational level": [
+          "equals"
+        ],
+        "Procedure": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "educational level": "Higher education",
+        "Procedure": "chemotherapy"
+      }
+    },
+    {
+      "query_id": "J147",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by birth date, reason for encounter, date of beginning of chemotherapy.",
+      "required_fields": [
+        "birth date",
+        "reason for encounter",
+        "date of beginning of chemotherapy"
+      ],
+      "required_operators": {
+        "birth date": [
+          "date_range"
+        ],
+        "reason for encounter": [
+          "equals"
+        ],
+        "date of beginning of chemotherapy": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "birth date": {
+          "operator": "before",
+          "value": "1970-01-01"
+        },
+        "reason for encounter": "treatment",
+        "date of beginning of chemotherapy": {
+          "operator": "after",
+          "value": "2021-06-01"
+        }
+      }
+    },
+    {
+      "query_id": "J148",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of pathological identification, Clinical staging, duration of treatment, reason for encounter.",
+      "required_fields": [
+        "date of pathological identification",
+        "Clinical staging",
+        "duration of treatment",
+        "reason for encounter"
+      ],
+      "required_operators": {
+        "date of pathological identification": [
+          "date_range"
+        ],
+        "Clinical staging": [
+          "equals"
+        ],
+        "duration of treatment": [
+          "range"
+        ],
+        "reason for encounter": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of pathological identification": {
+          "operator": "after",
+          "value": "2019-01-01"
+        },
+        "Clinical staging": "Stage III",
+        "duration of treatment": {
+          "operator": ">",
+          "value": 90,
+          "unit": "days"
+        },
+        "reason for encounter": "follow-up"
+      }
+    },
+    {
+      "query_id": "J149",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by State, birth date.",
+      "required_fields": [
+        "State",
+        "birth date"
+      ],
+      "required_operators": {
+        "State": [
+          "equals"
+        ],
+        "birth date": [
+          "date_range"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "State": "Rio de Janeiro",
+        "birth date": {
+          "operator": "between",
+          "from": "1960-01-01",
+          "to": "1990-12-31"
+        }
+      }
+    },
+    {
+      "query_id": "J150",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by Secondary Diagnosis, reason for encounter.",
+      "required_fields": [
+        "Secondary Diagnosis",
+        "reason for encounter"
+      ],
+      "required_operators": {
+        "Secondary Diagnosis": [
+          "equals"
+        ],
+        "reason for encounter": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "Secondary Diagnosis": "hypertension",
+        "reason for encounter": "treatment"
+      }
+    },
+    {
+      "query_id": "J151",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by date of pathological identification, healthcare unit.",
+      "required_fields": [
+        "date of pathological identification",
+        "healthcare unit"
+      ],
+      "required_operators": {
+        "date of pathological identification": [
+          "date_range"
+        ],
+        "healthcare unit": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "date of pathological identification": {
+          "operator": "between",
+          "from": "2020-01-01",
+          "to": "2020-12-31"
+        },
+        "healthcare unit": "Unit A"
+      }
+    },
+    {
+      "query_id": "J152",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by irradiated area 1, date of discharge, nationality.",
+      "required_fields": [
+        "irradiated area 1",
+        "date of discharge",
+        "nationality"
+      ],
+      "required_operators": {
+        "irradiated area 1": [
+          "equals"
+        ],
+        "date of discharge": [
+          "date_range"
+        ],
+        "nationality": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "irradiated area 1": "abdomen",
+        "date of discharge": {
+          "operator": "between",
+          "from": "2023-01-01",
+          "to": "2023-01-31"
+        },
+        "nationality": "Portuguese"
+      }
+    },
+    {
+      "query_id": "J153",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by reason for encounter, Secondary Diagnosis.",
+      "required_fields": [
+        "reason for encounter",
+        "Secondary Diagnosis"
+      ],
+      "required_operators": {
+        "reason for encounter": [
+          "equals"
+        ],
+        "Secondary Diagnosis": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "reason for encounter": "diagnosis",
+        "Secondary Diagnosis": "hypertension"
+      }
+    },
+    {
+      "query_id": "J154",
+      "query_name": "Cross-context semi-curated query",
+      "query_complexity": "medium",
+      "category": "cross_context",
+      "description": "Cross-context semi-curated query: filter records by nationality, topography.",
+      "required_fields": [
+        "nationality",
+        "topography"
+      ],
+      "required_operators": {
+        "nationality": [
+          "equals"
+        ],
+        "topography": [
+          "equals"
+        ]
+      },
+      "required_contexts": [
+        "Demographic data",
+        "Problem/Diagnosis",
+        "Procedure undertaken",
+        "chemotherapy",
+        "HCPA"
+      ],
+      "constraints": {
+        "nationality": "Portuguese",
+        "topography": "colon"
+      }
+    }
+  ]
+}
