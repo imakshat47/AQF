@@ -1,0 +1,3 @@
+form_id,form_group,utility,complexity,max_depth,selected_field_count,filter_count,output_count,relationship_count
+aqf_outpatient_high_complexity_procedures_76866,Outpatient high complexity procedures,8.034638475300092,18.5,5,16,8,8,40
+aqf_demographic_data_5816,Demographic data,0.7956133137119114,5.5,3,4,2,2,6

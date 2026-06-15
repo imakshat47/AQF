@@ -1,0 +1,999 @@
+{
+  "metadata": {
+    "field_count": 26,
+    "min_input_aq": 0.0,
+    "min_output_aq": 0.0,
+    "top_k_input_per_form": 12,
+    "top_k_output_per_form": 12
+  },
+  "operator_aware_fields": [
+    {
+      "canonical_id": "form_element_date_of_pathological_identification_34581024",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|tumour_-_tnm_cancer_staging|openehr-ehr-cluster.tnm_staging-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|pathological_(ptnm)|at0006|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|date_of_pathological_identification|at0.44|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "name": "date of pathological identification",
+      "datatype": "DV_DATE",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|tumour_-_tnm_cancer_staging|openehr-ehr-cluster.tnm_staging-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|pathological_(ptnm)|at0006|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|date_of_pathological_identification|at0.44|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "archetype_node_id": "at0.44",
+      "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.43916204986149576,
+      "input_operators": [
+        {
+          "operator": "date_range",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.43916204986149576,
+          "control_type": "date_range_picker",
+          "reason": "Temporal values support interval predicates."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "sort",
+          "operator_class": "ordering",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.43916204986149576,
+          "control_type": "sort_control",
+          "reason": "Temporal values naturally support chronological ordering."
+        }
+      ],
+      "best_input_operator": "date_range",
+      "best_output_operator": "sort",
+      "best_input_score": 0.43916204986149576,
+      "best_output_score": 0.43916204986149576,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_body_mass_index_14972415",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/observation|body_mass_index|openehr-ehr-observation.body_mass_index.v1|openehr-ehr-observation.body_mass_index.v1/none|history|at0001|openehr-ehr-observation.body_mass_index.v1/point_event|any_event|at0002|openehr-ehr-observation.body_mass_index.v1/item_tree|single|at0003|openehr-ehr-observation.body_mass_index.v1/element|body_mass_index|at0004|openehr-ehr-observation.body_mass_index.v1",
+      "name": "Body Mass Index",
+      "datatype": "DV_QUANTITY",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/observation|body_mass_index|openehr-ehr-observation.body_mass_index.v1|openehr-ehr-observation.body_mass_index.v1/none|history|at0001|openehr-ehr-observation.body_mass_index.v1/point_event|any_event|at0002|openehr-ehr-observation.body_mass_index.v1/item_tree|single|at0003|openehr-ehr-observation.body_mass_index.v1/element|body_mass_index|at0004|openehr-ehr-observation.body_mass_index.v1",
+      "archetype_node_id": "at0004",
+      "archetype_id": "openEHR-EHR-OBSERVATION.body_mass_index.v1",
+      "template_id": "edcb03a8-cc73-4485-a8a9-6559deb4597c",
+      "queriability": 0.5631578947368421,
+      "input_operators": [
+        {
+          "operator": "range",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.5631578947368421,
+          "control_type": "range_slider",
+          "reason": "Numeric values support range predicates."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "project",
+          "operator_class": "projection",
+          "compatibility": 0.92,
+          "operator_adjusted_queriability": 0.5181052631578947,
+          "control_type": "result_column",
+          "reason": "Numeric values are useful result attributes."
+        }
+      ],
+      "best_input_operator": "range",
+      "best_output_operator": "project",
+      "best_input_score": 0.5631578947368421,
+      "best_output_score": 0.5181052631578947,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_fields_insertions_1_61110248",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/action|procedure_undertaken|openehr-ehr-action.procedure-sus.v1|openehr-ehr-action.procedure-sus.v1/item_tree|procedure_list|at0001|openehr-ehr-action.procedure-sus.v1/element|fields_insertions_1|at0.61|openehr-ehr-action.procedure-sus.v1",
+      "name": "fields/insertions 1",
+      "datatype": "DV_COUNT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/action|procedure_undertaken|openehr-ehr-action.procedure-sus.v1|openehr-ehr-action.procedure-sus.v1/item_tree|procedure_list|at0001|openehr-ehr-action.procedure-sus.v1/element|fields_insertions_1|at0.61|openehr-ehr-action.procedure-sus.v1",
+      "archetype_node_id": "at0.61",
+      "archetype_id": "openEHR-EHR-ACTION.procedure-sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.3799572945521698,
+      "input_operators": [
+        {
+          "operator": "range",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.3799572945521698,
+          "control_type": "range_slider",
+          "reason": "Numeric values support range predicates."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "project",
+          "operator_class": "projection",
+          "compatibility": 0.92,
+          "operator_adjusted_queriability": 0.34956071098799624,
+          "control_type": "result_column",
+          "reason": "Numeric values are useful result attributes."
+        }
+      ],
+      "best_input_operator": "range",
+      "best_output_operator": "project",
+      "best_input_score": 0.3799572945521698,
+      "best_output_score": 0.34956071098799624,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_baros_table_8440652",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|bariatric_surgery_evaluation|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1/item_tree|components|at0001|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1/element|baros_table|at0004|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1",
+      "name": "Baros table",
+      "datatype": "DV_TEXT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|bariatric_surgery_evaluation|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1/item_tree|components|at0001|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1/element|baros_table|at0004|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1",
+      "archetype_node_id": "at0004",
+      "archetype_id": "openEHR-EHR-EVALUATION.bariatric_surgery_evaluation.v1",
+      "template_id": "edcb03a8-cc73-4485-a8a9-6559deb4597c",
+      "queriability": 0.45622807017543854,
+      "input_operators": [
+        {
+          "operator": "contains",
+          "operator_class": "filter",
+          "compatibility": 0.9,
+          "operator_adjusted_queriability": 0.4106052631578947,
+          "control_type": "text_search",
+          "reason": "Text values support contains/search predicates."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "project",
+          "operator_class": "projection",
+          "compatibility": 0.92,
+          "operator_adjusted_queriability": 0.41972982456140345,
+          "control_type": "result_column",
+          "reason": "Text values are useful result attributes."
+        }
+      ],
+      "best_input_operator": "contains",
+      "best_output_operator": "project",
+      "best_input_score": 0.4106052631578947,
+      "best_output_score": 0.41972982456140345,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_schema_17547428",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|chemotherapy|at0016|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|schema|at0014|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "name": "schema",
+      "datatype": "DV_TEXT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|chemotherapy|at0016|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|schema|at0014|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "archetype_node_id": "at0014",
+      "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+      "template_id": "b1fffd24-8222-4a68-8b3f-075e228b98e1",
+      "queriability": 0.37919898430286236,
+      "input_operators": [
+        {
+          "operator": "contains",
+          "operator_class": "filter",
+          "compatibility": 0.9,
+          "operator_adjusted_queriability": 0.34127908587257616,
+          "control_type": "text_search",
+          "reason": "Text values support contains/search predicates."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "project",
+          "operator_class": "projection",
+          "compatibility": 0.92,
+          "operator_adjusted_queriability": 0.3488630655586334,
+          "control_type": "result_column",
+          "reason": "Text values are useful result attributes."
+        }
+      ],
+      "best_input_operator": "contains",
+      "best_output_operator": "project",
+      "best_input_score": 0.34127908587257616,
+      "best_output_score": 0.3488630655586334,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_reason_for_discharge_86191469",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|patient_discharge|openehr-ehr-admin_entry.patient_discharge.v1|openehr-ehr-admin_entry.patient_discharge.v1/item_tree|components|at0001|openehr-ehr-admin_entry.patient_discharge.v1/element|reason_for_discharge|at0003|openehr-ehr-admin_entry.patient_discharge.v1",
+      "name": "reason for discharge",
+      "datatype": "DV_CODED_TEXT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|patient_discharge|openehr-ehr-admin_entry.patient_discharge.v1|openehr-ehr-admin_entry.patient_discharge.v1/item_tree|components|at0001|openehr-ehr-admin_entry.patient_discharge.v1/element|reason_for_discharge|at0003|openehr-ehr-admin_entry.patient_discharge.v1",
+      "archetype_node_id": "at0003",
+      "archetype_id": "openEHR-EHR-ADMIN_ENTRY.patient_discharge.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.5949249769159741,
+      "input_operators": [
+        {
+          "operator": "equals",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.5949249769159741,
+          "control_type": "dropdown",
+          "reason": "Coded values naturally support equality filtering."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "group_by",
+          "operator_class": "grouping",
+          "compatibility": 0.95,
+          "operator_adjusted_queriability": 0.5651787280701754,
+          "control_type": "group_control",
+          "reason": "Categorical values naturally support grouping."
+        }
+      ],
+      "best_input_operator": "equals",
+      "best_output_operator": "group_by",
+      "best_input_score": 0.5949249769159741,
+      "best_output_score": 0.5651787280701754,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_invaded_regional_linphonodes_27787187",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|invaded_regional_linphonodes|at0.4|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "name": "Invaded regional linphonodes",
+      "datatype": "DV_BOOLEAN",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|invaded_regional_linphonodes|at0.4|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "archetype_node_id": "at0.4",
+      "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.39801246537396107,
+      "input_operators": [
+        {
+          "operator": "equals",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.39801246537396107,
+          "control_type": "boolean_toggle",
+          "reason": "Boolean values support true/false filtering."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "group_by",
+          "operator_class": "grouping",
+          "compatibility": 0.85,
+          "operator_adjusted_queriability": 0.3383105955678669,
+          "control_type": "group_control",
+          "reason": "Boolean values support grouping."
+        }
+      ],
+      "best_input_operator": "equals",
+      "best_output_operator": "group_by",
+      "best_input_score": 0.39801246537396107,
+      "best_output_score": 0.3383105955678669,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_irradiated_area_1_80804279",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/action|procedure_undertaken|openehr-ehr-action.procedure-sus.v1|openehr-ehr-action.procedure-sus.v1/item_tree|procedure_list|at0001|openehr-ehr-action.procedure-sus.v1/element|irradiated_area_1|at0.59|openehr-ehr-action.procedure-sus.v1",
+      "name": "irradiated area 1",
+      "datatype": "DV_CODED_TEXT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/action|procedure_undertaken|openehr-ehr-action.procedure-sus.v1|openehr-ehr-action.procedure-sus.v1/item_tree|procedure_list|at0001|openehr-ehr-action.procedure-sus.v1/element|irradiated_area_1|at0.59|openehr-ehr-action.procedure-sus.v1",
+      "archetype_node_id": "at0.59",
+      "archetype_id": "openEHR-EHR-ACTION.procedure-sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.3799572945521698,
+      "input_operators": [
+        {
+          "operator": "equals",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.3799572945521698,
+          "control_type": "dropdown",
+          "reason": "Coded values naturally support equality filtering."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "group_by",
+          "operator_class": "grouping",
+          "compatibility": 0.95,
+          "operator_adjusted_queriability": 0.3609594298245613,
+          "control_type": "group_control",
+          "reason": "Categorical values naturally support grouping."
+        }
+      ],
+      "best_input_operator": "equals",
+      "best_output_operator": "group_by",
+      "best_input_score": 0.3799572945521698,
+      "best_output_score": 0.3609594298245613,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_reason_for_encounter_55629847",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|general_data|at0023|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|reason_for_encounter|at0010|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "name": "reason for encounter",
+      "datatype": "DV_CODED_TEXT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|general_data|at0023|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|reason_for_encounter|at0010|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "archetype_node_id": "at0010",
+      "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.7570060018467222,
+      "input_operators": [
+        {
+          "operator": "equals",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.7570060018467222,
+          "control_type": "dropdown",
+          "reason": "Coded values naturally support equality filtering."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "group_by",
+          "operator_class": "grouping",
+          "compatibility": 0.95,
+          "operator_adjusted_queriability": 0.719155701754386,
+          "control_type": "group_control",
+          "reason": "Categorical values naturally support grouping."
+        }
+      ],
+      "best_input_operator": "equals",
+      "best_output_operator": "group_by",
+      "best_input_score": 0.7570060018467222,
+      "best_output_score": 0.719155701754386,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_healthcare_unit_70512523",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|general_data|at0023|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|healthcare_unit|at0011|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "name": "healthcare unit",
+      "datatype": "DV_CODED_TEXT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|general_data|at0023|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|healthcare_unit|at0011|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "archetype_node_id": "at0011",
+      "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.8054339796860573,
+      "input_operators": [
+        {
+          "operator": "equals",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.8054339796860573,
+          "control_type": "dropdown",
+          "reason": "Coded values naturally support equality filtering."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "group_by",
+          "operator_class": "grouping",
+          "compatibility": 0.95,
+          "operator_adjusted_queriability": 0.7651622807017544,
+          "control_type": "group_control",
+          "reason": "Categorical values naturally support grouping."
+        }
+      ],
+      "best_input_operator": "equals",
+      "best_output_operator": "group_by",
+      "best_input_score": 0.8054339796860573,
+      "best_output_score": 0.7651622807017544,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_histopathological_grading_g_85736981",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|tumour_-_tnm_cancer_staging|openehr-ehr-cluster.tnm_staging-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|pathological_(ptnm)|at0006|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|histopathological_grading_(g)|at0035|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "name": "Histopathological grading (G)",
+      "datatype": null,
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|tumour_-_tnm_cancer_staging|openehr-ehr-cluster.tnm_staging-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|pathological_(ptnm)|at0006|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|histopathological_grading_(g)|at0035|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "archetype_node_id": "at0035",
+      "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.3857340720221606,
+      "input_operators": [
+        {
+          "operator": "is_present",
+          "operator_class": "filter",
+          "compatibility": 0.5,
+          "operator_adjusted_queriability": 0.1928670360110803,
+          "control_type": "checkbox",
+          "reason": "Presence filtering is datatype independent."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "project",
+          "operator_class": "projection",
+          "compatibility": 0.55,
+          "operator_adjusted_queriability": 0.21215373961218834,
+          "control_type": "result_column",
+          "reason": "Unknown datatype receives conservative projection compatibility."
+        }
+      ],
+      "best_input_operator": "is_present",
+      "best_output_operator": "project",
+      "best_input_score": 0.1928670360110803,
+      "best_output_score": 0.21215373961218834,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_state_85540722",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|general_data|at0023|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|state|at0028|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "name": "State",
+      "datatype": "DV_CODED_TEXT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|general_data|at0023|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|state|at0028|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "archetype_node_id": "at0028",
+      "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.789291320406279,
+      "input_operators": [
+        {
+          "operator": "equals",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.789291320406279,
+          "control_type": "dropdown",
+          "reason": "Coded values naturally support equality filtering."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "group_by",
+          "operator_class": "grouping",
+          "compatibility": 0.95,
+          "operator_adjusted_queriability": 0.749826754385965,
+          "control_type": "group_control",
+          "reason": "Categorical values naturally support grouping."
+        }
+      ],
+      "best_input_operator": "equals",
+      "best_output_operator": "group_by",
+      "best_input_score": 0.789291320406279,
+      "best_output_score": 0.749826754385965,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_issue_date_59592718",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|general_data|at0023|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|issue_date|at0009|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "name": "issue date",
+      "datatype": "DV_DATE",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|general_data|at0023|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|issue_date|at0009|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "archetype_node_id": "at0009",
+      "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.9184325946445061,
+      "input_operators": [
+        {
+          "operator": "date_range",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.9184325946445061,
+          "control_type": "date_range_picker",
+          "reason": "Temporal values support interval predicates."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "sort",
+          "operator_class": "ordering",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.9184325946445061,
+          "control_type": "sort_control",
+          "reason": "Temporal values naturally support chronological ordering."
+        }
+      ],
+      "best_input_operator": "date_range",
+      "best_output_operator": "sort",
+      "best_input_score": 0.9184325946445061,
+      "best_output_score": 0.9184325946445061,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_date_of_beginning_of_chemotherapy_89125116",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|chemotherapy|at0016|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|date_of_beginning_of_chemotherapy|at0031|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "name": "date of beginning of chemotherapy",
+      "datatype": "DV_DATE",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|chemotherapy|at0016|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|date_of_beginning_of_chemotherapy|at0031|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "archetype_node_id": "at0031",
+      "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+      "template_id": "b1fffd24-8222-4a68-8b3f-075e228b98e1",
+      "queriability": 0.37919898430286236,
+      "input_operators": [
+        {
+          "operator": "date_range",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.37919898430286236,
+          "control_type": "date_range_picker",
+          "reason": "Temporal values support interval predicates."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "sort",
+          "operator_class": "ordering",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.37919898430286236,
+          "control_type": "sort_control",
+          "reason": "Temporal values naturally support chronological ordering."
+        }
+      ],
+      "best_input_operator": "date_range",
+      "best_output_operator": "sort",
+      "best_input_score": 0.37919898430286236,
+      "best_output_score": 0.37919898430286236,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_duration_of_treatment_17997794",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|chemotherapy|at0016|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|duration_of_treatment|at0013|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "name": "duration of treatment",
+      "datatype": "DV_QUANTITY",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|chemotherapy|at0016|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|duration_of_treatment|at0013|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "archetype_node_id": "at0013",
+      "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+      "template_id": "b1fffd24-8222-4a68-8b3f-075e228b98e1",
+      "queriability": 0.37919898430286236,
+      "input_operators": [
+        {
+          "operator": "range",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.37919898430286236,
+          "control_type": "range_slider",
+          "reason": "Numeric values support range predicates."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "project",
+          "operator_class": "projection",
+          "compatibility": 0.92,
+          "operator_adjusted_queriability": 0.3488630655586334,
+          "control_type": "result_column",
+          "reason": "Numeric values are useful result attributes."
+        }
+      ],
+      "best_input_operator": "range",
+      "best_output_operator": "project",
+      "best_input_score": 0.37919898430286236,
+      "best_output_score": 0.3488630655586334,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_duration_of_follow_up_months_83535362",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|bariatric_surgery_evaluation|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1/item_tree|components|at0001|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1/element|duration_of_follow-up_(months)|at0002|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1",
+      "name": "duration of follow-up (months)",
+      "datatype": null,
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|bariatric_surgery_evaluation|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1/item_tree|components|at0001|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1/element|duration_of_follow-up_(months)|at0002|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1",
+      "archetype_node_id": "at0002",
+      "archetype_id": "openEHR-EHR-EVALUATION.bariatric_surgery_evaluation.v1",
+      "template_id": "edcb03a8-cc73-4485-a8a9-6559deb4597c",
+      "queriability": 0.508530701754386,
+      "input_operators": [
+        {
+          "operator": "is_present",
+          "operator_class": "filter",
+          "compatibility": 0.5,
+          "operator_adjusted_queriability": 0.254265350877193,
+          "control_type": "checkbox",
+          "reason": "Presence filtering is datatype independent."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "project",
+          "operator_class": "projection",
+          "compatibility": 0.55,
+          "operator_adjusted_queriability": 0.2796918859649123,
+          "control_type": "result_column",
+          "reason": "Unknown datatype receives conservative projection compatibility."
+        }
+      ],
+      "best_input_operator": "is_present",
+      "best_output_operator": "project",
+      "best_input_score": 0.254265350877193,
+      "best_output_score": 0.2796918859649123,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_patient_age_27878762",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|general_data|at0023|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|patient_age|at0012|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "name": "patient age",
+      "datatype": "DV_COUNT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|general_data|at0023|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|patient_age|at0012|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "archetype_node_id": "at0012",
+      "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 1.0152885503231763,
+      "input_operators": [
+        {
+          "operator": "range",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 1.0152885503231763,
+          "control_type": "range_slider",
+          "reason": "Numeric values support range predicates."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "project",
+          "operator_class": "projection",
+          "compatibility": 0.92,
+          "operator_adjusted_queriability": 0.9340654662973222,
+          "control_type": "result_column",
+          "reason": "Numeric values are useful result attributes."
+        }
+      ],
+      "best_input_operator": "range",
+      "best_output_operator": "project",
+      "best_input_score": 1.0152885503231763,
+      "best_output_score": 0.9340654662973222,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_baros_score_664612",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|bariatric_surgery_evaluation|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1/item_tree|components|at0001|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1/element|baros_score|at0003|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1",
+      "name": "Baros score",
+      "datatype": "DV_TEXT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|bariatric_surgery_evaluation|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1/item_tree|components|at0001|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1/element|baros_score|at0003|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1",
+      "archetype_node_id": "at0003",
+      "archetype_id": "openEHR-EHR-EVALUATION.bariatric_surgery_evaluation.v1",
+      "template_id": "edcb03a8-cc73-4485-a8a9-6559deb4597c",
+      "queriability": 0.43879385964912276,
+      "input_operators": [
+        {
+          "operator": "contains",
+          "operator_class": "filter",
+          "compatibility": 0.9,
+          "operator_adjusted_queriability": 0.3949144736842105,
+          "control_type": "text_search",
+          "reason": "Text values support contains/search predicates."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "project",
+          "operator_class": "projection",
+          "compatibility": 0.92,
+          "operator_adjusted_queriability": 0.40369035087719296,
+          "control_type": "result_column",
+          "reason": "Text values are useful result attributes."
+        }
+      ],
+      "best_input_operator": "contains",
+      "best_output_operator": "project",
+      "best_input_score": 0.3949144736842105,
+      "best_output_score": 0.40369035087719296,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_date_of_beginning_of_radiotherapy_4001690",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|radiotherapy|at0017|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|date_of_beginning_of_radiotherapy|at0032|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "name": "date of beginning of radiotherapy",
+      "datatype": "DV_DATE",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|radiotherapy|at0017|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|date_of_beginning_of_radiotherapy|at0032|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+      "archetype_node_id": "at0032",
+      "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.4651546629732225,
+      "input_operators": [
+        {
+          "operator": "date_range",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.4651546629732225,
+          "control_type": "date_range_picker",
+          "reason": "Temporal values support interval predicates."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "sort",
+          "operator_class": "ordering",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.4651546629732225,
+          "control_type": "sort_control",
+          "reason": "Temporal values naturally support chronological ordering."
+        }
+      ],
+      "best_input_operator": "date_range",
+      "best_output_operator": "sort",
+      "best_input_score": 0.4651546629732225,
+      "best_output_score": 0.4651546629732225,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_associated_causes_65195573",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|associated_causes|at0.2|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "name": "Associated causes",
+      "datatype": "DV_CODED_TEXT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|associated_causes|at0.2|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "archetype_node_id": "at0.2",
+      "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.6305147737765466,
+      "input_operators": [
+        {
+          "operator": "equals",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.6305147737765466,
+          "control_type": "dropdown",
+          "reason": "Coded values naturally support equality filtering."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "group_by",
+          "operator_class": "grouping",
+          "compatibility": 0.95,
+          "operator_adjusted_queriability": 0.5989890350877193,
+          "control_type": "group_control",
+          "reason": "Categorical values naturally support grouping."
+        }
+      ],
+      "best_input_operator": "equals",
+      "best_output_operator": "group_by",
+      "best_input_score": 0.6305147737765466,
+      "best_output_score": 0.5989890350877193,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_procedure_8430103",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/action|procedure_undertaken|openehr-ehr-action.procedure-sus.v1|openehr-ehr-action.procedure-sus.v1/item_tree|procedure_list|at0001|openehr-ehr-action.procedure-sus.v1/element|procedure|at0002|openehr-ehr-action.procedure-sus.v1",
+      "name": "Procedure",
+      "datatype": "DV_CODED_TEXT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/action|procedure_undertaken|openehr-ehr-action.procedure-sus.v1|openehr-ehr-action.procedure-sus.v1/item_tree|procedure_list|at0001|openehr-ehr-action.procedure-sus.v1/element|procedure|at0002|openehr-ehr-action.procedure-sus.v1",
+      "archetype_node_id": "at0002",
+      "archetype_id": "openEHR-EHR-ACTION.procedure-sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.6465524007386887,
+      "input_operators": [
+        {
+          "operator": "equals",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.6465524007386887,
+          "control_type": "dropdown",
+          "reason": "Coded values naturally support equality filtering."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "group_by",
+          "operator_class": "grouping",
+          "compatibility": 0.95,
+          "operator_adjusted_queriability": 0.6142247807017542,
+          "control_type": "group_control",
+          "reason": "Categorical values naturally support grouping."
+        }
+      ],
+      "best_input_operator": "equals",
+      "best_output_operator": "group_by",
+      "best_input_score": 0.6465524007386887,
+      "best_output_score": 0.6142247807017542,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_secondary_diagnosis_48129591",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|secondary_diagnosis|at0.1|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "name": "Secondary Diagnosis",
+      "datatype": "DV_CODED_TEXT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|secondary_diagnosis|at0.1|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "archetype_node_id": "at0.1",
+      "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.6305147737765466,
+      "input_operators": [
+        {
+          "operator": "equals",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.6305147737765466,
+          "control_type": "dropdown",
+          "reason": "Coded values naturally support equality filtering."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "group_by",
+          "operator_class": "grouping",
+          "compatibility": 0.95,
+          "operator_adjusted_queriability": 0.5989890350877193,
+          "control_type": "group_control",
+          "reason": "Categorical values naturally support grouping."
+        }
+      ],
+      "best_input_operator": "equals",
+      "best_output_operator": "group_by",
+      "best_input_score": 0.6305147737765466,
+      "best_output_score": 0.5989890350877193,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_problem_47642014",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|problem|at0002.1|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "name": "Problem",
+      "datatype": "DV_CODED_TEXT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|problem|at0002.1|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "archetype_node_id": "at0002.1",
+      "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.696927516158818,
+      "input_operators": [
+        {
+          "operator": "equals",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.696927516158818,
+          "control_type": "dropdown",
+          "reason": "Coded values naturally support equality filtering."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "group_by",
+          "operator_class": "grouping",
+          "compatibility": 0.95,
+          "operator_adjusted_queriability": 0.6620811403508771,
+          "control_type": "group_control",
+          "reason": "Categorical values naturally support grouping."
+        }
+      ],
+      "best_input_operator": "equals",
+      "best_output_operator": "group_by",
+      "best_input_score": 0.696927516158818,
+      "best_output_score": 0.6620811403508771,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_topography_17705524",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|tumour_-_tnm_cancer_staging|openehr-ehr-cluster.tnm_staging-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|topography|at0.43|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "name": "topography",
+      "datatype": "DV_CODED_TEXT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|tumour_-_tnm_cancer_staging|openehr-ehr-cluster.tnm_staging-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|topography|at0.43|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "archetype_node_id": "at0.43",
+      "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.4689427516158816,
+      "input_operators": [
+        {
+          "operator": "equals",
+          "operator_class": "filter",
+          "compatibility": 1.0,
+          "operator_adjusted_queriability": 0.4689427516158816,
+          "control_type": "dropdown",
+          "reason": "Coded values naturally support equality filtering."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "group_by",
+          "operator_class": "grouping",
+          "compatibility": 0.95,
+          "operator_adjusted_queriability": 0.44549561403508753,
+          "control_type": "group_control",
+          "reason": "Categorical values naturally support grouping."
+        }
+      ],
+      "best_input_operator": "equals",
+      "best_output_operator": "group_by",
+      "best_input_score": 0.4689427516158816,
+      "best_output_score": 0.44549561403508753,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_date_of_discharge_7356753",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|patient_discharge|openehr-ehr-admin_entry.patient_discharge.v1|openehr-ehr-admin_entry.patient_discharge.v1/item_tree|components|at0001|openehr-ehr-admin_entry.patient_discharge.v1/element|date_of_discharge|at0002|openehr-ehr-admin_entry.patient_discharge.v1",
+      "name": "date of discharge",
+      "datatype": null,
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|patient_discharge|openehr-ehr-admin_entry.patient_discharge.v1|openehr-ehr-admin_entry.patient_discharge.v1/item_tree|components|at0001|openehr-ehr-admin_entry.patient_discharge.v1/element|date_of_discharge|at0002|openehr-ehr-admin_entry.patient_discharge.v1",
+      "archetype_node_id": "at0002",
+      "archetype_id": "openEHR-EHR-ADMIN_ENTRY.patient_discharge.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.6779409048938134,
+      "input_operators": [
+        {
+          "operator": "is_present",
+          "operator_class": "filter",
+          "compatibility": 0.5,
+          "operator_adjusted_queriability": 0.3389704524469067,
+          "control_type": "checkbox",
+          "reason": "Presence filtering is datatype independent."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "project",
+          "operator_class": "projection",
+          "compatibility": 0.55,
+          "operator_adjusted_queriability": 0.37286749769159744,
+          "control_type": "result_column",
+          "reason": "Unknown datatype receives conservative projection compatibility."
+        }
+      ],
+      "best_input_operator": "is_present",
+      "best_output_operator": "project",
+      "best_input_score": 0.3389704524469067,
+      "best_output_score": 0.37286749769159744,
+      "field_role": "input_output"
+    },
+    {
+      "canonical_id": "form_element_clinical_staging_744781",
+      "source_node_id": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|tumour_-_tnm_cancer_staging|openehr-ehr-cluster.tnm_staging-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|clinical_(ctnm)|at0002|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|clinical_staging|at0010|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "name": "Clinical staging",
+      "datatype": "DV_TEXT",
+      "canonical_type": "form_element",
+      "rm_type": "ELEMENT",
+      "path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|tumour_-_tnm_cancer_staging|openehr-ehr-cluster.tnm_staging-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|clinical_(ctnm)|at0002|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|clinical_staging|at0010|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+      "archetype_node_id": "at0010",
+      "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+      "template_id": "a575b369-c4a2-4bb5-84fa-619d5c641339",
+      "queriability": 0.41674746075715596,
+      "input_operators": [
+        {
+          "operator": "contains",
+          "operator_class": "filter",
+          "compatibility": 0.9,
+          "operator_adjusted_queriability": 0.3750727146814404,
+          "control_type": "text_search",
+          "reason": "Text values support contains/search predicates."
+        }
+      ],
+      "output_operators": [
+        {
+          "operator": "project",
+          "operator_class": "projection",
+          "compatibility": 0.92,
+          "operator_adjusted_queriability": 0.3834076638965835,
+          "control_type": "result_column",
+          "reason": "Text values are useful result attributes."
+        }
+      ],
+      "best_input_operator": "contains",
+      "best_output_operator": "project",
+      "best_input_score": 0.3750727146814404,
+      "best_output_score": 0.3834076638965835,
+      "field_role": "input_output"
+    }
+  ]
+}
