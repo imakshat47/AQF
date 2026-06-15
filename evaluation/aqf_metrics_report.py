@@ -2,12 +2,17 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from pathlib import Path
 
 import matplotlib.pyplot as plt
 import pandas as pd
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from aqf_eval import advanced_metrics_v4
-from advanced_metrics_v4 import build_enhanced_metrics, save_outputs
 
 
 def pct(x):
