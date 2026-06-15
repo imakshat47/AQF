@@ -1,0 +1,913 @@
+{
+  "metadata": {
+    "query_count": 20,
+    "realizable_queries": 11,
+    "query_realization_rate": 0.55,
+    "avg_field_recall": 0.8333333333333334,
+    "avg_operator_support": 0.6166666666666667,
+    "avg_context_support": 0.9333333333333333,
+    "category_realization": "{\"demographic\": 0.25, \"diagnosis\": 0.75, \"treatment_procedure\": 0.5, \"temporal\": 0.75, \"cross_context\": 0.5}",
+    "complexity_realization": "{\"easy\": 0.625, \"medium\": 0.5, \"hard\": 0.5}"
+  },
+  "realized_queries": [
+    {
+      "query_id": "D1",
+      "query_name": "Male patient cohort",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Retrieve all patient records in which the demographic attribute gender is recorded as Male, in order to define a gender-specific patient cohort.",
+      "selected_form_id": "aqf_demographic_data_97667",
+      "selected_form_group": "Demographic data",
+      "field_recall": 0.0,
+      "operator_support": 0.0,
+      "context_support": 1.0,
+      "query_realizable": false,
+      "field_mappings": [
+        {
+          "required_field": "gender",
+          "matched": false,
+          "matched_field_name": null,
+          "canonical_id": null,
+          "aqf_role": null,
+          "datatype": null,
+          "aqf_operator": null,
+          "required_operators": [
+            "equals"
+          ],
+          "operator_supported": false,
+          "source_path": null,
+          "aql_path": null,
+          "archetype_node_id": null,
+          "archetype_id": null,
+          "score": 0.0
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  1 = 1\n",
+      "where_clause": "1 = 1",
+      "select_clause": "e/ehr_id/value AS ehr_id",
+      "notes": [
+        "Query is not fully realizable from selected AQF form; AQL is partial/template-level.",
+        "Missing one or more required fields.",
+        "Unsupported operator for one or more matched fields."
+      ]
+    },
+    {
+      "query_id": "D2",
+      "query_name": "Patients born before 01-01-1970",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Identify all patient records in which birth date is earlier than 01-01-1970, to enable age-based demographic stratification.",
+      "selected_form_id": "aqf_demographic_data_97667",
+      "selected_form_group": "Demographic data",
+      "field_recall": 1.0,
+      "operator_support": 1.0,
+      "context_support": 1.0,
+      "query_realizable": true,
+      "field_mappings": [
+        {
+          "required_field": "birth date",
+          "matched": true,
+          "matched_field_name": "birth date",
+          "canonical_id": "form_element_birth_date_83622860",
+          "aqf_role": "filter",
+          "datatype": "DV_DATE",
+          "aqf_operator": "date_range",
+          "required_operators": [
+            "date_range"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|demographic_data|openehr-ehr-composition.demographic_data.v1|openehr-ehr-composition.demographic_data.v1/admin_entry|demographic_data|openehr-ehr-admin_entry.demographic_data.v1|openehr-ehr-admin_entry.demographic_data.v1/item_tree|components|at0001|openehr-ehr-admin_entry.demographic_data.v1/element|birth_date|at0002|openehr-ehr-admin_entry.demographic_data.v1",
+          "aql_path": "/composition[openehr-ehr-composition.demographic_data.v1]/demographic_data/admin_entry[openehr-ehr-admin_entry.demographic_data.v1]/demographic_data/item_tree[at0001]/components/element[at0002]/birth_date",
+          "archetype_node_id": "at0002",
+          "archetype_id": "openEHR-EHR-ADMIN_ENTRY.demographic_data.v1",
+          "score": 0.3031509695290859
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.demographic_data.v1]/demographic_data/admin_entry[openehr-ehr-admin_entry.demographic_data.v1]/demographic_data/item_tree[at0001]/components/element[at0002]/birth_date/value AS birth_date\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.demographic_data.v1]/demographic_data/admin_entry[openehr-ehr-admin_entry.demographic_data.v1]/demographic_data/item_tree[at0001]/components/element[at0002]/birth_date/value < '1970-01-01'\n",
+      "where_clause": "c/composition[openehr-ehr-composition.demographic_data.v1]/demographic_data/admin_entry[openehr-ehr-admin_entry.demographic_data.v1]/demographic_data/item_tree[at0001]/components/element[at0002]/birth_date/value < '1970-01-01'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.demographic_data.v1]/demographic_data/admin_entry[openehr-ehr-admin_entry.demographic_data.v1]/demographic_data/item_tree[at0001]/components/element[at0002]/birth_date/value AS birth_date",
+      "notes": []
+    },
+    {
+      "query_id": "D3",
+      "query_name": "Brazilian nationality cohort",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Retrieve all patient records in which nationality is documented as Brazilian, for demographic and population-based subgroup analysis.",
+      "selected_form_id": "aqf_demographic_data_97667",
+      "selected_form_group": "Demographic data",
+      "field_recall": 0.0,
+      "operator_support": 0.0,
+      "context_support": 1.0,
+      "query_realizable": false,
+      "field_mappings": [
+        {
+          "required_field": "nationality",
+          "matched": false,
+          "matched_field_name": null,
+          "canonical_id": null,
+          "aqf_role": null,
+          "datatype": null,
+          "aqf_operator": null,
+          "required_operators": [
+            "equals"
+          ],
+          "operator_supported": false,
+          "source_path": null,
+          "aql_path": null,
+          "archetype_node_id": null,
+          "archetype_id": null,
+          "score": 0.0
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  1 = 1\n",
+      "where_clause": "1 = 1",
+      "select_clause": "e/ehr_id/value AS ehr_id",
+      "notes": [
+        "Query is not fully realizable from selected AQF form; AQL is partial/template-level.",
+        "Missing one or more required fields.",
+        "Unsupported operator for one or more matched fields."
+      ]
+    },
+    {
+      "query_id": "D4",
+      "query_name": "Higher education demographic filter",
+      "query_complexity": "easy",
+      "category": "demographic",
+      "description": "Retrieve all patient records in which educational level is documented as Higher education, for demographic and social-determinant profiling.",
+      "selected_form_id": "aqf_demographic_data_97667",
+      "selected_form_group": "Demographic data",
+      "field_recall": 0.0,
+      "operator_support": 0.0,
+      "context_support": 1.0,
+      "query_realizable": false,
+      "field_mappings": [
+        {
+          "required_field": "educational level",
+          "matched": false,
+          "matched_field_name": null,
+          "canonical_id": null,
+          "aqf_role": null,
+          "datatype": null,
+          "aqf_operator": null,
+          "required_operators": [
+            "equals"
+          ],
+          "operator_supported": false,
+          "source_path": null,
+          "aql_path": null,
+          "archetype_node_id": null,
+          "archetype_id": null,
+          "score": 0.0
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  1 = 1\n",
+      "where_clause": "1 = 1",
+      "select_clause": "e/ehr_id/value AS ehr_id",
+      "notes": [
+        "Query is not fully realizable from selected AQF form; AQL is partial/template-level.",
+        "Missing one or more required fields.",
+        "Unsupported operator for one or more matched fields."
+      ]
+    },
+    {
+      "query_id": "DX1",
+      "query_name": "Breast cancer primary diagnosis cohort",
+      "query_complexity": "easy",
+      "category": "diagnosis",
+      "description": "Retrieve all clinical records in which primary diagnosis corresponds to breast cancer, to define a diagnosis-specific outpatient cohort.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 1.0,
+      "operator_support": 1.0,
+      "context_support": 1.0,
+      "query_realizable": true,
+      "field_mappings": [
+        {
+          "required_field": "Problem",
+          "matched": true,
+          "matched_field_name": "Problem",
+          "canonical_id": "form_element_problem_37189755",
+          "aqf_role": "filter",
+          "datatype": "DV_CODED_TEXT",
+          "aqf_operator": "equals",
+          "required_operators": [
+            "equals"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|problem|at0002.1|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem",
+          "archetype_node_id": "at0002.1",
+          "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "score": 0.4626442751615881
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem/value AS problem\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem/value = 'breast cancer'\n",
+      "where_clause": "c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem/value = 'breast cancer'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem/value AS problem",
+      "notes": []
+    },
+    {
+      "query_id": "DX2",
+      "query_name": "Hypertension as secondary diagnosis",
+      "query_complexity": "easy",
+      "category": "diagnosis",
+      "description": "Identify all records in which secondary diagnosis is recorded as hypertension, to capture clinically relevant comorbidity alongside the principal disease.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 1.0,
+      "operator_support": 1.0,
+      "context_support": 1.0,
+      "query_realizable": true,
+      "field_mappings": [
+        {
+          "required_field": "Secondary Diagnosis",
+          "matched": true,
+          "matched_field_name": "Secondary Diagnosis",
+          "canonical_id": "form_element_secondary_diagnosis_89159750",
+          "aqf_role": "filter",
+          "datatype": "DV_CODED_TEXT",
+          "aqf_operator": "equals",
+          "required_operators": [
+            "equals"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|secondary_diagnosis|at0.1|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0.1]/secondary_diagnosis",
+          "archetype_node_id": "at0.1",
+          "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "score": 0.376598568790397
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0.1]/secondary_diagnosis/value AS secondary_diagnosis\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0.1]/secondary_diagnosis/value = 'hypertension'\n",
+      "where_clause": "c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0.1]/secondary_diagnosis/value = 'hypertension'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0.1]/secondary_diagnosis/value AS secondary_diagnosis",
+      "notes": []
+    },
+    {
+      "query_id": "DX3",
+      "query_name": "Colon topography cohort",
+      "query_complexity": "medium",
+      "category": "diagnosis",
+      "description": "Retrieve all clinical records in which topography corresponds to colon, thereby identifying cases associated with the specified anatomical site.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 1.0,
+      "operator_support": 1.0,
+      "context_support": 1.0,
+      "query_realizable": true,
+      "field_mappings": [
+        {
+          "required_field": "topography",
+          "matched": true,
+          "matched_field_name": "topography",
+          "canonical_id": "form_element_topography_20691120",
+          "aqf_role": "filter",
+          "datatype": "DV_CODED_TEXT",
+          "aqf_operator": "equals",
+          "required_operators": [
+            "equals"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|tumour_-_tnm_cancer_staging|openehr-ehr-cluster.tnm_staging-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|topography|at0.43|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/element[at0.43]/topography",
+          "archetype_node_id": "at0.43",
+          "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "score": 0.2866920590951062
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/element[at0.43]/topography/value AS topography\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/element[at0.43]/topography/value = 'colon'\n",
+      "where_clause": "c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/element[at0.43]/topography/value = 'colon'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/element[at0.43]/topography/value AS topography",
+      "notes": []
+    },
+    {
+      "query_id": "DX4",
+      "query_name": "Stage III disease cohort",
+      "query_complexity": "medium",
+      "category": "diagnosis",
+      "description": "Retrieve all records in which staging is documented as Stage III, for severity-oriented cohort derivation and treatment pathway review.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 1.0,
+      "operator_support": 0.0,
+      "context_support": 1.0,
+      "query_realizable": false,
+      "field_mappings": [
+        {
+          "required_field": "Clinical staging",
+          "matched": true,
+          "matched_field_name": "Clinical staging",
+          "canonical_id": "form_element_clinical_staging_18691914",
+          "aqf_role": "output",
+          "datatype": "DV_TEXT",
+          "aqf_operator": "project",
+          "required_operators": [
+            "equals"
+          ],
+          "operator_supported": false,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|tumour_-_tnm_cancer_staging|openehr-ehr-cluster.tnm_staging-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|clinical_(ctnm)|at0002|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|clinical_staging|at0010|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0002]/clinical_(ctnm)/element[at0010]/clinical_staging",
+          "archetype_node_id": "at0010",
+          "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "score": 0.23140697137580796
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0002]/clinical_(ctnm)/element[at0010]/clinical_staging/value AS clinical_staging\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0002]/clinical_(ctnm)/element[at0010]/clinical_staging/value = 'Stage III'\n",
+      "where_clause": "c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0002]/clinical_(ctnm)/element[at0010]/clinical_staging/value = 'Stage III'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0002]/clinical_(ctnm)/element[at0010]/clinical_staging/value AS clinical_staging",
+      "notes": [
+        "Query is not fully realizable from selected AQF form; AQL is partial/template-level.",
+        "Unsupported operator for one or more matched fields."
+      ]
+    },
+    {
+      "query_id": "TP1",
+      "query_name": "Biopsy procedure cohort",
+      "query_complexity": "easy",
+      "category": "treatment_procedure",
+      "description": "Retrieve all records in which procedure is documented as biopsy, to identify patients who underwent that specific diagnostic intervention.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 1.0,
+      "operator_support": 1.0,
+      "context_support": 1.0,
+      "query_realizable": true,
+      "field_mappings": [
+        {
+          "required_field": "Procedure",
+          "matched": true,
+          "matched_field_name": "Procedure",
+          "canonical_id": "form_element_procedure_58081004",
+          "aqf_role": "filter",
+          "datatype": "DV_CODED_TEXT",
+          "aqf_operator": "equals",
+          "required_operators": [
+            "equals"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/action|procedure_undertaken|openehr-ehr-action.procedure-sus.v1|openehr-ehr-action.procedure-sus.v1/item_tree|procedure_list|at0001|openehr-ehr-action.procedure-sus.v1/element|procedure|at0002|openehr-ehr-action.procedure-sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0002]/procedure",
+          "archetype_node_id": "at0002",
+          "archetype_id": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "score": 0.4290714450600184
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0002]/procedure/value AS procedure\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0002]/procedure/value = 'biopsy'\n",
+      "where_clause": "c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0002]/procedure/value = 'biopsy'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0002]/procedure/value AS procedure",
+      "notes": []
+    },
+    {
+      "query_id": "TP2",
+      "query_name": "FOLFOX chemotherapy schema cohort",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Retrieve all treatment records in which chemotherapy schema corresponds to FOLFOX, in order to identify a regimen-specific chemotherapy cohort.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 1.0,
+      "operator_support": 1.0,
+      "context_support": 1.0,
+      "query_realizable": true,
+      "field_mappings": [
+        {
+          "required_field": "schema",
+          "matched": true,
+          "matched_field_name": "schema",
+          "canonical_id": "form_element_schema_17981859",
+          "aqf_role": "filter",
+          "datatype": "DV_TEXT",
+          "aqf_operator": "contains",
+          "required_operators": [
+            "contains"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|chemotherapy|at0016|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|schema|at0014|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0014]/schema",
+          "archetype_node_id": "at0014",
+          "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "score": 0.15242555401662047
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0014]/schema/value AS schema\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  LOWER(c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0014]/schema/value) MATCHES '.*folfox.*'\n",
+      "where_clause": "LOWER(c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0014]/schema/value) MATCHES '.*folfox.*'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0014]/schema/value AS schema",
+      "notes": []
+    },
+    {
+      "query_id": "TP3",
+      "query_name": "Pelvic radiotherapy fields cohort",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Retrieve all records in which radiotherapy fields indicate pelvic field irradiation, to identify patients treated with the specified radiotherapy field configuration.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 1.0,
+      "operator_support": 0.0,
+      "context_support": 0.0,
+      "query_realizable": false,
+      "field_mappings": [
+        {
+          "required_field": "fields/insertions 1",
+          "matched": true,
+          "matched_field_name": "fields/insertions 1",
+          "canonical_id": "form_element_fields_insertions_1_82473170",
+          "aqf_role": "filter",
+          "datatype": "DV_COUNT",
+          "aqf_operator": "range",
+          "required_operators": [
+            "contains"
+          ],
+          "operator_supported": false,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/action|procedure_undertaken|openehr-ehr-action.procedure-sus.v1|openehr-ehr-action.procedure-sus.v1/item_tree|procedure_list|at0001|openehr-ehr-action.procedure-sus.v1/element|fields_insertions_1|at0.61|openehr-ehr-action.procedure-sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0.61]/fields_insertions_1",
+          "archetype_node_id": "at0.61",
+          "archetype_id": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "score": 0.2219673361034164
+        },
+        {
+          "required_field": "fields/insertions 2",
+          "matched": true,
+          "matched_field_name": "irradiated area 2",
+          "canonical_id": "form_element_irradiated_area_2_75613245",
+          "aqf_role": "filter",
+          "datatype": null,
+          "aqf_operator": "is_present",
+          "required_operators": [
+            "contains"
+          ],
+          "operator_supported": false,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/action|procedure_undertaken|openehr-ehr-action.procedure-sus.v1|openehr-ehr-action.procedure-sus.v1/item_tree|procedure_list|at0001|openehr-ehr-action.procedure-sus.v1/element|irradiated_area_2|at0.59|openehr-ehr-action.procedure-sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0.59]/irradiated_area_2",
+          "archetype_node_id": "at0.59",
+          "archetype_id": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "score": 0.07573003231763618
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0.61]/fields_insertions_1/value AS fields_insertions_1,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0.59]/irradiated_area_2/value AS fields_insertions_2\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0.61]/fields_insertions_1/value IS NOT NULL\n  AND c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0.59]/irradiated_area_2/value IS NOT NULL\n",
+      "where_clause": "c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0.61]/fields_insertions_1/value IS NOT NULL\n  AND c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0.59]/irradiated_area_2/value IS NOT NULL",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0.61]/fields_insertions_1/value AS fields_insertions_1,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0.59]/irradiated_area_2/value AS fields_insertions_2",
+      "notes": [
+        "Query is not fully realizable from selected AQF form; AQL is partial/template-level.",
+        "Unsupported operator for one or more matched fields.",
+        "Required structural context is partially matched."
+      ]
+    },
+    {
+      "query_id": "TP4",
+      "query_name": "Treatment duration greater than 90 days",
+      "query_complexity": "medium",
+      "category": "treatment_procedure",
+      "description": "Retrieve all records in which duration of treatment exceeds 90 days, to identify patients exposed to prolonged treatment courses.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 1.0,
+      "operator_support": 0.0,
+      "context_support": 1.0,
+      "query_realizable": false,
+      "field_mappings": [
+        {
+          "required_field": "duration of treatment",
+          "matched": true,
+          "matched_field_name": "duration of follow-up (months)",
+          "canonical_id": "form_element_duration_of_follow_up_months_17885454",
+          "aqf_role": "output",
+          "datatype": null,
+          "aqf_operator": "project",
+          "required_operators": [
+            "range"
+          ],
+          "operator_supported": false,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|bariatric_surgery_evaluation|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1/item_tree|components|at0001|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1/element|duration_of_follow-up_(months)|at0002|openehr-ehr-evaluation.bariatric_surgery_evaluation.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.bariatric_surgery_evaluation.v1]/bariatric_surgery_evaluation/item_tree[at0001]/components/element[at0002]/duration_of_follow-up_(months)",
+          "archetype_node_id": "at0002",
+          "archetype_id": "openEHR-EHR-EVALUATION.bariatric_surgery_evaluation.v1",
+          "score": 0.19862116228070179
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.bariatric_surgery_evaluation.v1]/bariatric_surgery_evaluation/item_tree[at0001]/components/element[at0002]/duration_of_follow-up_(months)/value AS duration_of_treatment\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.bariatric_surgery_evaluation.v1]/bariatric_surgery_evaluation/item_tree[at0001]/components/element[at0002]/duration_of_follow-up_(months)/value > '90'\n",
+      "where_clause": "c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.bariatric_surgery_evaluation.v1]/bariatric_surgery_evaluation/item_tree[at0001]/components/element[at0002]/duration_of_follow-up_(months)/value > '90'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.bariatric_surgery_evaluation.v1]/bariatric_surgery_evaluation/item_tree[at0001]/components/element[at0002]/duration_of_follow-up_(months)/value AS duration_of_treatment",
+      "notes": [
+        "Query is not fully realizable from selected AQF form; AQL is partial/template-level.",
+        "Unsupported operator for one or more matched fields."
+      ]
+    },
+    {
+      "query_id": "TM1",
+      "query_name": "Records issued after 01-01-2022",
+      "query_complexity": "easy",
+      "category": "temporal",
+      "description": "Retrieve all records in which issue date is later than 01-01-2022, to support time-bounded clinical record selection.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 1.0,
+      "operator_support": 1.0,
+      "context_support": 1.0,
+      "query_realizable": true,
+      "field_mappings": [
+        {
+          "required_field": "issue date",
+          "matched": true,
+          "matched_field_name": "issue date",
+          "canonical_id": "form_element_issue_date_82186217",
+          "aqf_role": "filter",
+          "datatype": "DV_DATE",
+          "aqf_operator": "date_range",
+          "required_operators": [
+            "date_range"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|general_data|at0023|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|issue_date|at0009|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0023]/general_data/element[at0009]/issue_date",
+          "archetype_node_id": "at0009",
+          "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "score": 0.6352435364727609
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0023]/general_data/element[at0009]/issue_date/value AS issue_date\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0023]/general_data/element[at0009]/issue_date/value > '2022-01-01'\n",
+      "where_clause": "c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0023]/general_data/element[at0009]/issue_date/value > '2022-01-01'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0023]/general_data/element[at0009]/issue_date/value AS issue_date",
+      "notes": []
+    },
+    {
+      "query_id": "TM2",
+      "query_name": "Discharge records in January 2023",
+      "query_complexity": "medium",
+      "category": "temporal",
+      "description": "Identify all records in which date of discharge falls within January 2023, for temporal analysis of discharge activity.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 1.0,
+      "operator_support": 0.0,
+      "context_support": 1.0,
+      "query_realizable": false,
+      "field_mappings": [
+        {
+          "required_field": "date of discharge",
+          "matched": true,
+          "matched_field_name": "date of discharge",
+          "canonical_id": "form_element_date_of_discharge_43563699",
+          "aqf_role": "output",
+          "datatype": null,
+          "aqf_operator": "project",
+          "required_operators": [
+            "date_range"
+          ],
+          "operator_supported": false,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|patient_discharge|openehr-ehr-admin_entry.patient_discharge.v1|openehr-ehr-admin_entry.patient_discharge.v1/item_tree|components|at0001|openehr-ehr-admin_entry.patient_discharge.v1/element|date_of_discharge|at0002|openehr-ehr-admin_entry.patient_discharge.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.patient_discharge.v1]/patient_discharge/item_tree[at0001]/components/element[at0002]/date_of_discharge",
+          "archetype_node_id": "at0002",
+          "archetype_id": "openEHR-EHR-ADMIN_ENTRY.patient_discharge.v1",
+          "score": 0.2678647276084949
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.patient_discharge.v1]/patient_discharge/item_tree[at0001]/components/element[at0002]/date_of_discharge/value AS date_of_discharge\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.patient_discharge.v1]/patient_discharge/item_tree[at0001]/components/element[at0002]/date_of_discharge/value >= '2023-01-01' AND c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.patient_discharge.v1]/patient_discharge/item_tree[at0001]/components/element[at0002]/date_of_discharge/value <= '2023-01-31'\n",
+      "where_clause": "c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.patient_discharge.v1]/patient_discharge/item_tree[at0001]/components/element[at0002]/date_of_discharge/value >= '2023-01-01' AND c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.patient_discharge.v1]/patient_discharge/item_tree[at0001]/components/element[at0002]/date_of_discharge/value <= '2023-01-31'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.patient_discharge.v1]/patient_discharge/item_tree[at0001]/components/element[at0002]/date_of_discharge/value AS date_of_discharge",
+      "notes": [
+        "Query is not fully realizable from selected AQF form; AQL is partial/template-level.",
+        "Unsupported operator for one or more matched fields."
+      ]
+    },
+    {
+      "query_id": "TM3",
+      "query_name": "Chemotherapy beginning after 01-06-2021",
+      "query_complexity": "medium",
+      "category": "temporal",
+      "description": "Retrieve all records in which date of beginning of chemotherapy is later than 01-06-2021, in order to identify patients starting chemotherapy in the defined time window.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 1.0,
+      "operator_support": 1.0,
+      "context_support": 1.0,
+      "query_realizable": true,
+      "field_mappings": [
+        {
+          "required_field": "date of beginning of chemotherapy",
+          "matched": true,
+          "matched_field_name": "date of beginning of chemotherapy",
+          "canonical_id": "form_element_date_of_beginning_of_chemotherapy_23455171",
+          "aqf_role": "filter",
+          "datatype": "DV_DATE",
+          "aqf_operator": "date_range",
+          "required_operators": [
+            "date_range"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|chemotherapy|at0016|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|date_of_beginning_of_chemotherapy|at0031|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0031]/date_of_beginning_of_chemotherapy",
+          "archetype_node_id": "at0031",
+          "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "score": 0.16936172668513386
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0031]/date_of_beginning_of_chemotherapy/value AS date_of_beginning_of_chemotherapy\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0031]/date_of_beginning_of_chemotherapy/value > '2021-06-01'\n",
+      "where_clause": "c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0031]/date_of_beginning_of_chemotherapy/value > '2021-06-01'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0031]/date_of_beginning_of_chemotherapy/value AS date_of_beginning_of_chemotherapy",
+      "notes": []
+    },
+    {
+      "query_id": "TM4",
+      "query_name": "Pathological identification in 2020",
+      "query_complexity": "medium",
+      "category": "temporal",
+      "description": "Retrieve all records in which date of pathological identification falls within the calendar year 2020, for diagnostic timing and case-identification review.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 1.0,
+      "operator_support": 1.0,
+      "context_support": 1.0,
+      "query_realizable": true,
+      "field_mappings": [
+        {
+          "required_field": "date of pathological identification",
+          "matched": true,
+          "matched_field_name": "date of pathological identification",
+          "canonical_id": "form_element_date_of_pathological_identification_20961404",
+          "aqf_role": "filter",
+          "datatype": "DV_DATE",
+          "aqf_operator": "date_range",
+          "required_operators": [
+            "date_range"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|tumour_-_tnm_cancer_staging|openehr-ehr-cluster.tnm_staging-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|pathological_(ptnm)|at0006|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|date_of_pathological_identification|at0.44|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0006]/pathological_(ptnm)/element[at0.44]/date_of_pathological_identification",
+          "archetype_node_id": "at0.44",
+          "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "score": 0.2760560941828255
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0006]/pathological_(ptnm)/element[at0.44]/date_of_pathological_identification/value AS date_of_pathological_identification\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0006]/pathological_(ptnm)/element[at0.44]/date_of_pathological_identification/value >= '2020-01-01' AND c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0006]/pathological_(ptnm)/element[at0.44]/date_of_pathological_identification/value <= '2020-12-31'\n",
+      "where_clause": "c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0006]/pathological_(ptnm)/element[at0.44]/date_of_pathological_identification/value >= '2020-01-01' AND c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0006]/pathological_(ptnm)/element[at0.44]/date_of_pathological_identification/value <= '2020-12-31'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0006]/pathological_(ptnm)/element[at0.44]/date_of_pathological_identification/value AS date_of_pathological_identification",
+      "notes": []
+    },
+    {
+      "query_id": "CX1",
+      "query_name": "Breast cancer plus biopsy cohort",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Retrieve all records in which primary diagnosis is breast cancer and procedure is biopsy, thereby identifying a clinically meaningful diagnosis–procedure cohort.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 1.0,
+      "operator_support": 1.0,
+      "context_support": 1.0,
+      "query_realizable": true,
+      "field_mappings": [
+        {
+          "required_field": "Problem",
+          "matched": true,
+          "matched_field_name": "Problem",
+          "canonical_id": "form_element_problem_37189755",
+          "aqf_role": "filter",
+          "datatype": "DV_CODED_TEXT",
+          "aqf_operator": "equals",
+          "required_operators": [
+            "equals"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|problem|at0002.1|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem",
+          "archetype_node_id": "at0002.1",
+          "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "score": 0.4626442751615881
+        },
+        {
+          "required_field": "Procedure",
+          "matched": true,
+          "matched_field_name": "Procedure",
+          "canonical_id": "form_element_procedure_58081004",
+          "aqf_role": "filter",
+          "datatype": "DV_CODED_TEXT",
+          "aqf_operator": "equals",
+          "required_operators": [
+            "equals"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/action|procedure_undertaken|openehr-ehr-action.procedure-sus.v1|openehr-ehr-action.procedure-sus.v1/item_tree|procedure_list|at0001|openehr-ehr-action.procedure-sus.v1/element|procedure|at0002|openehr-ehr-action.procedure-sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0002]/procedure",
+          "archetype_node_id": "at0002",
+          "archetype_id": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "score": 0.4290714450600184
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem/value AS problem,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0002]/procedure/value AS procedure\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem/value = 'breast cancer'\n  AND c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0002]/procedure/value = 'biopsy'\n",
+      "where_clause": "c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem/value = 'breast cancer'\n  AND c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0002]/procedure/value = 'biopsy'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem/value AS problem,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0002]/procedure/value AS procedure",
+      "notes": []
+    },
+    {
+      "query_id": "CX2",
+      "query_name": "Patients older than 60 with lung cancer",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Identify all patients older than 60 years based on birth date or age derivation, whose primary diagnosis is lung cancer, to define an age-conditioned disease cohort.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 0.6666666666666666,
+      "operator_support": 0.6666666666666666,
+      "context_support": 0.6666666666666666,
+      "query_realizable": false,
+      "field_mappings": [
+        {
+          "required_field": "birth date",
+          "matched": false,
+          "matched_field_name": null,
+          "canonical_id": null,
+          "aqf_role": null,
+          "datatype": null,
+          "aqf_operator": null,
+          "required_operators": [
+            "date_range"
+          ],
+          "operator_supported": false,
+          "source_path": null,
+          "aql_path": null,
+          "archetype_node_id": null,
+          "archetype_id": null,
+          "score": 0.0
+        },
+        {
+          "required_field": "patient age",
+          "matched": true,
+          "matched_field_name": "patient age",
+          "canonical_id": "form_element_patient_age_41782374",
+          "aqf_role": "filter",
+          "datatype": "DV_COUNT",
+          "aqf_operator": "range",
+          "required_operators": [
+            "range"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|general_data|at0023|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|patient_age|at0012|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0023]/general_data/element[at0012]/patient_age",
+          "archetype_node_id": "at0012",
+          "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "score": 0.7633252539242844
+        },
+        {
+          "required_field": "Problem",
+          "matched": true,
+          "matched_field_name": "Problem",
+          "canonical_id": "form_element_problem_37189755",
+          "aqf_role": "filter",
+          "datatype": "DV_CODED_TEXT",
+          "aqf_operator": "equals",
+          "required_operators": [
+            "equals"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|problem|at0002.1|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem",
+          "archetype_node_id": "at0002.1",
+          "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "score": 0.4626442751615881
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0023]/general_data/element[at0012]/patient_age/value AS patient_age,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem/value AS problem\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0023]/general_data/element[at0012]/patient_age/value > '60'\n  AND c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem/value = 'lung cancer'\n",
+      "where_clause": "c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0023]/general_data/element[at0012]/patient_age/value > '60'\n  AND c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem/value = 'lung cancer'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0023]/general_data/element[at0012]/patient_age/value AS patient_age,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem/value AS problem",
+      "notes": [
+        "Query is not fully realizable from selected AQF form; AQL is partial/template-level.",
+        "Missing one or more required fields.",
+        "Unsupported operator for one or more matched fields.",
+        "Required structural context is partially matched."
+      ]
+    },
+    {
+      "query_id": "CX3",
+      "query_name": "São Paulo patients on FOLFOX treatment",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Retrieve all patient records in which the demographic location attribute state is São Paulo and chemotherapy schema is FOLFOX, to identify a geographically restricted treatment cohort.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 1.0,
+      "operator_support": 1.0,
+      "context_support": 1.0,
+      "query_realizable": true,
+      "field_mappings": [
+        {
+          "required_field": "State",
+          "matched": true,
+          "matched_field_name": "State",
+          "canonical_id": "form_element_state_30118575",
+          "aqf_role": "filter",
+          "datatype": "DV_CODED_TEXT",
+          "aqf_operator": "equals",
+          "required_operators": [
+            "equals"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|general_data|at0023|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|state|at0028|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0023]/general_data/element[at0028]/state",
+          "archetype_node_id": "at0028",
+          "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "score": 0.4644679132040627
+        },
+        {
+          "required_field": "schema",
+          "matched": true,
+          "matched_field_name": "schema",
+          "canonical_id": "form_element_schema_17981859",
+          "aqf_role": "filter",
+          "datatype": "DV_TEXT",
+          "aqf_operator": "contains",
+          "required_operators": [
+            "contains"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|chemotherapy|at0016|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|schema|at0014|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0014]/schema",
+          "archetype_node_id": "at0014",
+          "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "score": 0.15242555401662047
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0023]/general_data/element[at0028]/state/value AS state,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0014]/schema/value AS schema\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0023]/general_data/element[at0028]/state/value = 'São Paulo'\n  AND LOWER(c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0014]/schema/value) MATCHES '.*folfox.*'\n",
+      "where_clause": "c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0023]/general_data/element[at0028]/state/value = 'São Paulo'\n  AND LOWER(c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0014]/schema/value) MATCHES '.*folfox.*'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0023]/general_data/element[at0028]/state/value AS state,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0014]/schema/value AS schema",
+      "notes": []
+    },
+    {
+      "query_id": "CX4",
+      "query_name": "Stage III biopsy cohort with chemotherapy beginning after 01-01-2022",
+      "query_complexity": "hard",
+      "category": "cross_context",
+      "description": "Retrieve all records in which staging is Stage III, procedure is biopsy, and date of beginning of chemotherapy is later than 01-01-2022, thereby defining a temporally constrained multi-context clinical cohort.",
+      "selected_form_id": "aqf_outpatient_high_complexity_procedures_42251",
+      "selected_form_group": "Outpatient high complexity procedures",
+      "field_recall": 1.0,
+      "operator_support": 0.6666666666666666,
+      "context_support": 1.0,
+      "query_realizable": false,
+      "field_mappings": [
+        {
+          "required_field": "Clinical staging",
+          "matched": true,
+          "matched_field_name": "Clinical staging",
+          "canonical_id": "form_element_clinical_staging_18691914",
+          "aqf_role": "output",
+          "datatype": "DV_TEXT",
+          "aqf_operator": "project",
+          "required_operators": [
+            "equals"
+          ],
+          "operator_supported": false,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/evaluation|problem_diagnosis|openehr-ehr-evaluation.problem_diagnosis-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/item_tree|structure|at0001|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|tumour_-_tnm_cancer_staging|openehr-ehr-cluster.tnm_staging-sus.v1|openehr-ehr-evaluation.problem_diagnosis-sus.v1/cluster|clinical_(ctnm)|at0002|openehr-ehr-evaluation.problem_diagnosis-sus.v1/element|clinical_staging|at0010|openehr-ehr-evaluation.problem_diagnosis-sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0002]/clinical_(ctnm)/element[at0010]/clinical_staging",
+          "archetype_node_id": "at0010",
+          "archetype_id": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "score": 0.23140697137580796
+        },
+        {
+          "required_field": "Procedure",
+          "matched": true,
+          "matched_field_name": "Procedure",
+          "canonical_id": "form_element_procedure_58081004",
+          "aqf_role": "filter",
+          "datatype": "DV_CODED_TEXT",
+          "aqf_operator": "equals",
+          "required_operators": [
+            "equals"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/action|procedure_undertaken|openehr-ehr-action.procedure-sus.v1|openehr-ehr-action.procedure-sus.v1/item_tree|procedure_list|at0001|openehr-ehr-action.procedure-sus.v1/element|procedure|at0002|openehr-ehr-action.procedure-sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0002]/procedure",
+          "archetype_node_id": "at0002",
+          "archetype_id": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "score": 0.4290714450600184
+        },
+        {
+          "required_field": "date of beginning of chemotherapy",
+          "matched": true,
+          "matched_field_name": "date of beginning of chemotherapy",
+          "canonical_id": "form_element_date_of_beginning_of_chemotherapy_23455171",
+          "aqf_role": "filter",
+          "datatype": "DV_DATE",
+          "aqf_operator": "date_range",
+          "required_operators": [
+            "date_range"
+          ],
+          "operator_supported": true,
+          "source_path": "/composition|outpatient_high_complexity_procedures|openehr-ehr-composition.outpatient_high_complexity_procedures.v1|openehr-ehr-composition.outpatient_high_complexity_procedures.v1/admin_entry|hcpa|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/item_tree|components|at0001|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/cluster|chemotherapy|at0016|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1/element|date_of_beginning_of_chemotherapy|at0031|openehr-ehr-admin_entry.high_complexity_procedures_sus.v1",
+          "aql_path": "/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0031]/date_of_beginning_of_chemotherapy",
+          "archetype_node_id": "at0031",
+          "archetype_id": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "score": 0.16936172668513386
+        }
+      ],
+      "aql": "SELECT\n  e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0002]/clinical_(ctnm)/element[at0010]/clinical_staging/value AS clinical_staging,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0002]/procedure/value AS procedure,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0031]/date_of_beginning_of_chemotherapy/value AS date_of_beginning_of_chemotherapy\nFROM EHR e\nCONTAINS COMPOSITION c\nWHERE\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0002]/clinical_(ctnm)/element[at0010]/clinical_staging/value = 'Stage III'\n  AND c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0002]/procedure/value = 'biopsy'\n  AND c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0031]/date_of_beginning_of_chemotherapy/value > '2022-01-01'\n",
+      "where_clause": "c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0002]/clinical_(ctnm)/element[at0010]/clinical_staging/value = 'Stage III'\n  AND c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0002]/procedure/value = 'biopsy'\n  AND c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0031]/date_of_beginning_of_chemotherapy/value > '2022-01-01'",
+      "select_clause": "e/ehr_id/value AS ehr_id,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/cluster[at0002]/clinical_(ctnm)/element[at0010]/clinical_staging/value AS clinical_staging,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/action[openehr-ehr-action.procedure-sus.v1]/procedure_undertaken/item_tree[at0001]/procedure_list/element[at0002]/procedure/value AS procedure,\n  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/admin_entry[openehr-ehr-admin_entry.high_complexity_procedures_sus.v1]/hcpa/item_tree[at0001]/components/cluster[at0016]/chemotherapy/element[at0031]/date_of_beginning_of_chemotherapy/value AS date_of_beginning_of_chemotherapy",
+      "notes": [
+        "Query is not fully realizable from selected AQF form; AQL is partial/template-level.",
+        "Unsupported operator for one or more matched fields."
+      ]
+    }
+  ]
+}

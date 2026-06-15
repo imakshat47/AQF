@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AQF Query Form - Demographic data</title>
+<style>
+body{font-family:Arial,sans-serif;margin:28px;background:#fafafa;color:#222}
+.header{background:#fff;border:1px solid #ddd;border-radius:10px;padding:18px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.panel{background:#fff;border:1px solid #ddd;border-radius:10px;padding:16px}
+.group{border-top:1px solid #eee;padding-top:12px;margin-top:12px}
+.field{display:grid;grid-template-columns:180px 1fr 130px;gap:10px;align-items:center;margin:8px 0}
+label{font-weight:600}
+input,select{padding:8px;border:1px solid #bbb;border-radius:6px}
+.badge{display:inline-block;background:#eef;border:1px solid #99c;border-radius:12px;padding:2px 8px;font-size:12px}
+table{width:100%;border-collapse:collapse}td,th{border-bottom:1px solid #eee;padding:6px;text-align:left}
+.meta{font-size:13px;color:#555}
+</style>
+</head>
+<body>
+<div class="header"><h1>AQF Query Form - Demographic data</h1><p>Automatically generated adaptive query form using operator-aware field selection and bounded complexity constraints.</p><p class="meta">Utility=0.606 | Complexity=5.00 | Fields=2 | RT=3</p></div>
+<div class="grid"><div class="panel"><h2>Input Tree / Filters</h2><div class="group"><h3>Components</h3><div class="field"><label>birth date</label><input type="date" name="filter_birth_date_18822_from"> <input type="date" name="filter_birth_date_18822_to"><span class="badge">date_range | 0.303</span></div></div></div><div class="panel"><h2>Output Tree / Results</h2><div class="group"><h3>Components</h3><div class="field"><label>birth date</label><input type="checkbox" name="output_birth_date_18822" checked> include as ordering<span class="badge">sort | 0.303</span></div></div></div></div>
+<div class="panel" style="margin-top:18px"><h2>Relationship Tree</h2><table><tr><th>Role</th><th>Priority</th><th>Weight</th><th>Source edge</th></tr><tr><td>containment_join</td><td>0.500</td><td>0.500</td><td>containment</td></tr><tr><td>containment_join</td><td>0.500</td><td>0.500</td><td>containment</td></tr><tr><td>containment_join</td><td>0.500</td><td>0.500</td><td>containment</td></tr></table></div>
+</body></html>

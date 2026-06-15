@@ -1,0 +1,2 @@
+query_count,realizable_queries,query_realization_rate,avg_field_recall,avg_operator_support,avg_context_support,category_realization,complexity_realization
+20,11,0.55,0.8333333333333334,0.6166666666666667,0.9333333333333333,"{""demographic"": 0.25, ""diagnosis"": 0.75, ""treatment_procedure"": 0.5, ""temporal"": 0.75, ""cross_context"": 0.5}","{""easy"": 0.625, ""medium"": 0.5, ""hard"": 0.5}"

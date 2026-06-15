@@ -1,0 +1,7 @@
+SELECT
+  e/ehr_id/value AS ehr_id,
+  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/element[at0.43]/topography/value AS topography
+FROM EHR e
+CONTAINS COMPOSITION c
+WHERE
+  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/cluster[openehr-ehr-cluster.tnm_staging-sus.v1]/tumour_-_tnm_cancer_staging/element[at0.43]/topography/value = 'colon'
