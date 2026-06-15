@@ -1,0 +1,27 @@
+[2026-06-15 09:06:56] [INFO] ================================================================================
+[2026-06-15 09:06:56] [INFO] MANUSCRIPT-ALIGNED AQF PIPELINE STARTED
+[2026-06-15 09:06:56] [INFO] ================================================================================
+[2026-06-15 09:06:56] [INFO] Starting AQF Evaluation
+[2026-06-15 09:06:56] [INFO] Data directory: dataset/mixed
+[2026-06-15 09:06:56] [INFO] Output directory: results/aqf_manuscript/evaluation
+[2026-06-15 09:06:56] [INFO] Parameters: complexity=35, theta=0.1, lambda_sc=0.25, mu=0.25, eta=1.0
+[2026-06-15 09:06:56] [INFO] Running: AQF Evaluation
+[2026-06-15 09:06:56] [NOTICE] [DRY RUN] Would execute: /usr/bin/python /home/runner/work/AQF/AQF/imakshat47/AQF/evaluation/run_evaluation_final.py --data-dir dataset/mixed --out-dir results/aqf_manuscript/evaluation --complexity-budget 35 --theta 0.1 --lambda-sc 0.25 --mu 0.25 --eta 1.0 --random-trials 30 --seed 42 --use-cache
+[2026-06-15 09:06:56] [INFO] Starting Postprocessing
+[2026-06-15 09:06:56] [INFO] Results directory: results/aqf_manuscript/evaluation
+[2026-06-15 09:06:56] [INFO] Eta: 1.0, Theta: 0.1
+[2026-06-15 09:06:56] [INFO] Running: Postprocessing
+[2026-06-15 09:06:56] [NOTICE] [DRY RUN] Would execute: /usr/bin/python /home/runner/work/AQF/AQF/imakshat47/AQF/evaluation/run_journal_postprocess.py --results-dir results/aqf_manuscript/evaluation --eta 1.0 --theta 0.1 --out-dir results/aqf_manuscript/evaluation
+[2026-06-15 09:06:56] [INFO] Starting Report Generation
+[2026-06-15 09:06:56] [INFO] Results directory: results/aqf_manuscript/evaluation
+[2026-06-15 09:06:56] [INFO] Running: Report Generation
+[2026-06-15 09:06:56] [NOTICE] [DRY RUN] Would execute: /usr/bin/python /home/runner/work/AQF/AQF/imakshat47/AQF/evaluation/aqf_metrics_report.py --results-dir results/aqf_manuscript/evaluation --eta 1.0
+[2026-06-15 09:06:56] [INFO] Starting Visualization Generation
+[2026-06-15 09:06:56] [INFO] Results directory: results/aqf_manuscript/evaluation
+[2026-06-15 09:06:56] [INFO] Output directory: results/aqf_manuscript/evaluation/schema_graphs
+[2026-06-15 09:06:56] [INFO] Running: Visualization Generation
+[2026-06-15 09:06:56] [NOTICE] [DRY RUN] Would execute: /usr/bin/python /home/runner/work/AQF/AQF/imakshat47/AQF/evaluation/generate_aqf_schema_graphs.py --data-dir dataset/mixed --results-dir results/aqf_manuscript/evaluation --out-dir results/aqf_manuscript/evaluation/schema_graphs --mu 0.25 --fig-width 48 --fig-height 38 --font-size 15 --max-field-labels 200
+[2026-06-15 09:06:56] [INFO] ================================================================================
+[2026-06-15 09:06:56] [INFO] PIPELINE COMPLETED SUCCESSFULLY in 0.0s
+[2026-06-15 09:06:56] [INFO] ================================================================================
+[2026-06-15 09:06:56] [INFO] Results saved to: results/aqf_manuscript/evaluation
