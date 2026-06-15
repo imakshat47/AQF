@@ -1,0 +1,6 @@
+SELECT
+  e/ehr_id/value AS ehr_id
+FROM EHR e
+CONTAINS COMPOSITION c
+WHERE
+  1 = 1

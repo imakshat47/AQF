@@ -1,0 +1,7 @@
+SELECT
+  e/ehr_id/value AS ehr_id,
+  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem/value AS problem
+FROM EHR e
+CONTAINS COMPOSITION c
+WHERE
+  c/composition[openehr-ehr-composition.outpatient_high_complexity_procedures.v1]/outpatient_high_complexity_procedures/evaluation[openehr-ehr-evaluation.problem_diagnosis-sus.v1]/problem_diagnosis/item_tree[at0001]/structure/element[at0002.1]/problem/value = 'breast cancer'
