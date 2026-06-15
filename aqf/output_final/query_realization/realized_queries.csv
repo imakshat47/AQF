@@ -1,0 +1,21 @@
+query_id,query_name,query_complexity,category,selected_forms,field_recall,operator_support,context_support,query_realizable,missing_fields,unsupported_fields,selected_required_fields,failure_reason
+D1,Male patient cohort,easy,demographic,,0.0,0.0,0.0,False,gender,,gender,missing_fields
+D2,Patients born before 01-01-1970,easy,demographic,aqf_demographic_data_50936,1.0,1.0,1.0,True,,,birth date,
+D3,Brazilian nationality cohort,easy,demographic,,0.0,0.0,0.0,False,nationality,,nationality,missing_fields
+D4,Higher education demographic filter,easy,demographic,,0.0,0.0,0.0,False,educational level,,educational level,missing_fields
+DX1,Breast cancer primary diagnosis cohort,easy,diagnosis,aqf_outpatient_high_complexity_procedures_59895,1.0,1.0,1.0,True,,,Problem,
+DX2,Hypertension as secondary diagnosis,easy,diagnosis,aqf_outpatient_high_complexity_procedures_59895,1.0,1.0,1.0,True,,,Secondary Diagnosis,
+DX3,Colon topography cohort,medium,diagnosis,aqf_outpatient_high_complexity_procedures_59895,1.0,1.0,1.0,True,,,topography,
+DX4,Stage III disease cohort,medium,diagnosis,,0.0,0.0,0.0,False,Clinical staging,,Clinical staging,missing_fields
+TP1,Biopsy procedure cohort,easy,treatment_procedure,aqf_outpatient_high_complexity_procedures_59895,1.0,1.0,1.0,True,,,Procedure,
+TP2,FOLFOX chemotherapy schema cohort,medium,treatment_procedure,,0.0,0.0,0.0,False,schema,,schema,missing_fields
+TP3,Pelvic radiotherapy fields cohort,medium,treatment_procedure,,0.0,0.0,0.0,False,fields/insertions 1; fields/insertions 2,,fields/insertions 1; fields/insertions 2,missing_fields
+TP4,Treatment duration greater than 90 days,medium,treatment_procedure,,0.0,0.0,0.0,False,duration of treatment,,duration of treatment,missing_fields
+TM1,Records issued after 01-01-2022,easy,temporal,aqf_outpatient_high_complexity_procedures_59895,1.0,1.0,1.0,True,,,issue date,
+TM2,Discharge records in January 2023,medium,temporal,,0.0,0.0,0.0,False,date of discharge,,date of discharge,missing_fields
+TM3,Chemotherapy beginning after 01-06-2021,medium,temporal,,0.0,0.0,0.0,False,date of beginning of chemotherapy,,date of beginning of chemotherapy,missing_fields
+TM4,Pathological identification in 2020,medium,temporal,aqf_outpatient_high_complexity_procedures_59895,1.0,0.0,1.0,False,,date of pathological identification,date of pathological identification,unsupported_operators
+CX1,Breast cancer plus biopsy cohort,hard,cross_context,aqf_outpatient_high_complexity_procedures_59895,1.0,1.0,1.0,True,,,Problem; Procedure,
+CX2,Patients older than 60 with lung cancer,hard,cross_context,aqf_demographic_data_50936; aqf_outpatient_high_complexity_procedures_59895,1.0,1.0,1.0,True,,,birth date; patient age; Problem,
+CX3,São Paulo patients on FOLFOX treatment,hard,cross_context,aqf_outpatient_high_complexity_procedures_59895,0.5,0.5,0.5,False,schema,,State; schema,missing_fields
+CX4,Stage III biopsy cohort with chemotherapy beginning after 01-01-2022,hard,cross_context,aqf_outpatient_high_complexity_procedures_59895,0.3333333333333333,0.3333333333333333,0.6666666666666666,False,Clinical staging; date of beginning of chemotherapy,,Clinical staging; Procedure; date of beginning of chemotherapy,missing_fields

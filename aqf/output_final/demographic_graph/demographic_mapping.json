@@ -1,0 +1,28 @@
+{
+  "fields": [
+    {
+      "name": "gender",
+      "datatype": "DV_CODED_TEXT",
+      "operator_hint": "equals",
+      "source_path": "DEMOGRAPHIC::gender"
+    },
+    {
+      "name": "birth date",
+      "datatype": "DV_DATE",
+      "operator_hint": "date_range",
+      "source_path": "DEMOGRAPHIC::birth_date"
+    },
+    {
+      "name": "nationality",
+      "datatype": "DV_CODED_TEXT",
+      "operator_hint": "equals",
+      "source_path": "DEMOGRAPHIC::nationality"
+    },
+    {
+      "name": "educational level",
+      "datatype": "DV_CODED_TEXT",
+      "operator_hint": "equals",
+      "source_path": "DEMOGRAPHIC::educational_level"
+    }
+  ]
+}

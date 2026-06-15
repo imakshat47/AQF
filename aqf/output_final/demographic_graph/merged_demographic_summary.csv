@@ -1,0 +1,5 @@
+name,datatype,operator_hint,source_path
+gender,DV_CODED_TEXT,equals,DEMOGRAPHIC::gender
+birth date,DV_DATE,date_range,DEMOGRAPHIC::birth_date
+nationality,DV_CODED_TEXT,equals,DEMOGRAPHIC::nationality
+educational level,DV_CODED_TEXT,equals,DEMOGRAPHIC::educational_level

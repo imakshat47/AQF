@@ -1,0 +1,229 @@
+{
+  "metadata": {
+    "graph_type": "demographic_schema_graph",
+    "node_count": 5,
+    "edge_count": 16
+  },
+  "nodes": [
+    {
+      "node_id": "demographic_root::demographic_data",
+      "name": "Demographic data",
+      "rm_type": "DEMOGRAPHIC_ROOT",
+      "aqf_type": "root",
+      "archetype_node_id": null,
+      "archetype_id": "EXTERNAL-DEMOGRAPHIC",
+      "template_id": "external-demographic",
+      "path": "DEMOGRAPHIC::root",
+      "datatype": null,
+      "records_present": [],
+      "weight": 1.0,
+      "queriability": 1.0
+    },
+    {
+      "node_id": "demographic::gender",
+      "name": "gender",
+      "rm_type": "DEMOGRAPHIC_FIELD",
+      "aqf_type": "leaf",
+      "archetype_node_id": null,
+      "archetype_id": "EXTERNAL-DEMOGRAPHIC",
+      "template_id": "external-demographic",
+      "path": "DEMOGRAPHIC::gender",
+      "datatype": "DV_CODED_TEXT",
+      "records_present": [],
+      "weight": 1.0,
+      "queriability": 1.0,
+      "operator_hint": "equals"
+    },
+    {
+      "node_id": "demographic::birth_date",
+      "name": "birth date",
+      "rm_type": "DEMOGRAPHIC_FIELD",
+      "aqf_type": "leaf",
+      "archetype_node_id": null,
+      "archetype_id": "EXTERNAL-DEMOGRAPHIC",
+      "template_id": "external-demographic",
+      "path": "DEMOGRAPHIC::birth_date",
+      "datatype": "DV_DATE",
+      "records_present": [],
+      "weight": 1.0,
+      "queriability": 1.0,
+      "operator_hint": "date_range"
+    },
+    {
+      "node_id": "demographic::nationality",
+      "name": "nationality",
+      "rm_type": "DEMOGRAPHIC_FIELD",
+      "aqf_type": "leaf",
+      "archetype_node_id": null,
+      "archetype_id": "EXTERNAL-DEMOGRAPHIC",
+      "template_id": "external-demographic",
+      "path": "DEMOGRAPHIC::nationality",
+      "datatype": "DV_CODED_TEXT",
+      "records_present": [],
+      "weight": 1.0,
+      "queriability": 1.0,
+      "operator_hint": "equals"
+    },
+    {
+      "node_id": "demographic::educational_level",
+      "name": "educational level",
+      "rm_type": "DEMOGRAPHIC_FIELD",
+      "aqf_type": "leaf",
+      "archetype_node_id": null,
+      "archetype_id": "EXTERNAL-DEMOGRAPHIC",
+      "template_id": "external-demographic",
+      "path": "DEMOGRAPHIC::educational_level",
+      "datatype": "DV_CODED_TEXT",
+      "records_present": [],
+      "weight": 1.0,
+      "queriability": 1.0,
+      "operator_hint": "equals"
+    }
+  ],
+  "edges": [
+    {
+      "source": "demographic_root::demographic_data",
+      "target": "demographic::gender",
+      "edge_type": "containment",
+      "weight": 1.0,
+      "structural_connectivity": 1.0,
+      "containment_connectivity": 1.0,
+      "cooccurrence_connectivity": 0.0
+    },
+    {
+      "source": "demographic_root::demographic_data",
+      "target": "demographic::birth_date",
+      "edge_type": "containment",
+      "weight": 1.0,
+      "structural_connectivity": 1.0,
+      "containment_connectivity": 1.0,
+      "cooccurrence_connectivity": 0.0
+    },
+    {
+      "source": "demographic_root::demographic_data",
+      "target": "demographic::nationality",
+      "edge_type": "containment",
+      "weight": 1.0,
+      "structural_connectivity": 1.0,
+      "containment_connectivity": 1.0,
+      "cooccurrence_connectivity": 0.0
+    },
+    {
+      "source": "demographic_root::demographic_data",
+      "target": "demographic::educational_level",
+      "edge_type": "containment",
+      "weight": 1.0,
+      "structural_connectivity": 1.0,
+      "containment_connectivity": 1.0,
+      "cooccurrence_connectivity": 0.0
+    },
+    {
+      "source": "demographic::gender",
+      "target": "demographic::birth_date",
+      "edge_type": "cooccurrence",
+      "weight": 0.75,
+      "structural_connectivity": 0.75,
+      "containment_connectivity": 0.5,
+      "cooccurrence_connectivity": 1.0
+    },
+    {
+      "source": "demographic::birth_date",
+      "target": "demographic::gender",
+      "edge_type": "cooccurrence",
+      "weight": 0.75,
+      "structural_connectivity": 0.75,
+      "containment_connectivity": 0.5,
+      "cooccurrence_connectivity": 1.0
+    },
+    {
+      "source": "demographic::gender",
+      "target": "demographic::nationality",
+      "edge_type": "cooccurrence",
+      "weight": 0.75,
+      "structural_connectivity": 0.75,
+      "containment_connectivity": 0.5,
+      "cooccurrence_connectivity": 1.0
+    },
+    {
+      "source": "demographic::nationality",
+      "target": "demographic::gender",
+      "edge_type": "cooccurrence",
+      "weight": 0.75,
+      "structural_connectivity": 0.75,
+      "containment_connectivity": 0.5,
+      "cooccurrence_connectivity": 1.0
+    },
+    {
+      "source": "demographic::gender",
+      "target": "demographic::educational_level",
+      "edge_type": "cooccurrence",
+      "weight": 0.75,
+      "structural_connectivity": 0.75,
+      "containment_connectivity": 0.5,
+      "cooccurrence_connectivity": 1.0
+    },
+    {
+      "source": "demographic::educational_level",
+      "target": "demographic::gender",
+      "edge_type": "cooccurrence",
+      "weight": 0.75,
+      "structural_connectivity": 0.75,
+      "containment_connectivity": 0.5,
+      "cooccurrence_connectivity": 1.0
+    },
+    {
+      "source": "demographic::birth_date",
+      "target": "demographic::nationality",
+      "edge_type": "cooccurrence",
+      "weight": 0.75,
+      "structural_connectivity": 0.75,
+      "containment_connectivity": 0.5,
+      "cooccurrence_connectivity": 1.0
+    },
+    {
+      "source": "demographic::nationality",
+      "target": "demographic::birth_date",
+      "edge_type": "cooccurrence",
+      "weight": 0.75,
+      "structural_connectivity": 0.75,
+      "containment_connectivity": 0.5,
+      "cooccurrence_connectivity": 1.0
+    },
+    {
+      "source": "demographic::birth_date",
+      "target": "demographic::educational_level",
+      "edge_type": "cooccurrence",
+      "weight": 0.75,
+      "structural_connectivity": 0.75,
+      "containment_connectivity": 0.5,
+      "cooccurrence_connectivity": 1.0
+    },
+    {
+      "source": "demographic::educational_level",
+      "target": "demographic::birth_date",
+      "edge_type": "cooccurrence",
+      "weight": 0.75,
+      "structural_connectivity": 0.75,
+      "containment_connectivity": 0.5,
+      "cooccurrence_connectivity": 1.0
+    },
+    {
+      "source": "demographic::nationality",
+      "target": "demographic::educational_level",
+      "edge_type": "cooccurrence",
+      "weight": 0.75,
+      "structural_connectivity": 0.75,
+      "containment_connectivity": 0.5,
+      "cooccurrence_connectivity": 1.0
+    },
+    {
+      "source": "demographic::educational_level",
+      "target": "demographic::nationality",
+      "edge_type": "cooccurrence",
+      "weight": 0.75,
+      "structural_connectivity": 0.75,
+      "containment_connectivity": 0.5,
+      "cooccurrence_connectivity": 1.0
+    }
+  ]
+}
