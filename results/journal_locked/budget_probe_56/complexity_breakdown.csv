@@ -1,0 +1,8 @@
+method,field_count,group_count,subgroup_count,max_depth,eta,final_complexity,operator_count,valid_operator_count,invalid_or_unwanted_operator_count,weighted_operator_burden,form_utility
+aqf_full,50,9,16,6,1.0,56.0,264,264,0,242.25,51.18274240020478
+aqf_topk_no_threshold,50,9,16,6,1.0,56.0,264,264,0,242.25,51.18274240020478
+frequency_only,50,9,16,6,1.0,56.0,264,264,0,242.25,51.18274240020478
+flattened_topk,50,1,1,6,1.0,56.0,264,264,0,242.25,51.18274240020478
+no_operator_awareness,50,9,16,6,1.0,56.0,550,264,286,600.0,51.18274240020478
+no_pruning,54,11,19,6,1.0,60.0,285,285,0,262.25,51.645750562610935
+random_topk_1,50,11,18,6,1.0,56.0,261,261,0,239.75,46.30551272793539

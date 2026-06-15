@@ -1,0 +1,4984 @@
+{
+  "trees": {
+    "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1": {
+      "tree_id": "tree_edab03775951",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "record_count": 27,
+      "nodes": [
+        {
+          "node_id": "group_e8f29c2c9654",
+          "node_type": "FORM_GROUP",
+          "label": "HCPA"
+        },
+        {
+          "node_id": "subgroup_d7e267a6e7bb",
+          "node_type": "NESTED_SUBGROUP",
+          "label": "components / General data",
+          "parent": "group_e8f29c2c9654"
+        },
+        {
+          "node_id": "cf_5cd62eaa6e16a8",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_5cd62eaa6e16a8",
+          "label": "issue date",
+          "canonical_path": "HCPA / components / General data / issue date",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / General data",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0009",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_DATE"
+          ],
+          "primary_dv_type": "DV_DATE",
+          "dv_type": "DV_DATE",
+          "kind": "temporal",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 12,
+          "distinct_ratio": 0.4444444444444444,
+          "top_values": [
+            "2011-07-01TZ",
+            "2011-08-01TZ",
+            "2011-06-01TZ",
+            "2009-03-01TZ",
+            "2011-03-01TZ",
+            "2012-10-01TZ",
+            "2011-09-01TZ",
+            "2009-02-01TZ",
+            "2011-05-01TZ",
+            "2012-01-01TZ"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_d7e267a6e7bb"
+        },
+        {
+          "node_id": "cf_775d9002cb4e7b",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_775d9002cb4e7b",
+          "label": "reason for encounter",
+          "canonical_path": "HCPA / components / General data / reason for encounter",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / General data",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0010",
+          "known_count": 23,
+          "unknown_count": 4,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": true,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 3,
+          "distinct_ratio": 0.1111111111111111,
+          "top_values": [
+            "CIRURGIA BARIATRICA",
+            "RADIOTERAPIA",
+            "unknown"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_d7e267a6e7bb"
+        },
+        {
+          "node_id": "cf_b87e8363f020f7",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_b87e8363f020f7",
+          "label": "healthcare unit",
+          "canonical_path": "HCPA / components / General data / healthcare unit",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / General data",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0011",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 5,
+          "distinct_ratio": 0.18518518518518517,
+          "top_values": [
+            "4dc5277c8fb69ad4819396aa806dcb132176af8d3d848025d02e257f05a5730b1af711b79d485d75",
+            "4dc5277c8fb69ad4bc3b531976a43978ac584b627823d3868e8f60c10d3cf78ad1bfd0c77255f7d6",
+            "4dc5277c8fb69ad47ce0692d8ec7b8acd85c1326321b7592dbc4b768f84e3d26",
+            "4dc5277c8fb69ad4a7948e1cd5fcdefd902391351ef619eeee87c32c02ea8b77",
+            "4dc5277c8fb69ad4ed4e7fb4e8aca0135f8839e97780daf8d14b28a7898b67fa"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_d7e267a6e7bb"
+        },
+        {
+          "node_id": "cf_8b431261fa7dca",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_8b431261fa7dca",
+          "label": "State",
+          "canonical_path": "HCPA / components / General data / State",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / General data",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0028",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 4,
+          "distinct_ratio": 0.14814814814814814,
+          "top_values": [
+            "SANTA CATARINA",
+            "ESPIRITO SANTO",
+            "RIO GRANDE DO SUL",
+            "PARANÁ"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_d7e267a6e7bb"
+        },
+        {
+          "node_id": "cf_16800b2d3f5ef6",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_16800b2d3f5ef6",
+          "label": "patient age",
+          "canonical_path": "HCPA / components / General data / patient age",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / General data",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0012",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_COUNT"
+          ],
+          "primary_dv_type": "DV_COUNT",
+          "dv_type": "DV_COUNT",
+          "kind": "numeric",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 18,
+          "distinct_ratio": 0.6666666666666666,
+          "top_values": [
+            "33",
+            "48",
+            "51",
+            "32",
+            "25",
+            "71",
+            "42",
+            "53",
+            "59",
+            "45"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_d7e267a6e7bb"
+        },
+        {
+          "node_id": "subgroup_7d434dbd4223",
+          "node_type": "NESTED_SUBGROUP",
+          "label": "components / radiotherapy",
+          "parent": "group_e8f29c2c9654"
+        },
+        {
+          "node_id": "cf_ed2fd195fdc918",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_ed2fd195fdc918",
+          "label": "date of beginning of radiotherapy",
+          "canonical_path": "HCPA / components / radiotherapy / date of beginning of radiotherapy",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / radiotherapy",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0032",
+          "known_count": 4,
+          "unknown_count": 0,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_DATE"
+          ],
+          "primary_dv_type": "DV_DATE",
+          "dv_type": "DV_DATE",
+          "kind": "temporal",
+          "supports_null_flavour": false,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 4,
+          "distinct_ratio": 1.0,
+          "top_values": [
+            "2012-10-01TZ",
+            "2009-02-01TZ",
+            "2009-01-01TZ",
+            "2009-03-01TZ"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_7d434dbd4223"
+        },
+        {
+          "node_id": "group_cec3cb8f6107",
+          "node_type": "FORM_GROUP",
+          "label": "Patient discharge"
+        },
+        {
+          "node_id": "subgroup_fafcb7f74a52",
+          "node_type": "NESTED_SUBGROUP",
+          "label": "Components",
+          "parent": "group_cec3cb8f6107"
+        },
+        {
+          "node_id": "cf_469c691048a0ce",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_469c691048a0ce",
+          "label": "date of discharge",
+          "canonical_path": "Patient discharge / Components / date of discharge",
+          "form_group": "Patient discharge",
+          "nested_subgroup": "Components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.patient_discharge.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0002",
+          "known_count": 22,
+          "unknown_count": 5,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_DATE_TIME",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_DATE_TIME",
+          "dv_type": "DV_DATE_TIME",
+          "kind": "temporal",
+          "supports_null_flavour": true,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 9,
+          "distinct_ratio": 0.3333333333333333,
+          "top_values": [
+            "2011-07-01T00:00:00-03:00",
+            "unknown",
+            "2011-08-01T00:00:00-03:00",
+            "2011-06-01T00:00:00-03:00",
+            "2009-03-01T00:00:00-03:00",
+            "2011-03-01T00:00:00-03:00",
+            "2011-09-01T00:00:00-03:00",
+            "2009-02-01T00:00:00-03:00",
+            "2011-05-01T00:00:00-03:00"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_fafcb7f74a52"
+        },
+        {
+          "node_id": "cf_49533263f29569",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_49533263f29569",
+          "label": "reason for discharge",
+          "canonical_path": "Patient discharge / Components / reason for discharge",
+          "form_group": "Patient discharge",
+          "nested_subgroup": "Components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.patient_discharge.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0003",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 3,
+          "distinct_ratio": 0.1111111111111111,
+          "top_values": [
+            "Alta - melhorado",
+            "Permanência - por características próprias doença",
+            "Alta - por evasão"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_fafcb7f74a52"
+        },
+        {
+          "node_id": "group_d58d104fb62e",
+          "node_type": "FORM_GROUP",
+          "label": "Problem/Diagnosis"
+        },
+        {
+          "node_id": "subgroup_694b33cb4f65",
+          "node_type": "NESTED_SUBGROUP",
+          "label": "structure",
+          "parent": "group_d58d104fb62e"
+        },
+        {
+          "node_id": "cf_bd9db9ae67063d",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_bd9db9ae67063d",
+          "label": "Problem",
+          "canonical_path": "Problem/Diagnosis / structure / Problem",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0002.1",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 6,
+          "distinct_ratio": 0.2222222222222222,
+          "top_values": [
+            "CID NAO INFORMADO",
+            "C50.4 Quadrante super externo da mama",
+            "C32.9 Laringe NE",
+            "C50.9 Mama NE",
+            "C53.9 Colo do utero NE",
+            "C53.1 Exocervix"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_694b33cb4f65"
+        },
+        {
+          "node_id": "cf_4e7e8ca2916a1e",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_4e7e8ca2916a1e",
+          "label": "Secondary Diagnosis",
+          "canonical_path": "Problem/Diagnosis / structure / Secondary Diagnosis",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0.1",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 2,
+          "distinct_ratio": 0.07407407407407407,
+          "top_values": [
+            "CID NAO INFORMADO",
+            "CID NÇO IDENTIFICADO"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_694b33cb4f65"
+        },
+        {
+          "node_id": "cf_0a229c157b8d2a",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_0a229c157b8d2a",
+          "label": "Associated causes",
+          "canonical_path": "Problem/Diagnosis / structure / Associated causes",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0.2",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 2,
+          "distinct_ratio": 0.07407407407407407,
+          "top_values": [
+            "CID NAO INFORMADO",
+            "CID NÇO IDENTIFICADO"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_694b33cb4f65"
+        },
+        {
+          "node_id": "cf_af0c9a7d79fe64",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_af0c9a7d79fe64",
+          "label": "Invaded regional linphonodes",
+          "canonical_path": "Problem/Diagnosis / structure / Invaded regional linphonodes",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0.4",
+          "known_count": 8,
+          "unknown_count": 0,
+          "record_count": 8,
+          "occurrence_count": 8,
+          "observed_dv_types": [
+            "DV_BOOLEAN"
+          ],
+          "primary_dv_type": "DV_BOOLEAN",
+          "dv_type": "DV_BOOLEAN",
+          "kind": "boolean",
+          "supports_null_flavour": false,
+          "coverage": 0.2962962962962963,
+          "sparsity": 0.7037037037037037,
+          "distinct_count": 1,
+          "distinct_ratio": 0.125,
+          "top_values": [
+            "false"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_694b33cb4f65"
+        },
+        {
+          "node_id": "subgroup_fcd5ba7b319d",
+          "node_type": "NESTED_SUBGROUP",
+          "label": "structure / Tumour - TNM Cancer staging / Clinical (cTNM)",
+          "parent": "group_d58d104fb62e"
+        },
+        {
+          "node_id": "cf_3c63f8bfbf5fd7",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_3c63f8bfbf5fd7",
+          "label": "Clinical staging",
+          "canonical_path": "Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Clinical (cTNM) / Clinical staging",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure / Tumour - TNM Cancer staging / Clinical (cTNM)",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0010",
+          "known_count": 8,
+          "unknown_count": 0,
+          "record_count": 8,
+          "occurrence_count": 8,
+          "observed_dv_types": [
+            "DV_TEXT"
+          ],
+          "primary_dv_type": "DV_TEXT",
+          "dv_type": "DV_TEXT",
+          "kind": "text",
+          "supports_null_flavour": false,
+          "coverage": 0.2962962962962963,
+          "sparsity": 0.7037037037037037,
+          "distinct_count": 4,
+          "distinct_ratio": 0.5,
+          "top_values": [
+            "2",
+            "3",
+            "1",
+            "0"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_fcd5ba7b319d"
+        },
+        {
+          "node_id": "subgroup_fcaf47e0ff12",
+          "node_type": "NESTED_SUBGROUP",
+          "label": "structure / Tumour - TNM Cancer staging / Pathological (pTNM)",
+          "parent": "group_d58d104fb62e"
+        },
+        {
+          "node_id": "cf_c4703128fab784",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_c4703128fab784",
+          "label": "Histopathological grading (G)",
+          "canonical_path": "Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / Histopathological grading (G)",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure / Tumour - TNM Cancer staging / Pathological (pTNM)",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0035",
+          "known_count": 5,
+          "unknown_count": 3,
+          "record_count": 8,
+          "occurrence_count": 8,
+          "observed_dv_types": [
+            "DV_CODED_TEXT",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": true,
+          "coverage": 0.2962962962962963,
+          "sparsity": 0.7037037037037037,
+          "distinct_count": 3,
+          "distinct_ratio": 0.375,
+          "top_values": [
+            "O grau de diferenciação não pode ser avaliado",
+            "unknown",
+            "Moderadamente diferenciado"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_fcaf47e0ff12"
+        },
+        {
+          "node_id": "cf_72eaea6790449d",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_72eaea6790449d",
+          "label": "date of pathological identification",
+          "canonical_path": "Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / date of pathological identification",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure / Tumour - TNM Cancer staging / Pathological (pTNM)",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0.44",
+          "known_count": 8,
+          "unknown_count": 0,
+          "record_count": 8,
+          "occurrence_count": 8,
+          "observed_dv_types": [
+            "DV_DATE"
+          ],
+          "primary_dv_type": "DV_DATE",
+          "dv_type": "DV_DATE",
+          "kind": "temporal",
+          "supports_null_flavour": false,
+          "coverage": 0.2962962962962963,
+          "sparsity": 0.7037037037037037,
+          "distinct_count": 5,
+          "distinct_ratio": 0.625,
+          "top_values": [
+            "2007-12-01TZ",
+            "2012-08-01TZ",
+            "2008-06-01TZ",
+            "2008-11-01TZ",
+            "2007-08-01TZ"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_fcaf47e0ff12"
+        },
+        {
+          "node_id": "subgroup_d7c958a82e2a",
+          "node_type": "NESTED_SUBGROUP",
+          "label": "structure / Tumour - TNM Cancer staging",
+          "parent": "group_d58d104fb62e"
+        },
+        {
+          "node_id": "cf_8e35971b63e360",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_8e35971b63e360",
+          "label": "topography",
+          "canonical_path": "Problem/Diagnosis / structure / Tumour - TNM Cancer staging / topography",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure / Tumour - TNM Cancer staging",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0.43",
+          "known_count": 8,
+          "unknown_count": 0,
+          "record_count": 8,
+          "occurrence_count": 8,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 0.2962962962962963,
+          "sparsity": 0.7037037037037037,
+          "distinct_count": 5,
+          "distinct_ratio": 0.625,
+          "top_values": [
+            "C50.4 Quadrante super externo da mama",
+            "C32.9 Laringe NE",
+            "C50.9 Mama NE",
+            "C53.9 Colo do utero NE",
+            "C53.1 Exocervix"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_d7c958a82e2a"
+        },
+        {
+          "node_id": "group_925a745701b0",
+          "node_type": "FORM_GROUP",
+          "label": "Procedure undertaken"
+        },
+        {
+          "node_id": "subgroup_f367030a75e3",
+          "node_type": "NESTED_SUBGROUP",
+          "label": "Procedure list",
+          "parent": "group_925a745701b0"
+        },
+        {
+          "node_id": "cf_0b6364bb149692",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_0b6364bb149692",
+          "label": "Procedure",
+          "canonical_path": "Procedure undertaken / Procedure list / Procedure",
+          "form_group": "Procedure undertaken",
+          "nested_subgroup": "Procedure list",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "entry_type": "ACTION",
+          "element_archetype": "at0002",
+          "known_count": 23,
+          "unknown_count": 4,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": true,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 6,
+          "distinct_ratio": 0.2222222222222222,
+          "top_values": [
+            "ACOMPANHAMENTO DE PACIENTE POS-CIRÚRGIA BARIATRICA POR EQUIPE MULTIPROFISSIONAL",
+            "unknown",
+            "RADIOTERAPIA COM ACELERADOR LINEAR SÓ DE FÓTONS (POR CAMPO)",
+            "COBALTOTERAPIA (POR CAMPO)",
+            "RADIOTERAPIA COM ACELERADOR LINEAR DE FÓTONS E ELÉTRONS (POR CAMPO)",
+            "BRAQUITERAPIA DE ALTA TAXA DE DOSE (POR INSERÇÃO)"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_f367030a75e3"
+        },
+        {
+          "node_id": "cf_e5c01940113606",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_e5c01940113606",
+          "label": "irradiated area 1",
+          "canonical_path": "Procedure undertaken / Procedure list / irradiated area 1",
+          "form_group": "Procedure undertaken",
+          "nested_subgroup": "Procedure list",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "entry_type": "ACTION",
+          "element_archetype": "at0.59",
+          "known_count": 4,
+          "unknown_count": 0,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 4,
+          "distinct_ratio": 1.0,
+          "top_values": [
+            "C32.9 Laringe NE",
+            "C50.9 Mama NE",
+            "C53.9 Colo do utero NE",
+            "C53.1 Exocervix"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_f367030a75e3"
+        },
+        {
+          "node_id": "cf_fc5be63ab59287",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_fc5be63ab59287",
+          "label": "irradiated area 2",
+          "canonical_path": "Procedure undertaken / Procedure list / irradiated area 2",
+          "form_group": "Procedure undertaken",
+          "nested_subgroup": "Procedure list",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "entry_type": "ACTION",
+          "element_archetype": "at0.59",
+          "known_count": 1,
+          "unknown_count": 3,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_CODED_TEXT",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": true,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 2,
+          "distinct_ratio": 0.5,
+          "top_values": [
+            "unknown",
+            "C77.0 Ganglios linfaticos da cabeca face e pescoco"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_f367030a75e3"
+        },
+        {
+          "node_id": "cf_821e1930333a5c",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_821e1930333a5c",
+          "label": "irradiated area 3",
+          "canonical_path": "Procedure undertaken / Procedure list / irradiated area 3",
+          "form_group": "Procedure undertaken",
+          "nested_subgroup": "Procedure list",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "entry_type": "ACTION",
+          "element_archetype": "at0.59",
+          "known_count": 0,
+          "unknown_count": 4,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "NULL_FLAVOUR",
+          "dv_type": "NULL_FLAVOUR",
+          "kind": "null",
+          "supports_null_flavour": true,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 1,
+          "distinct_ratio": 0.25,
+          "top_values": [
+            "unknown"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_f367030a75e3"
+        },
+        {
+          "node_id": "cf_c9b3a708f95249",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_c9b3a708f95249",
+          "label": "fields/insertions 1",
+          "canonical_path": "Procedure undertaken / Procedure list / fields/insertions 1",
+          "form_group": "Procedure undertaken",
+          "nested_subgroup": "Procedure list",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "entry_type": "ACTION",
+          "element_archetype": "at0.61",
+          "known_count": 4,
+          "unknown_count": 0,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_COUNT"
+          ],
+          "primary_dv_type": "DV_COUNT",
+          "dv_type": "DV_COUNT",
+          "kind": "numeric",
+          "supports_null_flavour": false,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 4,
+          "distinct_ratio": 1.0,
+          "top_values": [
+            "105",
+            "100",
+            "120",
+            "4"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_f367030a75e3"
+        },
+        {
+          "node_id": "cf_bbec72e0a270f7",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_bbec72e0a270f7",
+          "label": "fields/insertions 2",
+          "canonical_path": "Procedure undertaken / Procedure list / fields/insertions 2",
+          "form_group": "Procedure undertaken",
+          "nested_subgroup": "Procedure list",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "entry_type": "ACTION",
+          "element_archetype": "at0.61",
+          "known_count": 2,
+          "unknown_count": 2,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_COUNT",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_COUNT",
+          "dv_type": "DV_COUNT",
+          "kind": "numeric",
+          "supports_null_flavour": true,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 2,
+          "distinct_ratio": 0.5,
+          "top_values": [
+            "unknown",
+            "0"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_f367030a75e3"
+        },
+        {
+          "node_id": "group_df7caedb5964",
+          "node_type": "FORM_GROUP",
+          "label": "Bariatric surgery evaluation"
+        },
+        {
+          "node_id": "subgroup_57009a1ea4eb",
+          "node_type": "NESTED_SUBGROUP",
+          "label": "Components",
+          "parent": "group_df7caedb5964"
+        },
+        {
+          "node_id": "cf_505d09ec39545c",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_505d09ec39545c",
+          "label": "duration of follow-up (months)",
+          "canonical_path": "Bariatric surgery evaluation / Components / duration of follow-up (months)",
+          "form_group": "Bariatric surgery evaluation",
+          "nested_subgroup": "Components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.bariatric_surgery_evaluation.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0002",
+          "known_count": 7,
+          "unknown_count": 12,
+          "record_count": 19,
+          "occurrence_count": 19,
+          "observed_dv_types": [
+            "DV_COUNT",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_COUNT",
+          "dv_type": "DV_COUNT",
+          "kind": "numeric",
+          "supports_null_flavour": true,
+          "coverage": 0.7037037037037037,
+          "sparsity": 0.2962962962962963,
+          "distinct_count": 7,
+          "distinct_ratio": 0.3684210526315789,
+          "top_values": [
+            "unknown",
+            "3",
+            "2",
+            "9",
+            "17",
+            "15",
+            "1"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_57009a1ea4eb"
+        },
+        {
+          "node_id": "cf_ac2de786b38da7",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_ac2de786b38da7",
+          "label": "Baros score",
+          "canonical_path": "Bariatric surgery evaluation / Components / Baros score",
+          "form_group": "Bariatric surgery evaluation",
+          "nested_subgroup": "Components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.bariatric_surgery_evaluation.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0003",
+          "known_count": 19,
+          "unknown_count": 0,
+          "record_count": 19,
+          "occurrence_count": 19,
+          "observed_dv_types": [
+            "DV_TEXT"
+          ],
+          "primary_dv_type": "DV_TEXT",
+          "dv_type": "DV_TEXT",
+          "kind": "text",
+          "supports_null_flavour": false,
+          "coverage": 0.7037037037037037,
+          "sparsity": 0.2962962962962963,
+          "distinct_count": 2,
+          "distinct_ratio": 0.10526315789473684,
+          "top_values": [
+            "Com Comorbidade",
+            "Sem Comorbidade"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_57009a1ea4eb"
+        },
+        {
+          "node_id": "cf_8f20b6e7578a41",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_8f20b6e7578a41",
+          "label": "Baros table",
+          "canonical_path": "Bariatric surgery evaluation / Components / Baros table",
+          "form_group": "Bariatric surgery evaluation",
+          "nested_subgroup": "Components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.bariatric_surgery_evaluation.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0004",
+          "known_count": 19,
+          "unknown_count": 0,
+          "record_count": 19,
+          "occurrence_count": 19,
+          "observed_dv_types": [
+            "DV_TEXT"
+          ],
+          "primary_dv_type": "DV_TEXT",
+          "dv_type": "DV_TEXT",
+          "kind": "text",
+          "supports_null_flavour": false,
+          "coverage": 0.7037037037037037,
+          "sparsity": 0.2962962962962963,
+          "distinct_count": 3,
+          "distinct_ratio": 0.15789473684210525,
+          "top_values": [
+            "Bom",
+            "Muito Bom",
+            "Aceitavel"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_57009a1ea4eb"
+        },
+        {
+          "node_id": "group_6d004b78b01a",
+          "node_type": "FORM_GROUP",
+          "label": "Body mass index"
+        },
+        {
+          "node_id": "subgroup_ebf4530002cc",
+          "node_type": "NESTED_SUBGROUP",
+          "label": "Single",
+          "parent": "group_6d004b78b01a"
+        },
+        {
+          "node_id": "cf_c75844f7868470",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_c75844f7868470",
+          "label": "Body Mass Index",
+          "canonical_path": "Body mass index / Single / Body Mass Index",
+          "form_group": "Body mass index",
+          "nested_subgroup": "Single",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-OBSERVATION.body_mass_index.v1",
+          "entry_type": "OBSERVATION",
+          "element_archetype": "at0004",
+          "known_count": 17,
+          "unknown_count": 2,
+          "record_count": 19,
+          "occurrence_count": 19,
+          "observed_dv_types": [
+            "DV_QUANTITY",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_QUANTITY",
+          "dv_type": "DV_QUANTITY",
+          "kind": "numeric",
+          "supports_null_flavour": true,
+          "coverage": 0.7037037037037037,
+          "sparsity": 0.2962962962962963,
+          "distinct_count": 12,
+          "distinct_ratio": 0.631578947368421,
+          "top_values": [
+            "30.0 kg/m^2",
+            "36.0 kg/m^2",
+            "28.0 kg/m^2",
+            "unknown",
+            "38.0 kg/m^2",
+            "323.0 kg/m^2",
+            "370.0 kg/m^2",
+            "320.0 kg/m^2",
+            "364.0 kg/m^2",
+            "33.0 kg/m^2"
+          ],
+          "has_null_flavour": true,
+          "units": "kg/m^2",
+          "parent": "subgroup_ebf4530002cc"
+        },
+        {
+          "node_id": "subgroup_afe731ef6ef4",
+          "node_type": "NESTED_SUBGROUP",
+          "label": "components / chemotherapy",
+          "parent": "group_e8f29c2c9654"
+        },
+        {
+          "node_id": "cf_ccf42da6435cdd",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_ccf42da6435cdd",
+          "label": "duration of treatment",
+          "canonical_path": "HCPA / components / chemotherapy / duration of treatment",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / chemotherapy",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0013",
+          "known_count": 4,
+          "unknown_count": 0,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_QUANTITY"
+          ],
+          "primary_dv_type": "DV_QUANTITY",
+          "dv_type": "DV_QUANTITY",
+          "kind": "numeric",
+          "supports_null_flavour": false,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 1,
+          "distinct_ratio": 0.25,
+          "top_values": [
+            "60.0 mo"
+          ],
+          "has_null_flavour": false,
+          "units": "mo",
+          "parent": "subgroup_afe731ef6ef4"
+        },
+        {
+          "node_id": "cf_e7f0fa8ccde04c",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_e7f0fa8ccde04c",
+          "label": "schema",
+          "canonical_path": "HCPA / components / chemotherapy / schema",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / chemotherapy",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0014",
+          "known_count": 4,
+          "unknown_count": 0,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_TEXT"
+          ],
+          "primary_dv_type": "DV_TEXT",
+          "dv_type": "DV_TEXT",
+          "kind": "text",
+          "supports_null_flavour": false,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 1,
+          "distinct_ratio": 0.25,
+          "top_values": [
+            "TAMOXIFENO"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_afe731ef6ef4"
+        },
+        {
+          "node_id": "cf_ec7d5ae391fa0a",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_ec7d5ae391fa0a",
+          "label": "date of beginning of chemotherapy",
+          "canonical_path": "HCPA / components / chemotherapy / date of beginning of chemotherapy",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / chemotherapy",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0031",
+          "known_count": 4,
+          "unknown_count": 0,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_DATE"
+          ],
+          "primary_dv_type": "DV_DATE",
+          "dv_type": "DV_DATE",
+          "kind": "temporal",
+          "supports_null_flavour": false,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 1,
+          "distinct_ratio": 0.25,
+          "top_values": [
+            "2009-04-01TZ"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_afe731ef6ef4"
+        }
+      ],
+      "edges": [
+        {
+          "source": "group_e8f29c2c9654",
+          "target": "subgroup_d7e267a6e7bb",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_d7e267a6e7bb",
+          "target": "cf_5cd62eaa6e16a8",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_d7e267a6e7bb",
+          "target": "cf_775d9002cb4e7b",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_d7e267a6e7bb",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_d7e267a6e7bb",
+          "target": "cf_8b431261fa7dca",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_d7e267a6e7bb",
+          "target": "cf_16800b2d3f5ef6",
+          "edge_type": "containment"
+        },
+        {
+          "source": "group_e8f29c2c9654",
+          "target": "subgroup_7d434dbd4223",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_7d434dbd4223",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "containment"
+        },
+        {
+          "source": "group_cec3cb8f6107",
+          "target": "subgroup_fafcb7f74a52",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_fafcb7f74a52",
+          "target": "cf_469c691048a0ce",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_fafcb7f74a52",
+          "target": "cf_49533263f29569",
+          "edge_type": "containment"
+        },
+        {
+          "source": "group_d58d104fb62e",
+          "target": "subgroup_694b33cb4f65",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_694b33cb4f65",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_694b33cb4f65",
+          "target": "cf_4e7e8ca2916a1e",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_694b33cb4f65",
+          "target": "cf_0a229c157b8d2a",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_694b33cb4f65",
+          "target": "cf_af0c9a7d79fe64",
+          "edge_type": "containment"
+        },
+        {
+          "source": "group_d58d104fb62e",
+          "target": "subgroup_fcd5ba7b319d",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_fcd5ba7b319d",
+          "target": "cf_3c63f8bfbf5fd7",
+          "edge_type": "containment"
+        },
+        {
+          "source": "group_d58d104fb62e",
+          "target": "subgroup_fcaf47e0ff12",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_fcaf47e0ff12",
+          "target": "cf_c4703128fab784",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_fcaf47e0ff12",
+          "target": "cf_72eaea6790449d",
+          "edge_type": "containment"
+        },
+        {
+          "source": "group_d58d104fb62e",
+          "target": "subgroup_d7c958a82e2a",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_d7c958a82e2a",
+          "target": "cf_8e35971b63e360",
+          "edge_type": "containment"
+        },
+        {
+          "source": "group_925a745701b0",
+          "target": "subgroup_f367030a75e3",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_f367030a75e3",
+          "target": "cf_0b6364bb149692",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_f367030a75e3",
+          "target": "cf_e5c01940113606",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_f367030a75e3",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_f367030a75e3",
+          "target": "cf_821e1930333a5c",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_f367030a75e3",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_f367030a75e3",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "containment"
+        },
+        {
+          "source": "group_df7caedb5964",
+          "target": "subgroup_57009a1ea4eb",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_57009a1ea4eb",
+          "target": "cf_505d09ec39545c",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_57009a1ea4eb",
+          "target": "cf_ac2de786b38da7",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_57009a1ea4eb",
+          "target": "cf_8f20b6e7578a41",
+          "edge_type": "containment"
+        },
+        {
+          "source": "group_6d004b78b01a",
+          "target": "subgroup_ebf4530002cc",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_ebf4530002cc",
+          "target": "cf_c75844f7868470",
+          "edge_type": "containment"
+        },
+        {
+          "source": "group_e8f29c2c9654",
+          "target": "subgroup_afe731ef6ef4",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_afe731ef6ef4",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_afe731ef6ef4",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_afe731ef6ef4",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "containment"
+        }
+      ],
+      "cooccurrence_edges": [
+        {
+          "source": "cf_af0c9a7d79fe64",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_e5c01940113606",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_c4703128fab784",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_8e35971b63e360",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_b87e8363f020f7",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_bd9db9ae67063d",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_bbec72e0a270f7",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_c9b3a708f95249",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_ed2fd195fdc918",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_821e1930333a5c",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_fc5be63ab59287",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_af0c9a7d79fe64",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_af0c9a7d79fe64",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_af0c9a7d79fe64",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_af0c9a7d79fe64",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_af0c9a7d79fe64",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_af0c9a7d79fe64",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_8e35971b63e360",
+          "target": "cf_af0c9a7d79fe64",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_af0c9a7d79fe64",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_af0c9a7d79fe64",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_af0c9a7d79fe64",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_af0c9a7d79fe64",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_af0c9a7d79fe64",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_af0c9a7d79fe64",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_af0c9a7d79fe64",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_af0c9a7d79fe64",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_af0c9a7d79fe64",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_af0c9a7d79fe64",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_af0c9a7d79fe64",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_821e1930333a5c",
+          "target": "cf_af0c9a7d79fe64",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_af0c9a7d79fe64",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_5cd62eaa6e16a8",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_5cd62eaa6e16a8",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_5cd62eaa6e16a8",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_8e35971b63e360",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_72eaea6790449d",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_5cd62eaa6e16a8",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_5cd62eaa6e16a8",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_8b431261fa7dca",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_5cd62eaa6e16a8",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_5cd62eaa6e16a8",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_821e1930333a5c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_775d9002cb4e7b",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_c4703128fab784",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_8e35971b63e360",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_b87e8363f020f7",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_bd9db9ae67063d",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_bbec72e0a270f7",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_c9b3a708f95249",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_e5c01940113606",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_821e1930333a5c",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_e5c01940113606",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_49533263f29569",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_4e7e8ca2916a1e",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_8e35971b63e360",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_72eaea6790449d",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_16800b2d3f5ef6",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_3c63f8bfbf5fd7",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_8b431261fa7dca",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_469c691048a0ce",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_0b6364bb149692",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_821e1930333a5c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_775d9002cb4e7b",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_4e7e8ca2916a1e",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_8e35971b63e360",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_72eaea6790449d",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_49533263f29569",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_49533263f29569",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_8b431261fa7dca",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_49533263f29569",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_49533263f29569",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_821e1930333a5c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_775d9002cb4e7b",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_8e35971b63e360",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_72eaea6790449d",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_4e7e8ca2916a1e",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_4e7e8ca2916a1e",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_8b431261fa7dca",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_4e7e8ca2916a1e",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_4e7e8ca2916a1e",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_821e1930333a5c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_775d9002cb4e7b",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_8e35971b63e360",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_b87e8363f020f7",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_bd9db9ae67063d",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_bbec72e0a270f7",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_c4703128fab784",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_c4703128fab784",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_821e1930333a5c",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_c4703128fab784",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_8e35971b63e360",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_8e35971b63e360",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_8e35971b63e360",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_8e35971b63e360",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_8e35971b63e360",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_8e35971b63e360",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_8e35971b63e360",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_8e35971b63e360",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_8e35971b63e360",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_8e35971b63e360",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_8e35971b63e360",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_821e1930333a5c",
+          "target": "cf_8e35971b63e360",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_8e35971b63e360",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_b87e8363f020f7",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_b87e8363f020f7",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_b87e8363f020f7",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_b87e8363f020f7",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_821e1930333a5c",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_bbec72e0a270f7",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_bd9db9ae67063d",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_bd9db9ae67063d",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_821e1930333a5c",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_bbec72e0a270f7",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_bbec72e0a270f7",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_821e1930333a5c",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_bbec72e0a270f7",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_72eaea6790449d",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_72eaea6790449d",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_8b431261fa7dca",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_72eaea6790449d",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_72eaea6790449d",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_821e1930333a5c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_775d9002cb4e7b",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_c9b3a708f95249",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_821e1930333a5c",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_c9b3a708f95249",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_3c63f8bfbf5fd7",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_8b431261fa7dca",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_469c691048a0ce",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_16800b2d3f5ef6",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_821e1930333a5c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_775d9002cb4e7b",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_8b431261fa7dca",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_469c691048a0ce",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_3c63f8bfbf5fd7",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_821e1930333a5c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_775d9002cb4e7b",
+          "edge_type": "cooccurrence",
+          "count": 8
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_8b431261fa7dca",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_8b431261fa7dca",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_821e1930333a5c",
+          "target": "cf_8b431261fa7dca",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_8b431261fa7dca",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_469c691048a0ce",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_821e1930333a5c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_775d9002cb4e7b",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_821e1930333a5c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_775d9002cb4e7b",
+          "edge_type": "cooccurrence",
+          "count": 27
+        },
+        {
+          "source": "cf_821e1930333a5c",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_ed2fd195fdc918",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_821e1930333a5c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_505d09ec39545c",
+          "target": "cf_8b431261fa7dca",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_ac2de786b38da7",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_c75844f7868470",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_8f20b6e7578a41",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_505d09ec39545c",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_ac2de786b38da7",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_c75844f7868470",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_8f20b6e7578a41",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_505d09ec39545c",
+          "target": "cf_ac2de786b38da7",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_505d09ec39545c",
+          "target": "cf_5cd62eaa6e16a8",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_505d09ec39545c",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_505d09ec39545c",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_505d09ec39545c",
+          "target": "cf_c75844f7868470",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_505d09ec39545c",
+          "target": "cf_8f20b6e7578a41",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_505d09ec39545c",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_505d09ec39545c",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_505d09ec39545c",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_505d09ec39545c",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_505d09ec39545c",
+          "target": "cf_775d9002cb4e7b",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_505d09ec39545c",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_ac2de786b38da7",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_ac2de786b38da7",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_ac2de786b38da7",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_ac2de786b38da7",
+          "target": "cf_c75844f7868470",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_8f20b6e7578a41",
+          "target": "cf_ac2de786b38da7",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_ac2de786b38da7",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_ac2de786b38da7",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_ac2de786b38da7",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_ac2de786b38da7",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_ac2de786b38da7",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_ac2de786b38da7",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_c75844f7868470",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_8f20b6e7578a41",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_c75844f7868470",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_8f20b6e7578a41",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_c75844f7868470",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_8f20b6e7578a41",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_8f20b6e7578a41",
+          "target": "cf_c75844f7868470",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_c75844f7868470",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_c75844f7868470",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_b87e8363f020f7",
+          "target": "cf_c75844f7868470",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_c75844f7868470",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_c75844f7868470",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_bd9db9ae67063d",
+          "target": "cf_c75844f7868470",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_8f20b6e7578a41",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_8f20b6e7578a41",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_8f20b6e7578a41",
+          "target": "cf_b87e8363f020f7",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_8f20b6e7578a41",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_8f20b6e7578a41",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_8f20b6e7578a41",
+          "target": "cf_bd9db9ae67063d",
+          "edge_type": "cooccurrence",
+          "count": 19
+        },
+        {
+          "source": "cf_af0c9a7d79fe64",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_af0c9a7d79fe64",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_af0c9a7d79fe64",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_5cd62eaa6e16a8",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0a229c157b8d2a",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_49533263f29569",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_4e7e8ca2916a1e",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_c4703128fab784",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_c4703128fab784",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_c4703128fab784",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_8e35971b63e360",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_8e35971b63e360",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_8e35971b63e360",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_b87e8363f020f7",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_b87e8363f020f7",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_b87e8363f020f7",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_bd9db9ae67063d",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_bd9db9ae67063d",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_bd9db9ae67063d",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_e7f0fa8ccde04c",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_ccf42da6435cdd",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_e7f0fa8ccde04c",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_ccf42da6435cdd",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_ec7d5ae391fa0a",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_72eaea6790449d",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_16800b2d3f5ef6",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_3c63f8bfbf5fd7",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_8b431261fa7dca",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_469c691048a0ce",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_0b6364bb149692",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        },
+        {
+          "source": "cf_775d9002cb4e7b",
+          "target": "cf_ccf42da6435cdd",
+          "edge_type": "cooccurrence",
+          "count": 4
+        }
+      ],
+      "fields": [
+        {
+          "field_id": "cf_5cd62eaa6e16a8",
+          "label": "issue date",
+          "canonical_path": "HCPA / components / General data / issue date",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / General data",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0009",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_DATE"
+          ],
+          "primary_dv_type": "DV_DATE",
+          "dv_type": "DV_DATE",
+          "kind": "temporal",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 12,
+          "distinct_ratio": 0.4444444444444444,
+          "top_values": [
+            "2011-07-01TZ",
+            "2011-08-01TZ",
+            "2011-06-01TZ",
+            "2009-03-01TZ",
+            "2011-03-01TZ",
+            "2012-10-01TZ",
+            "2011-09-01TZ",
+            "2009-02-01TZ",
+            "2011-05-01TZ",
+            "2012-01-01TZ"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_d7e267a6e7bb"
+        },
+        {
+          "field_id": "cf_775d9002cb4e7b",
+          "label": "reason for encounter",
+          "canonical_path": "HCPA / components / General data / reason for encounter",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / General data",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0010",
+          "known_count": 23,
+          "unknown_count": 4,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": true,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 3,
+          "distinct_ratio": 0.1111111111111111,
+          "top_values": [
+            "CIRURGIA BARIATRICA",
+            "RADIOTERAPIA",
+            "unknown"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_d7e267a6e7bb"
+        },
+        {
+          "field_id": "cf_b87e8363f020f7",
+          "label": "healthcare unit",
+          "canonical_path": "HCPA / components / General data / healthcare unit",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / General data",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0011",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 5,
+          "distinct_ratio": 0.18518518518518517,
+          "top_values": [
+            "4dc5277c8fb69ad4819396aa806dcb132176af8d3d848025d02e257f05a5730b1af711b79d485d75",
+            "4dc5277c8fb69ad4bc3b531976a43978ac584b627823d3868e8f60c10d3cf78ad1bfd0c77255f7d6",
+            "4dc5277c8fb69ad47ce0692d8ec7b8acd85c1326321b7592dbc4b768f84e3d26",
+            "4dc5277c8fb69ad4a7948e1cd5fcdefd902391351ef619eeee87c32c02ea8b77",
+            "4dc5277c8fb69ad4ed4e7fb4e8aca0135f8839e97780daf8d14b28a7898b67fa"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_d7e267a6e7bb"
+        },
+        {
+          "field_id": "cf_8b431261fa7dca",
+          "label": "State",
+          "canonical_path": "HCPA / components / General data / State",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / General data",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0028",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 4,
+          "distinct_ratio": 0.14814814814814814,
+          "top_values": [
+            "SANTA CATARINA",
+            "ESPIRITO SANTO",
+            "RIO GRANDE DO SUL",
+            "PARANÁ"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_d7e267a6e7bb"
+        },
+        {
+          "field_id": "cf_16800b2d3f5ef6",
+          "label": "patient age",
+          "canonical_path": "HCPA / components / General data / patient age",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / General data",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0012",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_COUNT"
+          ],
+          "primary_dv_type": "DV_COUNT",
+          "dv_type": "DV_COUNT",
+          "kind": "numeric",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 18,
+          "distinct_ratio": 0.6666666666666666,
+          "top_values": [
+            "33",
+            "48",
+            "51",
+            "32",
+            "25",
+            "71",
+            "42",
+            "53",
+            "59",
+            "45"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_d7e267a6e7bb"
+        },
+        {
+          "field_id": "cf_ed2fd195fdc918",
+          "label": "date of beginning of radiotherapy",
+          "canonical_path": "HCPA / components / radiotherapy / date of beginning of radiotherapy",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / radiotherapy",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0032",
+          "known_count": 4,
+          "unknown_count": 0,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_DATE"
+          ],
+          "primary_dv_type": "DV_DATE",
+          "dv_type": "DV_DATE",
+          "kind": "temporal",
+          "supports_null_flavour": false,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 4,
+          "distinct_ratio": 1.0,
+          "top_values": [
+            "2012-10-01TZ",
+            "2009-02-01TZ",
+            "2009-01-01TZ",
+            "2009-03-01TZ"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_7d434dbd4223"
+        },
+        {
+          "field_id": "cf_469c691048a0ce",
+          "label": "date of discharge",
+          "canonical_path": "Patient discharge / Components / date of discharge",
+          "form_group": "Patient discharge",
+          "nested_subgroup": "Components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.patient_discharge.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0002",
+          "known_count": 22,
+          "unknown_count": 5,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_DATE_TIME",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_DATE_TIME",
+          "dv_type": "DV_DATE_TIME",
+          "kind": "temporal",
+          "supports_null_flavour": true,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 9,
+          "distinct_ratio": 0.3333333333333333,
+          "top_values": [
+            "2011-07-01T00:00:00-03:00",
+            "unknown",
+            "2011-08-01T00:00:00-03:00",
+            "2011-06-01T00:00:00-03:00",
+            "2009-03-01T00:00:00-03:00",
+            "2011-03-01T00:00:00-03:00",
+            "2011-09-01T00:00:00-03:00",
+            "2009-02-01T00:00:00-03:00",
+            "2011-05-01T00:00:00-03:00"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_fafcb7f74a52"
+        },
+        {
+          "field_id": "cf_49533263f29569",
+          "label": "reason for discharge",
+          "canonical_path": "Patient discharge / Components / reason for discharge",
+          "form_group": "Patient discharge",
+          "nested_subgroup": "Components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.patient_discharge.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0003",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 3,
+          "distinct_ratio": 0.1111111111111111,
+          "top_values": [
+            "Alta - melhorado",
+            "Permanência - por características próprias doença",
+            "Alta - por evasão"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_fafcb7f74a52"
+        },
+        {
+          "field_id": "cf_bd9db9ae67063d",
+          "label": "Problem",
+          "canonical_path": "Problem/Diagnosis / structure / Problem",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0002.1",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 6,
+          "distinct_ratio": 0.2222222222222222,
+          "top_values": [
+            "CID NAO INFORMADO",
+            "C50.4 Quadrante super externo da mama",
+            "C32.9 Laringe NE",
+            "C50.9 Mama NE",
+            "C53.9 Colo do utero NE",
+            "C53.1 Exocervix"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_694b33cb4f65"
+        },
+        {
+          "field_id": "cf_4e7e8ca2916a1e",
+          "label": "Secondary Diagnosis",
+          "canonical_path": "Problem/Diagnosis / structure / Secondary Diagnosis",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0.1",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 2,
+          "distinct_ratio": 0.07407407407407407,
+          "top_values": [
+            "CID NAO INFORMADO",
+            "CID NÇO IDENTIFICADO"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_694b33cb4f65"
+        },
+        {
+          "field_id": "cf_0a229c157b8d2a",
+          "label": "Associated causes",
+          "canonical_path": "Problem/Diagnosis / structure / Associated causes",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0.2",
+          "known_count": 27,
+          "unknown_count": 0,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 2,
+          "distinct_ratio": 0.07407407407407407,
+          "top_values": [
+            "CID NAO INFORMADO",
+            "CID NÇO IDENTIFICADO"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_694b33cb4f65"
+        },
+        {
+          "field_id": "cf_af0c9a7d79fe64",
+          "label": "Invaded regional linphonodes",
+          "canonical_path": "Problem/Diagnosis / structure / Invaded regional linphonodes",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0.4",
+          "known_count": 8,
+          "unknown_count": 0,
+          "record_count": 8,
+          "occurrence_count": 8,
+          "observed_dv_types": [
+            "DV_BOOLEAN"
+          ],
+          "primary_dv_type": "DV_BOOLEAN",
+          "dv_type": "DV_BOOLEAN",
+          "kind": "boolean",
+          "supports_null_flavour": false,
+          "coverage": 0.2962962962962963,
+          "sparsity": 0.7037037037037037,
+          "distinct_count": 1,
+          "distinct_ratio": 0.125,
+          "top_values": [
+            "false"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_694b33cb4f65"
+        },
+        {
+          "field_id": "cf_3c63f8bfbf5fd7",
+          "label": "Clinical staging",
+          "canonical_path": "Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Clinical (cTNM) / Clinical staging",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure / Tumour - TNM Cancer staging / Clinical (cTNM)",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0010",
+          "known_count": 8,
+          "unknown_count": 0,
+          "record_count": 8,
+          "occurrence_count": 8,
+          "observed_dv_types": [
+            "DV_TEXT"
+          ],
+          "primary_dv_type": "DV_TEXT",
+          "dv_type": "DV_TEXT",
+          "kind": "text",
+          "supports_null_flavour": false,
+          "coverage": 0.2962962962962963,
+          "sparsity": 0.7037037037037037,
+          "distinct_count": 4,
+          "distinct_ratio": 0.5,
+          "top_values": [
+            "2",
+            "3",
+            "1",
+            "0"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_fcd5ba7b319d"
+        },
+        {
+          "field_id": "cf_c4703128fab784",
+          "label": "Histopathological grading (G)",
+          "canonical_path": "Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / Histopathological grading (G)",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure / Tumour - TNM Cancer staging / Pathological (pTNM)",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0035",
+          "known_count": 5,
+          "unknown_count": 3,
+          "record_count": 8,
+          "occurrence_count": 8,
+          "observed_dv_types": [
+            "DV_CODED_TEXT",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": true,
+          "coverage": 0.2962962962962963,
+          "sparsity": 0.7037037037037037,
+          "distinct_count": 3,
+          "distinct_ratio": 0.375,
+          "top_values": [
+            "O grau de diferenciação não pode ser avaliado",
+            "unknown",
+            "Moderadamente diferenciado"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_fcaf47e0ff12"
+        },
+        {
+          "field_id": "cf_72eaea6790449d",
+          "label": "date of pathological identification",
+          "canonical_path": "Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / date of pathological identification",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure / Tumour - TNM Cancer staging / Pathological (pTNM)",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0.44",
+          "known_count": 8,
+          "unknown_count": 0,
+          "record_count": 8,
+          "occurrence_count": 8,
+          "observed_dv_types": [
+            "DV_DATE"
+          ],
+          "primary_dv_type": "DV_DATE",
+          "dv_type": "DV_DATE",
+          "kind": "temporal",
+          "supports_null_flavour": false,
+          "coverage": 0.2962962962962963,
+          "sparsity": 0.7037037037037037,
+          "distinct_count": 5,
+          "distinct_ratio": 0.625,
+          "top_values": [
+            "2007-12-01TZ",
+            "2012-08-01TZ",
+            "2008-06-01TZ",
+            "2008-11-01TZ",
+            "2007-08-01TZ"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_fcaf47e0ff12"
+        },
+        {
+          "field_id": "cf_8e35971b63e360",
+          "label": "topography",
+          "canonical_path": "Problem/Diagnosis / structure / Tumour - TNM Cancer staging / topography",
+          "form_group": "Problem/Diagnosis",
+          "nested_subgroup": "structure / Tumour - TNM Cancer staging",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.problem_diagnosis-sus.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0.43",
+          "known_count": 8,
+          "unknown_count": 0,
+          "record_count": 8,
+          "occurrence_count": 8,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 0.2962962962962963,
+          "sparsity": 0.7037037037037037,
+          "distinct_count": 5,
+          "distinct_ratio": 0.625,
+          "top_values": [
+            "C50.4 Quadrante super externo da mama",
+            "C32.9 Laringe NE",
+            "C50.9 Mama NE",
+            "C53.9 Colo do utero NE",
+            "C53.1 Exocervix"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_d7c958a82e2a"
+        },
+        {
+          "field_id": "cf_0b6364bb149692",
+          "label": "Procedure",
+          "canonical_path": "Procedure undertaken / Procedure list / Procedure",
+          "form_group": "Procedure undertaken",
+          "nested_subgroup": "Procedure list",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "entry_type": "ACTION",
+          "element_archetype": "at0002",
+          "known_count": 23,
+          "unknown_count": 4,
+          "record_count": 27,
+          "occurrence_count": 27,
+          "observed_dv_types": [
+            "DV_CODED_TEXT",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": true,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 6,
+          "distinct_ratio": 0.2222222222222222,
+          "top_values": [
+            "ACOMPANHAMENTO DE PACIENTE POS-CIRÚRGIA BARIATRICA POR EQUIPE MULTIPROFISSIONAL",
+            "unknown",
+            "RADIOTERAPIA COM ACELERADOR LINEAR SÓ DE FÓTONS (POR CAMPO)",
+            "COBALTOTERAPIA (POR CAMPO)",
+            "RADIOTERAPIA COM ACELERADOR LINEAR DE FÓTONS E ELÉTRONS (POR CAMPO)",
+            "BRAQUITERAPIA DE ALTA TAXA DE DOSE (POR INSERÇÃO)"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_f367030a75e3"
+        },
+        {
+          "field_id": "cf_e5c01940113606",
+          "label": "irradiated area 1",
+          "canonical_path": "Procedure undertaken / Procedure list / irradiated area 1",
+          "form_group": "Procedure undertaken",
+          "nested_subgroup": "Procedure list",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "entry_type": "ACTION",
+          "element_archetype": "at0.59",
+          "known_count": 4,
+          "unknown_count": 0,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 4,
+          "distinct_ratio": 1.0,
+          "top_values": [
+            "C32.9 Laringe NE",
+            "C50.9 Mama NE",
+            "C53.9 Colo do utero NE",
+            "C53.1 Exocervix"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_f367030a75e3"
+        },
+        {
+          "field_id": "cf_fc5be63ab59287",
+          "label": "irradiated area 2",
+          "canonical_path": "Procedure undertaken / Procedure list / irradiated area 2",
+          "form_group": "Procedure undertaken",
+          "nested_subgroup": "Procedure list",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "entry_type": "ACTION",
+          "element_archetype": "at0.59",
+          "known_count": 1,
+          "unknown_count": 3,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_CODED_TEXT",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": true,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 2,
+          "distinct_ratio": 0.5,
+          "top_values": [
+            "unknown",
+            "C77.0 Ganglios linfaticos da cabeca face e pescoco"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_f367030a75e3"
+        },
+        {
+          "field_id": "cf_821e1930333a5c",
+          "label": "irradiated area 3",
+          "canonical_path": "Procedure undertaken / Procedure list / irradiated area 3",
+          "form_group": "Procedure undertaken",
+          "nested_subgroup": "Procedure list",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "entry_type": "ACTION",
+          "element_archetype": "at0.59",
+          "known_count": 0,
+          "unknown_count": 4,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "NULL_FLAVOUR",
+          "dv_type": "NULL_FLAVOUR",
+          "kind": "null",
+          "supports_null_flavour": true,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 1,
+          "distinct_ratio": 0.25,
+          "top_values": [
+            "unknown"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_f367030a75e3"
+        },
+        {
+          "field_id": "cf_c9b3a708f95249",
+          "label": "fields/insertions 1",
+          "canonical_path": "Procedure undertaken / Procedure list / fields/insertions 1",
+          "form_group": "Procedure undertaken",
+          "nested_subgroup": "Procedure list",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "entry_type": "ACTION",
+          "element_archetype": "at0.61",
+          "known_count": 4,
+          "unknown_count": 0,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_COUNT"
+          ],
+          "primary_dv_type": "DV_COUNT",
+          "dv_type": "DV_COUNT",
+          "kind": "numeric",
+          "supports_null_flavour": false,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 4,
+          "distinct_ratio": 1.0,
+          "top_values": [
+            "105",
+            "100",
+            "120",
+            "4"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_f367030a75e3"
+        },
+        {
+          "field_id": "cf_bbec72e0a270f7",
+          "label": "fields/insertions 2",
+          "canonical_path": "Procedure undertaken / Procedure list / fields/insertions 2",
+          "form_group": "Procedure undertaken",
+          "nested_subgroup": "Procedure list",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ACTION.procedure-sus.v1",
+          "entry_type": "ACTION",
+          "element_archetype": "at0.61",
+          "known_count": 2,
+          "unknown_count": 2,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_COUNT",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_COUNT",
+          "dv_type": "DV_COUNT",
+          "kind": "numeric",
+          "supports_null_flavour": true,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 2,
+          "distinct_ratio": 0.5,
+          "top_values": [
+            "unknown",
+            "0"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_f367030a75e3"
+        },
+        {
+          "field_id": "cf_505d09ec39545c",
+          "label": "duration of follow-up (months)",
+          "canonical_path": "Bariatric surgery evaluation / Components / duration of follow-up (months)",
+          "form_group": "Bariatric surgery evaluation",
+          "nested_subgroup": "Components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.bariatric_surgery_evaluation.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0002",
+          "known_count": 7,
+          "unknown_count": 12,
+          "record_count": 19,
+          "occurrence_count": 19,
+          "observed_dv_types": [
+            "DV_COUNT",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_COUNT",
+          "dv_type": "DV_COUNT",
+          "kind": "numeric",
+          "supports_null_flavour": true,
+          "coverage": 0.7037037037037037,
+          "sparsity": 0.2962962962962963,
+          "distinct_count": 7,
+          "distinct_ratio": 0.3684210526315789,
+          "top_values": [
+            "unknown",
+            "3",
+            "2",
+            "9",
+            "17",
+            "15",
+            "1"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_57009a1ea4eb"
+        },
+        {
+          "field_id": "cf_ac2de786b38da7",
+          "label": "Baros score",
+          "canonical_path": "Bariatric surgery evaluation / Components / Baros score",
+          "form_group": "Bariatric surgery evaluation",
+          "nested_subgroup": "Components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.bariatric_surgery_evaluation.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0003",
+          "known_count": 19,
+          "unknown_count": 0,
+          "record_count": 19,
+          "occurrence_count": 19,
+          "observed_dv_types": [
+            "DV_TEXT"
+          ],
+          "primary_dv_type": "DV_TEXT",
+          "dv_type": "DV_TEXT",
+          "kind": "text",
+          "supports_null_flavour": false,
+          "coverage": 0.7037037037037037,
+          "sparsity": 0.2962962962962963,
+          "distinct_count": 2,
+          "distinct_ratio": 0.10526315789473684,
+          "top_values": [
+            "Com Comorbidade",
+            "Sem Comorbidade"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_57009a1ea4eb"
+        },
+        {
+          "field_id": "cf_8f20b6e7578a41",
+          "label": "Baros table",
+          "canonical_path": "Bariatric surgery evaluation / Components / Baros table",
+          "form_group": "Bariatric surgery evaluation",
+          "nested_subgroup": "Components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-EVALUATION.bariatric_surgery_evaluation.v1",
+          "entry_type": "EVALUATION",
+          "element_archetype": "at0004",
+          "known_count": 19,
+          "unknown_count": 0,
+          "record_count": 19,
+          "occurrence_count": 19,
+          "observed_dv_types": [
+            "DV_TEXT"
+          ],
+          "primary_dv_type": "DV_TEXT",
+          "dv_type": "DV_TEXT",
+          "kind": "text",
+          "supports_null_flavour": false,
+          "coverage": 0.7037037037037037,
+          "sparsity": 0.2962962962962963,
+          "distinct_count": 3,
+          "distinct_ratio": 0.15789473684210525,
+          "top_values": [
+            "Bom",
+            "Muito Bom",
+            "Aceitavel"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_57009a1ea4eb"
+        },
+        {
+          "field_id": "cf_c75844f7868470",
+          "label": "Body Mass Index",
+          "canonical_path": "Body mass index / Single / Body Mass Index",
+          "form_group": "Body mass index",
+          "nested_subgroup": "Single",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-OBSERVATION.body_mass_index.v1",
+          "entry_type": "OBSERVATION",
+          "element_archetype": "at0004",
+          "known_count": 17,
+          "unknown_count": 2,
+          "record_count": 19,
+          "occurrence_count": 19,
+          "observed_dv_types": [
+            "DV_QUANTITY",
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "DV_QUANTITY",
+          "dv_type": "DV_QUANTITY",
+          "kind": "numeric",
+          "supports_null_flavour": true,
+          "coverage": 0.7037037037037037,
+          "sparsity": 0.2962962962962963,
+          "distinct_count": 12,
+          "distinct_ratio": 0.631578947368421,
+          "top_values": [
+            "30.0 kg/m^2",
+            "36.0 kg/m^2",
+            "28.0 kg/m^2",
+            "unknown",
+            "38.0 kg/m^2",
+            "323.0 kg/m^2",
+            "370.0 kg/m^2",
+            "320.0 kg/m^2",
+            "364.0 kg/m^2",
+            "33.0 kg/m^2"
+          ],
+          "has_null_flavour": true,
+          "units": "kg/m^2",
+          "parent": "subgroup_ebf4530002cc"
+        },
+        {
+          "field_id": "cf_ccf42da6435cdd",
+          "label": "duration of treatment",
+          "canonical_path": "HCPA / components / chemotherapy / duration of treatment",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / chemotherapy",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0013",
+          "known_count": 4,
+          "unknown_count": 0,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_QUANTITY"
+          ],
+          "primary_dv_type": "DV_QUANTITY",
+          "dv_type": "DV_QUANTITY",
+          "kind": "numeric",
+          "supports_null_flavour": false,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 1,
+          "distinct_ratio": 0.25,
+          "top_values": [
+            "60.0 mo"
+          ],
+          "has_null_flavour": false,
+          "units": "mo",
+          "parent": "subgroup_afe731ef6ef4"
+        },
+        {
+          "field_id": "cf_e7f0fa8ccde04c",
+          "label": "schema",
+          "canonical_path": "HCPA / components / chemotherapy / schema",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / chemotherapy",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0014",
+          "known_count": 4,
+          "unknown_count": 0,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_TEXT"
+          ],
+          "primary_dv_type": "DV_TEXT",
+          "dv_type": "DV_TEXT",
+          "kind": "text",
+          "supports_null_flavour": false,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 1,
+          "distinct_ratio": 0.25,
+          "top_values": [
+            "TAMOXIFENO"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_afe731ef6ef4"
+        },
+        {
+          "field_id": "cf_ec7d5ae391fa0a",
+          "label": "date of beginning of chemotherapy",
+          "canonical_path": "HCPA / components / chemotherapy / date of beginning of chemotherapy",
+          "form_group": "HCPA",
+          "nested_subgroup": "components / chemotherapy",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.high_complexity_procedures_sus.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0031",
+          "known_count": 4,
+          "unknown_count": 0,
+          "record_count": 4,
+          "occurrence_count": 4,
+          "observed_dv_types": [
+            "DV_DATE"
+          ],
+          "primary_dv_type": "DV_DATE",
+          "dv_type": "DV_DATE",
+          "kind": "temporal",
+          "supports_null_flavour": false,
+          "coverage": 0.14814814814814814,
+          "sparsity": 0.8518518518518519,
+          "distinct_count": 1,
+          "distinct_ratio": 0.25,
+          "top_values": [
+            "2009-04-01TZ"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_afe731ef6ef4"
+        }
+      ]
+    },
+    "openEHR-EHR-COMPOSITION.demographic_data.v1": {
+      "tree_id": "tree_5eb48ae1d56d",
+      "record_family": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+      "record_count": 11,
+      "nodes": [
+        {
+          "node_id": "group_d752938f1647",
+          "node_type": "FORM_GROUP",
+          "label": "Demographic data"
+        },
+        {
+          "node_id": "subgroup_c9c50924cba0",
+          "node_type": "NESTED_SUBGROUP",
+          "label": "components",
+          "parent": "group_d752938f1647"
+        },
+        {
+          "node_id": "cf_7f3b6795a0e812",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_7f3b6795a0e812",
+          "label": "birth date",
+          "canonical_path": "Demographic data / components / birth date",
+          "form_group": "Demographic data",
+          "nested_subgroup": "components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.demographic_data.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0002",
+          "known_count": 11,
+          "unknown_count": 0,
+          "record_count": 11,
+          "occurrence_count": 11,
+          "observed_dv_types": [
+            "DV_DATE"
+          ],
+          "primary_dv_type": "DV_DATE",
+          "dv_type": "DV_DATE",
+          "kind": "temporal",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 11,
+          "distinct_ratio": 1.0,
+          "top_values": [
+            "1951-01-01TZ",
+            "1929-01-01TZ",
+            "1935-01-01TZ",
+            "1983-01-01TZ",
+            "1998-01-01TZ",
+            "1967-01-01TZ",
+            "1952-01-01TZ",
+            "1969-01-01TZ",
+            "1960-01-01TZ",
+            "1997-01-01TZ"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_c9c50924cba0"
+        },
+        {
+          "node_id": "cf_e7551706658b4a",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_e7551706658b4a",
+          "label": "gender",
+          "canonical_path": "Demographic data / components / gender",
+          "form_group": "Demographic data",
+          "nested_subgroup": "components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.demographic_data.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0003",
+          "known_count": 11,
+          "unknown_count": 0,
+          "record_count": 11,
+          "occurrence_count": 11,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 2,
+          "distinct_ratio": 0.18181818181818182,
+          "top_values": [
+            "Masculino",
+            "Feminino"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_c9c50924cba0"
+        },
+        {
+          "node_id": "cf_19e1b0f55ef007",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_19e1b0f55ef007",
+          "label": "race",
+          "canonical_path": "Demographic data / components / race",
+          "form_group": "Demographic data",
+          "nested_subgroup": "components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.demographic_data.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0004",
+          "known_count": 0,
+          "unknown_count": 11,
+          "record_count": 11,
+          "occurrence_count": 11,
+          "observed_dv_types": [
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "NULL_FLAVOUR",
+          "dv_type": "NULL_FLAVOUR",
+          "kind": "null",
+          "supports_null_flavour": true,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 1,
+          "distinct_ratio": 0.09090909090909091,
+          "top_values": [
+            "unknown"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_c9c50924cba0"
+        },
+        {
+          "node_id": "cf_4122372d727029",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_4122372d727029",
+          "label": "ethnic group",
+          "canonical_path": "Demographic data / components / ethnic group",
+          "form_group": "Demographic data",
+          "nested_subgroup": "components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.demographic_data.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0005",
+          "known_count": 0,
+          "unknown_count": 11,
+          "record_count": 11,
+          "occurrence_count": 11,
+          "observed_dv_types": [
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "NULL_FLAVOUR",
+          "dv_type": "NULL_FLAVOUR",
+          "kind": "null",
+          "supports_null_flavour": true,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 1,
+          "distinct_ratio": 0.09090909090909091,
+          "top_values": [
+            "unknown"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_c9c50924cba0"
+        },
+        {
+          "node_id": "cf_7ab0248b87b82e",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_7ab0248b87b82e",
+          "label": "educational level",
+          "canonical_path": "Demographic data / components / educational level",
+          "form_group": "Demographic data",
+          "nested_subgroup": "components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.demographic_data.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0007",
+          "known_count": 11,
+          "unknown_count": 0,
+          "record_count": 11,
+          "occurrence_count": 11,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 1,
+          "distinct_ratio": 0.09090909090909091,
+          "top_values": [
+            "Ignorado/não se aplica"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_c9c50924cba0"
+        },
+        {
+          "node_id": "cf_eee397355aecbe",
+          "node_type": "FORM_ELEMENT",
+          "field_id": "cf_eee397355aecbe",
+          "label": "nationality",
+          "canonical_path": "Demographic data / components / nationality",
+          "form_group": "Demographic data",
+          "nested_subgroup": "components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.demographic_data.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0008",
+          "known_count": 11,
+          "unknown_count": 0,
+          "record_count": 11,
+          "occurrence_count": 11,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 1,
+          "distinct_ratio": 0.09090909090909091,
+          "top_values": [
+            "BRASIL"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_c9c50924cba0"
+        }
+      ],
+      "edges": [
+        {
+          "source": "group_d752938f1647",
+          "target": "subgroup_c9c50924cba0",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_c9c50924cba0",
+          "target": "cf_7f3b6795a0e812",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_c9c50924cba0",
+          "target": "cf_e7551706658b4a",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_c9c50924cba0",
+          "target": "cf_19e1b0f55ef007",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_c9c50924cba0",
+          "target": "cf_4122372d727029",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_c9c50924cba0",
+          "target": "cf_7ab0248b87b82e",
+          "edge_type": "containment"
+        },
+        {
+          "source": "subgroup_c9c50924cba0",
+          "target": "cf_eee397355aecbe",
+          "edge_type": "containment"
+        }
+      ],
+      "cooccurrence_edges": [
+        {
+          "source": "cf_7f3b6795a0e812",
+          "target": "cf_e7551706658b4a",
+          "edge_type": "cooccurrence",
+          "count": 11
+        },
+        {
+          "source": "cf_4122372d727029",
+          "target": "cf_7f3b6795a0e812",
+          "edge_type": "cooccurrence",
+          "count": 11
+        },
+        {
+          "source": "cf_7f3b6795a0e812",
+          "target": "cf_eee397355aecbe",
+          "edge_type": "cooccurrence",
+          "count": 11
+        },
+        {
+          "source": "cf_7ab0248b87b82e",
+          "target": "cf_7f3b6795a0e812",
+          "edge_type": "cooccurrence",
+          "count": 11
+        },
+        {
+          "source": "cf_19e1b0f55ef007",
+          "target": "cf_7f3b6795a0e812",
+          "edge_type": "cooccurrence",
+          "count": 11
+        },
+        {
+          "source": "cf_4122372d727029",
+          "target": "cf_e7551706658b4a",
+          "edge_type": "cooccurrence",
+          "count": 11
+        },
+        {
+          "source": "cf_e7551706658b4a",
+          "target": "cf_eee397355aecbe",
+          "edge_type": "cooccurrence",
+          "count": 11
+        },
+        {
+          "source": "cf_7ab0248b87b82e",
+          "target": "cf_e7551706658b4a",
+          "edge_type": "cooccurrence",
+          "count": 11
+        },
+        {
+          "source": "cf_19e1b0f55ef007",
+          "target": "cf_e7551706658b4a",
+          "edge_type": "cooccurrence",
+          "count": 11
+        },
+        {
+          "source": "cf_4122372d727029",
+          "target": "cf_eee397355aecbe",
+          "edge_type": "cooccurrence",
+          "count": 11
+        },
+        {
+          "source": "cf_4122372d727029",
+          "target": "cf_7ab0248b87b82e",
+          "edge_type": "cooccurrence",
+          "count": 11
+        },
+        {
+          "source": "cf_19e1b0f55ef007",
+          "target": "cf_4122372d727029",
+          "edge_type": "cooccurrence",
+          "count": 11
+        },
+        {
+          "source": "cf_7ab0248b87b82e",
+          "target": "cf_eee397355aecbe",
+          "edge_type": "cooccurrence",
+          "count": 11
+        },
+        {
+          "source": "cf_19e1b0f55ef007",
+          "target": "cf_eee397355aecbe",
+          "edge_type": "cooccurrence",
+          "count": 11
+        },
+        {
+          "source": "cf_19e1b0f55ef007",
+          "target": "cf_7ab0248b87b82e",
+          "edge_type": "cooccurrence",
+          "count": 11
+        }
+      ],
+      "fields": [
+        {
+          "field_id": "cf_7f3b6795a0e812",
+          "label": "birth date",
+          "canonical_path": "Demographic data / components / birth date",
+          "form_group": "Demographic data",
+          "nested_subgroup": "components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.demographic_data.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0002",
+          "known_count": 11,
+          "unknown_count": 0,
+          "record_count": 11,
+          "occurrence_count": 11,
+          "observed_dv_types": [
+            "DV_DATE"
+          ],
+          "primary_dv_type": "DV_DATE",
+          "dv_type": "DV_DATE",
+          "kind": "temporal",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 11,
+          "distinct_ratio": 1.0,
+          "top_values": [
+            "1951-01-01TZ",
+            "1929-01-01TZ",
+            "1935-01-01TZ",
+            "1983-01-01TZ",
+            "1998-01-01TZ",
+            "1967-01-01TZ",
+            "1952-01-01TZ",
+            "1969-01-01TZ",
+            "1960-01-01TZ",
+            "1997-01-01TZ"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_c9c50924cba0"
+        },
+        {
+          "field_id": "cf_e7551706658b4a",
+          "label": "gender",
+          "canonical_path": "Demographic data / components / gender",
+          "form_group": "Demographic data",
+          "nested_subgroup": "components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.demographic_data.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0003",
+          "known_count": 11,
+          "unknown_count": 0,
+          "record_count": 11,
+          "occurrence_count": 11,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 2,
+          "distinct_ratio": 0.18181818181818182,
+          "top_values": [
+            "Masculino",
+            "Feminino"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_c9c50924cba0"
+        },
+        {
+          "field_id": "cf_19e1b0f55ef007",
+          "label": "race",
+          "canonical_path": "Demographic data / components / race",
+          "form_group": "Demographic data",
+          "nested_subgroup": "components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.demographic_data.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0004",
+          "known_count": 0,
+          "unknown_count": 11,
+          "record_count": 11,
+          "occurrence_count": 11,
+          "observed_dv_types": [
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "NULL_FLAVOUR",
+          "dv_type": "NULL_FLAVOUR",
+          "kind": "null",
+          "supports_null_flavour": true,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 1,
+          "distinct_ratio": 0.09090909090909091,
+          "top_values": [
+            "unknown"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_c9c50924cba0"
+        },
+        {
+          "field_id": "cf_4122372d727029",
+          "label": "ethnic group",
+          "canonical_path": "Demographic data / components / ethnic group",
+          "form_group": "Demographic data",
+          "nested_subgroup": "components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.demographic_data.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0005",
+          "known_count": 0,
+          "unknown_count": 11,
+          "record_count": 11,
+          "occurrence_count": 11,
+          "observed_dv_types": [
+            "NULL_FLAVOUR"
+          ],
+          "primary_dv_type": "NULL_FLAVOUR",
+          "dv_type": "NULL_FLAVOUR",
+          "kind": "null",
+          "supports_null_flavour": true,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 1,
+          "distinct_ratio": 0.09090909090909091,
+          "top_values": [
+            "unknown"
+          ],
+          "has_null_flavour": true,
+          "units": null,
+          "parent": "subgroup_c9c50924cba0"
+        },
+        {
+          "field_id": "cf_7ab0248b87b82e",
+          "label": "educational level",
+          "canonical_path": "Demographic data / components / educational level",
+          "form_group": "Demographic data",
+          "nested_subgroup": "components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.demographic_data.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0007",
+          "known_count": 11,
+          "unknown_count": 0,
+          "record_count": 11,
+          "occurrence_count": 11,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 1,
+          "distinct_ratio": 0.09090909090909091,
+          "top_values": [
+            "Ignorado/não se aplica"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_c9c50924cba0"
+        },
+        {
+          "field_id": "cf_eee397355aecbe",
+          "label": "nationality",
+          "canonical_path": "Demographic data / components / nationality",
+          "form_group": "Demographic data",
+          "nested_subgroup": "components",
+          "composition_archetype": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+          "entry_archetype": "openEHR-EHR-ADMIN_ENTRY.demographic_data.v1",
+          "entry_type": "ADMIN_ENTRY",
+          "element_archetype": "at0008",
+          "known_count": 11,
+          "unknown_count": 0,
+          "record_count": 11,
+          "occurrence_count": 11,
+          "observed_dv_types": [
+            "DV_CODED_TEXT"
+          ],
+          "primary_dv_type": "DV_CODED_TEXT",
+          "dv_type": "DV_CODED_TEXT",
+          "kind": "coded",
+          "supports_null_flavour": false,
+          "coverage": 1.0,
+          "sparsity": 0.0,
+          "distinct_count": 1,
+          "distinct_ratio": 0.09090909090909091,
+          "top_values": [
+            "BRASIL"
+          ],
+          "has_null_flavour": false,
+          "units": null,
+          "parent": "subgroup_c9c50924cba0"
+        }
+      ]
+    }
+  },
+  "tree_count": 2,
+  "record_count": 38
+}

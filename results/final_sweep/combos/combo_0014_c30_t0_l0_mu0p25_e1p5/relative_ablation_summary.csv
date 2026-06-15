@@ -1,0 +1,29 @@
+comparison,primary_claim,metric,aqf_value,baseline_value,absolute_delta,relative_delta_percent
+aqf_full_vs_no_pruning,compactness relative to full canonical schema,strict_coverage,0.6666666666666666,0.9523809523809523,-0.2857142857142857,-30.0
+aqf_full_vs_no_pruning,compactness relative to full canonical schema,partial_coverage,0.7385487528344671,0.9523809523809523,-0.21383219954648525,-22.452380952380953
+aqf_full_vs_no_pruning,compactness relative to full canonical schema,field_count,22.0,35.0,-13.0,-37.142857142857146
+aqf_full_vs_no_pruning,compactness relative to full canonical schema,operator_count,120.0,187.0,-67.0,-35.82887700534759
+aqf_full_vs_no_pruning,compactness relative to full canonical schema,final_complexity,29.5,44.0,-14.5,-32.95454545454545
+aqf_full_vs_no_pruning,compactness relative to full canonical schema,weighted_operator_burden,110.5,172.5,-62.0,-35.94202898550725
+aqf_full_vs_no_pruning,compactness relative to full canonical schema,invalid_or_unwanted_operator_count,0.0,0.0,0.0,
+aqf_full_vs_no_operator_awareness,operator awareness reduces unnecessary controls,strict_coverage,0.6666666666666666,0.6666666666666666,0.0,0.0
+aqf_full_vs_no_operator_awareness,operator awareness reduces unnecessary controls,partial_coverage,0.7385487528344671,0.7385487528344671,0.0,0.0
+aqf_full_vs_no_operator_awareness,operator awareness reduces unnecessary controls,field_count,22.0,22.0,0.0,0.0
+aqf_full_vs_no_operator_awareness,operator awareness reduces unnecessary controls,operator_count,120.0,242.0,-122.0,-50.413223140495866
+aqf_full_vs_no_operator_awareness,operator awareness reduces unnecessary controls,final_complexity,29.5,29.5,0.0,0.0
+aqf_full_vs_no_operator_awareness,operator awareness reduces unnecessary controls,weighted_operator_burden,110.5,264.0,-153.5,-58.14393939393939
+aqf_full_vs_no_operator_awareness,operator awareness reduces unnecessary controls,invalid_or_unwanted_operator_count,0.0,122.0,-122.0,-100.0
+aqf_full_vs_frequency_only,AQF ranking vs frequency-only ranking,strict_coverage,0.6666666666666666,0.6666666666666666,0.0,0.0
+aqf_full_vs_frequency_only,AQF ranking vs frequency-only ranking,partial_coverage,0.7385487528344671,0.7385487528344671,0.0,0.0
+aqf_full_vs_frequency_only,AQF ranking vs frequency-only ranking,field_count,22.0,22.0,0.0,0.0
+aqf_full_vs_frequency_only,AQF ranking vs frequency-only ranking,operator_count,120.0,120.0,0.0,0.0
+aqf_full_vs_frequency_only,AQF ranking vs frequency-only ranking,final_complexity,29.5,29.5,0.0,0.0
+aqf_full_vs_frequency_only,AQF ranking vs frequency-only ranking,weighted_operator_burden,110.5,110.5,0.0,0.0
+aqf_full_vs_frequency_only,AQF ranking vs frequency-only ranking,invalid_or_unwanted_operator_count,0.0,0.0,0.0,
+aqf_full_vs_flattened_topk,canonical structure/context preservation,strict_coverage,0.6666666666666666,0.6666666666666666,0.0,0.0
+aqf_full_vs_flattened_topk,canonical structure/context preservation,partial_coverage,0.7385487528344671,0.7385487528344671,0.0,0.0
+aqf_full_vs_flattened_topk,canonical structure/context preservation,field_count,22.0,22.0,0.0,0.0
+aqf_full_vs_flattened_topk,canonical structure/context preservation,operator_count,120.0,120.0,0.0,0.0
+aqf_full_vs_flattened_topk,canonical structure/context preservation,final_complexity,29.5,29.5,0.0,0.0
+aqf_full_vs_flattened_topk,canonical structure/context preservation,weighted_operator_burden,110.5,110.5,0.0,0.0
+aqf_full_vs_flattened_topk,canonical structure/context preservation,invalid_or_unwanted_operator_count,0.0,0.0,0.0,

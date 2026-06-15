@@ -1,0 +1,8 @@
+method,field_count,operator_count,valid_operator_count,invalid_or_unwanted_operator_count,weighted_operator_burden
+aqf_full,54,285,285,0,262.25
+aqf_topk_no_threshold,54,285,285,0,262.25
+flattened_topk,54,285,285,0,262.25
+frequency_only,54,285,285,0,262.25
+no_operator_awareness,54,594,285,309,648.0
+no_pruning,54,285,285,0,262.25
+random_topk_1,54,285,285,0,262.25

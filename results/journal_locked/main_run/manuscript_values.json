@@ -1,0 +1,2051 @@
+{
+  "status": "PASS",
+  "target_strict_coverage": 0.9,
+  "aqf_full": {
+    "method": "aqf_full",
+    "field_count": 44,
+    "group_count": 9,
+    "subgroup_count": 15,
+    "max_depth": 6,
+    "eta": 1.0,
+    "final_complexity": 50.0,
+    "operator_count": 234,
+    "valid_operator_count": 234,
+    "invalid_or_unwanted_operator_count": 0,
+    "weighted_operator_burden": 214.5,
+    "form_utility": 49.73698948377199,
+    "query_count": 54,
+    "strict_coverage": 0.9074074074074074,
+    "partial_coverage": 0.9074074074074074
+  },
+  "no_pruning": {
+    "method": "no_pruning",
+    "field_count": 54,
+    "group_count": 11,
+    "subgroup_count": 19,
+    "max_depth": 6,
+    "eta": 1.0,
+    "final_complexity": 60.0,
+    "operator_count": 285,
+    "valid_operator_count": 285,
+    "invalid_or_unwanted_operator_count": 0,
+    "weighted_operator_burden": 262.25,
+    "form_utility": 51.645750562610935,
+    "query_count": 54,
+    "strict_coverage": 0.9814814814814816,
+    "partial_coverage": 0.9814814814814816
+  },
+  "frequency_only": {
+    "method": "frequency_only",
+    "field_count": 44,
+    "group_count": 9,
+    "subgroup_count": 14,
+    "max_depth": 6,
+    "eta": 1.0,
+    "final_complexity": 50.0,
+    "operator_count": 230,
+    "valid_operator_count": 230,
+    "invalid_or_unwanted_operator_count": 0,
+    "weighted_operator_burden": 209.0,
+    "form_utility": 49.61005253850572,
+    "query_count": 54,
+    "strict_coverage": 0.8888888888888888,
+    "partial_coverage": 0.8962962962962963
+  },
+  "flattened_topk": {
+    "method": "flattened_topk",
+    "field_count": 44,
+    "group_count": 1,
+    "subgroup_count": 1,
+    "max_depth": 6,
+    "eta": 1.0,
+    "final_complexity": 50.0,
+    "operator_count": 234,
+    "valid_operator_count": 234,
+    "invalid_or_unwanted_operator_count": 0,
+    "weighted_operator_burden": 214.5,
+    "form_utility": 49.73698948377199,
+    "query_count": 54,
+    "strict_coverage": 0.9074074074074074,
+    "partial_coverage": 0.9074074074074074
+  },
+  "no_operator_awareness": {
+    "method": "no_operator_awareness",
+    "field_count": 44,
+    "group_count": 9,
+    "subgroup_count": 15,
+    "max_depth": 6,
+    "eta": 1.0,
+    "final_complexity": 50.0,
+    "operator_count": 484,
+    "valid_operator_count": 234,
+    "invalid_or_unwanted_operator_count": 250,
+    "weighted_operator_burden": 528.0,
+    "form_utility": 49.73698948377199,
+    "query_count": 54,
+    "strict_coverage": 0.9074074074074074,
+    "partial_coverage": 0.9074074074074074
+  },
+  "random_topk": {
+    "mean_strict_coverage": 0.7203703703703702,
+    "max_strict_coverage": 0.8703703703703703,
+    "min_strict_coverage": 0.5555555555555556,
+    "trial_count": 30
+  },
+  "dataset_summary": [
+    {
+      "composition_families": 3,
+      "canonical_fields": 54,
+      "coded_fields": 22,
+      "temporal_fields": 9,
+      "numeric_fields": 10,
+      "boolean_fields": 3
+    }
+  ],
+  "coverage_by_query_category": [
+    {
+      "method": "aqf_full",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "aqf_full",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "aqf_full",
+      "category": "general_clinical",
+      "query_count": 5,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "aqf_full",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "aqf_full",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "aqf_full",
+      "category": "treatment_procedure",
+      "query_count": 8,
+      "strict_coverage": 0.375,
+      "partial_coverage": 0.375,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "aqf_topk_no_threshold",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "aqf_topk_no_threshold",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "aqf_topk_no_threshold",
+      "category": "general_clinical",
+      "query_count": 5,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "aqf_topk_no_threshold",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "aqf_topk_no_threshold",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "aqf_topk_no_threshold",
+      "category": "treatment_procedure",
+      "query_count": 8,
+      "strict_coverage": 0.375,
+      "partial_coverage": 0.375,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "flattened_topk",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "flattened_topk",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "flattened_topk",
+      "category": "general_clinical",
+      "query_count": 5,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "flattened_topk",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "flattened_topk",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "flattened_topk",
+      "category": "treatment_procedure",
+      "query_count": 8,
+      "strict_coverage": 0.375,
+      "partial_coverage": 0.375,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "frequency_only",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "frequency_only",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "frequency_only",
+      "category": "general_clinical",
+      "query_count": 5,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "frequency_only",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "frequency_only",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "frequency_only",
+      "category": "treatment_procedure",
+      "query_count": 8,
+      "strict_coverage": 0.25,
+      "partial_coverage": 0.3,
+      "failure_count": 6,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "no_operator_awareness",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "no_operator_awareness",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "no_operator_awareness",
+      "category": "general_clinical",
+      "query_count": 5,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "no_operator_awareness",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "no_operator_awareness",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "no_operator_awareness",
+      "category": "treatment_procedure",
+      "query_count": 8,
+      "strict_coverage": 0.375,
+      "partial_coverage": 0.375,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "no_pruning",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "no_pruning",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "no_pruning",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "no_pruning",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "no_pruning",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "no_pruning",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.8571428571428571,
+      "partial_coverage": 0.8571428571428571,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_1",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_1",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.6363636363636364,
+      "partial_coverage": 0.8030303030303029,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_1",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 0.3333333333333333,
+      "partial_coverage": 0.611111111111111,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_1",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.6363636363636364,
+      "partial_coverage": 0.7626262626262627,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_1",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.2857142857142857,
+      "partial_coverage": 0.616326530612245,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_1",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.7142857142857143,
+      "partial_coverage": 0.7142857142857143,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_10",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.4166666666666667,
+      "partial_coverage": 0.628968253968254,
+      "failure_count": 7,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_10",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.8333333333333335,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_10",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_10",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.8181818181818182,
+      "partial_coverage": 0.9343434343434344,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_10",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.8571428571428571,
+      "partial_coverage": 0.9428571428571428,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_10",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.7142857142857143,
+      "partial_coverage": 0.7714285714285715,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_11",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_11",
+      "category": "diagnosis_oriented",
+      "query_count": 10,
+      "strict_coverage": 0.7,
+      "partial_coverage": 0.8166666666666667,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_11",
+      "category": "general_clinical",
+      "query_count": 2,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_11",
+      "category": "hospitalisation",
+      "query_count": 20,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_11",
+      "category": "temporal",
+      "query_count": 3,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_11",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.4285714285714285,
+      "partial_coverage": 0.6591836734693877,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_12",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.4166666666666667,
+      "partial_coverage": 0.6511904761904762,
+      "failure_count": 7,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_12",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_12",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_12",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.9090909090909092,
+      "partial_coverage": 0.9393939393939394,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_12",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_12",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.7142857142857143,
+      "partial_coverage": 0.7142857142857143,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_13",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.9166666666666666,
+      "partial_coverage": 0.9583333333333334,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_13",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.9090909090909092,
+      "partial_coverage": 0.961038961038961,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_13",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_13",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.8181818181818182,
+      "partial_coverage": 0.9343434343434344,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_13",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.8571428571428571,
+      "partial_coverage": 0.9428571428571428,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_13",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.5714285714285714,
+      "partial_coverage": 0.7244897959183673,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_14",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.0833333333333333,
+      "partial_coverage": 0.1527777777777777,
+      "failure_count": 11,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_14",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.9090909090909092,
+      "partial_coverage": 0.961038961038961,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_14",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_14",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_14",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_14",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.8571428571428571,
+      "partial_coverage": 0.8571428571428571,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_15",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_15",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.9090909090909092,
+      "partial_coverage": 0.961038961038961,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_15",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_15",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.8434343434343435,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_15",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.8571428571428571,
+      "partial_coverage": 0.9428571428571428,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_15",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.4285714285714285,
+      "partial_coverage": 0.6591836734693877,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_16",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_16",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.8982683982683981,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_16",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 0.5,
+      "partial_coverage": 0.6944444444444443,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_16",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.8181818181818182,
+      "partial_coverage": 0.898989898989899,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_16",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.4285714285714285,
+      "partial_coverage": 0.7734693877551021,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_16",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.5714285714285714,
+      "partial_coverage": 0.7285714285714285,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_17",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.5833333333333334,
+      "partial_coverage": 0.7615079365079365,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_17",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_17",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_17",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_17",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_17",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.7142857142857143,
+      "partial_coverage": 0.7959183673469388,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_18",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.5833333333333334,
+      "partial_coverage": 0.7623015873015873,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_18",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.8181818181818182,
+      "partial_coverage": 0.9307359307359306,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_18",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 0.5,
+      "partial_coverage": 0.6944444444444443,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_18",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.8535353535353536,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_18",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.4285714285714285,
+      "partial_coverage": 0.7734693877551021,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_18",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.5714285714285714,
+      "partial_coverage": 0.7285714285714285,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_19",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_19",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.5454545454545454,
+      "partial_coverage": 0.722943722943723,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_19",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_19",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.8535353535353536,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_19",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.8571428571428571,
+      "partial_coverage": 0.9428571428571428,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_19",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.7142857142857143,
+      "partial_coverage": 0.7142857142857143,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_2",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.5,
+      "partial_coverage": 0.6920634920634922,
+      "failure_count": 6,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_2",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.8181818181818182,
+      "partial_coverage": 0.9285714285714284,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_2",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 0.8333333333333334,
+      "partial_coverage": 0.9166666666666666,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_2",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.5454545454545454,
+      "partial_coverage": 0.7383838383838385,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_2",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.8571428571428571,
+      "partial_coverage": 0.9285714285714286,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_2",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.7142857142857143,
+      "partial_coverage": 0.7857142857142857,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_20",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.25,
+      "partial_coverage": 0.5023809523809525,
+      "failure_count": 9,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_20",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.8982683982683981,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_20",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 0.5,
+      "partial_coverage": 0.6944444444444443,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_20",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.8494949494949495,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_20",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.5714285714285714,
+      "partial_coverage": 0.8306122448979592,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_20",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.7142857142857143,
+      "partial_coverage": 0.7999999999999999,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_21",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_21",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.9090909090909092,
+      "partial_coverage": 0.961038961038961,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_21",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_21",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.4545454545454545,
+      "partial_coverage": 0.6767676767676768,
+      "failure_count": 6,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_21",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.2857142857142857,
+      "partial_coverage": 0.6459183673469387,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_21",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.5714285714285714,
+      "partial_coverage": 0.7000000000000001,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_22",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.5,
+      "partial_coverage": 0.740079365079365,
+      "failure_count": 6,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_22",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.5454545454545454,
+      "partial_coverage": 0.761904761904762,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_22",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_22",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.6363636363636364,
+      "partial_coverage": 0.8232323232323232,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_22",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.2857142857142857,
+      "partial_coverage": 0.6459183673469387,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_22",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.5714285714285714,
+      "partial_coverage": 0.7244897959183673,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_23",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_23",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.6363636363636364,
+      "partial_coverage": 0.8030303030303029,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_23",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 0.5,
+      "partial_coverage": 0.6944444444444443,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_23",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.4545454545454545,
+      "partial_coverage": 0.611111111111111,
+      "failure_count": 6,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_23",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.4285714285714285,
+      "partial_coverage": 0.7448979591836735,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_23",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.5714285714285714,
+      "partial_coverage": 0.7285714285714285,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_24",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.5833333333333334,
+      "partial_coverage": 0.7615079365079365,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_24",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.8181818181818182,
+      "partial_coverage": 0.9285714285714284,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_24",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_24",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.8181818181818182,
+      "partial_coverage": 0.9343434343434344,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_24",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.8571428571428571,
+      "partial_coverage": 0.9428571428571428,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_24",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.4285714285714285,
+      "partial_coverage": 0.5979591836734693,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_25",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_25",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.5454545454545454,
+      "partial_coverage": 0.722943722943723,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_25",
+      "category": "general_clinical",
+      "query_count": 5,
+      "strict_coverage": 0.8,
+      "partial_coverage": 0.9,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_25",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.8181818181818182,
+      "partial_coverage": 0.9343434343434344,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_25",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.1428571428571428,
+      "partial_coverage": 0.5744897959183674,
+      "failure_count": 6,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_25",
+      "category": "treatment_procedure",
+      "query_count": 8,
+      "strict_coverage": 0.375,
+      "partial_coverage": 0.5357142857142857,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_26",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.3333333333333333,
+      "partial_coverage": 0.6095238095238096,
+      "failure_count": 8,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_26",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.8333333333333335,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_26",
+      "category": "general_clinical",
+      "query_count": 5,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_26",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.8181818181818182,
+      "partial_coverage": 0.898989898989899,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_26",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.1428571428571428,
+      "partial_coverage": 0.5602040816326531,
+      "failure_count": 6,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_26",
+      "category": "treatment_procedure",
+      "query_count": 8,
+      "strict_coverage": 0.375,
+      "partial_coverage": 0.4910714285714285,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_27",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.5,
+      "partial_coverage": 0.740079365079365,
+      "failure_count": 6,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_27",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_27",
+      "category": "general_clinical",
+      "query_count": 5,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_27",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.8141414141414142,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_27",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.8571428571428571,
+      "partial_coverage": 0.9142857142857144,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_27",
+      "category": "treatment_procedure",
+      "query_count": 8,
+      "strict_coverage": 0.25,
+      "partial_coverage": 0.5267857142857143,
+      "failure_count": 6,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_28",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_28",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_28",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 0.8333333333333334,
+      "partial_coverage": 0.9166666666666666,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_28",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.5454545454545454,
+      "partial_coverage": 0.6868686868686869,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_28",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.1428571428571428,
+      "partial_coverage": 0.5744897959183674,
+      "failure_count": 6,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_28",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.5714285714285714,
+      "partial_coverage": 0.7306122448979592,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_29",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_29",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.8181818181818182,
+      "partial_coverage": 0.9285714285714284,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_29",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 0.8333333333333334,
+      "partial_coverage": 0.9166666666666666,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_29",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.6363636363636364,
+      "partial_coverage": 0.7686868686868688,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_29",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.7142857142857143,
+      "partial_coverage": 0.8428571428571429,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_29",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.5714285714285714,
+      "partial_coverage": 0.7244897959183673,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_3",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_3",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.8982683982683981,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_3",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 0.5,
+      "partial_coverage": 0.6944444444444443,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_3",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.8242424242424242,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_3",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.4285714285714285,
+      "partial_coverage": 0.6877551020408165,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_3",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.4285714285714285,
+      "partial_coverage": 0.673469387755102,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_30",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.5833333333333334,
+      "partial_coverage": 0.7623015873015873,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_30",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.8333333333333335,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_30",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_30",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.9090909090909092,
+      "partial_coverage": 0.9393939393939394,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_30",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_30",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.8571428571428571,
+      "partial_coverage": 0.8571428571428571,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_4",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_4",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.3636363636363636,
+      "partial_coverage": 0.5974025974025973,
+      "failure_count": 7,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_4",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 0.5,
+      "partial_coverage": 0.6944444444444443,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_4",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_4",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.2857142857142857,
+      "partial_coverage": 0.4765306122448979,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_4",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.2857142857142857,
+      "partial_coverage": 0.6020408163265306,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_5",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.3333333333333333,
+      "partial_coverage": 0.6095238095238096,
+      "failure_count": 8,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_5",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_5",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_5",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.9090909090909092,
+      "partial_coverage": 0.9090909090909092,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_5",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.1428571428571428,
+      "partial_coverage": 0.5887755102040817,
+      "failure_count": 6,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_5",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.8571428571428571,
+      "partial_coverage": 0.8571428571428571,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_6",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_6",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.8333333333333335,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_6",
+      "category": "general_clinical",
+      "query_count": 5,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_6",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.7878787878787878,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_6",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 0.2857142857142857,
+      "partial_coverage": 0.6459183673469387,
+      "failure_count": 5,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_6",
+      "category": "treatment_procedure",
+      "query_count": 8,
+      "strict_coverage": 0.25,
+      "partial_coverage": 0.5705357142857144,
+      "failure_count": 6,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_7",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.5,
+      "partial_coverage": 0.740079365079365,
+      "failure_count": 6,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_7",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.9090909090909092,
+      "partial_coverage": 0.961038961038961,
+      "failure_count": 1,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_7",
+      "category": "general_clinical",
+      "query_count": 5,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_7",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.8434343434343435,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_7",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_7",
+      "category": "treatment_procedure",
+      "query_count": 8,
+      "strict_coverage": 0.5,
+      "partial_coverage": 0.6642857142857144,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_8",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 0.6666666666666666,
+      "partial_coverage": 0.8031746031746031,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_8",
+      "category": "diagnosis_oriented",
+      "query_count": 10,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_8",
+      "category": "general_clinical",
+      "query_count": 2,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_8",
+      "category": "hospitalisation",
+      "query_count": 20,
+      "strict_coverage": 0.6,
+      "partial_coverage": 0.809404761904762,
+      "failure_count": 8,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_8",
+      "category": "temporal",
+      "query_count": 3,
+      "strict_coverage": 0.3333333333333333,
+      "partial_coverage": 0.4666666666666666,
+      "failure_count": 2,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_8",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.5714285714285714,
+      "partial_coverage": 0.7306122448979592,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_9",
+      "category": "demographic",
+      "query_count": 12,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_9",
+      "category": "diagnosis_oriented",
+      "query_count": 11,
+      "strict_coverage": 0.7272727272727273,
+      "partial_coverage": 0.8333333333333335,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_9",
+      "category": "general_clinical",
+      "query_count": 6,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_9",
+      "category": "hospitalisation",
+      "query_count": 11,
+      "strict_coverage": 0.6363636363636364,
+      "partial_coverage": 0.7333333333333333,
+      "failure_count": 4,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    },
+    {
+      "method": "random_topk_9",
+      "category": "temporal",
+      "query_count": 7,
+      "strict_coverage": 1.0,
+      "partial_coverage": 1.0,
+      "failure_count": 0,
+      "dominant_failure_reason": "SUPPORTED"
+    },
+    {
+      "method": "random_topk_9",
+      "category": "treatment_procedure",
+      "query_count": 7,
+      "strict_coverage": 0.5714285714285714,
+      "partial_coverage": 0.7000000000000001,
+      "failure_count": 3,
+      "dominant_failure_reason": "ABSENT_OR_PRUNED_OR_MATCH_FAILED"
+    }
+  ]
+}

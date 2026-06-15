@@ -1,0 +1,11 @@
+{
+  "method": "random_topk_23",
+  "complexity_budget": 35.0,
+  "theta": 0.1,
+  "eta": 1.0,
+  "field_count": 0,
+  "max_depth": 0,
+  "final_complexity": 0.0,
+  "fields": [],
+  "groups": {}
+}

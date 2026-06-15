@@ -1,0 +1,11 @@
+{
+  "parser_version": "aqf_final_v2_4_draft_aligned",
+  "benchmark_version": "expert_curated_v1",
+  "complexity_budget": 30.0,
+  "theta": 0.0,
+  "lambda_sc": 0.0,
+  "mu": 0.0,
+  "eta": 1.0,
+  "forest_cache_used": true,
+  "score_cache_used": true
+}

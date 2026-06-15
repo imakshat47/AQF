@@ -1,0 +1,2907 @@
+{
+  "cf_5cd62eaa6e16a8": {
+    "coverage": 1.0,
+    "diversity": 0.4444444444444444,
+    "local_utility": 0.4444444444444444,
+    "neighborhood_reinforcement": 5.151369047106472,
+    "overall_score": 3.020128967997681,
+    "final_queriability": 3.020128967997681,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_8b431261fa7dca",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_775d9002cb4e7b": {
+    "coverage": 1.0,
+    "diversity": 0.13043478260869565,
+    "local_utility": 0.13043478260869565,
+    "neighborhood_reinforcement": 5.465378708942222,
+    "overall_score": 2.8631241370798066,
+    "final_queriability": 2.8631241370798066,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_b87e8363f020f7": {
+    "coverage": 1.0,
+    "diversity": 0.18518518518518517,
+    "local_utility": 0.18518518518518517,
+    "neighborhood_reinforcement": 5.410628306365732,
+    "overall_score": 2.890499338368051,
+    "final_queriability": 2.890499338368051,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_8b431261fa7dca",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_8b431261fa7dca": {
+    "coverage": 1.0,
+    "diversity": 0.14814814814814814,
+    "local_utility": 0.14814814814814814,
+    "neighborhood_reinforcement": 5.447665343402769,
+    "overall_score": 2.871980819849533,
+    "final_queriability": 2.871980819849533,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_16800b2d3f5ef6": {
+    "coverage": 1.0,
+    "diversity": 0.6666666666666666,
+    "local_utility": 0.6666666666666666,
+    "neighborhood_reinforcement": 4.92914682488425,
+    "overall_score": 3.1312400791087915,
+    "final_queriability": 3.1312400791087915,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_8b431261fa7dca",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_ed2fd195fdc918": {
+    "coverage": 0.14814814814814814,
+    "diversity": 1.0,
+    "local_utility": 0.14814814814814814,
+    "neighborhood_reinforcement": 1.0565141803561808,
+    "overall_score": 0.6764052383262386,
+    "final_queriability": 0.6764052383262386,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.10425240054869685,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.09876543209876543,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.07358992979908013,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.06584362139917695,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.06060606060606061,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.03864734299516908,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.03292181069958847,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_72eaea6790449d",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      }
+    ]
+  },
+  "cf_469c691048a0ce": {
+    "coverage": 1.0,
+    "diversity": 0.4090909090909091,
+    "local_utility": 0.4090909090909091,
+    "neighborhood_reinforcement": 5.186722582460008,
+    "overall_score": 3.002452200320913,
+    "final_queriability": 3.002452200320913,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_8b431261fa7dca",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_49533263f29569": {
+    "coverage": 1.0,
+    "diversity": 0.1111111111111111,
+    "local_utility": 0.1111111111111111,
+    "neighborhood_reinforcement": 5.484702380439805,
+    "overall_score": 2.853462301331014,
+    "final_queriability": 2.853462301331014,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_bd9db9ae67063d": {
+    "coverage": 1.0,
+    "diversity": 0.2222222222222222,
+    "local_utility": 0.2222222222222222,
+    "neighborhood_reinforcement": 5.373591269328695,
+    "overall_score": 2.9090178568865697,
+    "final_queriability": 2.9090178568865697,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_8b431261fa7dca",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_4e7e8ca2916a1e": {
+    "coverage": 1.0,
+    "diversity": 0.07407407407407407,
+    "local_utility": 0.07407407407407407,
+    "neighborhood_reinforcement": 5.521739417476843,
+    "overall_score": 2.8349437828124953,
+    "final_queriability": 2.8349437828124953,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_0a229c157b8d2a": {
+    "coverage": 1.0,
+    "diversity": 0.07407407407407407,
+    "local_utility": 0.07407407407407407,
+    "neighborhood_reinforcement": 5.521739417476843,
+    "overall_score": 2.8349437828124953,
+    "final_queriability": 2.8349437828124953,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_af0c9a7d79fe64": {
+    "coverage": 0.2962962962962963,
+    "diversity": 0.125,
+    "local_utility": 0.037037037037037035,
+    "neighborhood_reinforcement": 2.0142629286135962,
+    "overall_score": 1.044168501343835,
+    "final_queriability": 1.044168501343835,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.2962962962962963,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.2085048010973937,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.19753086419753085,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.14717985959816027,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.1316872427983539,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.12121212121212122,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.07729468599033816,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.06584362139917695,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.05486968449931412,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_72eaea6790449d",
+        "term": 0.05486968449931412,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      }
+    ]
+  },
+  "cf_3c63f8bfbf5fd7": {
+    "coverage": 0.2962962962962963,
+    "diversity": 0.5,
+    "local_utility": 0.14814814814814814,
+    "neighborhood_reinforcement": 1.981341117914008,
+    "overall_score": 1.138818707105152,
+    "final_queriability": 1.138818707105152,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.2962962962962963,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.2085048010973937,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.19753086419753085,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.14717985959816027,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.1316872427983539,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.12121212121212122,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.07729468599033816,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.06584362139917695,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.05486968449931412,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_72eaea6790449d",
+        "term": 0.05486968449931412,
+        "containment_connectivity": 0.6666666666666666,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      }
+    ]
+  },
+  "cf_c4703128fab784": {
+    "coverage": 0.2962962962962963,
+    "diversity": 0.6,
+    "local_utility": 0.17777777777777776,
+    "neighborhood_reinforcement": 1.9725619683941176,
+    "overall_score": 1.1640587619748366,
+    "final_queriability": 1.1640587619748366,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.2962962962962963,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.2085048010973937,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.19753086419753085,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.14717985959816027,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.1316872427983539,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.12121212121212122,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.07729468599033816,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.06584362139917695,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.05486968449931412,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_72eaea6790449d",
+        "term": 0.05486968449931412,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      }
+    ]
+  },
+  "cf_72eaea6790449d": {
+    "coverage": 0.2962962962962963,
+    "diversity": 0.625,
+    "local_utility": 0.18518518518518517,
+    "neighborhood_reinforcement": 1.970367181014145,
+    "overall_score": 1.1703687756922576,
+    "final_queriability": 1.1703687756922576,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.2962962962962963,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.2085048010973937,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.19753086419753085,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.14717985959816027,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.1316872427983539,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.12121212121212122,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.07729468599033816,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.06584362139917695,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.05486968449931412,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_8e35971b63e360",
+        "term": 0.05486968449931412,
+        "containment_connectivity": 0.6666666666666666,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      }
+    ]
+  },
+  "cf_8e35971b63e360": {
+    "coverage": 0.2962962962962963,
+    "diversity": 0.625,
+    "local_utility": 0.18518518518518517,
+    "neighborhood_reinforcement": 1.970367181014145,
+    "overall_score": 1.1703687756922576,
+    "final_queriability": 1.1703687756922576,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.2962962962962963,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.2085048010973937,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.19753086419753085,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.14717985959816027,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.1316872427983539,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.12121212121212122,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.07729468599033816,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.06584362139917695,
+        "containment_connectivity": 0.6,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.05486968449931412,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      },
+      {
+        "field_id": "cf_72eaea6790449d",
+        "term": 0.05486968449931412,
+        "containment_connectivity": 0.6666666666666666,
+        "cooccurrence_support": 0.2962962962962963,
+        "structural_connectivity": 0.2962962962962963
+      }
+    ]
+  },
+  "cf_0b6364bb149692": {
+    "coverage": 1.0,
+    "diversity": 0.2608695652173913,
+    "local_utility": 0.2608695652173913,
+    "neighborhood_reinforcement": 5.334943926333525,
+    "overall_score": 2.928341528384154,
+    "final_queriability": 2.928341528384154,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_8b431261fa7dca",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_e5c01940113606": {
+    "coverage": 0.14814814814814814,
+    "diversity": 1.0,
+    "local_utility": 0.14814814814814814,
+    "neighborhood_reinforcement": 1.0565141803561808,
+    "overall_score": 0.6764052383262386,
+    "final_queriability": 0.6764052383262386,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.10425240054869685,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.09876543209876543,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.07358992979908013,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.06584362139917695,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.06060606060606061,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.03864734299516908,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.03292181069958847,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_72eaea6790449d",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      }
+    ]
+  },
+  "cf_fc5be63ab59287": {
+    "coverage": 0.14814814814814814,
+    "diversity": 1.0,
+    "local_utility": 0.14814814814814814,
+    "neighborhood_reinforcement": 1.0565141803561808,
+    "overall_score": 0.6764052383262386,
+    "final_queriability": 0.6764052383262386,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.10425240054869685,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.09876543209876543,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.07358992979908013,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.06584362139917695,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.06060606060606061,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.03864734299516908,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.03292181069958847,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_72eaea6790449d",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      }
+    ]
+  },
+  "cf_821e1930333a5c": {
+    "coverage": 0.14814814814814814,
+    "diversity": 0.25,
+    "local_utility": 0.037037037037037035,
+    "neighborhood_reinforcement": 1.072975085705975,
+    "overall_score": 0.5735245798900246,
+    "final_queriability": 0.5735245798900246,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.10425240054869685,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.09876543209876543,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.07358992979908013,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.06584362139917695,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.06060606060606061,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.03864734299516908,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.03292181069958847,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_72eaea6790449d",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      }
+    ]
+  },
+  "cf_c9b3a708f95249": {
+    "coverage": 0.14814814814814814,
+    "diversity": 1.0,
+    "local_utility": 0.14814814814814814,
+    "neighborhood_reinforcement": 1.0565141803561808,
+    "overall_score": 0.6764052383262386,
+    "final_queriability": 0.6764052383262386,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.10425240054869685,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.09876543209876543,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.07358992979908013,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.06584362139917695,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.06060606060606061,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.03864734299516908,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.03292181069958847,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_72eaea6790449d",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      }
+    ]
+  },
+  "cf_bbec72e0a270f7": {
+    "coverage": 0.14814814814814814,
+    "diversity": 1.0,
+    "local_utility": 0.14814814814814814,
+    "neighborhood_reinforcement": 1.0565141803561808,
+    "overall_score": 0.6764052383262386,
+    "final_queriability": 0.6764052383262386,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.10425240054869685,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.09876543209876543,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.07358992979908013,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.06584362139917695,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.06060606060606061,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.03864734299516908,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.03292181069958847,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_72eaea6790449d",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      }
+    ]
+  },
+  "cf_505d09ec39545c": {
+    "coverage": 0.7037037037037037,
+    "diversity": 1.0,
+    "local_utility": 0.7037037037037037,
+    "neighborhood_reinforcement": 3.8349032620416534,
+    "overall_score": 2.6211553347245307,
+    "final_queriability": 2.6211553347245307,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.7037037037037037,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.4691358024691358,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.3127572016460905,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.2878787878787879,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.18357487922705315,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.15637860082304525,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.13031550068587106,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.12794612794612795,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_8b431261fa7dca",
+        "term": 0.10425240054869685,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      }
+    ]
+  },
+  "cf_ac2de786b38da7": {
+    "coverage": 0.7037037037037037,
+    "diversity": 0.10526315789473684,
+    "local_utility": 0.07407407407407407,
+    "neighborhood_reinforcement": 4.277975964373615,
+    "overall_score": 2.2130620562608816,
+    "final_queriability": 2.2130620562608816,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.7037037037037037,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.4691358024691358,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.3127572016460905,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.2878787878787879,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.18357487922705315,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.15637860082304525,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.13031550068587106,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.12794612794612795,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      }
+    ]
+  },
+  "cf_8f20b6e7578a41": {
+    "coverage": 0.7037037037037037,
+    "diversity": 0.15789473684210525,
+    "local_utility": 0.1111111111111111,
+    "neighborhood_reinforcement": 4.251912864236441,
+    "overall_score": 2.237067543229332,
+    "final_queriability": 2.237067543229332,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.7037037037037037,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.4691358024691358,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.3127572016460905,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.2878787878787879,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.18357487922705315,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.15637860082304525,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.13031550068587106,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.12794612794612795,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      }
+    ]
+  },
+  "cf_c75844f7868470": {
+    "coverage": 0.7037037037037037,
+    "diversity": 0.7058823529411765,
+    "local_utility": 0.4967320261437909,
+    "neighborhood_reinforcement": 3.980549998102333,
+    "overall_score": 2.4870070251949574,
+    "final_queriability": 2.4870070251949574,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.7037037037037037,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.4691358024691358,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.3127572016460905,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.2878787878787879,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.18357487922705315,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.15637860082304525,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.13031550068587106,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.12794612794612795,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_8b431261fa7dca",
+        "term": 0.10425240054869685,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      }
+    ]
+  },
+  "cf_ccf42da6435cdd": {
+    "coverage": 0.14814814814814814,
+    "diversity": 0.25,
+    "local_utility": 0.037037037037037035,
+    "neighborhood_reinforcement": 1.072975085705975,
+    "overall_score": 0.5735245798900246,
+    "final_queriability": 0.5735245798900246,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.10425240054869685,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.09876543209876543,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.07358992979908013,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.06584362139917695,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.06060606060606061,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.03864734299516908,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.03292181069958847,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_72eaea6790449d",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      }
+    ]
+  },
+  "cf_e7f0fa8ccde04c": {
+    "coverage": 0.14814814814814814,
+    "diversity": 0.25,
+    "local_utility": 0.037037037037037035,
+    "neighborhood_reinforcement": 1.072975085705975,
+    "overall_score": 0.5735245798900246,
+    "final_queriability": 0.5735245798900246,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.10425240054869685,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.09876543209876543,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.07358992979908013,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.06584362139917695,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.06060606060606061,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.03864734299516908,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.03292181069958847,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_72eaea6790449d",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      }
+    ]
+  },
+  "cf_ec7d5ae391fa0a": {
+    "coverage": 0.14814814814814814,
+    "diversity": 0.25,
+    "local_utility": 0.037037037037037035,
+    "neighborhood_reinforcement": 1.072975085705975,
+    "overall_score": 0.5735245798900246,
+    "final_queriability": 0.5735245798900246,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.10425240054869685,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.09876543209876543,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.07358992979908013,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.06584362139917695,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.06060606060606061,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.03864734299516908,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.03292181069958847,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.5,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      },
+      {
+        "field_id": "cf_72eaea6790449d",
+        "term": 0.02743484224965706,
+        "containment_connectivity": 0.1,
+        "cooccurrence_support": 0.14814814814814814,
+        "structural_connectivity": 0.14814814814814814
+      }
+    ]
+  },
+  "cf_7f3b6795a0e812": {
+    "coverage": 1.0,
+    "diversity": 1.0,
+    "local_utility": 1.0,
+    "neighborhood_reinforcement": 4.595813491550917,
+    "overall_score": 3.2979067457754585,
+    "final_queriability": 3.2979067457754585,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_8b431261fa7dca",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_e7551706658b4a": {
+    "coverage": 1.0,
+    "diversity": 0.18181818181818182,
+    "local_utility": 0.18181818181818182,
+    "neighborhood_reinforcement": 5.413995309732735,
+    "overall_score": 2.8888158366845493,
+    "final_queriability": 2.8888158366845493,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_8b431261fa7dca",
+        "term": 0.14814814814814814,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_19e1b0f55ef007": {
+    "coverage": 1.0,
+    "diversity": 0.09090909090909091,
+    "local_utility": 0.09090909090909091,
+    "neighborhood_reinforcement": 5.504904400641826,
+    "overall_score": 2.843361291230004,
+    "final_queriability": 2.843361291230004,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_4122372d727029": {
+    "coverage": 1.0,
+    "diversity": 0.09090909090909091,
+    "local_utility": 0.09090909090909091,
+    "neighborhood_reinforcement": 5.504904400641826,
+    "overall_score": 2.843361291230004,
+    "final_queriability": 2.843361291230004,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_7ab0248b87b82e": {
+    "coverage": 1.0,
+    "diversity": 0.09090909090909091,
+    "local_utility": 0.09090909090909091,
+    "neighborhood_reinforcement": 5.504904400641826,
+    "overall_score": 2.843361291230004,
+    "final_queriability": 2.843361291230004,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  },
+  "cf_eee397355aecbe": {
+    "coverage": 1.0,
+    "diversity": 0.09090909090909091,
+    "local_utility": 0.09090909090909091,
+    "neighborhood_reinforcement": 5.504904400641826,
+    "overall_score": 2.843361291230004,
+    "final_queriability": 2.843361291230004,
+    "lambda_sc": 0.0,
+    "mu": 0.5,
+    "neighbor_count": 34,
+    "top_neighbors": [
+      {
+        "field_id": "cf_7f3b6795a0e812",
+        "term": 1.0,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_16800b2d3f5ef6",
+        "term": 0.6666666666666666,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_505d09ec39545c",
+        "term": 0.49519890260631005,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_5cd62eaa6e16a8",
+        "term": 0.4444444444444444,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_469c691048a0ce",
+        "term": 0.4090909090909091,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_c75844f7868470",
+        "term": 0.34955216654563065,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 0.7037037037037037,
+        "structural_connectivity": 0.7037037037037037
+      },
+      {
+        "field_id": "cf_0b6364bb149692",
+        "term": 0.2608695652173913,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_bd9db9ae67063d",
+        "term": 0.2222222222222222,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_b87e8363f020f7",
+        "term": 0.18518518518518517,
+        "containment_connectivity": 0.0,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      },
+      {
+        "field_id": "cf_e7551706658b4a",
+        "term": 0.18181818181818182,
+        "containment_connectivity": 0.85,
+        "cooccurrence_support": 1.0,
+        "structural_connectivity": 1.0
+      }
+    ]
+  }
+}

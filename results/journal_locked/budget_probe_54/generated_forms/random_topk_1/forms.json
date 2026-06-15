@@ -1,0 +1,1477 @@
+{
+  "method": "random_topk_1",
+  "complexity_budget": 54.0,
+  "theta": 0.0,
+  "eta": 1.0,
+  "field_count": 48,
+  "max_depth": 6,
+  "final_complexity": 54.0,
+  "fields": [
+    {
+      "field_id": "cf_3db72fcc22b158",
+      "label": "Patient class",
+      "canonical_path": "Patient admission / Tree / Patient class",
+      "record_family": "openEHR-EHR-COMPOSITION.hospitalisation.v1",
+      "form_group": "Patient admission",
+      "nested_subgroup": "Tree",
+      "kind": "null",
+      "dv_type": "NULL_FLAVOUR",
+      "primary_dv_type": "NULL_FLAVOUR",
+      "observed_dv_types": [
+        "NULL_FLAVOUR"
+      ],
+      "supports_null_flavour": true,
+      "operators": [
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.099777646463997,
+      "final_queriability": 1.099777646463997,
+      "local_utility": 0.041666666666666664,
+      "diversity": 0.041666666666666664,
+      "coverage": 1.0,
+      "rank": 1
+    },
+    {
+      "field_id": "cf_e5c01940113606",
+      "label": "irradiated area 1",
+      "canonical_path": "Procedure undertaken / Procedure list / irradiated area 1",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Procedure undertaken",
+      "nested_subgroup": "Procedure list",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.3241191407417369,
+      "final_queriability": 0.3241191407417369,
+      "local_utility": 0.0673076923076923,
+      "diversity": 0.30434782608695654,
+      "coverage": 0.22115384615384615,
+      "rank": 2
+    },
+    {
+      "field_id": "cf_22f759c45e42f4",
+      "label": "Admit date/time",
+      "canonical_path": "Patient admission / Tree / Admit date/time",
+      "record_family": "openEHR-EHR-COMPOSITION.hospitalisation.v1",
+      "form_group": "Patient admission",
+      "nested_subgroup": "Tree",
+      "kind": "temporal",
+      "dv_type": "DV_DATE_TIME",
+      "primary_dv_type": "DV_DATE_TIME",
+      "observed_dv_types": [
+        "DV_DATE_TIME"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "before",
+        "after",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.812277646463997,
+      "final_queriability": 1.812277646463997,
+      "local_utility": 0.8333333333333334,
+      "diversity": 0.8333333333333334,
+      "coverage": 1.0,
+      "rank": 3
+    },
+    {
+      "field_id": "cf_d7a40eea03f1d2",
+      "label": "number of transplantations",
+      "canonical_path": "HCPA / components / transplantation / number of transplantations",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "HCPA",
+      "nested_subgroup": "components / transplantation",
+      "kind": "numeric",
+      "dv_type": "DV_COUNT",
+      "primary_dv_type": "DV_COUNT",
+      "observed_dv_types": [
+        "DV_COUNT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        ">",
+        "<",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.11098595332343243,
+      "final_queriability": 0.11098595332343243,
+      "local_utility": 0.009615384615384614,
+      "diversity": 0.1111111111111111,
+      "coverage": 0.08653846153846154,
+      "rank": 4
+    },
+    {
+      "field_id": "cf_72eaea6790449d",
+      "label": "date of pathological identification",
+      "canonical_path": "Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / date of pathological identification",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Problem/Diagnosis",
+      "nested_subgroup": "structure / Tumour - TNM Cancer staging / Pathological (pTNM)",
+      "kind": "temporal",
+      "dv_type": "DV_DATE",
+      "primary_dv_type": "DV_DATE",
+      "observed_dv_types": [
+        "DV_DATE"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "before",
+        "after",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.4999834672132958,
+      "final_queriability": 0.4999834672132958,
+      "local_utility": 0.09615384615384616,
+      "diversity": 0.2702702702702703,
+      "coverage": 0.3557692307692308,
+      "rank": 5
+    },
+    {
+      "field_id": "cf_7f3b6795a0e812",
+      "label": "birth date",
+      "canonical_path": "Demographic data / components / birth date",
+      "record_family": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+      "form_group": "Demographic data",
+      "nested_subgroup": "components",
+      "kind": "temporal",
+      "dv_type": "DV_DATE",
+      "primary_dv_type": "DV_DATE",
+      "observed_dv_types": [
+        "DV_DATE"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "before",
+        "after",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.9622776464639968,
+      "final_queriability": 1.9622776464639968,
+      "local_utility": 1.0,
+      "diversity": 1.0,
+      "coverage": 1.0,
+      "rank": 6
+    },
+    {
+      "field_id": "cf_af0c9a7d79fe64",
+      "label": "Invaded regional linphonodes",
+      "canonical_path": "Problem/Diagnosis / structure / Invaded regional linphonodes",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Problem/Diagnosis",
+      "nested_subgroup": "structure",
+      "kind": "boolean",
+      "dv_type": "DV_BOOLEAN",
+      "primary_dv_type": "DV_BOOLEAN",
+      "observed_dv_types": [
+        "DV_BOOLEAN"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.4165237778641835,
+      "final_queriability": 0.4165237778641835,
+      "local_utility": 0.009615384615384616,
+      "diversity": 0.02702702702702703,
+      "coverage": 0.3557692307692308,
+      "rank": 7
+    },
+    {
+      "field_id": "cf_cc107606becdfc",
+      "label": "Weight",
+      "canonical_path": "Body weight / Simple / Weight",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Body weight",
+      "nested_subgroup": "Simple",
+      "kind": "numeric",
+      "dv_type": "DV_QUANTITY",
+      "primary_dv_type": "DV_QUANTITY",
+      "observed_dv_types": [
+        "DV_QUANTITY"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        ">",
+        "<",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.12051812787964546,
+      "final_queriability": 0.12051812787964546,
+      "local_utility": 0.01923076923076923,
+      "diversity": 0.2222222222222222,
+      "coverage": 0.08653846153846154,
+      "rank": 8
+    },
+    {
+      "field_id": "cf_ec7d5ae391fa0a",
+      "label": "date of beginning of chemotherapy",
+      "canonical_path": "HCPA / components / chemotherapy / date of beginning of chemotherapy",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "HCPA",
+      "nested_subgroup": "components / chemotherapy",
+      "kind": "temporal",
+      "dv_type": "DV_DATE",
+      "primary_dv_type": "DV_DATE",
+      "observed_dv_types": [
+        "DV_DATE"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "before",
+        "after",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.1766039714419731,
+      "final_queriability": 0.1766039714419731,
+      "local_utility": 0.01923076923076923,
+      "diversity": 0.14285714285714285,
+      "coverage": 0.1346153846153846,
+      "rank": 9
+    },
+    {
+      "field_id": "cf_8f20b6e7578a41",
+      "label": "Baros table",
+      "canonical_path": "Bariatric surgery evaluation / Components / Baros table",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Bariatric surgery evaluation",
+      "nested_subgroup": "Components",
+      "kind": "text",
+      "dv_type": "DV_TEXT",
+      "primary_dv_type": "DV_TEXT",
+      "observed_dv_types": [
+        "DV_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.6608962660922318,
+      "final_queriability": 0.6608962660922318,
+      "local_utility": 0.038461538461538464,
+      "diversity": 0.06896551724137931,
+      "coverage": 0.5576923076923077,
+      "rank": 10
+    },
+    {
+      "field_id": "cf_4e7e8ca2916a1e",
+      "label": "Secondary Diagnosis",
+      "canonical_path": "Problem/Diagnosis / structure / Secondary Diagnosis",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Problem/Diagnosis",
+      "nested_subgroup": "structure",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.0795853387716892,
+      "final_queriability": 1.0795853387716892,
+      "local_utility": 0.019230769230769232,
+      "diversity": 0.019230769230769232,
+      "coverage": 1.0,
+      "rank": 11
+    },
+    {
+      "field_id": "cf_821e1930333a5c",
+      "label": "irradiated area 3",
+      "canonical_path": "Procedure undertaken / Procedure list / irradiated area 3",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Procedure undertaken",
+      "nested_subgroup": "Procedure list",
+      "kind": "null",
+      "dv_type": "NULL_FLAVOUR",
+      "primary_dv_type": "NULL_FLAVOUR",
+      "observed_dv_types": [
+        "NULL_FLAVOUR"
+      ],
+      "supports_null_flavour": true,
+      "operators": [
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.26770272062339373,
+      "final_queriability": 0.26770272062339373,
+      "local_utility": 0.009615384615384614,
+      "diversity": 0.043478260869565216,
+      "coverage": 0.22115384615384615,
+      "rank": 12
+    },
+    {
+      "field_id": "cf_c89fef6e42073d",
+      "label": "indicator of transplantation",
+      "canonical_path": "HCPA / components / transplantation / indicator of transplantation",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "HCPA",
+      "nested_subgroup": "components / transplantation",
+      "kind": "boolean",
+      "dv_type": "DV_BOOLEAN",
+      "primary_dv_type": "DV_BOOLEAN",
+      "observed_dv_types": [
+        "DV_BOOLEAN"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.11098595332343243,
+      "final_queriability": 0.11098595332343243,
+      "local_utility": 0.009615384615384614,
+      "diversity": 0.1111111111111111,
+      "coverage": 0.08653846153846154,
+      "rank": 13
+    },
+    {
+      "field_id": "cf_e7551706658b4a",
+      "label": "gender",
+      "canonical_path": "Demographic data / components / gender",
+      "record_family": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+      "form_group": "Demographic data",
+      "nested_subgroup": "components",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.2259140101003605,
+      "final_queriability": 1.2259140101003605,
+      "local_utility": 0.18181818181818182,
+      "diversity": 0.18181818181818182,
+      "coverage": 1.0,
+      "rank": 14
+    },
+    {
+      "field_id": "cf_79ed78f34fef6f",
+      "label": "date of discharge",
+      "canonical_path": "Patient discharge / Components / date of discharge",
+      "record_family": "openEHR-EHR-COMPOSITION.hospitalisation.v1",
+      "form_group": "Patient discharge",
+      "nested_subgroup": "Components",
+      "kind": "temporal",
+      "dv_type": "DV_DATE_TIME",
+      "primary_dv_type": "DV_DATE_TIME",
+      "observed_dv_types": [
+        "DV_DATE_TIME"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "before",
+        "after",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.7747776464639968,
+      "final_queriability": 1.7747776464639968,
+      "local_utility": 0.7916666666666666,
+      "diversity": 0.7916666666666666,
+      "coverage": 1.0,
+      "rank": 15
+    },
+    {
+      "field_id": "cf_8b431261fa7dca",
+      "label": "State",
+      "canonical_path": "HCPA / components / General data / State",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "HCPA",
+      "nested_subgroup": "components / General data",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.1055468772332278,
+      "final_queriability": 1.1055468772332278,
+      "local_utility": 0.04807692307692308,
+      "diversity": 0.04807692307692308,
+      "coverage": 1.0,
+      "rank": 16
+    },
+    {
+      "field_id": "cf_8e35971b63e360",
+      "label": "topography",
+      "canonical_path": "Problem/Diagnosis / structure / Tumour - TNM Cancer staging / topography",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Problem/Diagnosis",
+      "nested_subgroup": "structure / Tumour - TNM Cancer staging",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.4907101683967278,
+      "final_queriability": 0.4907101683967278,
+      "local_utility": 0.08653846153846155,
+      "diversity": 0.24324324324324326,
+      "coverage": 0.3557692307692308,
+      "rank": 17
+    },
+    {
+      "field_id": "cf_2db2fd852fb674",
+      "label": "Problem",
+      "canonical_path": "Problem/Diagnosis / structure / Problem",
+      "record_family": "openEHR-EHR-COMPOSITION.hospitalisation.v1",
+      "form_group": "Problem/Diagnosis",
+      "nested_subgroup": "structure",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.812277646463997,
+      "final_queriability": 1.812277646463997,
+      "local_utility": 0.8333333333333334,
+      "diversity": 0.8333333333333334,
+      "coverage": 1.0,
+      "rank": 18
+    },
+    {
+      "field_id": "cf_16800b2d3f5ef6",
+      "label": "patient age",
+      "canonical_path": "HCPA / components / General data / patient age",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "HCPA",
+      "nested_subgroup": "components / General data",
+      "kind": "numeric",
+      "dv_type": "DV_COUNT",
+      "primary_dv_type": "DV_COUNT",
+      "observed_dv_types": [
+        "DV_COUNT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        ">",
+        "<",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.3911238003101507,
+      "final_queriability": 1.3911238003101507,
+      "local_utility": 0.36538461538461536,
+      "diversity": 0.36538461538461536,
+      "coverage": 1.0,
+      "rank": 19
+    },
+    {
+      "field_id": "cf_eee397355aecbe",
+      "label": "nationality",
+      "canonical_path": "Demographic data / components / nationality",
+      "record_family": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+      "form_group": "Demographic data",
+      "nested_subgroup": "components",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.1440958282821787,
+      "final_queriability": 1.1440958282821787,
+      "local_utility": 0.09090909090909091,
+      "diversity": 0.09090909090909091,
+      "coverage": 1.0,
+      "rank": 20
+    },
+    {
+      "field_id": "cf_bd9db9ae67063d",
+      "label": "Problem",
+      "canonical_path": "Problem/Diagnosis / structure / Problem",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Problem/Diagnosis",
+      "nested_subgroup": "structure",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.1574699541563047,
+      "final_queriability": 1.1574699541563047,
+      "local_utility": 0.10576923076923077,
+      "diversity": 0.10576923076923077,
+      "coverage": 1.0,
+      "rank": 21
+    },
+    {
+      "field_id": "cf_80f721f9446bd3",
+      "label": "death indicator",
+      "canonical_path": "Patient discharge / Components / death indicator",
+      "record_family": "openEHR-EHR-COMPOSITION.hospitalisation.v1",
+      "form_group": "Patient discharge",
+      "nested_subgroup": "Components",
+      "kind": "boolean",
+      "dv_type": "DV_BOOLEAN",
+      "primary_dv_type": "DV_BOOLEAN",
+      "observed_dv_types": [
+        "DV_BOOLEAN"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.1372776464639969,
+      "final_queriability": 1.1372776464639969,
+      "local_utility": 0.08333333333333333,
+      "diversity": 0.08333333333333333,
+      "coverage": 1.0,
+      "rank": 22
+    },
+    {
+      "field_id": "cf_fc5be63ab59287",
+      "label": "irradiated area 2",
+      "canonical_path": "Procedure undertaken / Procedure list / irradiated area 2",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Procedure undertaken",
+      "nested_subgroup": "Procedure list",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT",
+        "NULL_FLAVOUR"
+      ],
+      "supports_null_flavour": true,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.4745629277239854,
+      "final_queriability": 0.4745629277239854,
+      "local_utility": 0.22115384615384615,
+      "diversity": 1.0,
+      "coverage": 0.22115384615384615,
+      "rank": 23
+    },
+    {
+      "field_id": "cf_1d8359b2d21168",
+      "label": "State/province",
+      "canonical_path": "Patient admission / Tree / Assigned patient location / Address / State/province",
+      "record_family": "openEHR-EHR-COMPOSITION.hospitalisation.v1",
+      "form_group": "Patient admission",
+      "nested_subgroup": "Tree / Assigned patient location / Address",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.3247776464639969,
+      "final_queriability": 1.3247776464639969,
+      "local_utility": 0.2916666666666667,
+      "diversity": 0.2916666666666667,
+      "coverage": 1.0,
+      "rank": 24
+    },
+    {
+      "field_id": "cf_c9b3a708f95249",
+      "label": "fields/insertions 1",
+      "canonical_path": "Procedure undertaken / Procedure list / fields/insertions 1",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Procedure undertaken",
+      "nested_subgroup": "Procedure list",
+      "kind": "numeric",
+      "dv_type": "DV_COUNT",
+      "primary_dv_type": "DV_COUNT",
+      "observed_dv_types": [
+        "DV_COUNT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        ">",
+        "<",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.3241191407417369,
+      "final_queriability": 0.3241191407417369,
+      "local_utility": 0.0673076923076923,
+      "diversity": 0.30434782608695654,
+      "coverage": 0.22115384615384615,
+      "rank": 25
+    },
+    {
+      "field_id": "cf_5cd62eaa6e16a8",
+      "label": "issue date",
+      "canonical_path": "HCPA / components / General data / issue date",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "HCPA",
+      "nested_subgroup": "components / General data",
+      "kind": "temporal",
+      "dv_type": "DV_DATE",
+      "primary_dv_type": "DV_DATE",
+      "observed_dv_types": [
+        "DV_DATE"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "before",
+        "after",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.408431492617843,
+      "final_queriability": 1.408431492617843,
+      "local_utility": 0.38461538461538464,
+      "diversity": 0.38461538461538464,
+      "coverage": 1.0,
+      "rank": 26
+    },
+    {
+      "field_id": "cf_bbec72e0a270f7",
+      "label": "fields/insertions 2",
+      "canonical_path": "Procedure undertaken / Procedure list / fields/insertions 2",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Procedure undertaken",
+      "nested_subgroup": "Procedure list",
+      "kind": "numeric",
+      "dv_type": "DV_COUNT",
+      "primary_dv_type": "DV_COUNT",
+      "observed_dv_types": [
+        "DV_COUNT",
+        "NULL_FLAVOUR"
+      ],
+      "supports_null_flavour": true,
+      "operators": [
+        "equals",
+        ">",
+        "<",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.3664314558304943,
+      "final_queriability": 0.3664314558304943,
+      "local_utility": 0.11057692307692307,
+      "diversity": 0.5,
+      "coverage": 0.22115384615384615,
+      "rank": 27
+    },
+    {
+      "field_id": "cf_49398dcbba5447",
+      "label": "Secondary Diagnosis",
+      "canonical_path": "Problem/Diagnosis / structure / Secondary Diagnosis",
+      "record_family": "openEHR-EHR-COMPOSITION.hospitalisation.v1",
+      "form_group": "Problem/Diagnosis",
+      "nested_subgroup": "structure",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT",
+        "NULL_FLAVOUR"
+      ],
+      "supports_null_flavour": true,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.9231472116813881,
+      "final_queriability": 1.9231472116813881,
+      "local_utility": 0.9565217391304348,
+      "diversity": 0.9565217391304348,
+      "coverage": 1.0,
+      "rank": 28
+    },
+    {
+      "field_id": "cf_c4703128fab784",
+      "label": "Histopathological grading (G)",
+      "canonical_path": "Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / Histopathological grading (G)",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Problem/Diagnosis",
+      "nested_subgroup": "structure / Tumour - TNM Cancer staging / Pathological (pTNM)",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT",
+        "NULL_FLAVOUR"
+      ],
+      "supports_null_flavour": true,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.47587289029021895,
+      "final_queriability": 0.47587289029021895,
+      "local_utility": 0.07115384615384616,
+      "diversity": 0.2,
+      "coverage": 0.3557692307692308,
+      "rank": 29
+    },
+    {
+      "field_id": "cf_1285e1e2c004f2",
+      "label": "claim reason",
+      "canonical_path": "Patient discharge / Components / claim reason",
+      "record_family": "openEHR-EHR-COMPOSITION.hospitalisation.v1",
+      "form_group": "Patient discharge",
+      "nested_subgroup": "Components",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.3247776464639969,
+      "final_queriability": 1.3247776464639969,
+      "local_utility": 0.2916666666666667,
+      "diversity": 0.2916666666666667,
+      "coverage": 1.0,
+      "rank": 30
+    },
+    {
+      "field_id": "cf_7ab0248b87b82e",
+      "label": "educational level",
+      "canonical_path": "Demographic data / components / educational level",
+      "record_family": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+      "form_group": "Demographic data",
+      "nested_subgroup": "components",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.1440958282821787,
+      "final_queriability": 1.1440958282821787,
+      "local_utility": 0.09090909090909091,
+      "diversity": 0.09090909090909091,
+      "coverage": 1.0,
+      "rank": 31
+    },
+    {
+      "field_id": "cf_ccf42da6435cdd",
+      "label": "duration of treatment",
+      "canonical_path": "HCPA / components / chemotherapy / duration of treatment",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "HCPA",
+      "nested_subgroup": "components / chemotherapy",
+      "kind": "numeric",
+      "dv_type": "DV_QUANTITY",
+      "primary_dv_type": "DV_QUANTITY",
+      "observed_dv_types": [
+        "DV_QUANTITY"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        ">",
+        "<",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.1766039714419731,
+      "final_queriability": 0.1766039714419731,
+      "local_utility": 0.01923076923076923,
+      "diversity": 0.14285714285714285,
+      "coverage": 0.1346153846153846,
+      "rank": 32
+    },
+    {
+      "field_id": "cf_0a229c157b8d2a",
+      "label": "Associated causes",
+      "canonical_path": "Problem/Diagnosis / structure / Associated causes",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Problem/Diagnosis",
+      "nested_subgroup": "structure",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.0795853387716892,
+      "final_queriability": 1.0795853387716892,
+      "local_utility": 0.019230769230769232,
+      "diversity": 0.019230769230769232,
+      "coverage": 1.0,
+      "rank": 33
+    },
+    {
+      "field_id": "cf_ba09c313b94cba",
+      "label": "ICU - Total",
+      "canonical_path": "Authorization for hospital admission / Components / ICU - Total",
+      "record_family": "openEHR-EHR-COMPOSITION.hospitalisation.v1",
+      "form_group": "Authorization for hospital admission",
+      "nested_subgroup": "Components",
+      "kind": "numeric",
+      "dv_type": "DV_COUNT",
+      "primary_dv_type": "DV_COUNT",
+      "observed_dv_types": [
+        "DV_COUNT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        ">",
+        "<",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.3247776464639969,
+      "final_queriability": 1.3247776464639969,
+      "local_utility": 0.2916666666666667,
+      "diversity": 0.2916666666666667,
+      "coverage": 1.0,
+      "rank": 34
+    },
+    {
+      "field_id": "cf_1b05aa3c7da77f",
+      "label": "Height/Length",
+      "canonical_path": "Height/Length / Simple / Height/Length",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Height/Length",
+      "nested_subgroup": "Simple",
+      "kind": "numeric",
+      "dv_type": "DV_QUANTITY",
+      "primary_dv_type": "DV_QUANTITY",
+      "observed_dv_types": [
+        "DV_QUANTITY"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        ">",
+        "<",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.12051812787964546,
+      "final_queriability": 0.12051812787964546,
+      "local_utility": 0.01923076923076923,
+      "diversity": 0.2222222222222222,
+      "coverage": 0.08653846153846154,
+      "rank": 35
+    },
+    {
+      "field_id": "cf_19e1b0f55ef007",
+      "label": "race",
+      "canonical_path": "Demographic data / components / race",
+      "record_family": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+      "form_group": "Demographic data",
+      "nested_subgroup": "components",
+      "kind": "null",
+      "dv_type": "NULL_FLAVOUR",
+      "primary_dv_type": "NULL_FLAVOUR",
+      "observed_dv_types": [
+        "NULL_FLAVOUR"
+      ],
+      "supports_null_flavour": true,
+      "operators": [
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.1440958282821787,
+      "final_queriability": 1.1440958282821787,
+      "local_utility": 0.09090909090909091,
+      "diversity": 0.09090909090909091,
+      "coverage": 1.0,
+      "rank": 36
+    },
+    {
+      "field_id": "cf_0b6364bb149692",
+      "label": "Procedure",
+      "canonical_path": "Procedure undertaken / Procedure list / Procedure",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Procedure undertaken",
+      "nested_subgroup": "Procedure list",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT",
+        "NULL_FLAVOUR"
+      ],
+      "supports_null_flavour": true,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.152277646463997,
+      "final_queriability": 1.152277646463997,
+      "local_utility": 0.1,
+      "diversity": 0.1,
+      "coverage": 1.0,
+      "rank": 37
+    },
+    {
+      "field_id": "cf_10f7d6c8e1d5c5",
+      "label": "Admission type",
+      "canonical_path": "Patient admission / Tree / Admission type",
+      "record_family": "openEHR-EHR-COMPOSITION.hospitalisation.v1",
+      "form_group": "Patient admission",
+      "nested_subgroup": "Tree",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.174777646463997,
+      "final_queriability": 1.174777646463997,
+      "local_utility": 0.125,
+      "diversity": 0.125,
+      "coverage": 1.0,
+      "rank": 38
+    },
+    {
+      "field_id": "cf_4122372d727029",
+      "label": "ethnic group",
+      "canonical_path": "Demographic data / components / ethnic group",
+      "record_family": "openEHR-EHR-COMPOSITION.demographic_data.v1",
+      "form_group": "Demographic data",
+      "nested_subgroup": "components",
+      "kind": "null",
+      "dv_type": "NULL_FLAVOUR",
+      "primary_dv_type": "NULL_FLAVOUR",
+      "observed_dv_types": [
+        "NULL_FLAVOUR"
+      ],
+      "supports_null_flavour": true,
+      "operators": [
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.1440958282821787,
+      "final_queriability": 1.1440958282821787,
+      "local_utility": 0.09090909090909091,
+      "diversity": 0.09090909090909091,
+      "coverage": 1.0,
+      "rank": 39
+    },
+    {
+      "field_id": "cf_b87e8363f020f7",
+      "label": "healthcare unit",
+      "canonical_path": "HCPA / components / General data / healthcare unit",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "HCPA",
+      "nested_subgroup": "components / General data",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.183431492617843,
+      "final_queriability": 1.183431492617843,
+      "local_utility": 0.1346153846153846,
+      "diversity": 0.1346153846153846,
+      "coverage": 1.0,
+      "rank": 40
+    },
+    {
+      "field_id": "cf_e7f0fa8ccde04c",
+      "label": "schema",
+      "canonical_path": "HCPA / components / chemotherapy / schema",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "HCPA",
+      "nested_subgroup": "components / chemotherapy",
+      "kind": "text",
+      "dv_type": "DV_TEXT",
+      "primary_dv_type": "DV_TEXT",
+      "observed_dv_types": [
+        "DV_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.1766039714419731,
+      "final_queriability": 0.1766039714419731,
+      "local_utility": 0.01923076923076923,
+      "diversity": 0.14285714285714285,
+      "coverage": 0.1346153846153846,
+      "rank": 41
+    },
+    {
+      "field_id": "cf_ba8421601b1980",
+      "label": "Issue date",
+      "canonical_path": "Authorization for hospital admission / Components / Issue date",
+      "record_family": "openEHR-EHR-COMPOSITION.hospitalisation.v1",
+      "form_group": "Authorization for hospital admission",
+      "nested_subgroup": "Components",
+      "kind": "temporal",
+      "dv_type": "DV_DATE",
+      "primary_dv_type": "DV_DATE",
+      "observed_dv_types": [
+        "DV_DATE"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "before",
+        "after",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.812277646463997,
+      "final_queriability": 1.812277646463997,
+      "local_utility": 0.8333333333333334,
+      "diversity": 0.8333333333333334,
+      "coverage": 1.0,
+      "rank": 42
+    },
+    {
+      "field_id": "cf_469c691048a0ce",
+      "label": "date of discharge",
+      "canonical_path": "Patient discharge / Components / date of discharge",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Patient discharge",
+      "nested_subgroup": "Components",
+      "kind": "temporal",
+      "dv_type": "DV_DATE_TIME",
+      "primary_dv_type": "DV_DATE_TIME",
+      "observed_dv_types": [
+        "DV_DATE_TIME",
+        "NULL_FLAVOUR"
+      ],
+      "supports_null_flavour": true,
+      "operators": [
+        "equals",
+        "before",
+        "after",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.3530468772332276,
+      "final_queriability": 1.3530468772332276,
+      "local_utility": 0.3230769230769231,
+      "diversity": 0.3230769230769231,
+      "coverage": 1.0,
+      "rank": 43
+    },
+    {
+      "field_id": "cf_be52992cb12705",
+      "label": "hospital infection",
+      "canonical_path": "Patient discharge / Components / hospital infection",
+      "record_family": "openEHR-EHR-COMPOSITION.hospitalisation.v1",
+      "form_group": "Patient discharge",
+      "nested_subgroup": "Components",
+      "kind": "null",
+      "dv_type": "NULL_FLAVOUR",
+      "primary_dv_type": "NULL_FLAVOUR",
+      "observed_dv_types": [
+        "NULL_FLAVOUR"
+      ],
+      "supports_null_flavour": true,
+      "operators": [
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.099777646463997,
+      "final_queriability": 1.099777646463997,
+      "local_utility": 0.041666666666666664,
+      "diversity": 0.041666666666666664,
+      "coverage": 1.0,
+      "rank": 44
+    },
+    {
+      "field_id": "cf_2a67f6f1c22886",
+      "label": "Hospital service",
+      "canonical_path": "Patient admission / Tree / Hospital service",
+      "record_family": "openEHR-EHR-COMPOSITION.hospitalisation.v1",
+      "form_group": "Patient admission",
+      "nested_subgroup": "Tree",
+      "kind": "text",
+      "dv_type": "DV_TEXT",
+      "primary_dv_type": "DV_TEXT",
+      "observed_dv_types": [
+        "DV_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.2122776464639968,
+      "final_queriability": 1.2122776464639968,
+      "local_utility": 0.16666666666666666,
+      "diversity": 0.16666666666666666,
+      "coverage": 1.0,
+      "rank": 45
+    },
+    {
+      "field_id": "cf_49533263f29569",
+      "label": "reason for discharge",
+      "canonical_path": "Patient discharge / Components / reason for discharge",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Patient discharge",
+      "nested_subgroup": "Components",
+      "kind": "coded",
+      "dv_type": "DV_CODED_TEXT",
+      "primary_dv_type": "DV_CODED_TEXT",
+      "observed_dv_types": [
+        "DV_CODED_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "not_equals",
+        "in",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 1.1142007233870739,
+      "final_queriability": 1.1142007233870739,
+      "local_utility": 0.057692307692307696,
+      "diversity": 0.057692307692307696,
+      "coverage": 1.0,
+      "rank": 46
+    },
+    {
+      "field_id": "cf_ac2de786b38da7",
+      "label": "Baros score",
+      "canonical_path": "Bariatric surgery evaluation / Components / Baros score",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Bariatric surgery evaluation",
+      "nested_subgroup": "Components",
+      "kind": "text",
+      "dv_type": "DV_TEXT",
+      "primary_dv_type": "DV_TEXT",
+      "observed_dv_types": [
+        "DV_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.6427379820685634,
+      "final_queriability": 0.6427379820685634,
+      "local_utility": 0.019230769230769232,
+      "diversity": 0.034482758620689655,
+      "coverage": 0.5576923076923077,
+      "rank": 47
+    },
+    {
+      "field_id": "cf_c75844f7868470",
+      "label": "Body Mass Index",
+      "canonical_path": "Body mass index / Single / Body Mass Index",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Body mass index",
+      "nested_subgroup": "Single",
+      "kind": "numeric",
+      "dv_type": "DV_QUANTITY",
+      "primary_dv_type": "DV_QUANTITY",
+      "observed_dv_types": [
+        "DV_QUANTITY",
+        "NULL_FLAVOUR"
+      ],
+      "supports_null_flavour": true,
+      "operators": [
+        "equals",
+        ">",
+        "<",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.9501082079964815,
+      "final_queriability": 0.9501082079964815,
+      "local_utility": 0.34475524475524477,
+      "diversity": 0.6181818181818182,
+      "coverage": 0.5576923076923077,
+      "rank": 48
+    }
+  ],
+  "groups": {
+    "Patient admission": {
+      "Tree": [
+        "cf_3db72fcc22b158",
+        "cf_22f759c45e42f4",
+        "cf_10f7d6c8e1d5c5",
+        "cf_2a67f6f1c22886"
+      ],
+      "Tree / Assigned patient location / Address": [
+        "cf_1d8359b2d21168"
+      ]
+    },
+    "Procedure undertaken": {
+      "Procedure list": [
+        "cf_e5c01940113606",
+        "cf_821e1930333a5c",
+        "cf_fc5be63ab59287",
+        "cf_c9b3a708f95249",
+        "cf_bbec72e0a270f7",
+        "cf_0b6364bb149692"
+      ]
+    },
+    "HCPA": {
+      "components / transplantation": [
+        "cf_d7a40eea03f1d2",
+        "cf_c89fef6e42073d"
+      ],
+      "components / chemotherapy": [
+        "cf_ec7d5ae391fa0a",
+        "cf_ccf42da6435cdd",
+        "cf_e7f0fa8ccde04c"
+      ],
+      "components / General data": [
+        "cf_8b431261fa7dca",
+        "cf_16800b2d3f5ef6",
+        "cf_5cd62eaa6e16a8",
+        "cf_b87e8363f020f7"
+      ]
+    },
+    "Problem/Diagnosis": {
+      "structure / Tumour - TNM Cancer staging / Pathological (pTNM)": [
+        "cf_72eaea6790449d",
+        "cf_c4703128fab784"
+      ],
+      "structure": [
+        "cf_af0c9a7d79fe64",
+        "cf_4e7e8ca2916a1e",
+        "cf_2db2fd852fb674",
+        "cf_bd9db9ae67063d",
+        "cf_49398dcbba5447",
+        "cf_0a229c157b8d2a"
+      ],
+      "structure / Tumour - TNM Cancer staging": [
+        "cf_8e35971b63e360"
+      ]
+    },
+    "Demographic data": {
+      "components": [
+        "cf_7f3b6795a0e812",
+        "cf_e7551706658b4a",
+        "cf_eee397355aecbe",
+        "cf_7ab0248b87b82e",
+        "cf_19e1b0f55ef007",
+        "cf_4122372d727029"
+      ]
+    },
+    "Body weight": {
+      "Simple": [
+        "cf_cc107606becdfc"
+      ]
+    },
+    "Bariatric surgery evaluation": {
+      "Components": [
+        "cf_8f20b6e7578a41",
+        "cf_ac2de786b38da7"
+      ]
+    },
+    "Patient discharge": {
+      "Components": [
+        "cf_79ed78f34fef6f",
+        "cf_80f721f9446bd3",
+        "cf_1285e1e2c004f2",
+        "cf_469c691048a0ce",
+        "cf_be52992cb12705",
+        "cf_49533263f29569"
+      ]
+    },
+    "Authorization for hospital admission": {
+      "Components": [
+        "cf_ba09c313b94cba",
+        "cf_ba8421601b1980"
+      ]
+    },
+    "Height/Length": {
+      "Simple": [
+        "cf_1b05aa3c7da77f"
+      ]
+    },
+    "Body mass index": {
+      "Single": [
+        "cf_c75844f7868470"
+      ]
+    }
+  }
+}
