@@ -48,30 +48,30 @@ python evaluation/run_acf_evaluation.py  --data-dir orbda_10k/mixed  --out-dir r
 
 
 
-python evaluation/run_acf_evaluation.py \
-  --data-dir orbda_10k/mixed \
-  --out-dir results/acf_eval_ke10 \
-  --use-cache \
-  --entity-level subgroup \
-  --k-e 10 \
-  --k-a 10 \
-  --k-r 2 \
-  --field-complexity 35 \
-  --p 0.15 \
+python evaluation/run_acf_evaluation.py ^
+  --data-dir orbda_10k/mixed ^
+  --out-dir results/acf_eval_ke10 ^
+  --use-cache ^
+  --entity-level subgroup ^
+  --k-e 10 ^
+  --k-a 10 ^
+  --k-r 2 ^
+  --field-complexity 35 ^
+  --p 0.15 ^
   --random-trials 30
 
 
 
-python evaluation/run_acf_evaluation.py \
-  --data-dir orbda_10k/mixed \
-  --out-dir results/acf_eval_fc40 \
-  --use-cache \
-  --entity-level group \
-  --k-e 10 \
-  --k-a 12 \
-  --k-r 2 \
-  --field-complexity 40 \
-  --p 0.15 \
+python evaluation/run_acf_evaluation.py ^
+  --data-dir orbda_10k/mixed ^
+  --out-dir results/acf_eval_fc40 ^
+  --use-cache ^
+  --entity-level group ^
+  --k-e 10 ^
+  --k-a 12 ^
+  --k-r 2 ^
+  --field-complexity 40 ^
+  --p 0.15 ^
   --random-trials 30
 
 
@@ -98,7 +98,7 @@ python evaluation/generate_aqf_schema_graphs.py   --data-dir orbda_10k/mixed_min
 python evaluation/generate_aqf_schema_graphs.py   --data-dir orbda_10k/mixed_mini   --results-dir results/aqf_final_c35   --out-dir results/aqf_final_c35/schema_graphs   --mu 0.25   --fig-width 44   --fig-height 34   --font-size 14   --max-field-labels 180   --node-scale 2.2
 
 
-python evaluation/generate_aqf_schema_graphs.py   --data-dir orbda_10k/mixed_mini   --results-dir results/aqf_final_c35   --out-dir results/aqf_final_c35/schema_graphs   --mu 0.25   --fig-width 48   --fig-height 38   --font-size 15   --max-field-labels 200   --node-scale 2.8
+python evaluation/generate_aqf_schema_graphs.py   --data-dir orbda_10k/mixed   --results-dir results/aqf_final_c35   --out-dir results/aqf_final_c35/schema_graphs   --mu 0.25   --fig-width 48   --fig-height 38   --font-size 15   --max-field-labels 200   --node-scale 2.8
 
 
 python evaluation/generate_aqf_schema_graphs.py   --canonical-forest results/aqf_final_c35/.cache/canonical_forest.json   --out results/aqf_final_5   --cartesian-threshold 0.05
@@ -107,6 +107,11 @@ python evaluation/generate_aqf_schema_graphs.py   --canonical-forest results/aqf
 
 This is aqf:
 
+python evaluation/generate_aqf_schema_graphs.py   --data-dir orbda_10k/mixed   --results-dir results/aqf_final_c53   --out-dir results/aqf_final_c53/schema_graphs   --mu 0.25   --fig-width 48   --fig-height 38   --font-size 15   --max-field-labels 200   --node-scale 2.8
+
+python evaluation/generate_aqf_schema_graphs.py ^
+  --data-dir ../dataset/mixed ^
+  --out-dir aqf/output
 
 python visualize_schema_graph.py   --graph_json output/reduced_schema_graph.json   --output_png output/reduced_schema_graph_dense.png   --hide_labels   --max_nodes 200
 
@@ -127,21 +132,21 @@ python visualize_all_aqf_graphs.py   --input_dir output   --output_dir output/fi
 
 python canonical_structure_generator.py --graph_json output/reduced_schema_graph.json  --output_dir output/canonical
 
-python canonical_structure_generator.py \
-  --graph_json output/reduced_schema_graph.json \
-  --output_dir output/canonical \
-  --input_weight_threshold 0.2 \
+python canonical_structure_generator.py ^
+  --graph_json output/reduced_schema_graph.json ^
+  --output_dir output/canonical ^
+  --input_weight_threshold 0.2 ^
   --output_weight_threshold 0.2
 
 
-python canonical_structure_generator.py \
-  --graph_json output/reduced_schema_graph.json \
-  --output_dir output/canonical \
+python canonical_structure_generator.py ^
+  --graph_json output/reduced_schema_graph.json ^
+  --output_dir output/canonical ^
   --exclude_cooccurrence
 
-python canonical_structure_generator.py \
-  --graph_json output/reduced_schema_graph.json \
-  --output_dir output/canonical \
+python canonical_structure_generator.py ^
+  --graph_json output/reduced_schema_graph.json ^
+  --output_dir output/canonical ^
   --max_forms 5
 
 
@@ -159,16 +164,16 @@ python parameter_sweep_evaluator.py   --data_dir data   --workload_json aqf_benc
 python parameter_sweep_evaluator.py   --data_dir ../orbda_10k/mixed_mini   --workload_json aqf_benchmark_workload.json   --output_dir output/experiments_test   --scripts_dir .   --mode pilot   --limit 3
 
 
-python aqf_query_realizer.py \
-  --aqf_forms_json output/aqf_forms/aqf_forms.json \
-  --workload_json aqf_benchmark_workload.json \
+python aqf_query_realizer.py ^
+  --aqf_forms_json output/aqf_forms/aqf_forms.json ^
+  --workload_json aqf_benchmark_workload.json ^
   --output_dir output/query_realization
 
 
-  python aqf_query_realizer.py \
-  --aqf_forms_json output/aqf_forms/aqf_forms.json \
-  --workload_json aqf_benchmark_workload.json \
-  --output_dir output/query_realization \
+  python aqf_query_realizer.py ^
+  --aqf_forms_json output/aqf_forms/aqf_forms.json ^
+  --workload_json aqf_benchmark_workload.json ^
+  --output_dir output/query_realization ^
   --strict_context
 
 
