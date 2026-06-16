@@ -131,9 +131,23 @@ def build_canonical_forest_from_data(data_dir: Path) -> Dict[str, Any]:
     from aqf_eval.canonical import build_canonical_forest
     return build_canonical_forest(scan_json_folder(data_dir))
 
+def primary_tree_edges(G):
 
-def primary_tree_edges(G: nx.DiGraph) -> List[Tuple[str, str]]:
-    return [(u, v) for u, v, d in G.edges(data=True) if d.get('edge_type') != 'sibling_context']
+    allowed = {
+        'root_to_family',
+        'family_to_group',
+        'group_to_subgroup',
+        'subgroup_to_field'
+    }
+
+    return [
+        (u, v)
+        for u, v, d in G.edges(data=True)
+        if d.get('edge_type') in allowed
+    ]
+
+# def primary_tree_edges(G: nx.DiGraph) -> List[Tuple[str, str]]:
+#     return [(u, v) for u, v, d in G.edges(data=True) if d.get('edge_type') != 'sibling_context']
 
 
 def add_sibling_context_edges(G: nx.DiGraph) -> None:
