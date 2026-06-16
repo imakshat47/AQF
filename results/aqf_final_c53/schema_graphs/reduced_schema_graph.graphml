@@ -1,0 +1,2848 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d32" for="edge" attr.name="relative_queriability" attr.type="double" />
+  <key id="d31" for="edge" attr.name="relation_strength" attr.type="double" />
+  <key id="d30" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d29" for="edge" attr.name="edge_type" attr.type="string" />
+  <key id="d28" for="node" attr.name="depth" attr.type="double" />
+  <key id="d27" for="node" attr.name="weighted_operator_burden" attr.type="double" />
+  <key id="d26" for="node" attr.name="operator_count" attr.type="double" />
+  <key id="d25" for="node" attr.name="aqf_visual_weight" attr.type="double" />
+  <key id="d24" for="node" attr.name="specificity" attr.type="double" />
+  <key id="d23" for="node" attr.name="local_utility" attr.type="double" />
+  <key id="d22" for="node" attr.name="effective_diversity" attr.type="double" />
+  <key id="d21" for="node" attr.name="coverage" attr.type="double" />
+  <key id="d20" for="node" attr.name="operators" attr.type="string" />
+  <key id="d19" for="node" attr.name="dv_type" attr.type="string" />
+  <key id="d18" for="node" attr.name="kind" attr.type="string" />
+  <key id="d17" for="node" attr.name="nested_subgroup" attr.type="string" />
+  <key id="d16" for="node" attr.name="form_group" attr.type="string" />
+  <key id="d15" for="node" attr.name="record_family" attr.type="string" />
+  <key id="d14" for="node" attr.name="canonical_path" attr.type="string" />
+  <key id="d13" for="node" attr.name="field_id" attr.type="string" />
+  <key id="d12" for="node" attr.name="normalized_queriability" attr.type="double" />
+  <key id="d11" for="node" attr.name="queriability" attr.type="double" />
+  <key id="d10" for="node" attr.name="normalized_cartesian_queriability" attr.type="double" />
+  <key id="d9" for="node" attr.name="cartesian_queriability" attr.type="double" />
+  <key id="d8" for="node" attr.name="raw_cartesian_queriability" attr.type="double" />
+  <key id="d7" for="node" attr.name="normalized_upward_queriability" attr.type="double" />
+  <key id="d6" for="node" attr.name="upward_queriability" attr.type="double" />
+  <key id="d5" for="node" attr.name="base_queriability" attr.type="double" />
+  <key id="d4" for="node" attr.name="layer" attr.type="long" />
+  <key id="d3" for="node" attr.name="label" attr.type="string" />
+  <key id="d2" for="node" attr.name="node_type" attr.type="string" />
+  <key id="d1" for="graph" attr.name="cartesian_threshold" attr.type="double" />
+  <key id="d0" for="graph" attr.name="name" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="schema:root">
+      <data key="d2">root</data>
+      <data key="d3">EHR Schema</data>
+      <data key="d4">0</data>
+      <data key="d5">0.0</data>
+      <data key="d6">20.961620806729503</data>
+      <data key="d7">1.0</data>
+      <data key="d8">0.05612993269334717</data>
+      <data key="d9">1.0</data>
+      <data key="d10">1.0</data>
+      <data key="d11">1.0</data>
+      <data key="d12">1.0</data>
+    </node>
+    <node id="family:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1">
+      <data key="d2">composition_family</data>
+      <data key="d3">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d4">1</data>
+      <data key="d5">0.0</data>
+      <data key="d6">9.162864219114219</data>
+      <data key="d7">0.43712575013152516</data>
+      <data key="d8">0.036995475523009386</data>
+      <data key="d9">0.02330118902184941</data>
+      <data key="d10">0.02330118902184941</data>
+      <data key="d11">0.02330118902184941</data>
+      <data key="d12">0.02330118902184941</data>
+    </node>
+    <node id="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA">
+      <data key="d2">canonical_group</data>
+      <data key="d3">HCPA</data>
+      <data key="d4">2</data>
+      <data key="d5">0.0</data>
+      <data key="d6">2.496153846153846</data>
+      <data key="d7">0.11908210100587655</data>
+      <data key="d8">0.04422664204227156</data>
+      <data key="d9">0.027855658873412775</data>
+      <data key="d10">0.027855658873412775</data>
+      <data key="d11">0.027855658873412775</data>
+      <data key="d12">0.027855658873412775</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components_/_General_data">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">components / General data</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">2.275</data>
+      <data key="d7">0.1085316837364807</data>
+      <data key="d8">0.11308889622952677</data>
+      <data key="d9">0.07122778421046673</data>
+      <data key="d10">0.07122778421046673</data>
+      <data key="d11">0.07122778421046673</data>
+      <data key="d12">0.07122778421046673</data>
+    </node>
+    <node id="field:cf_5cd62eaa6e16a8">
+      <data key="d2">field</data>
+      <data key="d3">issue date</data>
+      <data key="d13">cf_5cd62eaa6e16a8</data>
+      <data key="d14">HCPA / components / General data / issue date</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">HCPA</data>
+      <data key="d17">components / General data</data>
+      <data key="d18">temporal</data>
+      <data key="d19">DV_DATE</data>
+      <data key="d20">after;before;between;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.38461538461538464</data>
+      <data key="d23">0.38461538461538464</data>
+      <data key="d24">0.5</data>
+      <data key="d25">0.5096153846153846</data>
+      <data key="d5">0.5096153846153846</data>
+      <data key="d26">6.0</data>
+      <data key="d27">6.0</data>
+      <data key="d28">4.0</data>
+      <data key="d6">0.5096153846153846</data>
+      <data key="d7">0.024311831099042593</data>
+      <data key="d8">0.6841900006398512</data>
+      <data key="d9">0.43092946654660563</data>
+      <data key="d10">0.43092946654660563</data>
+      <data key="d11">0.43092946654660563</data>
+      <data key="d12">0.43092946654660563</data>
+    </node>
+    <node id="field:cf_775d9002cb4e7b">
+      <data key="d2">field</data>
+      <data key="d3">reason for encounter</data>
+      <data key="d13">cf_775d9002cb4e7b</data>
+      <data key="d14">HCPA / components / General data / reason for encounter</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">HCPA</data>
+      <data key="d17">components / General data</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.5</data>
+      <data key="d25">0.425</data>
+      <data key="d5">0.425</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">4.0</data>
+      <data key="d6">0.425</data>
+      <data key="d7">0.02027514970901288</data>
+      <data key="d8">0.698099688992763</data>
+      <data key="d9">0.43969032913761713</data>
+      <data key="d10">0.43969032913761713</data>
+      <data key="d11">0.43969032913761713</data>
+      <data key="d12">0.43969032913761713</data>
+    </node>
+    <node id="field:cf_b87e8363f020f7">
+      <data key="d2">field</data>
+      <data key="d3">healthcare unit</data>
+      <data key="d13">cf_b87e8363f020f7</data>
+      <data key="d14">HCPA / components / General data / healthcare unit</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">HCPA</data>
+      <data key="d17">components / General data</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.5</data>
+      <data key="d25">0.425</data>
+      <data key="d5">0.425</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">4.0</data>
+      <data key="d6">0.425</data>
+      <data key="d7">0.02027514970901288</data>
+      <data key="d8">0.6499356807224043</data>
+      <data key="d9">0.4093547639126333</data>
+      <data key="d10">0.4093547639126333</data>
+      <data key="d11">0.4093547639126333</data>
+      <data key="d12">0.4093547639126333</data>
+    </node>
+    <node id="field:cf_8b431261fa7dca">
+      <data key="d2">field</data>
+      <data key="d3">State</data>
+      <data key="d13">cf_8b431261fa7dca</data>
+      <data key="d14">HCPA / components / General data / State</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">HCPA</data>
+      <data key="d17">components / General data</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.5</data>
+      <data key="d25">0.425</data>
+      <data key="d5">0.425</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">4.0</data>
+      <data key="d6">0.425</data>
+      <data key="d7">0.02027514970901288</data>
+      <data key="d8">0.5496192761488758</data>
+      <data key="d9">0.34617159159454003</data>
+      <data key="d10">0.34617159159454003</data>
+      <data key="d11">0.34617159159454003</data>
+      <data key="d12">0.34617159159454003</data>
+    </node>
+    <node id="field:cf_16800b2d3f5ef6">
+      <data key="d2">field</data>
+      <data key="d3">patient age</data>
+      <data key="d13">cf_16800b2d3f5ef6</data>
+      <data key="d14">HCPA / components / General data / patient age</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">HCPA</data>
+      <data key="d17">components / General data</data>
+      <data key="d18">numeric</data>
+      <data key="d19">DV_COUNT</data>
+      <data key="d20">&lt;;&gt;;between;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.36538461538461536</data>
+      <data key="d23">0.36538461538461536</data>
+      <data key="d24">0.5</data>
+      <data key="d25">0.49038461538461536</data>
+      <data key="d5">0.49038461538461536</data>
+      <data key="d26">6.0</data>
+      <data key="d27">6.0</data>
+      <data key="d28">4.0</data>
+      <data key="d6">0.49038461538461536</data>
+      <data key="d7">0.023394403510399474</data>
+      <data key="d8">0.7658673247486811</data>
+      <data key="d9">0.48237302122331255</data>
+      <data key="d10">0.48237302122331255</data>
+      <data key="d11">0.48237302122331255</data>
+      <data key="d12">0.48237302122331255</data>
+    </node>
+    <node id="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Patient_discharge">
+      <data key="d2">canonical_group</data>
+      <data key="d3">Patient discharge</data>
+      <data key="d4">2</data>
+      <data key="d5">0.0</data>
+      <data key="d6">0.8105769230769231</data>
+      <data key="d7">0.03866957286130737</data>
+      <data key="d8">0.137063017607053</data>
+      <data key="d9">0.08632761806725989</data>
+      <data key="d10">0.08632761806725989</data>
+      <data key="d11">0.08632761806725989</data>
+      <data key="d12">0.08632761806725989</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Patient_discharge::Components">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">Components</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">0.8105769230769231</data>
+      <data key="d7">0.03866957286130737</data>
+      <data key="d8">0.22870255481526125</data>
+      <data key="d9">0.14404576192610022</data>
+      <data key="d10">0.14404576192610022</data>
+      <data key="d11">0.14404576192610022</data>
+      <data key="d12">0.14404576192610022</data>
+    </node>
+    <node id="field:cf_469c691048a0ce">
+      <data key="d2">field</data>
+      <data key="d3">date of discharge</data>
+      <data key="d13">cf_469c691048a0ce</data>
+      <data key="d14">Patient discharge / Components / date of discharge</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Patient discharge</data>
+      <data key="d17">Components</data>
+      <data key="d18">temporal</data>
+      <data key="d19">DV_DATE_TIME</data>
+      <data key="d20">after;before;between;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3230769230769231</data>
+      <data key="d23">0.3230769230769231</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.4168269230769231</data>
+      <data key="d5">0.4168269230769231</data>
+      <data key="d26">6.0</data>
+      <data key="d27">6.0</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.4168269230769231</data>
+      <data key="d7">0.019885242983839556</data>
+      <data key="d8">0.5057780459559614</data>
+      <data key="d9">0.3185586800902628</data>
+      <data key="d10">0.3185586800902628</data>
+      <data key="d11">0.3185586800902628</data>
+      <data key="d12">0.3185586800902628</data>
+    </node>
+    <node id="field:cf_49533263f29569">
+      <data key="d2">field</data>
+      <data key="d3">reason for discharge</data>
+      <data key="d13">cf_49533263f29569</data>
+      <data key="d14">Patient discharge / Components / reason for discharge</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Patient discharge</data>
+      <data key="d17">Components</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.39375</data>
+      <data key="d5">0.39375</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.39375</data>
+      <data key="d7">0.018784329877467816</data>
+      <data key="d8">0.4870905165918486</data>
+      <data key="d9">0.30678854744813117</data>
+      <data key="d10">0.30678854744813117</data>
+      <data key="d11">0.30678854744813117</data>
+      <data key="d12">0.30678854744813117</data>
+    </node>
+    <node id="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Bariatric_surgery_evaluation">
+      <data key="d2">canonical_group</data>
+      <data key="d3">Bariatric surgery evaluation</data>
+      <data key="d4">2</data>
+      <data key="d5">0.0</data>
+      <data key="d6">1.3036858974358974</data>
+      <data key="d7">0.06219394528009795</data>
+      <data key="d8">0.12625756297112387</data>
+      <data key="d9">0.07952192257667999</data>
+      <data key="d10">0.07952192257667999</data>
+      <data key="d11">0.07952192257667999</data>
+      <data key="d12">0.07952192257667999</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Bariatric_surgery_evaluation::Components">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">Components</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">1.3036858974358974</data>
+      <data key="d7">0.06219394528009795</data>
+      <data key="d8">0.20895457323482622</data>
+      <data key="d9">0.13160771524335046</data>
+      <data key="d10">0.13160771524335046</data>
+      <data key="d11">0.13160771524335046</data>
+      <data key="d12">0.13160771524335046</data>
+    </node>
+    <node id="field:cf_505d09ec39545c">
+      <data key="d2">field</data>
+      <data key="d3">duration of follow-up (months)</data>
+      <data key="d13">cf_505d09ec39545c</data>
+      <data key="d14">Bariatric surgery evaluation / Components / duration of follow-up (months)</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Bariatric surgery evaluation</data>
+      <data key="d17">Components</data>
+      <data key="d18">numeric</data>
+      <data key="d19">DV_COUNT</data>
+      <data key="d20">&lt;;&gt;;between;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">0.5576923076923077</data>
+      <data key="d22">0.8333333333333334</data>
+      <data key="d23">0.46474358974358976</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.5584935897435898</data>
+      <data key="d5">0.5584935897435898</data>
+      <data key="d26">6.0</data>
+      <data key="d27">6.0</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.5584935897435898</data>
+      <data key="d7">0.026643626220177182</data>
+      <data key="d8">0.6750864686941458</data>
+      <data key="d9">0.4251957081441384</data>
+      <data key="d10">0.4251957081441384</data>
+      <data key="d11">0.4251957081441384</data>
+      <data key="d12">0.4251957081441384</data>
+    </node>
+    <node id="field:cf_ac2de786b38da7">
+      <data key="d2">field</data>
+      <data key="d3">Baros score</data>
+      <data key="d13">cf_ac2de786b38da7</data>
+      <data key="d14">Bariatric surgery evaluation / Components / Baros score</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Bariatric surgery evaluation</data>
+      <data key="d17">Components</data>
+      <data key="d18">text</data>
+      <data key="d19">DV_TEXT</data>
+      <data key="d20">contains;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">0.5576923076923077</data>
+      <data key="d22">0.5</data>
+      <data key="d23">0.27884615384615385</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.37259615384615385</data>
+      <data key="d5">0.37259615384615385</data>
+      <data key="d26">4.0</data>
+      <data key="d27">3.25</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.37259615384615385</data>
+      <data key="d7">0.017775159529960387</data>
+      <data key="d8">0.5839558975711123</data>
+      <data key="d9">0.3677981309164525</data>
+      <data key="d10">0.3677981309164525</data>
+      <data key="d11">0.3677981309164525</data>
+      <data key="d12">0.3677981309164525</data>
+    </node>
+    <node id="field:cf_8f20b6e7578a41">
+      <data key="d2">field</data>
+      <data key="d3">Baros table</data>
+      <data key="d13">cf_8f20b6e7578a41</data>
+      <data key="d14">Bariatric surgery evaluation / Components / Baros table</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Bariatric surgery evaluation</data>
+      <data key="d17">Components</data>
+      <data key="d18">text</data>
+      <data key="d19">DV_TEXT</data>
+      <data key="d20">contains;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">0.5576923076923077</data>
+      <data key="d22">0.5</data>
+      <data key="d23">0.27884615384615385</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.37259615384615385</data>
+      <data key="d5">0.37259615384615385</data>
+      <data key="d26">4.0</data>
+      <data key="d27">3.25</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.37259615384615385</data>
+      <data key="d7">0.017775159529960387</data>
+      <data key="d8">0.4688853160487722</data>
+      <data key="d9">0.29532220425243244</data>
+      <data key="d10">0.29532220425243244</data>
+      <data key="d11">0.29532220425243244</data>
+      <data key="d12">0.29532220425243244</data>
+    </node>
+    <node id="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis">
+      <data key="d2">canonical_group</data>
+      <data key="d3">Problem/Diagnosis</data>
+      <data key="d4">2</data>
+      <data key="d5">0.0</data>
+      <data key="d6">2.7129807692307693</data>
+      <data key="d7">0.1294260970678277</data>
+      <data key="d8">0.0742797091090427</data>
+      <data key="d9">0.046784249099901865</data>
+      <data key="d10">0.046784249099901865</data>
+      <data key="d11">0.046784249099901865</data>
+      <data key="d12">0.046784249099901865</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">structure</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">1.5067307692307692</data>
+      <data key="d7">0.0718804515701882</data>
+      <data key="d8">0.1478986805964514</data>
+      <data key="d9">0.09315233995348073</data>
+      <data key="d10">0.09315233995348073</data>
+      <data key="d11">0.09315233995348073</data>
+      <data key="d12">0.09315233995348073</data>
+    </node>
+    <node id="field:cf_bd9db9ae67063d">
+      <data key="d2">field</data>
+      <data key="d3">Problem</data>
+      <data key="d13">cf_bd9db9ae67063d</data>
+      <data key="d14">Problem/Diagnosis / structure / Problem</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Problem/Diagnosis</data>
+      <data key="d17">structure</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.5</data>
+      <data key="d25">0.425</data>
+      <data key="d5">0.425</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">4.0</data>
+      <data key="d6">0.425</data>
+      <data key="d7">0.02027514970901288</data>
+      <data key="d8">0.544513645864519</data>
+      <data key="d9">0.3429558671133805</data>
+      <data key="d10">0.3429558671133805</data>
+      <data key="d11">0.3429558671133805</data>
+      <data key="d12">0.3429558671133805</data>
+    </node>
+    <node id="field:cf_4e7e8ca2916a1e">
+      <data key="d2">field</data>
+      <data key="d3">Secondary Diagnosis</data>
+      <data key="d13">cf_4e7e8ca2916a1e</data>
+      <data key="d14">Problem/Diagnosis / structure / Secondary Diagnosis</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Problem/Diagnosis</data>
+      <data key="d17">structure</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.5</data>
+      <data key="d25">0.425</data>
+      <data key="d5">0.425</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">4.0</data>
+      <data key="d6">0.425</data>
+      <data key="d7">0.02027514970901288</data>
+      <data key="d8">0.6231925069151978</data>
+      <data key="d9">0.3925108731633895</data>
+      <data key="d10">0.3925108731633895</data>
+      <data key="d11">0.3925108731633895</data>
+      <data key="d12">0.3925108731633895</data>
+    </node>
+    <node id="field:cf_0a229c157b8d2a">
+      <data key="d2">field</data>
+      <data key="d3">Associated causes</data>
+      <data key="d13">cf_0a229c157b8d2a</data>
+      <data key="d14">Problem/Diagnosis / structure / Associated causes</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Problem/Diagnosis</data>
+      <data key="d17">structure</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.5</data>
+      <data key="d25">0.425</data>
+      <data key="d5">0.425</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">4.0</data>
+      <data key="d6">0.425</data>
+      <data key="d7">0.02027514970901288</data>
+      <data key="d8">0.5763062147673081</data>
+      <data key="d9">0.3629800632352364</data>
+      <data key="d10">0.3629800632352364</data>
+      <data key="d11">0.3629800632352364</data>
+      <data key="d12">0.3629800632352364</data>
+    </node>
+    <node id="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Procedure_undertaken">
+      <data key="d2">canonical_group</data>
+      <data key="d3">Procedure undertaken</data>
+      <data key="d4">2</data>
+      <data key="d5">0.0</data>
+      <data key="d6">1.4009615384615384</data>
+      <data key="d7">0.06683459983265105</data>
+      <data key="d8">0.06169811421655822</data>
+      <data key="d9">0.03885987141204701</data>
+      <data key="d10">0.03885987141204701</data>
+      <data key="d11">0.03885987141204701</data>
+      <data key="d12">0.03885987141204701</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Procedure_undertaken::Procedure_list">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">Procedure list</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">1.4009615384615384</data>
+      <data key="d7">0.06683459983265105</data>
+      <data key="d8">0.09011689257085156</data>
+      <data key="d9">0.05675912305949728</data>
+      <data key="d10">0.05675912305949728</data>
+      <data key="d11">0.05675912305949728</data>
+      <data key="d12">0.05675912305949728</data>
+    </node>
+    <node id="field:cf_0b6364bb149692">
+      <data key="d2">field</data>
+      <data key="d3">Procedure</data>
+      <data key="d13">cf_0b6364bb149692</data>
+      <data key="d14">Procedure undertaken / Procedure list / Procedure</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Procedure undertaken</data>
+      <data key="d17">Procedure list</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.39375</data>
+      <data key="d5">0.39375</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.39375</data>
+      <data key="d7">0.018784329877467816</data>
+      <data key="d8">0.45276900828176864</data>
+      <data key="d9">0.2851715269519152</data>
+      <data key="d10">0.2851715269519152</data>
+      <data key="d11">0.2851715269519152</data>
+      <data key="d12">0.2851715269519152</data>
+    </node>
+    <node id="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Body_mass_index">
+      <data key="d2">canonical_group</data>
+      <data key="d3">Body mass index</data>
+      <data key="d4">2</data>
+      <data key="d5">0.0</data>
+      <data key="d6">0.43850524475524477</data>
+      <data key="d7">0.020919434083764524</data>
+      <data key="d8">0.13762565834350945</data>
+      <data key="d9">0.0866819910808845</data>
+      <data key="d10">0.0866819910808845</data>
+      <data key="d11">0.0866819910808845</data>
+      <data key="d12">0.0866819910808845</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Body_mass_index::Single">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">Single</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">0.43850524475524477</data>
+      <data key="d7">0.020919434083764524</data>
+      <data key="d8">0.22973443440465266</data>
+      <data key="d9">0.14469567981525516</data>
+      <data key="d10">0.14469567981525516</data>
+      <data key="d11">0.14469567981525516</data>
+      <data key="d12">0.14469567981525516</data>
+    </node>
+    <node id="field:cf_c75844f7868470">
+      <data key="d2">field</data>
+      <data key="d3">Body Mass Index</data>
+      <data key="d13">cf_c75844f7868470</data>
+      <data key="d14">Body mass index / Single / Body Mass Index</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Body mass index</data>
+      <data key="d17">Single</data>
+      <data key="d18">numeric</data>
+      <data key="d19">DV_QUANTITY</data>
+      <data key="d20">&lt;;&gt;;between;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">0.5576923076923077</data>
+      <data key="d22">0.6181818181818182</data>
+      <data key="d23">0.34475524475524477</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.43850524475524477</data>
+      <data key="d5">0.43850524475524477</data>
+      <data key="d26">6.0</data>
+      <data key="d27">6.0</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.43850524475524477</data>
+      <data key="d7">0.020919434083764524</data>
+      <data key="d8">0.45292795237316846</data>
+      <data key="d9">0.2852716361210841</data>
+      <data key="d10">0.2852716361210841</data>
+      <data key="d11">0.2852716361210841</data>
+      <data key="d12">0.2852716361210841</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components_/_radiotherapy">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">components / radiotherapy</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">0.22115384615384615</data>
+      <data key="d7">0.010550417269395842</data>
+      <data key="d8">0.12427701052023092</data>
+      <data key="d9">0.07827449363101767</data>
+      <data key="d10">0.07827449363101767</data>
+      <data key="d11">0.07827449363101767</data>
+      <data key="d12">0.07827449363101767</data>
+    </node>
+    <node id="field:cf_ed2fd195fdc918">
+      <data key="d2">field</data>
+      <data key="d3">date of beginning of radiotherapy</data>
+      <data key="d13">cf_ed2fd195fdc918</data>
+      <data key="d14">HCPA / components / radiotherapy / date of beginning of radiotherapy</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">HCPA</data>
+      <data key="d17">components / radiotherapy</data>
+      <data key="d18">temporal</data>
+      <data key="d19">DV_DATE</data>
+      <data key="d20">after;before;between;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">0.22115384615384615</data>
+      <data key="d22">0.43478260869565216</data>
+      <data key="d23">0.09615384615384615</data>
+      <data key="d24">0.5</data>
+      <data key="d25">0.22115384615384615</data>
+      <data key="d5">0.22115384615384615</data>
+      <data key="d26">6.0</data>
+      <data key="d27">6.0</data>
+      <data key="d28">4.0</data>
+      <data key="d6">0.22115384615384615</data>
+      <data key="d7">0.010550417269395842</data>
+      <data key="d8">0.23211259661131534</data>
+      <data key="d9">0.1461935388458169</data>
+      <data key="d10">0.1461935388458169</data>
+      <data key="d11">0.1461935388458169</data>
+      <data key="d12">0.1461935388458169</data>
+    </node>
+    <node id="field:cf_af0c9a7d79fe64">
+      <data key="d2">field</data>
+      <data key="d3">Invaded regional linphonodes</data>
+      <data key="d13">cf_af0c9a7d79fe64</data>
+      <data key="d14">Problem/Diagnosis / structure / Invaded regional linphonodes</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Problem/Diagnosis</data>
+      <data key="d17">structure</data>
+      <data key="d18">boolean</data>
+      <data key="d19">DV_BOOLEAN</data>
+      <data key="d20">equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">0.3557692307692308</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.10673076923076923</data>
+      <data key="d24">0.5</data>
+      <data key="d25">0.23173076923076924</data>
+      <data key="d5">0.23173076923076924</data>
+      <data key="d26">3.0</data>
+      <data key="d27">2.0</data>
+      <data key="d28">4.0</data>
+      <data key="d6">0.23173076923076924</data>
+      <data key="d7">0.011055002443149557</data>
+      <data key="d8">0.3107020395959801</data>
+      <data key="d9">0.1956922259209052</data>
+      <data key="d10">0.1956922259209052</data>
+      <data key="d11">0.1956922259209052</data>
+      <data key="d12">0.1956922259209052</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure_/_Tumour_-_TNM_Cancer_staging_/_Clinical_cTNM_">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">structure / Tumour - TNM Cancer staging / Clinical (cTNM)</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">0.3653846153846154</data>
+      <data key="d7">0.01743112418421922</data>
+      <data key="d8">0.19308956402981794</data>
+      <data key="d9">0.1216153155487078</data>
+      <data key="d10">0.1216153155487078</data>
+      <data key="d11">0.1216153155487078</data>
+      <data key="d12">0.1216153155487078</data>
+    </node>
+    <node id="field:cf_3c63f8bfbf5fd7">
+      <data key="d2">field</data>
+      <data key="d3">Clinical staging</data>
+      <data key="d13">cf_3c63f8bfbf5fd7</data>
+      <data key="d14">Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Clinical (cTNM) / Clinical staging</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Problem/Diagnosis</data>
+      <data key="d17">structure / Tumour - TNM Cancer staging / Clinical (cTNM)</data>
+      <data key="d18">text</data>
+      <data key="d19">DV_TEXT</data>
+      <data key="d20">contains;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">0.3557692307692308</data>
+      <data key="d22">0.5</data>
+      <data key="d23">0.1778846153846154</data>
+      <data key="d24">0.75</data>
+      <data key="d25">0.3653846153846154</data>
+      <data key="d5">0.3653846153846154</data>
+      <data key="d26">4.0</data>
+      <data key="d27">3.25</data>
+      <data key="d28">6.0</data>
+      <data key="d6">0.3653846153846154</data>
+      <data key="d7">0.01743112418421922</data>
+      <data key="d8">0.3780263973057387</data>
+      <data key="d9">0.23809572425664124</data>
+      <data key="d10">0.23809572425664124</data>
+      <data key="d11">0.23809572425664124</data>
+      <data key="d12">0.23809572425664124</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure_/_Tumour_-_TNM_Cancer_staging_/_Pathological_pTNM_">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">structure / Tumour - TNM Cancer staging / Pathological (pTNM)</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">0.5778846153846153</data>
+      <data key="d7">0.027568699038725657</data>
+      <data key="d8">0.16740384220264676</data>
+      <data key="d9">0.10543744917460711</data>
+      <data key="d10">0.10543744917460711</data>
+      <data key="d11">0.10543744917460711</data>
+      <data key="d12">0.10543744917460711</data>
+    </node>
+    <node id="field:cf_c4703128fab784">
+      <data key="d2">field</data>
+      <data key="d3">Histopathological grading (G)</data>
+      <data key="d13">cf_c4703128fab784</data>
+      <data key="d14">Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / Histopathological grading (G)</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Problem/Diagnosis</data>
+      <data key="d17">structure / Tumour - TNM Cancer staging / Pathological (pTNM)</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">0.3557692307692308</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.10673076923076923</data>
+      <data key="d24">0.75</data>
+      <data key="d25">0.29423076923076924</data>
+      <data key="d5">0.29423076923076924</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">6.0</data>
+      <data key="d6">0.29423076923076924</data>
+      <data key="d7">0.014036642106239686</data>
+      <data key="d8">0.3324282172477715</data>
+      <data key="d9">0.20937621740985937</data>
+      <data key="d10">0.20937621740985937</data>
+      <data key="d11">0.20937621740985937</data>
+      <data key="d12">0.20937621740985937</data>
+    </node>
+    <node id="field:cf_72eaea6790449d">
+      <data key="d2">field</data>
+      <data key="d3">date of pathological identification</data>
+      <data key="d13">cf_72eaea6790449d</data>
+      <data key="d14">Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / date of pathological identification</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Problem/Diagnosis</data>
+      <data key="d17">structure / Tumour - TNM Cancer staging / Pathological (pTNM)</data>
+      <data key="d18">temporal</data>
+      <data key="d19">DV_DATE</data>
+      <data key="d20">after;before;between;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">0.3557692307692308</data>
+      <data key="d22">0.2702702702702703</data>
+      <data key="d23">0.09615384615384616</data>
+      <data key="d24">0.75</data>
+      <data key="d25">0.28365384615384615</data>
+      <data key="d5">0.28365384615384615</data>
+      <data key="d26">6.0</data>
+      <data key="d27">6.0</data>
+      <data key="d28">6.0</data>
+      <data key="d6">0.28365384615384615</data>
+      <data key="d7">0.013532056932485971</data>
+      <data key="d8">0.32279137409079245</data>
+      <data key="d9">0.20330655886918117</data>
+      <data key="d10">0.20330655886918117</data>
+      <data key="d11">0.20330655886918117</data>
+      <data key="d12">0.20330655886918117</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure_/_Tumour_-_TNM_Cancer_staging">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">structure / Tumour - TNM Cancer staging</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">0.26298076923076924</data>
+      <data key="d7">0.012545822274694621</data>
+      <data key="d8">0.14422671805303308</data>
+      <data key="d9">0.09083959516250957</data>
+      <data key="d10">0.09083959516250957</data>
+      <data key="d11">0.09083959516250957</data>
+      <data key="d12">0.09083959516250957</data>
+    </node>
+    <node id="field:cf_8e35971b63e360">
+      <data key="d2">field</data>
+      <data key="d3">topography</data>
+      <data key="d13">cf_8e35971b63e360</data>
+      <data key="d14">Problem/Diagnosis / structure / Tumour - TNM Cancer staging / topography</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Problem/Diagnosis</data>
+      <data key="d17">structure / Tumour - TNM Cancer staging</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">0.3557692307692308</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.10673076923076923</data>
+      <data key="d24">0.625</data>
+      <data key="d25">0.26298076923076924</data>
+      <data key="d5">0.26298076923076924</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">5.0</data>
+      <data key="d6">0.26298076923076924</data>
+      <data key="d7">0.012545822274694621</data>
+      <data key="d8">0.2744473570956878</data>
+      <data key="d9">0.1728576171498668</data>
+      <data key="d10">0.1728576171498668</data>
+      <data key="d11">0.1728576171498668</data>
+      <data key="d12">0.1728576171498668</data>
+    </node>
+    <node id="field:cf_e5c01940113606">
+      <data key="d2">field</data>
+      <data key="d3">irradiated area 1</data>
+      <data key="d13">cf_e5c01940113606</data>
+      <data key="d14">Procedure undertaken / Procedure list / irradiated area 1</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Procedure undertaken</data>
+      <data key="d17">Procedure list</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">0.22115384615384615</data>
+      <data key="d22">0.30434782608695654</data>
+      <data key="d23">0.0673076923076923</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.1610576923076923</data>
+      <data key="d5">0.1610576923076923</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.1610576923076923</data>
+      <data key="d7">0.007683456054886102</data>
+      <data key="d8">0.18661067007170304</data>
+      <data key="d9">0.11753465620763083</data>
+      <data key="d10">0.11753465620763083</data>
+      <data key="d11">0.11753465620763083</data>
+      <data key="d12">0.11753465620763083</data>
+    </node>
+    <node id="field:cf_fc5be63ab59287">
+      <data key="d2">field</data>
+      <data key="d3">irradiated area 2</data>
+      <data key="d13">cf_fc5be63ab59287</data>
+      <data key="d14">Procedure undertaken / Procedure list / irradiated area 2</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Procedure undertaken</data>
+      <data key="d17">Procedure list</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">0.22115384615384615</data>
+      <data key="d22">1.0</data>
+      <data key="d23">0.22115384615384615</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.31490384615384615</data>
+      <data key="d5">0.31490384615384615</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.31490384615384615</data>
+      <data key="d7">0.015022876764031036</data>
+      <data key="d8">0.4071782562926321</data>
+      <data key="d9">0.2564566985917171</data>
+      <data key="d10">0.2564566985917171</data>
+      <data key="d11">0.2564566985917171</data>
+      <data key="d12">0.2564566985917171</data>
+    </node>
+    <node id="field:cf_821e1930333a5c">
+      <data key="d2">field</data>
+      <data key="d3">irradiated area 3</data>
+      <data key="d13">cf_821e1930333a5c</data>
+      <data key="d14">Procedure undertaken / Procedure list / irradiated area 3</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Procedure undertaken</data>
+      <data key="d17">Procedure list</data>
+      <data key="d18">null</data>
+      <data key="d19">NULL_FLAVOUR</data>
+      <data key="d20">equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">0.22115384615384615</data>
+      <data key="d22">0.043478260869565216</data>
+      <data key="d23">0.009615384615384614</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.10336538461538461</data>
+      <data key="d5">0.10336538461538461</data>
+      <data key="d26">3.0</data>
+      <data key="d27">2.0</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.10336538461538461</data>
+      <data key="d7">0.004931173288956752</data>
+      <data key="d8">0.11762974024053564</data>
+      <data key="d9">0.07408778433543996</data>
+      <data key="d10">0.07408778433543996</data>
+      <data key="d11">0.07408778433543996</data>
+      <data key="d12">0.07408778433543996</data>
+    </node>
+    <node id="field:cf_c9b3a708f95249">
+      <data key="d2">field</data>
+      <data key="d3">fields/insertions 1</data>
+      <data key="d13">cf_c9b3a708f95249</data>
+      <data key="d14">Procedure undertaken / Procedure list / fields/insertions 1</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Procedure undertaken</data>
+      <data key="d17">Procedure list</data>
+      <data key="d18">numeric</data>
+      <data key="d19">DV_COUNT</data>
+      <data key="d20">&lt;;&gt;;between;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">0.22115384615384615</data>
+      <data key="d22">0.30434782608695654</data>
+      <data key="d23">0.0673076923076923</data>
+      <data key="d24">0.5</data>
+      <data key="d25">0.1923076923076923</data>
+      <data key="d5">0.1923076923076923</data>
+      <data key="d26">6.0</data>
+      <data key="d27">6.0</data>
+      <data key="d28">4.0</data>
+      <data key="d6">0.1923076923076923</data>
+      <data key="d7">0.009174275886431167</data>
+      <data key="d8">0.2280286078741318</data>
+      <data key="d9">0.14362128393672588</data>
+      <data key="d10">0.14362128393672588</data>
+      <data key="d11">0.14362128393672588</data>
+      <data key="d12">0.14362128393672588</data>
+    </node>
+    <node id="field:cf_bbec72e0a270f7">
+      <data key="d2">field</data>
+      <data key="d3">fields/insertions 2</data>
+      <data key="d13">cf_bbec72e0a270f7</data>
+      <data key="d14">Procedure undertaken / Procedure list / fields/insertions 2</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1</data>
+      <data key="d16">Procedure undertaken</data>
+      <data key="d17">Procedure list</data>
+      <data key="d18">numeric</data>
+      <data key="d19">DV_COUNT</data>
+      <data key="d20">&lt;;&gt;;between;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">0.22115384615384615</data>
+      <data key="d22">0.5</data>
+      <data key="d23">0.11057692307692307</data>
+      <data key="d24">0.5</data>
+      <data key="d25">0.23557692307692307</data>
+      <data key="d5">0.23557692307692307</data>
+      <data key="d26">6.0</data>
+      <data key="d27">6.0</data>
+      <data key="d28">4.0</data>
+      <data key="d6">0.23557692307692307</data>
+      <data key="d7">0.01123848796087818</data>
+      <data key="d8">0.2910173217264144</data>
+      <data key="d9">0.18329402518321633</data>
+      <data key="d10">0.18329402518321633</data>
+      <data key="d11">0.18329402518321633</data>
+      <data key="d12">0.18329402518321633</data>
+    </node>
+    <node id="family:openEHR-EHR-COMPOSITION.hospitalisation.v1">
+      <data key="d2">composition_family</data>
+      <data key="d3">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d4">1</data>
+      <data key="d5">0.0</data>
+      <data key="d6">9.154438405797102</data>
+      <data key="d7">0.43672378630464337</data>
+      <data key="d8">0.09225746583900737</data>
+      <data key="d9">0.05810733933814451</data>
+      <data key="d10">0.05810733933814451</data>
+      <data key="d11">0.05810733933814451</data>
+      <data key="d12">0.05810733933814451</data>
+    </node>
+    <node id="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_discharge">
+      <data key="d2">canonical_group</data>
+      <data key="d3">Patient discharge</data>
+      <data key="d4">2</data>
+      <data key="d5">0.0</data>
+      <data key="d6">1.8083333333333333</data>
+      <data key="d7">0.08626877425207441</data>
+      <data key="d8">0.15202143326708908</data>
+      <data key="d9">0.0957490098951636</data>
+      <data key="d10">0.0957490098951636</data>
+      <data key="d11">0.0957490098951636</data>
+      <data key="d12">0.0957490098951636</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_discharge::Components">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">Components</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">1.8083333333333333</data>
+      <data key="d7">0.08626877425207441</data>
+      <data key="d8">0.25727030594514255</data>
+      <data key="d9">0.1620388424202949</data>
+      <data key="d10">0.1620388424202949</data>
+      <data key="d11">0.1620388424202949</data>
+      <data key="d12">0.1620388424202949</data>
+    </node>
+    <node id="field:cf_79ed78f34fef6f">
+      <data key="d2">field</data>
+      <data key="d3">date of discharge</data>
+      <data key="d13">cf_79ed78f34fef6f</data>
+      <data key="d14">Patient discharge / Components / date of discharge</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d16">Patient discharge</data>
+      <data key="d17">Components</data>
+      <data key="d18">temporal</data>
+      <data key="d19">DV_DATE_TIME</data>
+      <data key="d20">after;before;between;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.7916666666666666</data>
+      <data key="d23">0.7916666666666666</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.8854166666666666</data>
+      <data key="d5">0.8854166666666666</data>
+      <data key="d26">6.0</data>
+      <data key="d27">6.0</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.8854166666666666</data>
+      <data key="d7">0.042239895227110164</data>
+      <data key="d8">1.0634778128491642</data>
+      <data key="d9">0.6698196789585589</data>
+      <data key="d10">0.6698196789585589</data>
+      <data key="d11">0.6698196789585589</data>
+      <data key="d12">0.6698196789585589</data>
+    </node>
+    <node id="field:cf_be52992cb12705">
+      <data key="d2">field</data>
+      <data key="d3">hospital infection</data>
+      <data key="d13">cf_be52992cb12705</data>
+      <data key="d14">Patient discharge / Components / hospital infection</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d16">Patient discharge</data>
+      <data key="d17">Components</data>
+      <data key="d18">null</data>
+      <data key="d19">NULL_FLAVOUR</data>
+      <data key="d20">equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.041666666666666664</data>
+      <data key="d23">0.041666666666666664</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.13541666666666666</data>
+      <data key="d5">0.13541666666666666</data>
+      <data key="d26">3.0</data>
+      <data key="d27">2.0</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.13541666666666666</data>
+      <data key="d7">0.006460219270028613</data>
+      <data key="d8">0.18524898154421646</data>
+      <data key="d9">0.11667701182492476</data>
+      <data key="d10">0.11667701182492476</data>
+      <data key="d11">0.11667701182492476</data>
+      <data key="d12">0.11667701182492476</data>
+    </node>
+    <node id="field:cf_1285e1e2c004f2">
+      <data key="d2">field</data>
+      <data key="d3">claim reason</data>
+      <data key="d13">cf_1285e1e2c004f2</data>
+      <data key="d14">Patient discharge / Components / claim reason</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d16">Patient discharge</data>
+      <data key="d17">Components</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.39375</data>
+      <data key="d5">0.39375</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.39375</data>
+      <data key="d7">0.018784329877467816</data>
+      <data key="d8">0.7963357501367404</data>
+      <data key="d9">0.5015632202714023</data>
+      <data key="d10">0.5015632202714023</data>
+      <data key="d11">0.5015632202714023</data>
+      <data key="d12">0.5015632202714023</data>
+    </node>
+    <node id="field:cf_80f721f9446bd3">
+      <data key="d2">field</data>
+      <data key="d3">death indicator</data>
+      <data key="d13">cf_80f721f9446bd3</data>
+      <data key="d14">Patient discharge / Components / death indicator</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d16">Patient discharge</data>
+      <data key="d17">Components</data>
+      <data key="d18">boolean</data>
+      <data key="d19">DV_BOOLEAN</data>
+      <data key="d20">equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.39375</data>
+      <data key="d5">0.39375</data>
+      <data key="d26">3.0</data>
+      <data key="d27">2.0</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.39375</data>
+      <data key="d7">0.018784329877467816</data>
+      <data key="d8">0.5510734418474984</data>
+      <data key="d9">0.3470874816955233</data>
+      <data key="d10">0.3470874816955233</data>
+      <data key="d11">0.3470874816955233</data>
+      <data key="d12">0.3470874816955233</data>
+    </node>
+    <node id="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Authorization_for_hospital_admission">
+      <data key="d2">canonical_group</data>
+      <data key="d3">Authorization for hospital admission</data>
+      <data key="d4">2</data>
+      <data key="d5">0.0</data>
+      <data key="d6">1.3208333333333333</data>
+      <data key="d7">0.0630119848799714</data>
+      <data key="d8">0.2213961027212634</data>
+      <data key="d9">0.13944387429215307</data>
+      <data key="d10">0.13944387429215307</data>
+      <data key="d11">0.13944387429215307</data>
+      <data key="d12">0.13944387429215307</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Authorization_for_hospital_admission::Components">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">Components</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">1.3208333333333333</data>
+      <data key="d7">0.0630119848799714</data>
+      <data key="d8">0.38090330797185346</data>
+      <data key="d9">0.2399077144603736</data>
+      <data key="d10">0.2399077144603736</data>
+      <data key="d11">0.2399077144603736</data>
+      <data key="d12">0.2399077144603736</data>
+    </node>
+    <node id="field:cf_ba8421601b1980">
+      <data key="d2">field</data>
+      <data key="d3">Issue date</data>
+      <data key="d13">cf_ba8421601b1980</data>
+      <data key="d14">Authorization for hospital admission / Components / Issue date</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d16">Authorization for hospital admission</data>
+      <data key="d17">Components</data>
+      <data key="d18">temporal</data>
+      <data key="d19">DV_DATE</data>
+      <data key="d20">after;before;between;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.8333333333333334</data>
+      <data key="d23">0.8333333333333334</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.9270833333333334</data>
+      <data key="d5">0.9270833333333334</data>
+      <data key="d26">6.0</data>
+      <data key="d27">6.0</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.9270833333333334</data>
+      <data key="d7">0.044227655002503585</data>
+      <data key="d8">1.083504924055156</data>
+      <data key="d9">0.6824335323332011</data>
+      <data key="d10">0.6824335323332011</data>
+      <data key="d11">0.6824335323332011</data>
+      <data key="d12">0.6824335323332011</data>
+    </node>
+    <node id="field:cf_ba09c313b94cba">
+      <data key="d2">field</data>
+      <data key="d3">ICU - Total</data>
+      <data key="d13">cf_ba09c313b94cba</data>
+      <data key="d14">Authorization for hospital admission / Components / ICU - Total</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d16">Authorization for hospital admission</data>
+      <data key="d17">Components</data>
+      <data key="d18">numeric</data>
+      <data key="d19">DV_COUNT</data>
+      <data key="d20">&lt;;&gt;;between;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.39375</data>
+      <data key="d5">0.39375</data>
+      <data key="d26">6.0</data>
+      <data key="d27">6.0</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.39375</data>
+      <data key="d7">0.018784329877467816</data>
+      <data key="d8">0.7444988833386876</data>
+      <data key="d9">0.4689143459297108</data>
+      <data key="d10">0.4689143459297108</data>
+      <data key="d11">0.4689143459297108</data>
+      <data key="d12">0.4689143459297108</data>
+    </node>
+    <node id="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission">
+      <data key="d2">canonical_group</data>
+      <data key="d3">Patient admission</data>
+      <data key="d4">2</data>
+      <data key="d5">0.0</data>
+      <data key="d6">3.308333333333333</data>
+      <data key="d7">0.1578281261662375</data>
+      <data key="d8">0.16363407051943038</data>
+      <data key="d9">0.1030631003841663</data>
+      <data key="d10">0.1030631003841663</data>
+      <data key="d11">0.1030631003841663</data>
+      <data key="d12">0.1030631003841663</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">Tree</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">2.08125</data>
+      <data key="d7">0.09928860078090129</data>
+      <data key="d8">0.29807821186693134</data>
+      <data key="d9">0.1877412483503944</data>
+      <data key="d10">0.1877412483503944</data>
+      <data key="d11">0.1877412483503944</data>
+      <data key="d12">0.1877412483503944</data>
+    </node>
+    <node id="field:cf_3db72fcc22b158">
+      <data key="d2">field</data>
+      <data key="d3">Patient class</data>
+      <data key="d13">cf_3db72fcc22b158</data>
+      <data key="d14">Patient admission / Tree / Patient class</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d16">Patient admission</data>
+      <data key="d17">Tree</data>
+      <data key="d18">null</data>
+      <data key="d19">NULL_FLAVOUR</data>
+      <data key="d20">equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.041666666666666664</data>
+      <data key="d23">0.041666666666666664</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.13541666666666666</data>
+      <data key="d5">0.13541666666666666</data>
+      <data key="d26">3.0</data>
+      <data key="d27">2.0</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.13541666666666666</data>
+      <data key="d7">0.006460219270028613</data>
+      <data key="d8">0.19811697269809087</data>
+      <data key="d9">0.12478177301447693</data>
+      <data key="d10">0.12478177301447693</data>
+      <data key="d11">0.12478177301447693</data>
+      <data key="d12">0.12478177301447693</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree_/_Assigned_patient_location_/_Facility">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">Tree / Assigned patient location / Facility</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">0.7395833333333334</data>
+      <data key="d7">0.0352827360132332</data>
+      <data key="d8">0.3762682630495924</data>
+      <data key="d9">0.2369883829385718</data>
+      <data key="d10">0.2369883829385718</data>
+      <data key="d11">0.2369883829385718</data>
+      <data key="d12">0.2369883829385718</data>
+    </node>
+    <node id="field:cf_9449e602105d68">
+      <data key="d2">field</data>
+      <data key="d3">Universal ID</data>
+      <data key="d13">cf_9449e602105d68</data>
+      <data key="d14">Patient admission / Tree / Assigned patient location / Facility / Universal ID</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d16">Patient admission</data>
+      <data key="d17">Tree / Assigned patient location / Facility</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.5833333333333334</data>
+      <data key="d23">0.5833333333333334</data>
+      <data key="d24">0.625</data>
+      <data key="d25">0.7395833333333334</data>
+      <data key="d5">0.7395833333333334</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">5.0</data>
+      <data key="d6">0.7395833333333334</data>
+      <data key="d7">0.0352827360132332</data>
+      <data key="d8">0.7593668450134321</data>
+      <data key="d9">0.47827876632045196</data>
+      <data key="d10">0.47827876632045196</data>
+      <data key="d11">0.47827876632045196</data>
+      <data key="d12">0.47827876632045196</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree_/_Assigned_patient_location_/_Address">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">Tree / Assigned patient location / Address</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">0.4875</data>
+      <data key="d7">0.023256789372103008</data>
+      <data key="d8">0.25921884307599163</data>
+      <data key="d9">0.1632661068725052</data>
+      <data key="d10">0.1632661068725052</data>
+      <data key="d11">0.1632661068725052</data>
+      <data key="d12">0.1632661068725052</data>
+    </node>
+    <node id="field:cf_1d8359b2d21168">
+      <data key="d2">field</data>
+      <data key="d3">State/province</data>
+      <data key="d13">cf_1d8359b2d21168</data>
+      <data key="d14">Patient admission / Tree / Assigned patient location / Address / State/province</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d16">Patient admission</data>
+      <data key="d17">Tree / Assigned patient location / Address</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.75</data>
+      <data key="d25">0.4875</data>
+      <data key="d5">0.4875</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">6.0</data>
+      <data key="d6">0.4875</data>
+      <data key="d7">0.023256789372103008</data>
+      <data key="d8">0.5062927324203157</data>
+      <data key="d9">0.31888284963865654</data>
+      <data key="d10">0.31888284963865654</data>
+      <data key="d11">0.31888284963865654</data>
+      <data key="d12">0.31888284963865654</data>
+    </node>
+    <node id="field:cf_10f7d6c8e1d5c5">
+      <data key="d2">field</data>
+      <data key="d3">Admission type</data>
+      <data key="d13">cf_10f7d6c8e1d5c5</data>
+      <data key="d14">Patient admission / Tree / Admission type</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d16">Patient admission</data>
+      <data key="d17">Tree</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.39375</data>
+      <data key="d5">0.39375</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.39375</data>
+      <data key="d7">0.018784329877467816</data>
+      <data key="d8">0.6851016127591141</data>
+      <data key="d9">0.4315036353065758</data>
+      <data key="d10">0.4315036353065758</data>
+      <data key="d11">0.4315036353065758</data>
+      <data key="d12">0.4315036353065758</data>
+    </node>
+    <node id="field:cf_2a67f6f1c22886">
+      <data key="d2">field</data>
+      <data key="d3">Hospital service</data>
+      <data key="d13">cf_2a67f6f1c22886</data>
+      <data key="d14">Patient admission / Tree / Hospital service</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d16">Patient admission</data>
+      <data key="d17">Tree</data>
+      <data key="d18">text</data>
+      <data key="d19">DV_TEXT</data>
+      <data key="d20">contains;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.5</data>
+      <data key="d23">0.5</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.59375</data>
+      <data key="d5">0.59375</data>
+      <data key="d26">4.0</data>
+      <data key="d27">3.25</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.59375</data>
+      <data key="d7">0.02832557679935623</data>
+      <data key="d8">1.1185136942668028</data>
+      <data key="d9">0.7044834170986157</data>
+      <data key="d10">0.7044834170986157</data>
+      <data key="d11">0.7044834170986157</data>
+      <data key="d12">0.7044834170986157</data>
+    </node>
+    <node id="field:cf_22f759c45e42f4">
+      <data key="d2">field</data>
+      <data key="d3">Admit date/time</data>
+      <data key="d13">cf_22f759c45e42f4</data>
+      <data key="d14">Patient admission / Tree / Admit date/time</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d16">Patient admission</data>
+      <data key="d17">Tree</data>
+      <data key="d18">temporal</data>
+      <data key="d19">DV_DATE_TIME</data>
+      <data key="d20">after;before;between;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.8333333333333334</data>
+      <data key="d23">0.8333333333333334</data>
+      <data key="d24">0.5</data>
+      <data key="d25">0.9583333333333334</data>
+      <data key="d5">0.9583333333333334</data>
+      <data key="d26">6.0</data>
+      <data key="d27">6.0</data>
+      <data key="d28">4.0</data>
+      <data key="d6">0.9583333333333334</data>
+      <data key="d7">0.04571847483404865</data>
+      <data key="d8">1.2679715276568164</data>
+      <data key="d9">0.7986177721078063</data>
+      <data key="d10">0.7986177721078063</data>
+      <data key="d11">0.7986177721078063</data>
+      <data key="d12">0.7986177721078063</data>
+    </node>
+    <node id="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Problem/Diagnosis">
+      <data key="d2">canonical_group</data>
+      <data key="d3">Problem/Diagnosis</data>
+      <data key="d4">2</data>
+      <data key="d5">0.0</data>
+      <data key="d6">2.039855072463768</data>
+      <data key="d7">0.09731380465621697</data>
+      <data key="d8">0.3054369870850385</data>
+      <data key="d9">0.19237609112244564</data>
+      <data key="d10">0.19237609112244564</data>
+      <data key="d11">0.19237609112244564</data>
+      <data key="d12">0.19237609112244564</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Problem/Diagnosis::structure">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">structure</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">2.039855072463768</data>
+      <data key="d7">0.09731380465621697</data>
+      <data key="d8">0.5345179204242733</data>
+      <data key="d9">0.33666017055587</data>
+      <data key="d10">0.33666017055587</data>
+      <data key="d11">0.33666017055587</data>
+      <data key="d12">0.33666017055587</data>
+    </node>
+    <node id="field:cf_2db2fd852fb674">
+      <data key="d2">field</data>
+      <data key="d3">Problem</data>
+      <data key="d13">cf_2db2fd852fb674</data>
+      <data key="d14">Problem/Diagnosis / structure / Problem</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d16">Problem/Diagnosis</data>
+      <data key="d17">structure</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.8333333333333334</data>
+      <data key="d23">0.8333333333333334</data>
+      <data key="d24">0.5</data>
+      <data key="d25">0.9583333333333334</data>
+      <data key="d5">0.9583333333333334</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">4.0</data>
+      <data key="d6">0.9583333333333334</data>
+      <data key="d7">0.04571847483404865</data>
+      <data key="d8">1.5262406077796273</data>
+      <data key="d9">0.9612856813416774</data>
+      <data key="d10">0.9612856813416774</data>
+      <data key="d11">0.9612856813416774</data>
+      <data key="d12">0.9612856813416774</data>
+    </node>
+    <node id="field:cf_49398dcbba5447">
+      <data key="d2">field</data>
+      <data key="d3">Secondary Diagnosis</data>
+      <data key="d13">cf_49398dcbba5447</data>
+      <data key="d14">Problem/Diagnosis / structure / Secondary Diagnosis</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d16">Problem/Diagnosis</data>
+      <data key="d17">structure</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.9565217391304348</data>
+      <data key="d23">0.9565217391304348</data>
+      <data key="d24">0.5</data>
+      <data key="d25">1.0815217391304348</data>
+      <data key="d5">1.0815217391304348</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">4.0</data>
+      <data key="d6">1.0815217391304348</data>
+      <data key="d7">0.05159532982216833</data>
+      <data key="d8">1.5861199191522197</data>
+      <data key="d9">0.999</data>
+      <data key="d10">0.999</data>
+      <data key="d11">0.999</data>
+      <data key="d12">0.999</data>
+    </node>
+    <node id="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Procedure_undertaken">
+      <data key="d2">canonical_group</data>
+      <data key="d3">Procedure undertaken</data>
+      <data key="d4">2</data>
+      <data key="d5">0.0</data>
+      <data key="d6">0.6770833333333334</data>
+      <data key="d7">0.03230109635014307</data>
+      <data key="d8">0.1988376841447626</data>
+      <data key="d9">0.12523570510783963</data>
+      <data key="d10">0.12523570510783963</data>
+      <data key="d11">0.12523570510783963</data>
+      <data key="d12">0.12523570510783963</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Procedure_undertaken::Procedure_list">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">Procedure list</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">0.6770833333333334</data>
+      <data key="d7">0.03230109635014307</data>
+      <data key="d8">0.34017873632067647</data>
+      <data key="d9">0.2142577956942873</data>
+      <data key="d10">0.2142577956942873</data>
+      <data key="d11">0.2142577956942873</data>
+      <data key="d12">0.2142577956942873</data>
+    </node>
+    <node id="field:cf_18704e514938d4">
+      <data key="d2">field</data>
+      <data key="d3">Procedure</data>
+      <data key="d13">cf_18704e514938d4</data>
+      <data key="d14">Procedure undertaken / Procedure list / Procedure</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.hospitalisation.v1</data>
+      <data key="d16">Procedure undertaken</data>
+      <data key="d17">Procedure list</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.5833333333333334</data>
+      <data key="d23">0.5833333333333334</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.6770833333333334</data>
+      <data key="d5">0.6770833333333334</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.6770833333333334</data>
+      <data key="d7">0.03230109635014307</data>
+      <data key="d8">0.6923092428624414</data>
+      <data key="d9">0.43604328100819</data>
+      <data key="d10">0.43604328100819</data>
+      <data key="d11">0.43604328100819</data>
+      <data key="d12">0.43604328100819</data>
+    </node>
+    <node id="family:openEHR-EHR-COMPOSITION.demographic_data.v1">
+      <data key="d2">composition_family</data>
+      <data key="d3">openEHR-EHR-COMPOSITION.demographic_data.v1</data>
+      <data key="d4">1</data>
+      <data key="d5">0.0</data>
+      <data key="d6">2.644318181818182</data>
+      <data key="d7">0.12615046356383147</data>
+      <data key="d8">0.09381636847758139</data>
+      <data key="d9">0.05908919683651566</data>
+      <data key="d10">0.05908919683651566</data>
+      <data key="d11">0.05908919683651566</data>
+      <data key="d12">0.05908919683651566</data>
+    </node>
+    <node id="group:openEHR-EHR-COMPOSITION.demographic_data.v1::Demographic_data">
+      <data key="d2">canonical_group</data>
+      <data key="d3">Demographic data</data>
+      <data key="d4">2</data>
+      <data key="d5">0.0</data>
+      <data key="d6">2.644318181818182</data>
+      <data key="d7">0.12615046356383147</data>
+      <data key="d8">0.1400709957247081</data>
+      <data key="d9">0.08822215964841826</data>
+      <data key="d10">0.08822215964841826</data>
+      <data key="d11">0.08822215964841826</data>
+      <data key="d12">0.08822215964841826</data>
+    </node>
+    <node id="subgroup:openEHR-EHR-COMPOSITION.demographic_data.v1::Demographic_data::components">
+      <data key="d2">canonical_subgroup</data>
+      <data key="d3">components</data>
+      <data key="d4">3</data>
+      <data key="d5">0.0</data>
+      <data key="d6">2.644318181818182</data>
+      <data key="d7">0.12615046356383147</data>
+      <data key="d8">0.2193111923406125</data>
+      <data key="d9">0.13813071666446025</data>
+      <data key="d10">0.13813071666446025</data>
+      <data key="d11">0.13813071666446025</data>
+      <data key="d12">0.13813071666446025</data>
+    </node>
+    <node id="field:cf_7f3b6795a0e812">
+      <data key="d2">field</data>
+      <data key="d3">birth date</data>
+      <data key="d13">cf_7f3b6795a0e812</data>
+      <data key="d14">Demographic data / components / birth date</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.demographic_data.v1</data>
+      <data key="d16">Demographic data</data>
+      <data key="d17">components</data>
+      <data key="d18">temporal</data>
+      <data key="d19">DV_DATE</data>
+      <data key="d20">after;before;between;equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">1.0</data>
+      <data key="d23">1.0</data>
+      <data key="d24">0.375</data>
+      <data key="d25">1.09375</data>
+      <data key="d5">1.09375</data>
+      <data key="d26">6.0</data>
+      <data key="d27">6.0</data>
+      <data key="d28">3.0</data>
+      <data key="d6">1.09375</data>
+      <data key="d7">0.052178694104077265</data>
+      <data key="d8">1.302548413091116</data>
+      <data key="d9">0.8203956390469771</data>
+      <data key="d10">0.8203956390469771</data>
+      <data key="d11">0.8203956390469771</data>
+      <data key="d12">0.8203956390469771</data>
+    </node>
+    <node id="field:cf_e7551706658b4a">
+      <data key="d2">field</data>
+      <data key="d3">gender</data>
+      <data key="d13">cf_e7551706658b4a</data>
+      <data key="d14">Demographic data / components / gender</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.demographic_data.v1</data>
+      <data key="d16">Demographic data</data>
+      <data key="d17">components</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.39375</data>
+      <data key="d5">0.39375</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.39375</data>
+      <data key="d7">0.018784329877467816</data>
+      <data key="d8">0.9422440405656418</data>
+      <data key="d9">0.5934619351027389</data>
+      <data key="d10">0.5934619351027389</data>
+      <data key="d11">0.5934619351027389</data>
+      <data key="d12">0.5934619351027389</data>
+    </node>
+    <node id="field:cf_19e1b0f55ef007">
+      <data key="d2">field</data>
+      <data key="d3">race</data>
+      <data key="d13">cf_19e1b0f55ef007</data>
+      <data key="d14">Demographic data / components / race</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.demographic_data.v1</data>
+      <data key="d16">Demographic data</data>
+      <data key="d17">components</data>
+      <data key="d18">null</data>
+      <data key="d19">NULL_FLAVOUR</data>
+      <data key="d20">equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.09090909090909091</data>
+      <data key="d23">0.09090909090909091</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.1846590909090909</data>
+      <data key="d5">0.1846590909090909</data>
+      <data key="d26">3.0</data>
+      <data key="d27">2.0</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.1846590909090909</data>
+      <data key="d7">0.008809389913675383</data>
+      <data key="d8">0.25646317171147315</data>
+      <data key="d9">0.16153047789520483</data>
+      <data key="d10">0.16153047789520483</data>
+      <data key="d11">0.16153047789520483</data>
+      <data key="d12">0.16153047789520483</data>
+    </node>
+    <node id="field:cf_4122372d727029">
+      <data key="d2">field</data>
+      <data key="d3">ethnic group</data>
+      <data key="d13">cf_4122372d727029</data>
+      <data key="d14">Demographic data / components / ethnic group</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.demographic_data.v1</data>
+      <data key="d16">Demographic data</data>
+      <data key="d17">components</data>
+      <data key="d18">null</data>
+      <data key="d19">NULL_FLAVOUR</data>
+      <data key="d20">equals;is_known;is_unknown</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.09090909090909091</data>
+      <data key="d23">0.09090909090909091</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.1846590909090909</data>
+      <data key="d5">0.1846590909090909</data>
+      <data key="d26">3.0</data>
+      <data key="d27">2.0</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.1846590909090909</data>
+      <data key="d7">0.008809389913675383</data>
+      <data key="d8">0.20413269592416494</data>
+      <data key="d9">0.1285707094185164</data>
+      <data key="d10">0.1285707094185164</data>
+      <data key="d11">0.1285707094185164</data>
+      <data key="d12">0.1285707094185164</data>
+    </node>
+    <node id="field:cf_7ab0248b87b82e">
+      <data key="d2">field</data>
+      <data key="d3">educational level</data>
+      <data key="d13">cf_7ab0248b87b82e</data>
+      <data key="d14">Demographic data / components / educational level</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.demographic_data.v1</data>
+      <data key="d16">Demographic data</data>
+      <data key="d17">components</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.39375</data>
+      <data key="d5">0.39375</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.39375</data>
+      <data key="d7">0.018784329877467816</data>
+      <data key="d8">0.6475953765587813</data>
+      <data key="d9">0.40788074934965557</data>
+      <data key="d10">0.40788074934965557</data>
+      <data key="d11">0.40788074934965557</data>
+      <data key="d12">0.40788074934965557</data>
+    </node>
+    <node id="field:cf_eee397355aecbe">
+      <data key="d2">field</data>
+      <data key="d3">nationality</data>
+      <data key="d13">cf_eee397355aecbe</data>
+      <data key="d14">Demographic data / components / nationality</data>
+      <data key="d15">openEHR-EHR-COMPOSITION.demographic_data.v1</data>
+      <data key="d16">Demographic data</data>
+      <data key="d17">components</data>
+      <data key="d18">coded</data>
+      <data key="d19">DV_CODED_TEXT</data>
+      <data key="d20">contains;equals;in;is_known;is_unknown;not_equals</data>
+      <data key="d4">4</data>
+      <data key="d21">1.0</data>
+      <data key="d22">0.3</data>
+      <data key="d23">0.3</data>
+      <data key="d24">0.375</data>
+      <data key="d25">0.39375</data>
+      <data key="d5">0.39375</data>
+      <data key="d26">6.0</data>
+      <data key="d27">5.5</data>
+      <data key="d28">3.0</data>
+      <data key="d6">0.39375</data>
+      <data key="d7">0.018784329877467816</data>
+      <data key="d8">0.5292554696840914</data>
+      <data key="d9">0.3333456744538025</data>
+      <data key="d10">0.3333456744538025</data>
+      <data key="d11">0.3333456744538025</data>
+      <data key="d12">0.3333456744538025</data>
+    </node>
+    <edge source="schema:root" target="family:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1">
+      <data key="d29">root_to_family</data>
+      <data key="d30">0.1658474469195768</data>
+      <data key="d31">33.0</data>
+      <data key="d32">0.1658474469195768</data>
+    </edge>
+    <edge source="schema:root" target="family:openEHR-EHR-COMPOSITION.hospitalisation.v1">
+      <data key="d29">root_to_family</data>
+      <data key="d30">0.41358206516775753</data>
+      <data key="d31">15.0</data>
+      <data key="d32">0.41358206516775753</data>
+    </edge>
+    <edge source="schema:root" target="family:openEHR-EHR-COMPOSITION.demographic_data.v1">
+      <data key="d29">root_to_family</data>
+      <data key="d30">0.4205704879126657</data>
+      <data key="d31">6.0</data>
+      <data key="d32">0.4205704879126657</data>
+    </edge>
+    <edge source="family:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1" target="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA">
+      <data key="d29">family_to_group</data>
+      <data key="d30">0.07610184710407852</data>
+      <data key="d31">11.0</data>
+      <data key="d32">0.07610184710407852</data>
+    </edge>
+    <edge source="family:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1" target="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Patient_discharge">
+      <data key="d29">family_to_group</data>
+      <data key="d30">0.23584763228431238</data>
+      <data key="d31">2.0</data>
+      <data key="d32">0.23584763228431238</data>
+    </edge>
+    <edge source="family:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1" target="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Bariatric_surgery_evaluation">
+      <data key="d29">family_to_group</data>
+      <data key="d30">0.2172544265010749</data>
+      <data key="d31">3.0</data>
+      <data key="d32">0.2172544265010749</data>
+    </edge>
+    <edge source="family:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1" target="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis">
+      <data key="d29">family_to_group</data>
+      <data key="d30">0.12781488271591732</data>
+      <data key="d31">8.0</data>
+      <data key="d32">0.12781488271591732</data>
+    </edge>
+    <edge source="family:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1" target="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Procedure_undertaken">
+      <data key="d29">family_to_group</data>
+      <data key="d30">0.10616542965732532</data>
+      <data key="d31">6.0</data>
+      <data key="d32">0.10616542965732532</data>
+    </edge>
+    <edge source="family:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1" target="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Body_mass_index">
+      <data key="d29">family_to_group</data>
+      <data key="d30">0.23681578173729162</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.23681578173729162</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components_/_General_data">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">0.47643276904442056</data>
+      <data key="d31">5.0</data>
+      <data key="d32">0.47643276904442056</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components_/_radiotherapy">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">0.5235672309555794</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.5235672309555794</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components_/_General_data" target="field:cf_5cd62eaa6e16a8">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.20437540819375077</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.20437540819375077</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components_/_General_data" target="field:cf_775d9002cb4e7b">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.20853039179818175</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.20853039179818175</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components_/_General_data" target="field:cf_b87e8363f020f7">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.19414324956971293</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.19414324956971293</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components_/_General_data" target="field:cf_8b431261fa7dca">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.16417758781775696</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.16417758781775696</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components_/_General_data" target="field:cf_16800b2d3f5ef6">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.22877336262059764</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.22877336262059764</data>
+    </edge>
+    <edge source="field:cf_5cd62eaa6e16a8" target="field:cf_16800b2d3f5ef6">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.5</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.5</data>
+    </edge>
+    <edge source="field:cf_775d9002cb4e7b" target="field:cf_16800b2d3f5ef6">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.4576923076923077</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.4576923076923077</data>
+    </edge>
+    <edge source="field:cf_775d9002cb4e7b" target="field:cf_b87e8363f020f7">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.425</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.425</data>
+    </edge>
+    <edge source="field:cf_b87e8363f020f7" target="field:cf_775d9002cb4e7b">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.425</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.425</data>
+    </edge>
+    <edge source="field:cf_b87e8363f020f7" target="field:cf_8b431261fa7dca">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.425</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.425</data>
+    </edge>
+    <edge source="field:cf_8b431261fa7dca" target="field:cf_b87e8363f020f7">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.425</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.425</data>
+    </edge>
+    <edge source="field:cf_16800b2d3f5ef6" target="field:cf_5cd62eaa6e16a8">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.5</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.5</data>
+    </edge>
+    <edge source="field:cf_16800b2d3f5ef6" target="field:cf_775d9002cb4e7b">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.4576923076923077</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.4576923076923077</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Patient_discharge" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Patient_discharge::Components">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">1.0</data>
+      <data key="d31">2.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Patient_discharge::Components" target="field:cf_469c691048a0ce">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.5094108777682307</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.5094108777682307</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Patient_discharge::Components" target="field:cf_49533263f29569">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.4905891222317692</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.4905891222317692</data>
+    </edge>
+    <edge source="field:cf_469c691048a0ce" target="field:cf_49533263f29569">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.40528846153846154</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.40528846153846154</data>
+    </edge>
+    <edge source="field:cf_469c691048a0ce" target="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Patient_discharge">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.055820286240360686</data>
+      <data key="d32">0.055820286240360686</data>
+    </edge>
+    <edge source="field:cf_469c691048a0ce" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Patient_discharge::Components">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.10376589539609599</data>
+      <data key="d32">0.10376589539609599</data>
+    </edge>
+    <edge source="field:cf_49533263f29569" target="field:cf_469c691048a0ce">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.40528846153846154</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.40528846153846154</data>
+    </edge>
+    <edge source="field:cf_49533263f29569" target="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Patient_discharge">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.05146880034776871</data>
+      <data key="d32">0.05146880034776871</data>
+    </edge>
+    <edge source="field:cf_49533263f29569" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Patient_discharge::Components">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.09567679624665802</data>
+      <data key="d32">0.09567679624665802</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Bariatric_surgery_evaluation" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Bariatric_surgery_evaluation::Components">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">1.0</data>
+      <data key="d31">3.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Bariatric_surgery_evaluation::Components" target="field:cf_505d09ec39545c">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.39069139038855727</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.39069139038855727</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Bariatric_surgery_evaluation::Components" target="field:cf_ac2de786b38da7">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.33795158417109344</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.33795158417109344</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Bariatric_surgery_evaluation::Components" target="field:cf_8f20b6e7578a41">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.2713570254403494</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.2713570254403494</data>
+    </edge>
+    <edge source="field:cf_505d09ec39545c" target="field:cf_ac2de786b38da7">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.4655448717948718</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.4655448717948718</data>
+    </edge>
+    <edge source="field:cf_505d09ec39545c" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Bariatric_surgery_evaluation::Components">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.08611734595200111</data>
+      <data key="d32">0.08611734595200111</data>
+    </edge>
+    <edge source="field:cf_505d09ec39545c" target="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Bariatric_surgery_evaluation">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.052161479683013955</data>
+      <data key="d32">0.052161479683013955</data>
+    </edge>
+    <edge source="field:cf_ac2de786b38da7" target="field:cf_505d09ec39545c">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.4655448717948718</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.4655448717948718</data>
+    </edge>
+    <edge source="field:cf_ac2de786b38da7" target="field:cf_8f20b6e7578a41">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.37259615384615385</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.37259615384615385</data>
+    </edge>
+    <edge source="field:cf_ac2de786b38da7" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Bariatric_surgery_evaluation::Components">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.05050062968972089</data>
+      <data key="d32">0.05050062968972089</data>
+    </edge>
+    <edge source="field:cf_8f20b6e7578a41" target="field:cf_ac2de786b38da7">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.37259615384615385</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.37259615384615385</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">0.2266233818119974</data>
+      <data key="d31">4.0</data>
+      <data key="d32">0.2266233818119974</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure_/_Tumour_-_TNM_Cancer_staging_/_Clinical_cTNM_">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">0.29586883274800135</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.29586883274800135</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure_/_Tumour_-_TNM_Cancer_staging_/_Pathological_pTNM_">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">0.25651090797625437</data>
+      <data key="d31">2.0</data>
+      <data key="d32">0.25651090797625437</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure_/_Tumour_-_TNM_Cancer_staging">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">0.22099687746374694</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.22099687746374694</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure" target="field:cf_bd9db9ae67063d">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.2650069732180652</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.2650069732180652</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure" target="field:cf_4e7e8ca2916a1e">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.3032988452062888</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.3032988452062888</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure" target="field:cf_0a229c157b8d2a">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.2804799600196691</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.2804799600196691</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure" target="field:cf_af0c9a7d79fe64">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.1512142215559769</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.1512142215559769</data>
+    </edge>
+    <edge source="field:cf_bd9db9ae67063d" target="field:cf_4e7e8ca2916a1e">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.425</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.425</data>
+    </edge>
+    <edge source="field:cf_4e7e8ca2916a1e" target="field:cf_bd9db9ae67063d">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.425</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.425</data>
+    </edge>
+    <edge source="field:cf_4e7e8ca2916a1e" target="field:cf_0a229c157b8d2a">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.425</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.425</data>
+    </edge>
+    <edge source="field:cf_0a229c157b8d2a" target="field:cf_4e7e8ca2916a1e">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.425</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.425</data>
+    </edge>
+    <edge source="field:cf_0a229c157b8d2a" target="field:cf_af0c9a7d79fe64">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.3283653846153846</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.3283653846153846</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Procedure_undertaken" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Procedure_undertaken::Procedure_list">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">1.0</data>
+      <data key="d31">6.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Procedure_undertaken::Procedure_list" target="field:cf_0b6364bb149692">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.26898762422207545</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.26898762422207545</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Procedure_undertaken::Procedure_list" target="field:cf_e5c01940113606">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.11086439195025216</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.11086439195025216</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Procedure_undertaken::Procedure_list" target="field:cf_fc5be63ab59287">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.24190240451899914</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.24190240451899914</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Procedure_undertaken::Procedure_list" target="field:cf_821e1930333a5c">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.06988319382821065</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.06988319382821065</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Procedure_undertaken::Procedure_list" target="field:cf_c9b3a708f95249">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.13547056526571843</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.13547056526571843</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Procedure_undertaken::Procedure_list" target="field:cf_bbec72e0a270f7">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.17289182021474425</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.17289182021474425</data>
+    </edge>
+    <edge source="field:cf_0b6364bb149692" target="field:cf_fc5be63ab59287">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.35432692307692304</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.35432692307692304</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Body_mass_index" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Body_mass_index::Single">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">1.0</data>
+      <data key="d31">1.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Body_mass_index::Single" target="field:cf_c75844f7868470">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">1.0</data>
+      <data key="d31">1.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="field:cf_c75844f7868470" target="group:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Body_mass_index">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.10786202271831821</data>
+      <data key="d32">0.10786202271831821</data>
+    </edge>
+    <edge source="field:cf_c75844f7868470" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Body_mass_index::Single">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.20050773868134894</data>
+      <data key="d32">0.20050773868134894</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components_/_radiotherapy" target="field:cf_ed2fd195fdc918">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">1.0</data>
+      <data key="d31">1.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="field:cf_ed2fd195fdc918" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components_/_radiotherapy">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.10112320918246043</data>
+      <data key="d32">0.10112320918246043</data>
+    </edge>
+    <edge source="field:cf_af0c9a7d79fe64" target="field:cf_0a229c157b8d2a">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.3283653846153846</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.3283653846153846</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure_/_Tumour_-_TNM_Cancer_staging_/_Clinical_cTNM_" target="field:cf_3c63f8bfbf5fd7">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">1.0</data>
+      <data key="d31">1.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="field:cf_3c63f8bfbf5fd7" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure_/_Tumour_-_TNM_Cancer_staging_/_Clinical_cTNM_">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.16707312821449988</data>
+      <data key="d32">0.16707312821449988</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure_/_Tumour_-_TNM_Cancer_staging_/_Pathological_pTNM_" target="field:cf_c4703128fab784">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.507353903396945</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.507353903396945</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure_/_Tumour_-_TNM_Cancer_staging_/_Pathological_pTNM_" target="field:cf_72eaea6790449d">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.4926460966030551</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.4926460966030551</data>
+    </edge>
+    <edge source="field:cf_c4703128fab784" target="field:cf_72eaea6790449d">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.28894230769230766</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.28894230769230766</data>
+    </edge>
+    <edge source="field:cf_c4703128fab784" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure_/_Tumour_-_TNM_Cancer_staging_/_Pathological_pTNM_">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.07278255683854196</data>
+      <data key="d32">0.07278255683854196</data>
+    </edge>
+    <edge source="field:cf_72eaea6790449d" target="field:cf_c4703128fab784">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.28894230769230766</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.28894230769230766</data>
+    </edge>
+    <edge source="field:cf_72eaea6790449d" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure_/_Tumour_-_TNM_Cancer_staging_/_Pathological_pTNM_">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.06937685024721109</data>
+      <data key="d32">0.06937685024721109</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure_/_Tumour_-_TNM_Cancer_staging" target="field:cf_8e35971b63e360">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">1.0</data>
+      <data key="d31">1.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="field:cf_8e35971b63e360" target="subgroup:openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Problem/Diagnosis::structure_/_Tumour_-_TNM_Cancer_staging">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.12024868570175187</data>
+      <data key="d32">0.12024868570175187</data>
+    </edge>
+    <edge source="field:cf_e5c01940113606" target="field:cf_c9b3a708f95249">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.1766826923076923</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.1766826923076923</data>
+    </edge>
+    <edge source="field:cf_e5c01940113606" target="field:cf_821e1930333a5c">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.13221153846153844</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.13221153846153844</data>
+    </edge>
+    <edge source="field:cf_fc5be63ab59287" target="field:cf_0b6364bb149692">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.35432692307692304</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.35432692307692304</data>
+    </edge>
+    <edge source="field:cf_fc5be63ab59287" target="field:cf_bbec72e0a270f7">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.2752403846153846</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.2752403846153846</data>
+    </edge>
+    <edge source="field:cf_821e1930333a5c" target="field:cf_e5c01940113606">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.13221153846153844</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.13221153846153844</data>
+    </edge>
+    <edge source="field:cf_c9b3a708f95249" target="field:cf_bbec72e0a270f7">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.21394230769230768</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.21394230769230768</data>
+    </edge>
+    <edge source="field:cf_c9b3a708f95249" target="field:cf_e5c01940113606">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.1766826923076923</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.1766826923076923</data>
+    </edge>
+    <edge source="field:cf_bbec72e0a270f7" target="field:cf_fc5be63ab59287">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.2752403846153846</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.2752403846153846</data>
+    </edge>
+    <edge source="field:cf_bbec72e0a270f7" target="field:cf_c9b3a708f95249">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.21394230769230768</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.21394230769230768</data>
+    </edge>
+    <edge source="family:openEHR-EHR-COMPOSITION.hospitalisation.v1" target="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_discharge">
+      <data key="d29">family_to_group</data>
+      <data key="d30">0.1459882810192549</data>
+      <data key="d31">4.0</data>
+      <data key="d32">0.1459882810192549</data>
+    </edge>
+    <edge source="family:openEHR-EHR-COMPOSITION.hospitalisation.v1" target="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Authorization_for_hospital_admission">
+      <data key="d29">family_to_group</data>
+      <data key="d30">0.2126097338120335</data>
+      <data key="d31">2.0</data>
+      <data key="d32">0.2126097338120335</data>
+    </edge>
+    <edge source="family:openEHR-EHR-COMPOSITION.hospitalisation.v1" target="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission">
+      <data key="d29">family_to_group</data>
+      <data key="d30">0.15714005688490507</data>
+      <data key="d31">6.0</data>
+      <data key="d32">0.15714005688490507</data>
+    </edge>
+    <edge source="family:openEHR-EHR-COMPOSITION.hospitalisation.v1" target="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Problem/Diagnosis">
+      <data key="d29">family_to_group</data>
+      <data key="d30">0.2933153552493076</data>
+      <data key="d31">2.0</data>
+      <data key="d32">0.2933153552493076</data>
+    </edge>
+    <edge source="family:openEHR-EHR-COMPOSITION.hospitalisation.v1" target="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Procedure_undertaken">
+      <data key="d29">family_to_group</data>
+      <data key="d30">0.19094657303449902</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.19094657303449902</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_discharge" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_discharge::Components">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">1.0</data>
+      <data key="d31">4.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_discharge::Components" target="field:cf_79ed78f34fef6f">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.409638716318952</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.409638716318952</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_discharge::Components" target="field:cf_be52992cb12705">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.07135565413994117</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.07135565413994117</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_discharge::Components" target="field:cf_1285e1e2c004f2">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.306738843541037</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.306738843541037</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_discharge::Components" target="field:cf_80f721f9446bd3">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.21226678600006985</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.21226678600006985</data>
+    </edge>
+    <edge source="field:cf_79ed78f34fef6f" target="field:cf_1285e1e2c004f2">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.6395833333333333</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.6395833333333333</data>
+    </edge>
+    <edge source="field:cf_79ed78f34fef6f" target="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_discharge">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.05833037736489594</data>
+      <data key="d32">0.05833037736489594</data>
+    </edge>
+    <edge source="field:cf_79ed78f34fef6f" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_discharge::Components">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.10843197417508421</data>
+      <data key="d32">0.10843197417508421</data>
+    </edge>
+    <edge source="field:cf_79ed78f34fef6f" target="field:cf_80f721f9446bd3">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.06607435954022242</data>
+      <data key="d32">0.06607435954022242</data>
+    </edge>
+    <edge source="field:cf_be52992cb12705" target="field:cf_80f721f9446bd3">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.26458333333333334</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.26458333333333334</data>
+    </edge>
+    <edge source="field:cf_1285e1e2c004f2" target="field:cf_79ed78f34fef6f">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.6395833333333333</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.6395833333333333</data>
+    </edge>
+    <edge source="field:cf_1285e1e2c004f2" target="field:cf_80f721f9446bd3">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.39375</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.39375</data>
+    </edge>
+    <edge source="field:cf_80f721f9446bd3" target="field:cf_1285e1e2c004f2">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.39375</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.39375</data>
+    </edge>
+    <edge source="field:cf_80f721f9446bd3" target="field:cf_be52992cb12705">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.26458333333333334</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.26458333333333334</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Authorization_for_hospital_admission" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Authorization_for_hospital_admission::Components">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">1.0</data>
+      <data key="d31">2.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Authorization_for_hospital_admission::Components" target="field:cf_ba8421601b1980">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.5927257479840219</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.5927257479840219</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Authorization_for_hospital_admission::Components" target="field:cf_ba09c313b94cba">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.407274252015978</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.407274252015978</data>
+    </edge>
+    <edge source="field:cf_ba8421601b1980" target="field:cf_ba09c313b94cba">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.6604166666666667</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.6604166666666667</data>
+    </edge>
+    <edge source="field:cf_ba8421601b1980" target="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Authorization_for_hospital_admission">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.142659032582144</data>
+      <data key="d32">0.142659032582144</data>
+    </edge>
+    <edge source="field:cf_ba8421601b1980" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Authorization_for_hospital_admission::Components">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.26519287608961833</data>
+      <data key="d32">0.26519287608961833</data>
+    </edge>
+    <edge source="field:cf_ba09c313b94cba" target="field:cf_ba8421601b1980">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.6604166666666667</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.6604166666666667</data>
+    </edge>
+    <edge source="field:cf_ba09c313b94cba" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Authorization_for_hospital_admission::Components">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.07933650460594714</data>
+      <data key="d32">0.07933650460594714</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">0.31929015155351037</data>
+      <data key="d31">4.0</data>
+      <data key="d32">0.31929015155351037</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree_/_Assigned_patient_location_/_Facility">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">0.40304438885829413</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.40304438885829413</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree_/_Assigned_patient_location_/_Address">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">0.27766545958819544</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.27766545958819544</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree" target="field:cf_3db72fcc22b158">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.06059171850700179</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.06059171850700179</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree" target="field:cf_10f7d6c8e1d5c5">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.20953017555064432</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.20953017555064432</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree" target="field:cf_2a67f6f1c22886">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.34208410307439474</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.34208410307439474</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree" target="field:cf_22f759c45e42f4">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.38779400286795923</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.38779400286795923</data>
+    </edge>
+    <edge source="field:cf_3db72fcc22b158" target="field:cf_10f7d6c8e1d5c5">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.26458333333333334</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.26458333333333334</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree_/_Assigned_patient_location_/_Facility" target="field:cf_9449e602105d68">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">1.0</data>
+      <data key="d31">1.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="field:cf_9449e602105d68" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree_/_Assigned_patient_location_/_Facility">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.3381765292587354</data>
+      <data key="d32">0.3381765292587354</data>
+    </edge>
+    <edge source="field:cf_9449e602105d68" target="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.0804473724428203</data>
+      <data key="d32">0.0804473724428203</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree_/_Assigned_patient_location_/_Address" target="field:cf_1d8359b2d21168">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">1.0</data>
+      <data key="d31">1.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="field:cf_1d8359b2d21168" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree_/_Assigned_patient_location_/_Address">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.22291072632829326</data>
+      <data key="d32">0.22291072632829326</data>
+    </edge>
+    <edge source="field:cf_10f7d6c8e1d5c5" target="field:cf_2a67f6f1c22886">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.49375</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.49375</data>
+    </edge>
+    <edge source="field:cf_10f7d6c8e1d5c5" target="field:cf_3db72fcc22b158">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.26458333333333334</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.26458333333333334</data>
+    </edge>
+    <edge source="field:cf_2a67f6f1c22886" target="field:cf_22f759c45e42f4">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.7760416666666667</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.7760416666666667</data>
+    </edge>
+    <edge source="field:cf_2a67f6f1c22886" target="field:cf_10f7d6c8e1d5c5">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.49375</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.49375</data>
+    </edge>
+    <edge source="field:cf_2a67f6f1c22886" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.05322242175206198</data>
+      <data key="d32">0.05322242175206198</data>
+    </edge>
+    <edge source="field:cf_22f759c45e42f4" target="field:cf_2a67f6f1c22886">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.7760416666666667</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.7760416666666667</data>
+    </edge>
+    <edge source="field:cf_22f759c45e42f4" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Patient_admission::Tree">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.11293525822271844</data>
+      <data key="d32">0.11293525822271844</data>
+    </edge>
+    <edge source="field:cf_22f759c45e42f4" target="field:cf_10f7d6c8e1d5c5">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.11666189828619987</data>
+      <data key="d32">0.11666189828619987</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Problem/Diagnosis" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Problem/Diagnosis::structure">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">1.0</data>
+      <data key="d31">2.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Problem/Diagnosis::structure" target="field:cf_2db2fd852fb674">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.4903804024542714</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.4903804024542714</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Problem/Diagnosis::structure" target="field:cf_49398dcbba5447">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.5096195975457286</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.5096195975457286</data>
+    </edge>
+    <edge source="field:cf_2db2fd852fb674" target="field:cf_49398dcbba5447">
+      <data key="d29">sibling_context</data>
+      <data key="d30">1.019927536231884</data>
+      <data key="d31">0.5</data>
+      <data key="d32">1.019927536231884</data>
+    </edge>
+    <edge source="field:cf_2db2fd852fb674" target="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Problem/Diagnosis">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.12424397381941185</data>
+      <data key="d32">0.12424397381941185</data>
+    </edge>
+    <edge source="field:cf_2db2fd852fb674" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Problem/Diagnosis::structure">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.23096060696332746</data>
+      <data key="d32">0.23096060696332746</data>
+    </edge>
+    <edge source="field:cf_49398dcbba5447" target="field:cf_2db2fd852fb674">
+      <data key="d29">sibling_context</data>
+      <data key="d30">1.019927536231884</data>
+      <data key="d31">0.5</data>
+      <data key="d32">1.019927536231884</data>
+    </edge>
+    <edge source="field:cf_49398dcbba5447" target="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Problem/Diagnosis">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.14596739709068926</data>
+      <data key="d32">0.14596739709068926</data>
+    </edge>
+    <edge source="field:cf_49398dcbba5447" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Problem/Diagnosis::structure">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.2713428876472024</data>
+      <data key="d32">0.2713428876472024</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Procedure_undertaken" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Procedure_undertaken::Procedure_list">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">1.0</data>
+      <data key="d31">1.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Procedure_undertaken::Procedure_list" target="field:cf_18704e514938d4">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">1.0</data>
+      <data key="d31">1.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="field:cf_18704e514938d4" target="group:openEHR-EHR-COMPOSITION.hospitalisation.v1::Procedure_undertaken">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.16654664626179735</data>
+      <data key="d32">0.16654664626179735</data>
+    </edge>
+    <edge source="field:cf_18704e514938d4" target="subgroup:openEHR-EHR-COMPOSITION.hospitalisation.v1::Procedure_undertaken::Procedure_list">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.3095982310115184</data>
+      <data key="d32">0.3095982310115184</data>
+    </edge>
+    <edge source="family:openEHR-EHR-COMPOSITION.demographic_data.v1" target="group:openEHR-EHR-COMPOSITION.demographic_data.v1::Demographic_data">
+      <data key="d29">family_to_group</data>
+      <data key="d30">1.0</data>
+      <data key="d31">6.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="group:openEHR-EHR-COMPOSITION.demographic_data.v1::Demographic_data" target="subgroup:openEHR-EHR-COMPOSITION.demographic_data.v1::Demographic_data::components">
+      <data key="d29">group_to_subgroup</data>
+      <data key="d30">1.0</data>
+      <data key="d31">6.0</data>
+      <data key="d32">1.0</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.demographic_data.v1::Demographic_data::components" target="field:cf_7f3b6795a0e812">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.33551472665144166</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.33551472665144166</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.demographic_data.v1::Demographic_data::components" target="field:cf_e7551706658b4a">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.24270633515962586</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.24270633515962586</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.demographic_data.v1::Demographic_data::components" target="field:cf_19e1b0f55ef007">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.06606063167259603</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.06606063167259603</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.demographic_data.v1::Demographic_data::components" target="field:cf_4122372d727029">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.05258117470742108</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.05258117470742108</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.demographic_data.v1::Demographic_data::components" target="field:cf_7ab0248b87b82e">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.16680975813499985</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.16680975813499985</data>
+    </edge>
+    <edge source="subgroup:openEHR-EHR-COMPOSITION.demographic_data.v1::Demographic_data::components" target="field:cf_eee397355aecbe">
+      <data key="d29">subgroup_to_field</data>
+      <data key="d30">0.13632737367391556</data>
+      <data key="d31">1.0</data>
+      <data key="d32">0.13632737367391556</data>
+    </edge>
+    <edge source="field:cf_7f3b6795a0e812" target="field:cf_e7551706658b4a">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.74375</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.74375</data>
+    </edge>
+    <edge source="field:cf_7f3b6795a0e812" target="subgroup:openEHR-EHR-COMPOSITION.demographic_data.v1::Demographic_data::components">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.06498219742139176</data>
+      <data key="d32">0.06498219742139176</data>
+    </edge>
+    <edge source="field:cf_7f3b6795a0e812" target="field:cf_7ab0248b87b82e">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.09349028464006147</data>
+      <data key="d32">0.09349028464006147</data>
+    </edge>
+    <edge source="field:cf_7f3b6795a0e812" target="group:openEHR-EHR-COMPOSITION.demographic_data.v1::Demographic_data">
+      <data key="d29">cartesian</data>
+      <data key="d30">0.07859664974910806</data>
+      <data key="d32">0.07859664974910806</data>
+    </edge>
+    <edge source="field:cf_e7551706658b4a" target="field:cf_7f3b6795a0e812">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.74375</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.74375</data>
+    </edge>
+    <edge source="field:cf_e7551706658b4a" target="field:cf_7ab0248b87b82e">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.39375</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.39375</data>
+    </edge>
+    <edge source="field:cf_19e1b0f55ef007" target="field:cf_eee397355aecbe">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.28920454545454544</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.28920454545454544</data>
+    </edge>
+    <edge source="field:cf_19e1b0f55ef007" target="field:cf_4122372d727029">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.1846590909090909</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.1846590909090909</data>
+    </edge>
+    <edge source="field:cf_4122372d727029" target="field:cf_19e1b0f55ef007">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.1846590909090909</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.1846590909090909</data>
+    </edge>
+    <edge source="field:cf_7ab0248b87b82e" target="field:cf_e7551706658b4a">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.39375</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.39375</data>
+    </edge>
+    <edge source="field:cf_7ab0248b87b82e" target="field:cf_eee397355aecbe">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.39375</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.39375</data>
+    </edge>
+    <edge source="field:cf_eee397355aecbe" target="field:cf_7ab0248b87b82e">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.39375</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.39375</data>
+    </edge>
+    <edge source="field:cf_eee397355aecbe" target="field:cf_19e1b0f55ef007">
+      <data key="d29">sibling_context</data>
+      <data key="d30">0.28920454545454544</data>
+      <data key="d31">0.5</data>
+      <data key="d32">0.28920454545454544</data>
+    </edge>
+    <data key="d0">AQF Reduced Schema Graph</data>
+    <data key="d1">0.05</data>
+  </graph>
+</graphml>
