@@ -6,6 +6,6 @@
   "lambda_sc": 0.25,
   "mu": 0.25,
   "eta": 1.0,
-  "forest_cache_used": false,
-  "score_cache_used": false
+  "forest_cache_used": true,
+  "score_cache_used": true
 }
