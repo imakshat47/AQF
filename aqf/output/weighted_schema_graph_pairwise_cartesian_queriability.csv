@@ -1,0 +1,2 @@
+source,target,source_label,target_label,source_type,target_type,distance,source_base_queriability,pairwise_influence
+schema:root,schema:root,EHR Schema,EHR Schema,root,root,0,0.02,0.02
