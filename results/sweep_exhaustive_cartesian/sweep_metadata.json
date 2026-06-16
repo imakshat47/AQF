@@ -1,0 +1,6 @@
+{
+  "parser_version": "orbda_parser_v2_2_parameter_sweep",
+  "benchmark_version": "expert_curated_v1",
+  "data_dir": "orbda_10k\\mixed",
+  "query_count": 42
+}
