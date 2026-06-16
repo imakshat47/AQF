@@ -1,0 +1,17 @@
+{
+  "params": {
+    "p": 0.15,
+    "entity_level": "subgroup",
+    "use_p1": true,
+    "use_p2": true,
+    "use_p3": true,
+    "use_p4": true,
+    "use_p5": true,
+    "use_p6": true,
+    "use_p7": true,
+    "use_p8": true,
+    "use_p9": true
+  },
+  "forest_cache_used": false,
+  "acf_cache_used": false
+}

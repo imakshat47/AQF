@@ -1,0 +1,291 @@
+{
+  "method": "selection_only",
+  "k_e": 5,
+  "k_a": 10,
+  "k_r": 1,
+  "k_sigma": 6,
+  "k_pi": 6,
+  "k_tau": 3,
+  "k_gamma": 2,
+  "field_complexity": 30,
+  "field_count": 8,
+  "fields": [
+    {
+      "field_id": "cf_ed2fd195fdc918",
+      "label": "date of beginning of radiotherapy",
+      "canonical_path": "HCPA / components / radiotherapy / date of beginning of radiotherapy",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "HCPA",
+      "nested_subgroup": "components / radiotherapy",
+      "kind": "temporal",
+      "dv_type": "DV_DATE",
+      "primary_dv_type": "DV_DATE",
+      "observed_dv_types": [
+        "DV_DATE"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "before",
+        "after",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.43478260869565216,
+      "necessity": 1.0,
+      "q_selection": 0.43478260869565216,
+      "q_projection": 1.0,
+      "q_sort": 1.0,
+      "q_aggregation": 0.0,
+      "entity_id": "E::openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components / radiotherapy",
+      "entity_queriability": 0.044579815910709905,
+      "rank": 1
+    },
+    {
+      "field_id": "cf_cc107606becdfc",
+      "label": "Weight",
+      "canonical_path": "Body weight / Simple / Weight",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Body weight",
+      "nested_subgroup": "Simple",
+      "kind": "numeric",
+      "dv_type": "DV_QUANTITY",
+      "primary_dv_type": "DV_QUANTITY",
+      "observed_dv_types": [
+        "DV_QUANTITY"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        ">",
+        "<",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.2222222222222222,
+      "necessity": 1.0,
+      "q_selection": 0.2222222222222222,
+      "q_projection": 1.0,
+      "q_sort": 1.0,
+      "q_aggregation": 0.0,
+      "entity_id": "E::openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Body weight::Simple",
+      "entity_queriability": 0.0686604309178417,
+      "rank": 2
+    },
+    {
+      "field_id": "cf_1b05aa3c7da77f",
+      "label": "Height/Length",
+      "canonical_path": "Height/Length / Simple / Height/Length",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "Height/Length",
+      "nested_subgroup": "Simple",
+      "kind": "numeric",
+      "dv_type": "DV_QUANTITY",
+      "primary_dv_type": "DV_QUANTITY",
+      "observed_dv_types": [
+        "DV_QUANTITY"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        ">",
+        "<",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.2222222222222222,
+      "necessity": 1.0,
+      "q_selection": 0.2222222222222222,
+      "q_projection": 1.0,
+      "q_sort": 1.0,
+      "q_aggregation": 0.0,
+      "entity_id": "E::openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::Height/Length::Simple",
+      "entity_queriability": 0.0686604309178417,
+      "rank": 3
+    },
+    {
+      "field_id": "cf_ccf42da6435cdd",
+      "label": "duration of treatment",
+      "canonical_path": "HCPA / components / chemotherapy / duration of treatment",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "HCPA",
+      "nested_subgroup": "components / chemotherapy",
+      "kind": "numeric",
+      "dv_type": "DV_QUANTITY",
+      "primary_dv_type": "DV_QUANTITY",
+      "observed_dv_types": [
+        "DV_QUANTITY"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        ">",
+        "<",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.14285714285714285,
+      "necessity": 1.0,
+      "q_selection": 0.14285714285714285,
+      "q_projection": 0.3333333333333333,
+      "q_sort": 1.0,
+      "q_aggregation": 0.0,
+      "entity_id": "E::openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components / chemotherapy",
+      "entity_queriability": 0.08687473513551806,
+      "rank": 4
+    },
+    {
+      "field_id": "cf_e7f0fa8ccde04c",
+      "label": "schema",
+      "canonical_path": "HCPA / components / chemotherapy / schema",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "HCPA",
+      "nested_subgroup": "components / chemotherapy",
+      "kind": "text",
+      "dv_type": "DV_TEXT",
+      "primary_dv_type": "DV_TEXT",
+      "observed_dv_types": [
+        "DV_TEXT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "contains",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.14285714285714285,
+      "necessity": 1.0,
+      "q_selection": 0.14285714285714285,
+      "q_projection": 0.3333333333333333,
+      "q_sort": 1.0,
+      "q_aggregation": 0.0,
+      "entity_id": "E::openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components / chemotherapy",
+      "entity_queriability": 0.08687473513551806,
+      "rank": 5
+    },
+    {
+      "field_id": "cf_ec7d5ae391fa0a",
+      "label": "date of beginning of chemotherapy",
+      "canonical_path": "HCPA / components / chemotherapy / date of beginning of chemotherapy",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "HCPA",
+      "nested_subgroup": "components / chemotherapy",
+      "kind": "temporal",
+      "dv_type": "DV_DATE",
+      "primary_dv_type": "DV_DATE",
+      "observed_dv_types": [
+        "DV_DATE"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "before",
+        "after",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.14285714285714285,
+      "necessity": 1.0,
+      "q_selection": 0.14285714285714285,
+      "q_projection": 0.3333333333333333,
+      "q_sort": 1.0,
+      "q_aggregation": 0.0,
+      "entity_id": "E::openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components / chemotherapy",
+      "entity_queriability": 0.08687473513551806,
+      "rank": 6
+    },
+    {
+      "field_id": "cf_c89fef6e42073d",
+      "label": "indicator of transplantation",
+      "canonical_path": "HCPA / components / transplantation / indicator of transplantation",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "HCPA",
+      "nested_subgroup": "components / transplantation",
+      "kind": "boolean",
+      "dv_type": "DV_BOOLEAN",
+      "primary_dv_type": "DV_BOOLEAN",
+      "observed_dv_types": [
+        "DV_BOOLEAN"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.1111111111111111,
+      "necessity": 1.0,
+      "q_selection": 0.1111111111111111,
+      "q_projection": 0.5,
+      "q_sort": 1.0,
+      "q_aggregation": 0.0,
+      "entity_id": "E::openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components / transplantation",
+      "entity_queriability": 0.09604112516784631,
+      "rank": 7
+    },
+    {
+      "field_id": "cf_d7a40eea03f1d2",
+      "label": "number of transplantations",
+      "canonical_path": "HCPA / components / transplantation / number of transplantations",
+      "record_family": "openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1",
+      "form_group": "HCPA",
+      "nested_subgroup": "components / transplantation",
+      "kind": "numeric",
+      "dv_type": "DV_COUNT",
+      "primary_dv_type": "DV_COUNT",
+      "observed_dv_types": [
+        "DV_COUNT"
+      ],
+      "supports_null_flavour": false,
+      "operators": [
+        "equals",
+        ">",
+        "<",
+        "between",
+        "is_known",
+        "is_unknown"
+      ],
+      "score": 0.1111111111111111,
+      "necessity": 1.0,
+      "q_selection": 0.1111111111111111,
+      "q_projection": 0.5,
+      "q_sort": 1.0,
+      "q_aggregation": 0.0,
+      "entity_id": "E::openEHR-EHR-COMPOSITION.outpatient_high_complexity_procedures.v1::HCPA::components / transplantation",
+      "entity_queriability": 0.09604112516784631,
+      "rank": 8
+    }
+  ],
+  "groups": {
+    "HCPA": {
+      "components / radiotherapy": [
+        "cf_ed2fd195fdc918"
+      ],
+      "components / chemotherapy": [
+        "cf_ccf42da6435cdd",
+        "cf_e7f0fa8ccde04c",
+        "cf_ec7d5ae391fa0a"
+      ],
+      "components / transplantation": [
+        "cf_c89fef6e42073d",
+        "cf_d7a40eea03f1d2"
+      ]
+    },
+    "Body weight": {
+      "Simple": [
+        "cf_cc107606becdfc"
+      ]
+    },
+    "Height/Length": {
+      "Simple": [
+        "cf_1b05aa3c7da77f"
+      ]
+    }
+  }
+}
