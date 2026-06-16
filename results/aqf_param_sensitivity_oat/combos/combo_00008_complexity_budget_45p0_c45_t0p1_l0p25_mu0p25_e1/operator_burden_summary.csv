@@ -1,0 +1,17 @@
+method,field_count,operator_count,valid_operator_count,invalid_or_unwanted_operator_count,weighted_operator_burden
+aqf_full,39,209,209,0,191.75
+aqf_topk_no_threshold,39,209,209,0,191.75
+flattened_topk,39,209,209,0,191.75
+frequency_only,39,206,206,0,188.25
+no_operator_awareness,39,429,209,220,468.0
+no_pruning,54,285,285,0,262.25
+random_topk_1,39,207,207,0,190.75
+random_topk_10,39,205,205,0,188.25
+random_topk_2,39,212,212,0,197.0
+random_topk_3,39,202,202,0,184.25
+random_topk_4,39,200,200,0,181.0
+random_topk_5,39,209,209,0,193.0
+random_topk_6,39,210,210,0,194.5
+random_topk_7,39,205,205,0,189.0
+random_topk_8,39,204,204,0,187.0
+random_topk_9,39,207,207,0,190.25

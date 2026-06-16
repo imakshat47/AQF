@@ -1,0 +1,17 @@
+method,field_count,form_group_count,subgroup_count,max_depth,avg_depth,context_preservation_rate,lineage_preservation_rate,ambiguous_label_count,ambiguous_label_resolution_rate
+aqf_full,32,7,9,6,3.5,1.0,1.0,5,0.84375
+aqf_topk_no_threshold,32,7,9,6,3.5,1.0,1.0,5,0.84375
+frequency_only,32,7,9,6,3.5,1.0,1.0,5,0.84375
+flattened_topk,32,1,1,6,3.5,0.0,1.0,5,0.84375
+no_operator_awareness,32,7,9,6,3.5,1.0,1.0,5,0.84375
+no_pruning,54,11,19,6,3.7037037037037037,1.0,1.0,5,0.9074074074074074
+random_topk_1,32,8,13,6,3.8125,1.0,1.0,2,0.9375
+random_topk_2,32,8,16,6,3.78125,1.0,1.0,2,0.9375
+random_topk_3,32,9,15,6,3.59375,1.0,1.0,0,1.0
+random_topk_4,32,9,15,6,3.625,1.0,1.0,1,0.96875
+random_topk_5,32,10,15,6,3.6875,1.0,1.0,2,0.9375
+random_topk_6,32,10,16,6,3.6875,1.0,1.0,3,0.90625
+random_topk_7,32,7,14,6,3.78125,1.0,1.0,1,0.96875
+random_topk_8,32,9,15,6,3.59375,1.0,1.0,4,0.875
+random_topk_9,32,9,13,6,3.78125,1.0,1.0,3,0.90625
+random_topk_10,32,9,14,6,3.6875,1.0,1.0,1,0.96875

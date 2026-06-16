@@ -1,0 +1,490 @@
+method,rank,field_id,label,canonical_path,dv_type,operator_count,operators_exposed,valid_operator_count,invalid_or_unwanted_operator_count,invalid_or_unwanted_operators,weighted_operator_burden,score
+aqf_full,1,cf_49398dcbba5447,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.5557227684696855
+aqf_full,2,cf_7f3b6795a0e812,birth date,Demographic data / components / birth date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.489780106059632
+aqf_full,3,cf_2db2fd852fb674,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.4627817149579796
+aqf_full,4,cf_22f759c45e42f4,Admit date/time,Patient admission / Tree / Admit date/time,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.4208983537539663
+aqf_full,5,cf_79ed78f34fef6f,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3943598922155047
+aqf_full,6,cf_ba8421601b1980,Issue date,Authorization for hospital admission / Components / Issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3827733537539664
+aqf_full,7,cf_9449e602105d68,Universal ID,Patient admission / Tree / Assigned patient location / Facility / Universal ID,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.2092316870872994
+aqf_full,8,cf_18704e514938d4,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.201355084523197
+aqf_full,9,cf_469c691048a0ce,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.017941047948939
+aqf_full,10,cf_1285e1e2c004f2,claim reason,Patient discharge / Components / claim reason,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.0070137383693507
+aqf_full,11,cf_5cd62eaa6e16a8,issue date,HCPA / components / General data / issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.0016433408483474
+aqf_full,12,cf_16800b2d3f5ef6,patient age,HCPA / components / General data / patient age,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9869318023868088
+aqf_full,13,cf_1d8359b2d21168,State/province,Patient admission / Tree / Assigned patient location / Address / State/province,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.9758983537539663
+aqf_full,14,cf_ba09c313b94cba,ICU - Total,Authorization for hospital admission / Components / ICU - Total,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9683983537539662
+aqf_full,15,cf_bd9db9ae67063d,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8972934726981028
+aqf_full,16,cf_10f7d6c8e1d5c5,Admission type,Patient admission / Tree / Admission type,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8790233537539662
+aqf_full,17,cf_e7551706658b4a,gender,Demographic data / components / gender,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8638710151505407
+aqf_full,18,cf_4e7e8ca2916a1e,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.832939375708136
+aqf_full,19,cf_0a229c157b8d2a,Associated causes,Problem/Diagnosis / structure / Associated causes,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8185915496211795
+aqf_full,20,cf_b87e8363f020f7,healthcare unit,HCPA / components / General data / healthcare unit,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.810393340848347
+aqf_full,21,cf_0b6364bb149692,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8056498127418383
+aqf_full,22,cf_49533263f29569,reason for discharge,Patient discharge / Components / reason for discharge,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.803046817179708
+aqf_full,23,cf_7ab0248b87b82e,educational level,Demographic data / components / educational level,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+aqf_full,24,cf_eee397355aecbe,nationality,Demographic data / components / nationality,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+aqf_full,25,cf_2a67f6f1c22886,Hospital service,Patient admission / Tree / Hospital service,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.9108983537539663
+aqf_full,26,cf_8b431261fa7dca,State,HCPA / components / General data / State,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.7441914177714242
+aqf_full,27,cf_775d9002cb4e7b,reason for encounter,HCPA / components / General data / reason for encounter,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.741412571617578
+aqf_full,28,cf_80f721f9446bd3,death indicator,Patient discharge / Components / death indicator,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,1.8476387383693507
+aqf_full,29,cf_be52992cb12705,hospital infection,Patient discharge / Components / hospital infection,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.815763738369351
+aqf_topk_no_threshold,1,cf_49398dcbba5447,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.5557227684696855
+aqf_topk_no_threshold,2,cf_7f3b6795a0e812,birth date,Demographic data / components / birth date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.489780106059632
+aqf_topk_no_threshold,3,cf_2db2fd852fb674,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.4627817149579796
+aqf_topk_no_threshold,4,cf_22f759c45e42f4,Admit date/time,Patient admission / Tree / Admit date/time,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.4208983537539663
+aqf_topk_no_threshold,5,cf_79ed78f34fef6f,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3943598922155047
+aqf_topk_no_threshold,6,cf_ba8421601b1980,Issue date,Authorization for hospital admission / Components / Issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3827733537539664
+aqf_topk_no_threshold,7,cf_9449e602105d68,Universal ID,Patient admission / Tree / Assigned patient location / Facility / Universal ID,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.2092316870872994
+aqf_topk_no_threshold,8,cf_18704e514938d4,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.201355084523197
+aqf_topk_no_threshold,9,cf_469c691048a0ce,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.017941047948939
+aqf_topk_no_threshold,10,cf_1285e1e2c004f2,claim reason,Patient discharge / Components / claim reason,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.0070137383693507
+aqf_topk_no_threshold,11,cf_5cd62eaa6e16a8,issue date,HCPA / components / General data / issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.0016433408483474
+aqf_topk_no_threshold,12,cf_16800b2d3f5ef6,patient age,HCPA / components / General data / patient age,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9869318023868088
+aqf_topk_no_threshold,13,cf_1d8359b2d21168,State/province,Patient admission / Tree / Assigned patient location / Address / State/province,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.9758983537539663
+aqf_topk_no_threshold,14,cf_ba09c313b94cba,ICU - Total,Authorization for hospital admission / Components / ICU - Total,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9683983537539662
+aqf_topk_no_threshold,15,cf_bd9db9ae67063d,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8972934726981028
+aqf_topk_no_threshold,16,cf_10f7d6c8e1d5c5,Admission type,Patient admission / Tree / Admission type,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8790233537539662
+aqf_topk_no_threshold,17,cf_e7551706658b4a,gender,Demographic data / components / gender,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8638710151505407
+aqf_topk_no_threshold,18,cf_4e7e8ca2916a1e,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.832939375708136
+aqf_topk_no_threshold,19,cf_0a229c157b8d2a,Associated causes,Problem/Diagnosis / structure / Associated causes,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8185915496211795
+aqf_topk_no_threshold,20,cf_b87e8363f020f7,healthcare unit,HCPA / components / General data / healthcare unit,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.810393340848347
+aqf_topk_no_threshold,21,cf_0b6364bb149692,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8056498127418383
+aqf_topk_no_threshold,22,cf_49533263f29569,reason for discharge,Patient discharge / Components / reason for discharge,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.803046817179708
+aqf_topk_no_threshold,23,cf_7ab0248b87b82e,educational level,Demographic data / components / educational level,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+aqf_topk_no_threshold,24,cf_eee397355aecbe,nationality,Demographic data / components / nationality,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+aqf_topk_no_threshold,25,cf_2a67f6f1c22886,Hospital service,Patient admission / Tree / Hospital service,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.9108983537539663
+aqf_topk_no_threshold,26,cf_8b431261fa7dca,State,HCPA / components / General data / State,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.7441914177714242
+aqf_topk_no_threshold,27,cf_775d9002cb4e7b,reason for encounter,HCPA / components / General data / reason for encounter,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.741412571617578
+aqf_topk_no_threshold,28,cf_80f721f9446bd3,death indicator,Patient discharge / Components / death indicator,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,1.8476387383693507
+aqf_topk_no_threshold,29,cf_be52992cb12705,hospital infection,Patient discharge / Components / hospital infection,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.815763738369351
+frequency_only,1,cf_775d9002cb4e7b,reason for encounter,HCPA / components / General data / reason for encounter,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.741412571617578
+frequency_only,2,cf_49533263f29569,reason for discharge,Patient discharge / Components / reason for discharge,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.803046817179708
+frequency_only,3,cf_19e1b0f55ef007,race,Demographic data / components / race,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.794325560605086
+frequency_only,4,cf_16800b2d3f5ef6,patient age,HCPA / components / General data / patient age,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9869318023868088
+frequency_only,5,cf_eee397355aecbe,nationality,Demographic data / components / nationality,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+frequency_only,6,cf_5cd62eaa6e16a8,issue date,HCPA / components / General data / issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.0016433408483474
+frequency_only,7,cf_be52992cb12705,hospital infection,Patient discharge / Components / hospital infection,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.815763738369351
+frequency_only,8,cf_b87e8363f020f7,healthcare unit,HCPA / components / General data / healthcare unit,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.810393340848347
+frequency_only,9,cf_e7551706658b4a,gender,Demographic data / components / gender,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8638710151505407
+frequency_only,10,cf_4122372d727029,ethnic group,Demographic data / components / ethnic group,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.794325560605086
+frequency_only,11,cf_7ab0248b87b82e,educational level,Demographic data / components / educational level,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+frequency_only,12,cf_80f721f9446bd3,death indicator,Patient discharge / Components / death indicator,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,1.8476387383693507
+frequency_only,13,cf_469c691048a0ce,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.017941047948939
+frequency_only,14,cf_79ed78f34fef6f,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3943598922155047
+frequency_only,15,cf_1285e1e2c004f2,claim reason,Patient discharge / Components / claim reason,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.0070137383693507
+frequency_only,16,cf_7f3b6795a0e812,birth date,Demographic data / components / birth date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.489780106059632
+frequency_only,17,cf_9449e602105d68,Universal ID,Patient admission / Tree / Assigned patient location / Facility / Universal ID,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.2092316870872994
+frequency_only,18,cf_1d8359b2d21168,State/province,Patient admission / Tree / Assigned patient location / Address / State/province,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.9758983537539663
+frequency_only,19,cf_8b431261fa7dca,State,HCPA / components / General data / State,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.7441914177714242
+frequency_only,20,cf_4e7e8ca2916a1e,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.832939375708136
+frequency_only,21,cf_49398dcbba5447,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.5557227684696855
+frequency_only,22,cf_0b6364bb149692,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8056498127418383
+frequency_only,23,cf_18704e514938d4,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.201355084523197
+frequency_only,24,cf_bd9db9ae67063d,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8972934726981028
+frequency_only,25,cf_2db2fd852fb674,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.4627817149579796
+frequency_only,26,cf_3db72fcc22b158,Patient class,Patient admission / Tree / Patient class,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.8152733537539663
+frequency_only,27,cf_ba8421601b1980,Issue date,Authorization for hospital admission / Components / Issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3827733537539664
+frequency_only,28,cf_ba09c313b94cba,ICU - Total,Authorization for hospital admission / Components / ICU - Total,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9683983537539662
+frequency_only,29,cf_2a67f6f1c22886,Hospital service,Patient admission / Tree / Hospital service,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.9108983537539663
+flattened_topk,1,cf_49398dcbba5447,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.5557227684696855
+flattened_topk,2,cf_7f3b6795a0e812,birth date,Demographic data / components / birth date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.489780106059632
+flattened_topk,3,cf_2db2fd852fb674,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.4627817149579796
+flattened_topk,4,cf_22f759c45e42f4,Admit date/time,Patient admission / Tree / Admit date/time,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.4208983537539663
+flattened_topk,5,cf_79ed78f34fef6f,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3943598922155047
+flattened_topk,6,cf_ba8421601b1980,Issue date,Authorization for hospital admission / Components / Issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3827733537539664
+flattened_topk,7,cf_9449e602105d68,Universal ID,Patient admission / Tree / Assigned patient location / Facility / Universal ID,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.2092316870872994
+flattened_topk,8,cf_18704e514938d4,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.201355084523197
+flattened_topk,9,cf_469c691048a0ce,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.017941047948939
+flattened_topk,10,cf_1285e1e2c004f2,claim reason,Patient discharge / Components / claim reason,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.0070137383693507
+flattened_topk,11,cf_5cd62eaa6e16a8,issue date,HCPA / components / General data / issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.0016433408483474
+flattened_topk,12,cf_16800b2d3f5ef6,patient age,HCPA / components / General data / patient age,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9869318023868088
+flattened_topk,13,cf_1d8359b2d21168,State/province,Patient admission / Tree / Assigned patient location / Address / State/province,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.9758983537539663
+flattened_topk,14,cf_ba09c313b94cba,ICU - Total,Authorization for hospital admission / Components / ICU - Total,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9683983537539662
+flattened_topk,15,cf_bd9db9ae67063d,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8972934726981028
+flattened_topk,16,cf_10f7d6c8e1d5c5,Admission type,Patient admission / Tree / Admission type,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8790233537539662
+flattened_topk,17,cf_e7551706658b4a,gender,Demographic data / components / gender,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8638710151505407
+flattened_topk,18,cf_4e7e8ca2916a1e,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.832939375708136
+flattened_topk,19,cf_0a229c157b8d2a,Associated causes,Problem/Diagnosis / structure / Associated causes,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8185915496211795
+flattened_topk,20,cf_b87e8363f020f7,healthcare unit,HCPA / components / General data / healthcare unit,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.810393340848347
+flattened_topk,21,cf_0b6364bb149692,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8056498127418383
+flattened_topk,22,cf_49533263f29569,reason for discharge,Patient discharge / Components / reason for discharge,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.803046817179708
+flattened_topk,23,cf_7ab0248b87b82e,educational level,Demographic data / components / educational level,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+flattened_topk,24,cf_eee397355aecbe,nationality,Demographic data / components / nationality,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+flattened_topk,25,cf_2a67f6f1c22886,Hospital service,Patient admission / Tree / Hospital service,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.9108983537539663
+flattened_topk,26,cf_8b431261fa7dca,State,HCPA / components / General data / State,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.7441914177714242
+flattened_topk,27,cf_775d9002cb4e7b,reason for encounter,HCPA / components / General data / reason for encounter,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.741412571617578
+flattened_topk,28,cf_80f721f9446bd3,death indicator,Patient discharge / Components / death indicator,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,1.8476387383693507
+flattened_topk,29,cf_be52992cb12705,hospital infection,Patient discharge / Components / hospital infection,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.815763738369351
+no_operator_awareness,1,cf_49398dcbba5447,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,2.5557227684696855
+no_operator_awareness,2,cf_7f3b6795a0e812,birth date,Demographic data / components / birth date,DV_DATE,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,not_equals;in;contains;>;<,12.0,2.489780106059632
+no_operator_awareness,3,cf_2db2fd852fb674,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,2.4627817149579796
+no_operator_awareness,4,cf_22f759c45e42f4,Admit date/time,Patient admission / Tree / Admit date/time,DV_DATE_TIME,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,not_equals;in;contains;>;<,12.0,2.4208983537539663
+no_operator_awareness,5,cf_79ed78f34fef6f,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,not_equals;in;contains;>;<,12.0,2.3943598922155047
+no_operator_awareness,6,cf_ba8421601b1980,Issue date,Authorization for hospital admission / Components / Issue date,DV_DATE,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,not_equals;in;contains;>;<,12.0,2.3827733537539664
+no_operator_awareness,7,cf_9449e602105d68,Universal ID,Patient admission / Tree / Assigned patient location / Facility / Universal ID,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,2.2092316870872994
+no_operator_awareness,8,cf_18704e514938d4,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,2.201355084523197
+no_operator_awareness,9,cf_469c691048a0ce,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,not_equals;in;contains;>;<,12.0,2.017941047948939
+no_operator_awareness,10,cf_1285e1e2c004f2,claim reason,Patient discharge / Components / claim reason,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,2.0070137383693507
+no_operator_awareness,11,cf_5cd62eaa6e16a8,issue date,HCPA / components / General data / issue date,DV_DATE,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,not_equals;in;contains;>;<,12.0,2.0016433408483474
+no_operator_awareness,12,cf_16800b2d3f5ef6,patient age,HCPA / components / General data / patient age,DV_COUNT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,not_equals;in;contains;before;after,12.0,1.9869318023868088
+no_operator_awareness,13,cf_1d8359b2d21168,State/province,Patient admission / Tree / Assigned patient location / Address / State/province,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,1.9758983537539663
+no_operator_awareness,14,cf_ba09c313b94cba,ICU - Total,Authorization for hospital admission / Components / ICU - Total,DV_COUNT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,not_equals;in;contains;before;after,12.0,1.9683983537539662
+no_operator_awareness,15,cf_bd9db9ae67063d,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,1.8972934726981028
+no_operator_awareness,16,cf_10f7d6c8e1d5c5,Admission type,Patient admission / Tree / Admission type,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,1.8790233537539662
+no_operator_awareness,17,cf_e7551706658b4a,gender,Demographic data / components / gender,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,1.8638710151505407
+no_operator_awareness,18,cf_4e7e8ca2916a1e,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,1.832939375708136
+no_operator_awareness,19,cf_0a229c157b8d2a,Associated causes,Problem/Diagnosis / structure / Associated causes,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,1.8185915496211795
+no_operator_awareness,20,cf_b87e8363f020f7,healthcare unit,HCPA / components / General data / healthcare unit,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,1.810393340848347
+no_operator_awareness,21,cf_0b6364bb149692,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,1.8056498127418383
+no_operator_awareness,22,cf_49533263f29569,reason for discharge,Patient discharge / Components / reason for discharge,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,1.803046817179708
+no_operator_awareness,23,cf_7ab0248b87b82e,educational level,Demographic data / components / educational level,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,1.794325560605086
+no_operator_awareness,24,cf_eee397355aecbe,nationality,Demographic data / components / nationality,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,1.794325560605086
+no_operator_awareness,25,cf_2a67f6f1c22886,Hospital service,Patient admission / Tree / Hospital service,DV_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,4,7,not_equals;in;>;<;before;after;between,12.0,1.9108983537539663
+no_operator_awareness,26,cf_8b431261fa7dca,State,HCPA / components / General data / State,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,1.7441914177714242
+no_operator_awareness,27,cf_775d9002cb4e7b,reason for encounter,HCPA / components / General data / reason for encounter,DV_CODED_TEXT,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,6,5,>;<;before;after;between,12.0,1.741412571617578
+no_operator_awareness,28,cf_80f721f9446bd3,death indicator,Patient discharge / Components / death indicator,DV_BOOLEAN,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,3,8,not_equals;in;contains;>;<;before;after;between,12.0,1.8476387383693507
+no_operator_awareness,29,cf_be52992cb12705,hospital infection,Patient discharge / Components / hospital infection,NULL_FLAVOUR,11,equals;not_equals;in;contains;>;<;before;after;between;is_known;is_unknown,2,9,equals;not_equals;in;contains;>;<;before;after;between,12.0,1.815763738369351
+no_pruning,1,cf_49398dcbba5447,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.5557227684696855
+no_pruning,2,cf_7f3b6795a0e812,birth date,Demographic data / components / birth date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.489780106059632
+no_pruning,3,cf_2db2fd852fb674,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.4627817149579796
+no_pruning,4,cf_22f759c45e42f4,Admit date/time,Patient admission / Tree / Admit date/time,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.4208983537539663
+no_pruning,5,cf_79ed78f34fef6f,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3943598922155047
+no_pruning,6,cf_ba8421601b1980,Issue date,Authorization for hospital admission / Components / Issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3827733537539664
+no_pruning,7,cf_9449e602105d68,Universal ID,Patient admission / Tree / Assigned patient location / Facility / Universal ID,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.2092316870872994
+no_pruning,8,cf_18704e514938d4,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.201355084523197
+no_pruning,9,cf_469c691048a0ce,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.017941047948939
+no_pruning,10,cf_1285e1e2c004f2,claim reason,Patient discharge / Components / claim reason,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.0070137383693507
+no_pruning,11,cf_5cd62eaa6e16a8,issue date,HCPA / components / General data / issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.0016433408483474
+no_pruning,12,cf_16800b2d3f5ef6,patient age,HCPA / components / General data / patient age,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9869318023868088
+no_pruning,13,cf_1d8359b2d21168,State/province,Patient admission / Tree / Assigned patient location / Address / State/province,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.9758983537539663
+no_pruning,14,cf_ba09c313b94cba,ICU - Total,Authorization for hospital admission / Components / ICU - Total,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9683983537539662
+no_pruning,15,cf_2a67f6f1c22886,Hospital service,Patient admission / Tree / Hospital service,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.9108983537539663
+no_pruning,16,cf_bd9db9ae67063d,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8972934726981028
+no_pruning,17,cf_10f7d6c8e1d5c5,Admission type,Patient admission / Tree / Admission type,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8790233537539662
+no_pruning,18,cf_e7551706658b4a,gender,Demographic data / components / gender,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8638710151505407
+no_pruning,19,cf_80f721f9446bd3,death indicator,Patient discharge / Components / death indicator,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,1.8476387383693507
+no_pruning,20,cf_4e7e8ca2916a1e,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.832939375708136
+no_pruning,21,cf_0a229c157b8d2a,Associated causes,Problem/Diagnosis / structure / Associated causes,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8185915496211795
+no_pruning,22,cf_be52992cb12705,hospital infection,Patient discharge / Components / hospital infection,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.815763738369351
+no_pruning,23,cf_3db72fcc22b158,Patient class,Patient admission / Tree / Patient class,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.8152733537539663
+no_pruning,24,cf_b87e8363f020f7,healthcare unit,HCPA / components / General data / healthcare unit,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.810393340848347
+no_pruning,25,cf_0b6364bb149692,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8056498127418383
+no_pruning,26,cf_49533263f29569,reason for discharge,Patient discharge / Components / reason for discharge,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.803046817179708
+no_pruning,27,cf_19e1b0f55ef007,race,Demographic data / components / race,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.794325560605086
+no_pruning,28,cf_4122372d727029,ethnic group,Demographic data / components / ethnic group,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.794325560605086
+no_pruning,29,cf_7ab0248b87b82e,educational level,Demographic data / components / educational level,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+no_pruning,30,cf_eee397355aecbe,nationality,Demographic data / components / nationality,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+no_pruning,31,cf_8b431261fa7dca,State,HCPA / components / General data / State,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.7441914177714242
+no_pruning,32,cf_775d9002cb4e7b,reason for encounter,HCPA / components / General data / reason for encounter,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.741412571617578
+no_pruning,33,cf_505d09ec39545c,duration of follow-up (months),Bariatric surgery evaluation / Components / duration of follow-up (months),DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.396644741691094
+no_pruning,34,cf_c75844f7868470,Body Mass Index,Body mass index / Single / Body Mass Index,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.283566843627619
+no_pruning,35,cf_8f20b6e7578a41,Baros table,Bariatric surgery evaluation / Components / Baros table,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.042256797904112
+no_pruning,36,cf_ac2de786b38da7,Baros score,Bariatric surgery evaluation / Components / Baros score,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.026269371868609
+no_pruning,37,cf_8e35971b63e360,topography,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / topography,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.8529042121189383
+no_pruning,38,cf_72eaea6790449d,date of pathological identification,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / date of pathological identification,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.8432329173114603
+no_pruning,39,cf_af0c9a7d79fe64,Invaded regional linphonodes,Problem/Diagnosis / structure / Invaded regional linphonodes,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,0.829624208259921
+no_pruning,40,cf_c4703128fab784,Histopathological grading (G),Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / Histopathological grading (G),DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.8216920519268449
+no_pruning,41,cf_3c63f8bfbf5fd7,Clinical staging,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Clinical (cTNM) / Clinical staging,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,0.7911610484751684
+no_pruning,42,cf_fc5be63ab59287,irradiated area 2,Procedure undertaken / Procedure list / irradiated area 2,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.7094795467619988
+no_pruning,43,cf_bbec72e0a270f7,fields/insertions 2,Procedure undertaken / Procedure list / fields/insertions 2,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.611969838921762
+no_pruning,44,cf_e5c01940113606,irradiated area 1,Procedure undertaken / Procedure list / irradiated area 1,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.573813866288626
+no_pruning,45,cf_c9b3a708f95249,fields/insertions 1,Procedure undertaken / Procedure list / fields/insertions 1,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.573813866288626
+no_pruning,46,cf_ed2fd195fdc918,date of beginning of radiotherapy,HCPA / components / radiotherapy / date of beginning of radiotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.5554295385437212
+no_pruning,47,cf_821e1930333a5c,irradiated area 3,Procedure undertaken / Procedure list / irradiated area 3,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,0.5229392361111111
+no_pruning,48,cf_ccf42da6435cdd,duration of treatment,HCPA / components / chemotherapy / duration of treatment,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+no_pruning,49,cf_e7f0fa8ccde04c,schema,HCPA / components / chemotherapy / schema,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,0.33569247246389805
+no_pruning,50,cf_ec7d5ae391fa0a,date of beginning of chemotherapy,HCPA / components / chemotherapy / date of beginning of chemotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+no_pruning,51,cf_c89fef6e42073d,indicator of transplantation,HCPA / components / transplantation / indicator of transplantation,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,0.24161363315590947
+no_pruning,52,cf_d7a40eea03f1d2,number of transplantations,HCPA / components / transplantation / number of transplantations,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.24161363315590947
+no_pruning,53,cf_cc107606becdfc,Weight,Body weight / Simple / Weight,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.205268547685824
+no_pruning,54,cf_1b05aa3c7da77f,Height/Length,Height/Length / Simple / Height/Length,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.205268547685824
+random_topk_1,1,cf_3db72fcc22b158,Patient class,Patient admission / Tree / Patient class,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.8152733537539663
+random_topk_1,2,cf_e5c01940113606,irradiated area 1,Procedure undertaken / Procedure list / irradiated area 1,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.573813866288626
+random_topk_1,3,cf_22f759c45e42f4,Admit date/time,Patient admission / Tree / Admit date/time,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.4208983537539663
+random_topk_1,4,cf_d7a40eea03f1d2,number of transplantations,HCPA / components / transplantation / number of transplantations,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.24161363315590947
+random_topk_1,5,cf_72eaea6790449d,date of pathological identification,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / date of pathological identification,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.8432329173114603
+random_topk_1,6,cf_7f3b6795a0e812,birth date,Demographic data / components / birth date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.489780106059632
+random_topk_1,7,cf_af0c9a7d79fe64,Invaded regional linphonodes,Problem/Diagnosis / structure / Invaded regional linphonodes,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,0.829624208259921
+random_topk_1,8,cf_cc107606becdfc,Weight,Body weight / Simple / Weight,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.205268547685824
+random_topk_1,9,cf_ec7d5ae391fa0a,date of beginning of chemotherapy,HCPA / components / chemotherapy / date of beginning of chemotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+random_topk_1,10,cf_8f20b6e7578a41,Baros table,Bariatric surgery evaluation / Components / Baros table,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.042256797904112
+random_topk_1,11,cf_4e7e8ca2916a1e,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.832939375708136
+random_topk_1,12,cf_821e1930333a5c,irradiated area 3,Procedure undertaken / Procedure list / irradiated area 3,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,0.5229392361111111
+random_topk_1,13,cf_c89fef6e42073d,indicator of transplantation,HCPA / components / transplantation / indicator of transplantation,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,0.24161363315590947
+random_topk_1,14,cf_e7551706658b4a,gender,Demographic data / components / gender,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8638710151505407
+random_topk_1,15,cf_79ed78f34fef6f,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3943598922155047
+random_topk_1,16,cf_8b431261fa7dca,State,HCPA / components / General data / State,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.7441914177714242
+random_topk_1,17,cf_8e35971b63e360,topography,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / topography,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.8529042121189383
+random_topk_1,18,cf_2db2fd852fb674,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.4627817149579796
+random_topk_1,19,cf_16800b2d3f5ef6,patient age,HCPA / components / General data / patient age,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9869318023868088
+random_topk_1,20,cf_eee397355aecbe,nationality,Demographic data / components / nationality,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+random_topk_1,21,cf_bd9db9ae67063d,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8972934726981028
+random_topk_1,22,cf_80f721f9446bd3,death indicator,Patient discharge / Components / death indicator,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,1.8476387383693507
+random_topk_1,23,cf_fc5be63ab59287,irradiated area 2,Procedure undertaken / Procedure list / irradiated area 2,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.7094795467619988
+random_topk_1,24,cf_1d8359b2d21168,State/province,Patient admission / Tree / Assigned patient location / Address / State/province,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.9758983537539663
+random_topk_1,25,cf_c9b3a708f95249,fields/insertions 1,Procedure undertaken / Procedure list / fields/insertions 1,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.573813866288626
+random_topk_1,26,cf_5cd62eaa6e16a8,issue date,HCPA / components / General data / issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.0016433408483474
+random_topk_1,27,cf_bbec72e0a270f7,fields/insertions 2,Procedure undertaken / Procedure list / fields/insertions 2,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.611969838921762
+random_topk_1,28,cf_49398dcbba5447,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.5557227684696855
+random_topk_1,29,cf_c4703128fab784,Histopathological grading (G),Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / Histopathological grading (G),DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.8216920519268449
+random_topk_2,1,cf_c75844f7868470,Body Mass Index,Body mass index / Single / Body Mass Index,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.283566843627619
+random_topk_2,2,cf_c9b3a708f95249,fields/insertions 1,Procedure undertaken / Procedure list / fields/insertions 1,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.573813866288626
+random_topk_2,3,cf_2db2fd852fb674,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.4627817149579796
+random_topk_2,4,cf_7ab0248b87b82e,educational level,Demographic data / components / educational level,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+random_topk_2,5,cf_505d09ec39545c,duration of follow-up (months),Bariatric surgery evaluation / Components / duration of follow-up (months),DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.396644741691094
+random_topk_2,6,cf_e5c01940113606,irradiated area 1,Procedure undertaken / Procedure list / irradiated area 1,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.573813866288626
+random_topk_2,7,cf_3c63f8bfbf5fd7,Clinical staging,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Clinical (cTNM) / Clinical staging,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,0.7911610484751684
+random_topk_2,8,cf_8e35971b63e360,topography,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / topography,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.8529042121189383
+random_topk_2,9,cf_bd9db9ae67063d,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8972934726981028
+random_topk_2,10,cf_9449e602105d68,Universal ID,Patient admission / Tree / Assigned patient location / Facility / Universal ID,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.2092316870872994
+random_topk_2,11,cf_eee397355aecbe,nationality,Demographic data / components / nationality,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+random_topk_2,12,cf_0b6364bb149692,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8056498127418383
+random_topk_2,13,cf_e7551706658b4a,gender,Demographic data / components / gender,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8638710151505407
+random_topk_2,14,cf_5cd62eaa6e16a8,issue date,HCPA / components / General data / issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.0016433408483474
+random_topk_2,15,cf_3db72fcc22b158,Patient class,Patient admission / Tree / Patient class,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.8152733537539663
+random_topk_2,16,cf_72eaea6790449d,date of pathological identification,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / date of pathological identification,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.8432329173114603
+random_topk_2,17,cf_1285e1e2c004f2,claim reason,Patient discharge / Components / claim reason,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.0070137383693507
+random_topk_2,18,cf_ac2de786b38da7,Baros score,Bariatric surgery evaluation / Components / Baros score,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.026269371868609
+random_topk_2,19,cf_fc5be63ab59287,irradiated area 2,Procedure undertaken / Procedure list / irradiated area 2,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.7094795467619988
+random_topk_2,20,cf_ec7d5ae391fa0a,date of beginning of chemotherapy,HCPA / components / chemotherapy / date of beginning of chemotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+random_topk_2,21,cf_79ed78f34fef6f,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3943598922155047
+random_topk_2,22,cf_ed2fd195fdc918,date of beginning of radiotherapy,HCPA / components / radiotherapy / date of beginning of radiotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.5554295385437212
+random_topk_2,23,cf_af0c9a7d79fe64,Invaded regional linphonodes,Problem/Diagnosis / structure / Invaded regional linphonodes,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,0.829624208259921
+random_topk_2,24,cf_469c691048a0ce,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.017941047948939
+random_topk_2,25,cf_d7a40eea03f1d2,number of transplantations,HCPA / components / transplantation / number of transplantations,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.24161363315590947
+random_topk_2,26,cf_16800b2d3f5ef6,patient age,HCPA / components / General data / patient age,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9869318023868088
+random_topk_2,27,cf_0a229c157b8d2a,Associated causes,Problem/Diagnosis / structure / Associated causes,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8185915496211795
+random_topk_2,28,cf_2a67f6f1c22886,Hospital service,Patient admission / Tree / Hospital service,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.9108983537539663
+random_topk_2,29,cf_ccf42da6435cdd,duration of treatment,HCPA / components / chemotherapy / duration of treatment,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+random_topk_3,1,cf_3c63f8bfbf5fd7,Clinical staging,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Clinical (cTNM) / Clinical staging,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,0.7911610484751684
+random_topk_3,2,cf_2a67f6f1c22886,Hospital service,Patient admission / Tree / Hospital service,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.9108983537539663
+random_topk_3,3,cf_7ab0248b87b82e,educational level,Demographic data / components / educational level,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+random_topk_3,4,cf_ed2fd195fdc918,date of beginning of radiotherapy,HCPA / components / radiotherapy / date of beginning of radiotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.5554295385437212
+random_topk_3,5,cf_9449e602105d68,Universal ID,Patient admission / Tree / Assigned patient location / Facility / Universal ID,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.2092316870872994
+random_topk_3,6,cf_0b6364bb149692,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8056498127418383
+random_topk_3,7,cf_c89fef6e42073d,indicator of transplantation,HCPA / components / transplantation / indicator of transplantation,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,0.24161363315590947
+random_topk_3,8,cf_cc107606becdfc,Weight,Body weight / Simple / Weight,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.205268547685824
+random_topk_3,9,cf_821e1930333a5c,irradiated area 3,Procedure undertaken / Procedure list / irradiated area 3,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,0.5229392361111111
+random_topk_3,10,cf_e7f0fa8ccde04c,schema,HCPA / components / chemotherapy / schema,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,0.33569247246389805
+random_topk_3,11,cf_ba8421601b1980,Issue date,Authorization for hospital admission / Components / Issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3827733537539664
+random_topk_3,12,cf_0a229c157b8d2a,Associated causes,Problem/Diagnosis / structure / Associated causes,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8185915496211795
+random_topk_3,13,cf_10f7d6c8e1d5c5,Admission type,Patient admission / Tree / Admission type,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8790233537539662
+random_topk_3,14,cf_1285e1e2c004f2,claim reason,Patient discharge / Components / claim reason,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.0070137383693507
+random_topk_3,15,cf_3db72fcc22b158,Patient class,Patient admission / Tree / Patient class,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.8152733537539663
+random_topk_3,16,cf_7f3b6795a0e812,birth date,Demographic data / components / birth date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.489780106059632
+random_topk_3,17,cf_19e1b0f55ef007,race,Demographic data / components / race,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.794325560605086
+random_topk_3,18,cf_ec7d5ae391fa0a,date of beginning of chemotherapy,HCPA / components / chemotherapy / date of beginning of chemotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+random_topk_3,19,cf_e5c01940113606,irradiated area 1,Procedure undertaken / Procedure list / irradiated area 1,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.573813866288626
+random_topk_3,20,cf_d7a40eea03f1d2,number of transplantations,HCPA / components / transplantation / number of transplantations,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.24161363315590947
+random_topk_3,21,cf_ac2de786b38da7,Baros score,Bariatric surgery evaluation / Components / Baros score,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.026269371868609
+random_topk_3,22,cf_4122372d727029,ethnic group,Demographic data / components / ethnic group,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.794325560605086
+random_topk_3,23,cf_2db2fd852fb674,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.4627817149579796
+random_topk_3,24,cf_b87e8363f020f7,healthcare unit,HCPA / components / General data / healthcare unit,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.810393340848347
+random_topk_3,25,cf_af0c9a7d79fe64,Invaded regional linphonodes,Problem/Diagnosis / structure / Invaded regional linphonodes,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,0.829624208259921
+random_topk_3,26,cf_8b431261fa7dca,State,HCPA / components / General data / State,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.7441914177714242
+random_topk_3,27,cf_469c691048a0ce,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.017941047948939
+random_topk_3,28,cf_1d8359b2d21168,State/province,Patient admission / Tree / Assigned patient location / Address / State/province,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.9758983537539663
+random_topk_3,29,cf_8f20b6e7578a41,Baros table,Bariatric surgery evaluation / Components / Baros table,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.042256797904112
+random_topk_4,1,cf_be52992cb12705,hospital infection,Patient discharge / Components / hospital infection,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.815763738369351
+random_topk_4,2,cf_1d8359b2d21168,State/province,Patient admission / Tree / Assigned patient location / Address / State/province,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.9758983537539663
+random_topk_4,3,cf_9449e602105d68,Universal ID,Patient admission / Tree / Assigned patient location / Facility / Universal ID,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.2092316870872994
+random_topk_4,4,cf_c75844f7868470,Body Mass Index,Body mass index / Single / Body Mass Index,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.283566843627619
+random_topk_4,5,cf_bbec72e0a270f7,fields/insertions 2,Procedure undertaken / Procedure list / fields/insertions 2,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.611969838921762
+random_topk_4,6,cf_1285e1e2c004f2,claim reason,Patient discharge / Components / claim reason,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.0070137383693507
+random_topk_4,7,cf_22f759c45e42f4,Admit date/time,Patient admission / Tree / Admit date/time,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.4208983537539663
+random_topk_4,8,cf_19e1b0f55ef007,race,Demographic data / components / race,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.794325560605086
+random_topk_4,9,cf_ec7d5ae391fa0a,date of beginning of chemotherapy,HCPA / components / chemotherapy / date of beginning of chemotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+random_topk_4,10,cf_ed2fd195fdc918,date of beginning of radiotherapy,HCPA / components / radiotherapy / date of beginning of radiotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.5554295385437212
+random_topk_4,11,cf_1b05aa3c7da77f,Height/Length,Height/Length / Simple / Height/Length,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.205268547685824
+random_topk_4,12,cf_18704e514938d4,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.201355084523197
+random_topk_4,13,cf_49533263f29569,reason for discharge,Patient discharge / Components / reason for discharge,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.803046817179708
+random_topk_4,14,cf_0a229c157b8d2a,Associated causes,Problem/Diagnosis / structure / Associated causes,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8185915496211795
+random_topk_4,15,cf_c9b3a708f95249,fields/insertions 1,Procedure undertaken / Procedure list / fields/insertions 1,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.573813866288626
+random_topk_4,16,cf_8e35971b63e360,topography,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / topography,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.8529042121189383
+random_topk_4,17,cf_2a67f6f1c22886,Hospital service,Patient admission / Tree / Hospital service,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.9108983537539663
+random_topk_4,18,cf_ba09c313b94cba,ICU - Total,Authorization for hospital admission / Components / ICU - Total,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9683983537539662
+random_topk_4,19,cf_c89fef6e42073d,indicator of transplantation,HCPA / components / transplantation / indicator of transplantation,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,0.24161363315590947
+random_topk_4,20,cf_8b431261fa7dca,State,HCPA / components / General data / State,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.7441914177714242
+random_topk_4,21,cf_821e1930333a5c,irradiated area 3,Procedure undertaken / Procedure list / irradiated area 3,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,0.5229392361111111
+random_topk_4,22,cf_4e7e8ca2916a1e,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.832939375708136
+random_topk_4,23,cf_80f721f9446bd3,death indicator,Patient discharge / Components / death indicator,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,1.8476387383693507
+random_topk_4,24,cf_bd9db9ae67063d,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8972934726981028
+random_topk_4,25,cf_e7551706658b4a,gender,Demographic data / components / gender,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8638710151505407
+random_topk_4,26,cf_7ab0248b87b82e,educational level,Demographic data / components / educational level,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+random_topk_4,27,cf_49398dcbba5447,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.5557227684696855
+random_topk_4,28,cf_fc5be63ab59287,irradiated area 2,Procedure undertaken / Procedure list / irradiated area 2,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.7094795467619988
+random_topk_4,29,cf_4122372d727029,ethnic group,Demographic data / components / ethnic group,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.794325560605086
+random_topk_5,1,cf_80f721f9446bd3,death indicator,Patient discharge / Components / death indicator,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,1.8476387383693507
+random_topk_5,2,cf_1b05aa3c7da77f,Height/Length,Height/Length / Simple / Height/Length,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.205268547685824
+random_topk_5,3,cf_5cd62eaa6e16a8,issue date,HCPA / components / General data / issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.0016433408483474
+random_topk_5,4,cf_49533263f29569,reason for discharge,Patient discharge / Components / reason for discharge,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.803046817179708
+random_topk_5,5,cf_3db72fcc22b158,Patient class,Patient admission / Tree / Patient class,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.8152733537539663
+random_topk_5,6,cf_2a67f6f1c22886,Hospital service,Patient admission / Tree / Hospital service,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.9108983537539663
+random_topk_5,7,cf_7ab0248b87b82e,educational level,Demographic data / components / educational level,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+random_topk_5,8,cf_af0c9a7d79fe64,Invaded regional linphonodes,Problem/Diagnosis / structure / Invaded regional linphonodes,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,0.829624208259921
+random_topk_5,9,cf_cc107606becdfc,Weight,Body weight / Simple / Weight,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.205268547685824
+random_topk_5,10,cf_2db2fd852fb674,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.4627817149579796
+random_topk_5,11,cf_22f759c45e42f4,Admit date/time,Patient admission / Tree / Admit date/time,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.4208983537539663
+random_topk_5,12,cf_821e1930333a5c,irradiated area 3,Procedure undertaken / Procedure list / irradiated area 3,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,0.5229392361111111
+random_topk_5,13,cf_ccf42da6435cdd,duration of treatment,HCPA / components / chemotherapy / duration of treatment,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+random_topk_5,14,cf_e7f0fa8ccde04c,schema,HCPA / components / chemotherapy / schema,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,0.33569247246389805
+random_topk_5,15,cf_d7a40eea03f1d2,number of transplantations,HCPA / components / transplantation / number of transplantations,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.24161363315590947
+random_topk_5,16,cf_c89fef6e42073d,indicator of transplantation,HCPA / components / transplantation / indicator of transplantation,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,0.24161363315590947
+random_topk_5,17,cf_bd9db9ae67063d,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8972934726981028
+random_topk_5,18,cf_505d09ec39545c,duration of follow-up (months),Bariatric surgery evaluation / Components / duration of follow-up (months),DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.396644741691094
+random_topk_5,19,cf_0b6364bb149692,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8056498127418383
+random_topk_5,20,cf_ba09c313b94cba,ICU - Total,Authorization for hospital admission / Components / ICU - Total,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9683983537539662
+random_topk_5,21,cf_72eaea6790449d,date of pathological identification,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / date of pathological identification,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.8432329173114603
+random_topk_5,22,cf_3c63f8bfbf5fd7,Clinical staging,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Clinical (cTNM) / Clinical staging,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,0.7911610484751684
+random_topk_5,23,cf_c9b3a708f95249,fields/insertions 1,Procedure undertaken / Procedure list / fields/insertions 1,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.573813866288626
+random_topk_5,24,cf_10f7d6c8e1d5c5,Admission type,Patient admission / Tree / Admission type,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8790233537539662
+random_topk_5,25,cf_7f3b6795a0e812,birth date,Demographic data / components / birth date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.489780106059632
+random_topk_5,26,cf_ec7d5ae391fa0a,date of beginning of chemotherapy,HCPA / components / chemotherapy / date of beginning of chemotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+random_topk_5,27,cf_18704e514938d4,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.201355084523197
+random_topk_5,28,cf_4e7e8ca2916a1e,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.832939375708136
+random_topk_5,29,cf_ed2fd195fdc918,date of beginning of radiotherapy,HCPA / components / radiotherapy / date of beginning of radiotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.5554295385437212
+random_topk_6,1,cf_ac2de786b38da7,Baros score,Bariatric surgery evaluation / Components / Baros score,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.026269371868609
+random_topk_6,2,cf_ed2fd195fdc918,date of beginning of radiotherapy,HCPA / components / radiotherapy / date of beginning of radiotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.5554295385437212
+random_topk_6,3,cf_2a67f6f1c22886,Hospital service,Patient admission / Tree / Hospital service,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.9108983537539663
+random_topk_6,4,cf_c4703128fab784,Histopathological grading (G),Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / Histopathological grading (G),DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.8216920519268449
+random_topk_6,5,cf_cc107606becdfc,Weight,Body weight / Simple / Weight,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.205268547685824
+random_topk_6,6,cf_8b431261fa7dca,State,HCPA / components / General data / State,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.7441914177714242
+random_topk_6,7,cf_7ab0248b87b82e,educational level,Demographic data / components / educational level,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+random_topk_6,8,cf_8f20b6e7578a41,Baros table,Bariatric surgery evaluation / Components / Baros table,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.042256797904112
+random_topk_6,9,cf_821e1930333a5c,irradiated area 3,Procedure undertaken / Procedure list / irradiated area 3,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,0.5229392361111111
+random_topk_6,10,cf_469c691048a0ce,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.017941047948939
+random_topk_6,11,cf_1d8359b2d21168,State/province,Patient admission / Tree / Assigned patient location / Address / State/province,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.9758983537539663
+random_topk_6,12,cf_79ed78f34fef6f,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3943598922155047
+random_topk_6,13,cf_2db2fd852fb674,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.4627817149579796
+random_topk_6,14,cf_0b6364bb149692,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8056498127418383
+random_topk_6,15,cf_0a229c157b8d2a,Associated causes,Problem/Diagnosis / structure / Associated causes,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8185915496211795
+random_topk_6,16,cf_22f759c45e42f4,Admit date/time,Patient admission / Tree / Admit date/time,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.4208983537539663
+random_topk_6,17,cf_ba09c313b94cba,ICU - Total,Authorization for hospital admission / Components / ICU - Total,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9683983537539662
+random_topk_6,18,cf_eee397355aecbe,nationality,Demographic data / components / nationality,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+random_topk_6,19,cf_bd9db9ae67063d,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8972934726981028
+random_topk_6,20,cf_72eaea6790449d,date of pathological identification,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / date of pathological identification,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.8432329173114603
+random_topk_6,21,cf_18704e514938d4,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.201355084523197
+random_topk_6,22,cf_9449e602105d68,Universal ID,Patient admission / Tree / Assigned patient location / Facility / Universal ID,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.2092316870872994
+random_topk_6,23,cf_3c63f8bfbf5fd7,Clinical staging,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Clinical (cTNM) / Clinical staging,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,0.7911610484751684
+random_topk_6,24,cf_10f7d6c8e1d5c5,Admission type,Patient admission / Tree / Admission type,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8790233537539662
+random_topk_6,25,cf_e7551706658b4a,gender,Demographic data / components / gender,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8638710151505407
+random_topk_6,26,cf_c75844f7868470,Body Mass Index,Body mass index / Single / Body Mass Index,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.283566843627619
+random_topk_6,27,cf_4e7e8ca2916a1e,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.832939375708136
+random_topk_6,28,cf_ec7d5ae391fa0a,date of beginning of chemotherapy,HCPA / components / chemotherapy / date of beginning of chemotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+random_topk_6,29,cf_7f3b6795a0e812,birth date,Demographic data / components / birth date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.489780106059632
+random_topk_7,1,cf_c89fef6e42073d,indicator of transplantation,HCPA / components / transplantation / indicator of transplantation,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,0.24161363315590947
+random_topk_7,2,cf_ccf42da6435cdd,duration of treatment,HCPA / components / chemotherapy / duration of treatment,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+random_topk_7,3,cf_e7551706658b4a,gender,Demographic data / components / gender,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8638710151505407
+random_topk_7,4,cf_4e7e8ca2916a1e,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.832939375708136
+random_topk_7,5,cf_bbec72e0a270f7,fields/insertions 2,Procedure undertaken / Procedure list / fields/insertions 2,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.611969838921762
+random_topk_7,6,cf_af0c9a7d79fe64,Invaded regional linphonodes,Problem/Diagnosis / structure / Invaded regional linphonodes,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,0.829624208259921
+random_topk_7,7,cf_fc5be63ab59287,irradiated area 2,Procedure undertaken / Procedure list / irradiated area 2,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.7094795467619988
+random_topk_7,8,cf_1d8359b2d21168,State/province,Patient admission / Tree / Assigned patient location / Address / State/province,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.9758983537539663
+random_topk_7,9,cf_c9b3a708f95249,fields/insertions 1,Procedure undertaken / Procedure list / fields/insertions 1,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.573813866288626
+random_topk_7,10,cf_ec7d5ae391fa0a,date of beginning of chemotherapy,HCPA / components / chemotherapy / date of beginning of chemotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+random_topk_7,11,cf_3db72fcc22b158,Patient class,Patient admission / Tree / Patient class,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.8152733537539663
+random_topk_7,12,cf_7ab0248b87b82e,educational level,Demographic data / components / educational level,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+random_topk_7,13,cf_5cd62eaa6e16a8,issue date,HCPA / components / General data / issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.0016433408483474
+random_topk_7,14,cf_c4703128fab784,Histopathological grading (G),Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / Histopathological grading (G),DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.8216920519268449
+random_topk_7,15,cf_821e1930333a5c,irradiated area 3,Procedure undertaken / Procedure list / irradiated area 3,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,0.5229392361111111
+random_topk_7,16,cf_4122372d727029,ethnic group,Demographic data / components / ethnic group,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.794325560605086
+random_topk_7,17,cf_505d09ec39545c,duration of follow-up (months),Bariatric surgery evaluation / Components / duration of follow-up (months),DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.396644741691094
+random_topk_7,18,cf_8b431261fa7dca,State,HCPA / components / General data / State,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.7441914177714242
+random_topk_7,19,cf_18704e514938d4,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.201355084523197
+random_topk_7,20,cf_2a67f6f1c22886,Hospital service,Patient admission / Tree / Hospital service,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.9108983537539663
+random_topk_7,21,cf_7f3b6795a0e812,birth date,Demographic data / components / birth date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.489780106059632
+random_topk_7,22,cf_3c63f8bfbf5fd7,Clinical staging,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Clinical (cTNM) / Clinical staging,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,0.7911610484751684
+random_topk_7,23,cf_9449e602105d68,Universal ID,Patient admission / Tree / Assigned patient location / Facility / Universal ID,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.2092316870872994
+random_topk_7,24,cf_22f759c45e42f4,Admit date/time,Patient admission / Tree / Admit date/time,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.4208983537539663
+random_topk_7,25,cf_469c691048a0ce,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.017941047948939
+random_topk_7,26,cf_e5c01940113606,irradiated area 1,Procedure undertaken / Procedure list / irradiated area 1,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.573813866288626
+random_topk_7,27,cf_ed2fd195fdc918,date of beginning of radiotherapy,HCPA / components / radiotherapy / date of beginning of radiotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.5554295385437212
+random_topk_7,28,cf_16800b2d3f5ef6,patient age,HCPA / components / General data / patient age,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9869318023868088
+random_topk_7,29,cf_79ed78f34fef6f,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3943598922155047
+random_topk_8,1,cf_5cd62eaa6e16a8,issue date,HCPA / components / General data / issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.0016433408483474
+random_topk_8,2,cf_af0c9a7d79fe64,Invaded regional linphonodes,Problem/Diagnosis / structure / Invaded regional linphonodes,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,0.829624208259921
+random_topk_8,3,cf_10f7d6c8e1d5c5,Admission type,Patient admission / Tree / Admission type,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8790233537539662
+random_topk_8,4,cf_ec7d5ae391fa0a,date of beginning of chemotherapy,HCPA / components / chemotherapy / date of beginning of chemotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+random_topk_8,5,cf_4122372d727029,ethnic group,Demographic data / components / ethnic group,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.794325560605086
+random_topk_8,6,cf_c9b3a708f95249,fields/insertions 1,Procedure undertaken / Procedure list / fields/insertions 1,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.573813866288626
+random_topk_8,7,cf_18704e514938d4,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.201355084523197
+random_topk_8,8,cf_19e1b0f55ef007,race,Demographic data / components / race,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.794325560605086
+random_topk_8,9,cf_cc107606becdfc,Weight,Body weight / Simple / Weight,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.205268547685824
+random_topk_8,10,cf_469c691048a0ce,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.017941047948939
+random_topk_8,11,cf_e5c01940113606,irradiated area 1,Procedure undertaken / Procedure list / irradiated area 1,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.573813866288626
+random_topk_8,12,cf_80f721f9446bd3,death indicator,Patient discharge / Components / death indicator,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,1.8476387383693507
+random_topk_8,13,cf_7ab0248b87b82e,educational level,Demographic data / components / educational level,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+random_topk_8,14,cf_9449e602105d68,Universal ID,Patient admission / Tree / Assigned patient location / Facility / Universal ID,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.2092316870872994
+random_topk_8,15,cf_1d8359b2d21168,State/province,Patient admission / Tree / Assigned patient location / Address / State/province,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.9758983537539663
+random_topk_8,16,cf_3db72fcc22b158,Patient class,Patient admission / Tree / Patient class,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.8152733537539663
+random_topk_8,17,cf_49533263f29569,reason for discharge,Patient discharge / Components / reason for discharge,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.803046817179708
+random_topk_8,18,cf_e7f0fa8ccde04c,schema,HCPA / components / chemotherapy / schema,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,0.33569247246389805
+random_topk_8,19,cf_ba8421601b1980,Issue date,Authorization for hospital admission / Components / Issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3827733537539664
+random_topk_8,20,cf_72eaea6790449d,date of pathological identification,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / date of pathological identification,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.8432329173114603
+random_topk_8,21,cf_79ed78f34fef6f,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3943598922155047
+random_topk_8,22,cf_e7551706658b4a,gender,Demographic data / components / gender,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8638710151505407
+random_topk_8,23,cf_ac2de786b38da7,Baros score,Bariatric surgery evaluation / Components / Baros score,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.026269371868609
+random_topk_8,24,cf_4e7e8ca2916a1e,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.832939375708136
+random_topk_8,25,cf_bd9db9ae67063d,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8972934726981028
+random_topk_8,26,cf_0a229c157b8d2a,Associated causes,Problem/Diagnosis / structure / Associated causes,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8185915496211795
+random_topk_8,27,cf_d7a40eea03f1d2,number of transplantations,HCPA / components / transplantation / number of transplantations,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.24161363315590947
+random_topk_8,28,cf_0b6364bb149692,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8056498127418383
+random_topk_8,29,cf_2db2fd852fb674,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.4627817149579796
+random_topk_9,1,cf_af0c9a7d79fe64,Invaded regional linphonodes,Problem/Diagnosis / structure / Invaded regional linphonodes,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,0.829624208259921
+random_topk_9,2,cf_c4703128fab784,Histopathological grading (G),Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / Histopathological grading (G),DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.8216920519268449
+random_topk_9,3,cf_19e1b0f55ef007,race,Demographic data / components / race,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.794325560605086
+random_topk_9,4,cf_4122372d727029,ethnic group,Demographic data / components / ethnic group,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.794325560605086
+random_topk_9,5,cf_e7551706658b4a,gender,Demographic data / components / gender,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8638710151505407
+random_topk_9,6,cf_c9b3a708f95249,fields/insertions 1,Procedure undertaken / Procedure list / fields/insertions 1,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.573813866288626
+random_topk_9,7,cf_7f3b6795a0e812,birth date,Demographic data / components / birth date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.489780106059632
+random_topk_9,8,cf_3db72fcc22b158,Patient class,Patient admission / Tree / Patient class,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.8152733537539663
+random_topk_9,9,cf_1b05aa3c7da77f,Height/Length,Height/Length / Simple / Height/Length,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.205268547685824
+random_topk_9,10,cf_7ab0248b87b82e,educational level,Demographic data / components / educational level,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+random_topk_9,11,cf_8b431261fa7dca,State,HCPA / components / General data / State,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.7441914177714242
+random_topk_9,12,cf_775d9002cb4e7b,reason for encounter,HCPA / components / General data / reason for encounter,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.741412571617578
+random_topk_9,13,cf_4e7e8ca2916a1e,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.832939375708136
+random_topk_9,14,cf_ba8421601b1980,Issue date,Authorization for hospital admission / Components / Issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3827733537539664
+random_topk_9,15,cf_79ed78f34fef6f,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.3943598922155047
+random_topk_9,16,cf_ac2de786b38da7,Baros score,Bariatric surgery evaluation / Components / Baros score,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.026269371868609
+random_topk_9,17,cf_eee397355aecbe,nationality,Demographic data / components / nationality,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+random_topk_9,18,cf_505d09ec39545c,duration of follow-up (months),Bariatric surgery evaluation / Components / duration of follow-up (months),DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.396644741691094
+random_topk_9,19,cf_5cd62eaa6e16a8,issue date,HCPA / components / General data / issue date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.0016433408483474
+random_topk_9,20,cf_e7f0fa8ccde04c,schema,HCPA / components / chemotherapy / schema,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,0.33569247246389805
+random_topk_9,21,cf_ccf42da6435cdd,duration of treatment,HCPA / components / chemotherapy / duration of treatment,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+random_topk_9,22,cf_bd9db9ae67063d,Problem,Problem/Diagnosis / structure / Problem,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8972934726981028
+random_topk_9,23,cf_c89fef6e42073d,indicator of transplantation,HCPA / components / transplantation / indicator of transplantation,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,0.24161363315590947
+random_topk_9,24,cf_80f721f9446bd3,death indicator,Patient discharge / Components / death indicator,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,1.8476387383693507
+random_topk_9,25,cf_bbec72e0a270f7,fields/insertions 2,Procedure undertaken / Procedure list / fields/insertions 2,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.611969838921762
+random_topk_9,26,cf_b87e8363f020f7,healthcare unit,HCPA / components / General data / healthcare unit,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.810393340848347
+random_topk_9,27,cf_1d8359b2d21168,State/province,Patient admission / Tree / Assigned patient location / Address / State/province,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.9758983537539663
+random_topk_9,28,cf_0b6364bb149692,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8056498127418383
+random_topk_9,29,cf_18704e514938d4,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.201355084523197
+random_topk_10,1,cf_2a67f6f1c22886,Hospital service,Patient admission / Tree / Hospital service,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.9108983537539663
+random_topk_10,2,cf_19e1b0f55ef007,race,Demographic data / components / race,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.794325560605086
+random_topk_10,3,cf_ba09c313b94cba,ICU - Total,Authorization for hospital admission / Components / ICU - Total,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9683983537539662
+random_topk_10,4,cf_16800b2d3f5ef6,patient age,HCPA / components / General data / patient age,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,1.9869318023868088
+random_topk_10,5,cf_8b431261fa7dca,State,HCPA / components / General data / State,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.7441914177714242
+random_topk_10,6,cf_49398dcbba5447,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,2.5557227684696855
+random_topk_10,7,cf_0b6364bb149692,Procedure,Procedure undertaken / Procedure list / Procedure,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8056498127418383
+random_topk_10,8,cf_7ab0248b87b82e,educational level,Demographic data / components / educational level,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.794325560605086
+random_topk_10,9,cf_b87e8363f020f7,healthcare unit,HCPA / components / General data / healthcare unit,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.810393340848347
+random_topk_10,10,cf_0a229c157b8d2a,Associated causes,Problem/Diagnosis / structure / Associated causes,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8185915496211795
+random_topk_10,11,cf_fc5be63ab59287,irradiated area 2,Procedure undertaken / Procedure list / irradiated area 2,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.7094795467619988
+random_topk_10,12,cf_ccf42da6435cdd,duration of treatment,HCPA / components / chemotherapy / duration of treatment,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+random_topk_10,13,cf_ec7d5ae391fa0a,date of beginning of chemotherapy,HCPA / components / chemotherapy / date of beginning of chemotherapy,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.33569247246389805
+random_topk_10,14,cf_d7a40eea03f1d2,number of transplantations,HCPA / components / transplantation / number of transplantations,DV_COUNT,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.24161363315590947
+random_topk_10,15,cf_c4703128fab784,Histopathological grading (G),Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / Histopathological grading (G),DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.8216920519268449
+random_topk_10,16,cf_e7f0fa8ccde04c,schema,HCPA / components / chemotherapy / schema,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,0.33569247246389805
+random_topk_10,17,cf_be52992cb12705,hospital infection,Patient discharge / Components / hospital infection,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.815763738369351
+random_topk_10,18,cf_8e35971b63e360,topography,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / topography,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,0.8529042121189383
+random_topk_10,19,cf_1d8359b2d21168,State/province,Patient admission / Tree / Assigned patient location / Address / State/province,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.9758983537539663
+random_topk_10,20,cf_49533263f29569,reason for discharge,Patient discharge / Components / reason for discharge,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.803046817179708
+random_topk_10,21,cf_7f3b6795a0e812,birth date,Demographic data / components / birth date,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.489780106059632
+random_topk_10,22,cf_80f721f9446bd3,death indicator,Patient discharge / Components / death indicator,DV_BOOLEAN,3,equals;is_known;is_unknown,3,0,,2.0,1.8476387383693507
+random_topk_10,23,cf_8f20b6e7578a41,Baros table,Bariatric surgery evaluation / Components / Baros table,DV_TEXT,4,equals;contains;is_known;is_unknown,4,0,,3.25,1.042256797904112
+random_topk_10,24,cf_72eaea6790449d,date of pathological identification,Problem/Diagnosis / structure / Tumour - TNM Cancer staging / Pathological (pTNM) / date of pathological identification,DV_DATE,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,0.8432329173114603
+random_topk_10,25,cf_4e7e8ca2916a1e,Secondary Diagnosis,Problem/Diagnosis / structure / Secondary Diagnosis,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.832939375708136
+random_topk_10,26,cf_469c691048a0ce,date of discharge,Patient discharge / Components / date of discharge,DV_DATE_TIME,6,equals;before;after;between;is_known;is_unknown,6,0,,6.0,2.017941047948939
+random_topk_10,27,cf_3db72fcc22b158,Patient class,Patient admission / Tree / Patient class,NULL_FLAVOUR,2,is_known;is_unknown,2,0,,1.0,1.8152733537539663
+random_topk_10,28,cf_e7551706658b4a,gender,Demographic data / components / gender,DV_CODED_TEXT,6,equals;not_equals;in;contains;is_known;is_unknown,6,0,,5.5,1.8638710151505407
+random_topk_10,29,cf_cc107606becdfc,Weight,Body weight / Simple / Weight,DV_QUANTITY,6,equals;>;<;between;is_known;is_unknown,6,0,,6.0,0.205268547685824
