@@ -1,7 +1,7 @@
 metric,seconds
-scan_seconds,1.2172281999992265
-canonical_build_seconds,0.07022389999929146
-queriability_seconds,0.00025519999962853035
-form_generation_seconds,0.006422299999940151
-query_evaluation_seconds,8.57022760000018
-total_seconds,9.864357199998267
+scan_seconds,0.0
+canonical_build_seconds,0.0
+queriability_seconds,0.0
+form_generation_seconds,0.01789470000039728
+query_evaluation_seconds,13.68597520000003
+total_seconds,13.703869900000427
