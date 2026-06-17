@@ -1,0 +1,26 @@
+python evaluation/run_evaluation.py ^
+  --data-dir dataset/mixed ^
+  --out-dir results/aqf_eval_mixed_corrected ^
+  --use-cache ^
+  --kappa 25 ^
+  --theta 0.10 ^
+  --alpha 0.70 ^
+  --beta 0.30 ^
+  --lamb 0.25
+
+
+
+python evaluation/run_evaluation_final.py ^
+  --data-dir orbda_10k/mixed ^
+  --out-dir results/aqf_final_c35 ^
+  --use-cache ^
+  --complexity-budget 35 ^
+  --theta 0.10 ^
+  --lambda-sc 0.25 ^
+  --mu 0.25 ^
+  --eta 1.0 ^
+  --random-trials 30
+
+
+
+python evaluation/generate_aqf_schema_graphs.py   --canonical-forest results/aqf_final_c35/.cache/canonical_forest.json   --out results/aqf_final_5   --cartesian-threshold 0.05
