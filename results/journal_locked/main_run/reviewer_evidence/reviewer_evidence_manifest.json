@@ -1,0 +1,13 @@
+{
+  "source_results_dir": "results\\journal_locked\\main_run",
+  "outputs": [
+    "table_rq_metric_mapping.csv",
+    "table_claim_evidence.csv",
+    "table_ablation_framing.csv",
+    "table_formula_motivation.csv",
+    "formula_motivation.md",
+    "evaluation_framing.md",
+    "reviewer_evidence_summary.png",
+    "reviewer_evidence_summary.pdf"
+  ]
+}

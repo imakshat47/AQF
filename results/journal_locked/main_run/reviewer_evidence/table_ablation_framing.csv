@@ -1,0 +1,5 @@
+component_tested,comparison,reviewer_question,strict_coverage_delta,field_delta,complexity_delta,operator_burden_delta,main_interpretation
+Candidate pruning,aqf_full vs no_pruning,Does pruning reduce fields and complexity?,-7.41%,-10,-10,-47.75,No-pruning is the expressivity upper bound; AQF is judged by how much complexity it saves for its coverage loss.
+Operator-aware classification,aqf_full vs no_operator_awareness,Does operator awareness reduce unnecessary controls?,0.00%,0,0,-313.50,Coverage should remain similar while operator count and invalid operators fall sharply.
+Structural queriability ranking,aqf_full vs frequency_only,Does AQF improve over prevalence-only ranking?,1.85%,0,0,5.50,Tests whether structural and diversity-aware scoring adds value over field prevalence.
+Canonical grouping,aqf_full vs flattened_topk,Does AQF preserve structured form context?,0.00%,0,0,0,Tests whether context preservation is maintained beyond raw coverage.
