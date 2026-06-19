@@ -104,6 +104,7 @@ def main() -> None:
     parser.add_argument("--include-cross", action="store_true")
     parser.add_argument("--no-cache", action="store_true")
     parser.add_argument("--skip-enhanced-metrics", action="store_true")
+    parser.add_argument("--skip-reviewer-evidence", action="store_true")
     args = parser.parse_args()
 
     out_dir = Path(args.out_dir)
@@ -148,6 +149,15 @@ def main() -> None:
             str(out_dir),
             "--eta",
             str(args.eta),
+        ])
+
+    if not args.skip_reviewer_evidence:
+        run_command([
+            sys.executable,
+            "-B",
+            str(ROOT / "evaluation" / "export_reviewer_evidence.py"),
+            "--results-dir",
+            str(out_dir),
         ])
 
     summarize(out_dir, args.target_coverage)
