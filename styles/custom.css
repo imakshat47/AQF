@@ -1,0 +1,176 @@
+/* ============================================================
+   AQF — custom stylesheet
+   Injected via st.markdown(<style>…</style>)
+   ============================================================ */
+
+/* ---------- Header bar ---------- */
+.aqf-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: #1C2333;
+    border-bottom: 1px solid #2E3A50;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+.aqf-header-brand {
+    font-size: 20px;
+    font-weight: 700;
+    color: #FAFAFA;
+    letter-spacing: 0.5px;
+}
+.aqf-header-sub {
+    font-size: 14px;
+    font-weight: 400;
+    color: #9AABB8;
+}
+.aqf-header-chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* ---------- Step header ---------- */
+.aqf-step-header {
+    font-size: 22px;
+    font-weight: 700;
+    color: #4C9BE8;
+    margin-bottom: 16px;
+    border-left: 4px solid #4C9BE8;
+    padding-left: 12px;
+}
+
+/* ---------- Cards ---------- */
+.aqf-card {
+    background: #1C2333;
+    border: 1px solid #2E3A50;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+}
+.aqf-card-footer {
+    margin-top: 12px;
+}
+
+/* ---------- Result card (record) ---------- */
+.aqf-result-card {
+    background: #1C2333;
+    border: 1px solid #2E3A50;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+.aqf-card-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+    word-break: break-word;
+}
+.aqf-card-label {
+    font-size: 11px;
+    color: #9AABB8;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+.aqf-card-value {
+    font-size: 13px;
+    color: #E8EDF3;
+    font-weight: 500;
+}
+
+/* ---------- Chips (general) ---------- */
+.aqf-chip {
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 3px 4px 3px 0;
+    border-radius: 14px;
+    background: #2A3A55;
+    color: #B8D0EF;
+    font-size: 12px;
+    border: 1px solid #3A5080;
+    white-space: nowrap;
+}
+
+/* ---------- Filter chip ---------- */
+.aqf-filter-chip {
+    display: inline-block;
+    padding: 5px 12px;
+    margin: 4px 6px 4px 0;
+    border-radius: 16px;
+    background: #163042;
+    color: #7EC8E3;
+    font-size: 12px;
+    border: 1px solid #1E4A66;
+    white-space: nowrap;
+}
+
+/* ---------- Output chip ---------- */
+.aqf-output-chip {
+    display: inline-block;
+    padding: 5px 12px;
+    margin: 4px 6px 4px 0;
+    border-radius: 16px;
+    background: #1A3828;
+    color: #6EC89A;
+    font-size: 12px;
+    border: 1px solid #235030;
+    white-space: nowrap;
+}
+
+/* ---------- Chip row wrapper ---------- */
+.aqf-chip-row {
+    margin: 10px 0 14px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ---------- Sidebar styling ---------- */
+.aqf-sidebar-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #9AABB8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.aqf-sidebar-section {
+    font-size: 12px;
+    font-weight: 700;
+    color: #9AABB8;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin: 8px 0 4px 0;
+}
+
+/* ---------- Status badges ---------- */
+.aqf-badge-ok {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: #1a4a2e;
+    color: #4ade80;
+    font-size: 12px;
+    border: 1px solid #22663d;
+}
+.aqf-badge-warn {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: #4a3a00;
+    color: #fbbf24;
+    font-size: 12px;
+    border: 1px solid #66500a;
+}
+.aqf-badge-err {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: #4a1a1a;
+    color: #f87171;
+    font-size: 12px;
+    border: 1px solid #662222;
+}
